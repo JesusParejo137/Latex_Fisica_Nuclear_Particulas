@@ -1,0 +1,64 @@
+% ==============================================================================
+% MAIN.TEX - Archivo Principal del Libro de Apuntes
+% ==============================================================================
+\documentclass[11pt, a4paper, twoside, openright]{report}
+
+% Carga de la configuración y preámbulo estilizado
+\input{preamble.tex}
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Portada Académica
+% ------------------------------------------------------------------------------
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge \bfseries \color{maincolor} FÍSICA NUCLEAR Y DE PARTÍCULAS \par}
+    \vspace{0.6cm}
+    {\Large \scshape Prometeo 137 \par}
+    
+    \vspace{1.5cm}
+    \color{maincolor}\rule{\linewidth}{0.8mm}
+    \vfill
+    
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushleft} \large
+            \emph{Asignatura:}\\
+            Física Nuclear y de Partículas
+        \end{flushleft}
+    \end{minipage}
+    ~
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushright} \large
+            \emph{Nivel:}\\
+            Cuarto Curso
+        \end{flushright}
+    \end{minipage}
+    
+    \vspace{2cm}
+    {\small \today \par}
+\end{titlepage}
+
+% ------------------------------------------------------------------------------
+% Índices del Libro
+% ------------------------------------------------------------------------------
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+
+% ------------------------------------------------------------------------------
+% Bloque de Capítulos
+% ------------------------------------------------------------------------------
+
+\input{temas/tema1.tex}
+
+% Estructura prevista para los siguientes capítulos del programa:
+% \input{tema2.tex} % Antipartículas
+% \input{tema3.tex} % Leptones
+% \input{tema4.tex} % Quarks y Hadrones
+
+\end{document}

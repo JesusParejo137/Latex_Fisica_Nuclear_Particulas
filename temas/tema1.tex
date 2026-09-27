@@ -1,0 +1,1165 @@
+% !TEX root = ../main.tex
+% ==============================================================================
+% TEMA 1: CONCEPTO DE PARTÍCULA FUNDAMENTAL: CLASIFICACIÓN
+% ==============================================================================
+
+\chapter{Concepto de Partícula Fundamental: Clasificación}
+\label{chap:tema1}
+
+% ==============================================================================
+% SECCIÓN 1: CLASIFICACIÓN DE PARTÍCULAS FUNDAMENTALES
+% ==============================================================================
+
+\section{Clasificación de Partículas Fundamentales}
+
+El estudio de la física subatómica requiere un esquema de clasificación sistemático para las partículas conocidas. Esta división se realiza fundamentalmente bajo dos criterios independientes: el comportamiento cuántico y estadístico (determinado por el espín) y el tipo de interacciones en las que participan.
+
+\subsection{Criterios de Clasificación General}
+
+\begin{concepto}[Clasificación por Espín: Fermiones vs. Bosones]
+De acuerdo con el \textbf{Teorema Espín-Estadística}, toda partícula subatómica pertenece a una de las siguientes dos categorías:
+\begin{itemize}
+    \item \textbf{Fermiones} (espín semientero: $s = 1/2, 3/2, \dots$): Constituyen la materia. Obedecen la estadística de Fermi-Dirac y el principio de exclusión de Pauli. Sus campos anticonmutan.
+    \item \textbf{Bosones} (espín entero: $s = 0, 1, 2, \dots$): Mediadores de interacciones (o escalares como el Higgs). Obedecen la estadística de Bose-Einstein y no están sujetos al principio de exclusión. Sus campos conmutan.
+\end{itemize}
+\end{concepto}
+
+Por otro lado, según la respuesta ante las fuerzas fundamentales, las partículas que forman la materia se dividen en:
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Leptones:} Fermiones elementales (sin estructura interna apreciable) que no experimentan la interacción fuerte.
+    \item \textbf{Hadrones:} Partículas compuestas por constituyentes con carga de color (quarks y antiquarks). Su característica definitoria es que experimentan la interacción fuerte, además de la electromagnética y la débil si sus componentes o la partícula global poseen las cargas correspondientes.
+\end{enumerate}
+
+---
+
+\subsection{Estructura Hadrónica: Hadrones Convencionales y Exóticos}
+
+Dado que la interacción fuerte se describe mediante la Cromodinámica Cuántica (QCD) bajo el grupo de simetría gauge $\SU{3}_C$, los estados ligados de quarks que observamos en la naturaleza deben ser invariantes de color (singletes de color o ``materia blanca''). 
+
+La condición de invarianza gauge de color establece que la composición de cualquier hadrón en términos de contenido de quarks ($q$) y antiquarks ($\bar{q}$) responde a la fórmula general:
+
+\begin{equation}
+\label{eq:hadron_formula}
+(q q q)^m \, (q \bar{q})^n \quad \text{con } m, n \in \mathbb{N}_0 = \{0, 1, 2, 3, \dots\}
+\end{equation}
+
+Donde el término $(qqq)$ representa un trío con combinación totalmente antisimétrica de color ($\epsilon_{ijk} q_i q_j q_k$), y $(q\bar{q})$ representa un par quark-antiquark neutro de color ($\delta_{ij} q_i \bar{q}_j$).
+
+\begin{table}[h!]
+\centering
+\caption{Clasificación del espectro hadrónico según su contenido de quarks.}
+\label{tab:hadron_classification}
+\vspace{0.3cm}
+\small
+\begin{tabularx}{\linewidth}{c c X l c c}
+\toprule
+\textbf{$m$} & \textbf{$n$} & \textbf{Configuración} & \textbf{Denominación} & \textbf{Espín ($s$)} & \textbf{Ejemplos Destacados} \\
+\midrule
+1 & 0 & $q q q$ & \textbf{Barión} (Convencional) & Semientero & Protón ($uud$), Neutrón ($udd$), $\Lambda^0$ ($uds$) \\
+0 & 1 & $q \bar{q}$ & \textbf{Mesón} (Convencional) & Entero & Pión ($\pi^+ = u\bar{d}$), Kaón ($K^0 = d\bar{s}$) \\
+\midrule
+0 & 2 & $q \bar{q} q \bar{q}$ & \textbf{Tetraquark} (Exótico) & Entero & $X(3872)$, $Z_c(3900)$ \\
+1 & 1 & $q q q q \bar{q}$ & \textbf{Pentaquark} (Exótico) & Semientero & $P_c^+(4380)$, $P_c^+(4450)$ \\
+2 & 0 & $q q q q q q$ & \textbf{Hexaquark / Dibarión} & Entero & Deuterón ($pn$), Resonancia $d^*(2380)$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{observacion}[Hadrones Exóticos]
+Los estados con $m+n > 1$ se denominan \textbf{hadrones exóticos}. Aunque la teoría de QCD predijo su existencia teórica desde el modelo de Gell-Mann (1964), su confirmación experimental definitiva ha tenido lugar en las últimas dos décadas en experimentos de altas energías como LHCb, Belle y BESIII.
+\end{observacion}
+
+---
+
+\subsection{Interacciones en Hadrones y Criterios de Selección}
+
+Dado que los quarks que constituyen a los hadrones poseen:
+\begin{enumerate}[label=\roman*)]
+    \item \textbf{Carga de Color:} Interactúan mediante la interacción fuerte.
+    \item \textbf{Carga Eléctrica ($Q \ne 0$):} Interactúan mediante la interacción electromagnética.
+    \item \textbf{Isospín Débil ($T_3$):} Interactúan mediante la interacción débil.
+\end{enumerate}
+
+En principio, las tres interacciones pueden intervenir en las reacciones o desintegraciones entre hadrones. Sin embargo, el mecanismo dominante queda determinado por las leyes de conservación de números cuánticos y las escalas características de tiempo de cada interacción.
+
+\begin{table}[h!]
+\centering
+\caption{Escalas de tiempo y conservación de sabor en interacciones hadrónicas.}
+\label{tab:interacciones_tiempos}
+\vspace{0.2cm}
+\small
+\begin{tabularx}{\linewidth}{l c X}
+\toprule
+\textbf{Interacción} & \textbf{Tiempo Característico ($\tau$)} & \textbf{Conservación de Sabor ($S, C, B, T$)} \\
+\midrule
+\textbf{Fuerte} & $10^{-24} - 10^{-23} \text{ s}$ & Estrictamente conservado ($\Delta S = 0$). \\
+\textbf{Electromagnética} & $10^{-21} - 10^{-16} \text{ s}$ & Estrictamente conservado ($\Delta S = 0$). \\
+\textbf{Débil} & $10^{-13} - 10^{-8} \text{ s}$ & Puede violar el sabor ($\Delta S = \pm 1$). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+\subsection{Análisis Detallado de un Proceso: La Desintegración $\Lambda^0 \to p + \pi^-$}
+
+Consideremos el proceso de desintegración del hiperón neutral $\Lambda^0$:
+\begin{equation}
+\label{eq:lambda_decay}
+\Lambda^0 \longrightarrow p + \pi^-
+\end{equation}
+
+\subsubsection*{1. Identificación del contenido de quarks y cargas}
+\begin{itemize}
+    \item \textbf{Estado Inicial:} $\Lambda^0 = (u\,d\,s)$ --- Barión neutro con extrañeza $S = -1$.
+    \item \textbf{Estado Final:} 
+    \begin{itemize}
+        \item Protón $p = (u\,u\,d)$ --- Barión cargado ($Q = +1$) con extrañeza $S = 0$.
+        \item Pión $\pi^- = (d\,\bar{u})$ --- Mesón cargado ($Q = -1$) con extrañeza $S = 0$.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{2. Análisis de las interacciones posibles}
+Aunque todas las partículas involucradas ($\Lambda^0, p, \pi^-$) son hadrones que cargan interacción fuerte, electromagnética y débil:
+\begin{itemize}
+    \item \textbf{¿Puede ser Interacción Fuerte?} \\
+    La extrañeza inicial es $S_{\text{inicial}} = -1$, mientras que la final es $S_{\text{final}} = 0 + 0 = 0$. Hubo un cambio de extrañeza de $\Delta S = +1$. La interacción fuerte conserva estrictamente el sabor, por lo que no puede mediar este proceso.
+    
+    \item \textbf{¿Puede ser Interacción Electromagnética?} \\
+    La interacción electromagnética también conserva el sabor ($\Delta S = 0$). Por lo tanto, queda descartada.
+    
+    \item \textbf{¿Por qué es una Interacción Débil?} \\
+    La interacción débil es la única fuerza del Modelo Estándar que permite transiciones entre familias de quarks (violación del sabor con $\Delta S = \pm 1$) mediante el intercambio de bosones cargados $W^\pm$. En este proceso, el quark $s$ ($Q=-1/3$) se transforma en un quark $u$ ($Q=+2/3$) emitiendo un bosón $W^-$, el cual se desintegra posteriormente en un par $d\,\bar{u}$ ($\pi^-$):
+    $$s \longrightarrow u + W^- \longrightarrow u + (d\,\bar{u})$$
+\end{itemize}
+
+\begin{ejemplo}[Conclusión sobre la Vida Media del $\Lambda^0$]
+Debido a que el proceso $\Lambda^0 \to p + \pi^-$ transcurre obligatoriamente a través de la \textbf{interacción débil}, su vida media medida experimentalmente es de:
+$$\tau_{\Lambda^0} \approx 2.63 \times 10^{-10} \text{ s}$$
+Este tiempo es enormemente mayor que el tiempo característico de una desintegración fuerte ($\sim 10^{-23} \text{ s}$), lo cual constituye la evidencia experimental directa de que el proceso es guiado por la fuerza débil.
+\end{ejemplo}
+
+\newpage
+% ==============================================================================
+% SUBSECCIÓN: EL DESCUBRIMIENTO DEL MUÓN Y LA FÍSICA DE RAYOS CÓSMICOS
+% ==============================================================================
+
+\subsection{El Descubrimiento del Muón y la Física de Rayos Cósmicos}
+
+A principios de la década de 1930, el esquema de partículas elementales parecía completo con el electrón ($e^-$), el protón ($p$), el neutrón ($n$), el fotón ($\gamma$) y la hipótesis del neutrino ($\nu$). Sin embargo, el estudio de la radiación cósmica mediante cámaras de niebla puestas en campos magnéticos reveló la existencia de nuevas entidades subatómicas.
+
+En 1937, Seth H. Neddermeyer y Carl D. Anderson descubrieron en los rayos cósmicos una partícula cargada cuya masa se situaba en un rango intermedio entre la del electrón y la del protón.
+
+\subsubsection{Mecanismos de Pérdida de Energía de Partículas Cargadas en la Materia}
+
+Para entender el experimento fundamental de Neddermeyer y Anderson, es necesario analizar cómo interaccionan las partículas cargadas al atravesar un medio absorbente:
+
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Pérdida por Ionización y Excitación (Fórmula de Bethe-Bloch):} \\
+    Las partículas cargadas transfieren energía a los electrones atómicos del medio mediante colisiones inelásticas. La pérdida específica de energía por unidad de longitud viene dada por:
+    \begin{equation}
+    -\left(\frac{dE}{dx}\right)_{\text{ion}} \propto \frac{z^2}{\beta^2} \ln \left( \frac{2 m_e c^2 \beta^2 \gamma^2 T_{\text{máx}}}{I^2} \right)
+    \end{equation}
+    donde $z e$ es la carga de la partícula incidente, $\beta = v/c$ su velocidad y $I$ el potencial medio de ionización del medio. Para partículas ultra-relativistas ($\beta \approx 1$), la ionización alcanza un mínimo de pérdida (\emph{partículas de ionización mínima} o MIPs).
+    
+    \item \textbf{Pérdida por Radiación de Frenado (\emph{Bremsstrahlung}):} \\
+    Cuando una partícula cargada se desacelera en el campo eléctrico de los núcleos del absorbente, emite fotones. La pérdida de energía por radiación es inversamente proporcional al cuadrado de la masa de la partícula:
+    \begin{equation}
+    -\left(\frac{dE}{dx}\right)_{\text{rad}} \propto \frac{Z^2 e^6}{m^2 c^4} E
+    \end{equation}
+    Para el electrón ($m = m_e$), la emisión de \emph{Bremsstrahlung} es el mecanismo dominante a altas energías ($E > 10 \text{ MeV}$ en plomo), produciendo cascadas o lluvias electromagnéticas ($\text{showers}$). En cambio, para una partícula de mayor masa, este efecto queda severamente suprimido por un factor $(m_e/m)^2$.
+\end{enumerate}
+
+\newpage
+%-------------------------------------
+\subsubsection{El Experimento de Neddermeyer y Anderson (1937)}
+
+Neddermeyer y Anderson operaron una cámara de niebla sumergida en un campo magnético de intensidad conocida e introdujeron en su centro una placa pesada de platino de $1\text{ cm}$ de espesor (equivalente en densidad electrónica a $1.96\text{ cm}$ de plomo).
+
+Al medir la rigidez magnética ($B\rho$) antes y después de atravesar la placa, calcularon la pérdida fraccionaria de energía $\Delta E / E_i$ para más de 6000 trazas de rayos cósmicos con energías por debajo de $500\text{ MeV}$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+  % Ejes
+  \draw[->, thick] (0,0) -- (6.5,0) node[right] {$E_i \text{ (MeV)}$};
+  \draw[->, thick] (0,0) -- (0,4.5) node[above] {$-\Delta E / d \text{ (MeV/cm)}$};
+  
+  % Línea del límite teórica Bethe-Heitler (\Delta E / E = 1)
+  \draw[thick, gray, dashed] (0,0) -- (5.5,4.0) node[above right, black] {\small $-\Delta E / E_i = 1$};
+  
+  % Grupo 1: Electrones (Shower particles) -> alta pérdida
+  \foreach \x/\y in {0.8/0.7, 1.2/1.0, 1.6/1.5, 2.0/1.8, 2.1/2.0, 2.8/2.5, 3.0/2.7, 4.5/3.6, 4.6/3.7} {
+    \draw[red!80!black, thick] (\x,\y) circle (2.5pt);
+  }
+  \node[red!80!black, left] at (2.2,2.3) {\small Electrones ($e^\pm$) [Cascapas]};
+
+  % Grupo 2: Muones (Penetrating single particles) -> baja pérdida
+  \foreach \x/\y in {1.8/0.2, 2.2/0.4, 2.5/0.1, 2.7/0.6, 2.9/0.5, 3.2/0.9, 3.5/0.3, 4.0/1.1, 4.8/0.9, 5.2/3.0} {
+    \fill[maincolor] (\x,\y) circle (2.2pt);
+  }
+  \node[maincolor, right] at (3.5,0.4) {\small Partículas penetrantes ($\mu^\pm$)};
+\end{tikzpicture}
+\end{center}
+
+\begin{concepto}[Evidencia Experimental de la Separación en Dos Grupos]
+Los datos experimentales mostraron una bifurcación neta en la población de partículas entrantes:
+\begin{itemize}
+    \item \textbf{Componente poco penetrante (electrones/positrones $e^\pm$):} Producían cascadas secundarias ($\text{showers}$) y exhibían pérdidas masivas de energía ($\Delta E / E_i \sim 0.5 - 1.0$), en excelente acuerdo con la teoría de Bethe-Heitler para $m = m_e$.
+    \item \textbf{Componente penetrante (partículas individuales):} Partículas cargadas simples que atravesaban la placa de platino de $1\text{ cm}$ sufriendo una pérdida de energía fraccionaria extremadamente pequeña, muy por debajo de la curva del \emph{Bremsstrahlung} electrónico.
+\end{itemize}
+\end{concepto}
+
+\newpage
+%--------------------------------
+\subsubsection{Deducción del Rango de Masa: Inobservabilidad de la Masa Proatónica}
+
+Para determinar la naturaleza de esta nueva componente penetrante, se analizaron dos hipótesis extremas:
+
+\paragraph{1. ¿Podían ser protones?}
+Si la partícula fuera un protón ($m_p \approx 938 \text{ MeV}/c^2$), una rigidez magnética medida de $B\rho \approx 4.5 \times 10^5 \text{ gauss}\cdot\text{cm}$ correspondería a un momento de $p \approx 135 \text{ MeV}/c$.
+Para un protón con dicho momento, su velocidad sería relativas a la luz de apenas $\beta \approx 0.14$. Según la ecuación de Bethe-Bloch ($dE/dx \propto 1/\beta^2$), un protón tan lento debería producir una traza ultra-densa en la cámara de niebla, ionizando al menos 25 veces más fuertemente que un electrón rápido. 
+
+Sin embargo, las trazas del grupo penetrante mostraban una densidad de ionización imperceptiblemente diferente a la de un electrón ultra-relativista ($\beta \approx 1$). Por consiguiente, quedó descartado que fuesen protones.
+
+\paragraph{2. ¿Podían ser electrones ordinarios?}
+Si fuesen electrones, deberían haber perdido prácticamente el $100\%$ de su energía radiando fotones en $1.96\text{ cm}$ de equivalencia en plomo. Al no sufrir apenas pérdida de energía radiativa, la única explicación consistente en electrodinámica cuántica era que su masa fuese significativamente superior a la del electrón ($m > m_e$).
+
+\begin{definicion}[El Muón]
+La componente penetrante de los rayos cósmicos correspondía a una nueva partícula elemental cargada, denominada inicialmente \emph{mesotrón} o \emph{mu-mesón}, y hoy conocida como muón ($\mu^-$ y su antipartícula $\mu^+$).
+Sus propiedades fundamentales son:
+\begin{itemize}
+    \item \textbf{Carga eléctrica:} $q = \pm e$
+    \item \textbf{Espín:} $s = 1/2$ (Fermión)
+    \item \textbf{Masa en reposo:} $m_\mu \approx 105.66 \text{ MeV}/c^2 \approx 207 \, m_e \quad \left( m_e < m_\mu < m_p \right)$
+    \item \textbf{Vida media:} $\tau_\mu \approx 2.197 \times 10^{-6} \text{ s}$
+\end{itemize}
+\end{definicion}
+
+\newpage
+%--------------------------------
+\subsubsection{La Paradoja del Muón: Diferenciación del Pión y Carácter Leptónico}
+
+Tras la predicción teórica de Hideki Yukawa (1935) sobre la existencia de un bosón de masa intermedia ($\sim 140 \text{ MeV}/c^2$) responsable de mediar la fuerza nuclear fuerte entre nucleones, la comunidad científica asumió inicialmente que el muón era dicho "mesón de Yukawa".
+
+Sin embargo, el experimento histórico de Conversi, Pancini y Piccioni (1947) demostró que los muones negativos frenados en materia no eran absorbidos masivamente por los núcleos atómicos, lo que evidenció que el muón no experimenta la interacción fuerte.
+
+\begin{observacion}[Naturaleza del Muón y la Reacción del Pión]
+En 1947, C. Powell y su equipo descubrieron el verdadero mesón de Yukawa empleando emulsiones fotográficas: el pión ($\pi^\pm$). Se constató que los piones producidos en la alta atmósfera se desintegran rápidamente mediante interacción débil en muones:
+\begin{equation}
+\pi^+ \longrightarrow \mu^+ + \nu_\mu, \qquad \pi^- \longrightarrow \mu^- + \bar{\nu}_\mu \quad (\tau_\pi \approx 2.6 \times 10^{-8} \text{ s})
+\end{equation}
+Posteriormente, el muón se desintegra en un electrón y dos neutrinos:
+\begin{equation}
+\mu^- \longrightarrow e^- + \bar{\nu}_e + \nu_\mu \quad (\tau_\mu \approx 2.2 \times 10^{-6} \text{ s})
+\end{equation}
+
+El muón no es un hadrón, sino un leptón cargado de la segunda generación del Modelo Estándar, réplica pesada del electrón. La existencia innecesaria del muón para la constitución de la materia ordinaria motivó la famosa frase del premio Nobel Isidor Isaac Rabi: \emph{«¿Quién ha encargado esto?»} (\emph{"Who ordered that?"}).
+\end{observacion}
+
+\newpage
+% ==============================================================================
+% SUBSECCIÓN: EL NEUTRINO Y LA CINEMÁTICA DE LA DESINTEGRACIÓN BETA
+% ==============================================================================
+
+\subsection{El Neutrino y las Desintegraciones Débiles}
+
+El neutrino es un signo inequívoco de la presencia de la interacción débil. Para comprender la necesidad histórica de postular su existencia, recordamos en primer lugar la caracterización estándar de un núcleo atómico $(A, Z)$, definido por:
+\begin{itemize}
+    \item $Z$: número atómico (número de protones).
+    \item $N$: número de neutrones.
+    \item $A = Z + N$: número másico (número total de nucleones).
+\end{itemize}
+
+---
+
+\subsubsection{Tipos de Desintegraciones Débiles Nucleares}
+
+Se conocen tres procesos fundamentales de desintegración nuclear mediados por la fuerza débil:
+
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Desintegración $\beta^-$:}
+    Un neutrón se transforma en un protón emitido junto con un electrón y un antineutrino electrónico:
+    \begin{equation}
+    (A, Z) \longrightarrow (A, Z+1) + e^- + \bar{\nu}_e \quad \Big( n \longrightarrow p + e^- + \bar{\nu}_e \Big)
+    \end{equation}
+
+    \item \textbf{Desintegración $\beta^+$:}
+    Un protón ligado en el núcleo se transforma en un neutrón emitiendo un positrón y un neutrino electrónico:
+    \begin{equation}
+    (A, Z) \longrightarrow (A, Z-1) + e^+ + \nu_e \quad \Big( p \longrightarrow n + e^+ + \nu_e \Big)
+    \end{equation}
+    \textit{Nota:} Un protón libre no puede sufrir este proceso por conservación de la energía ($m_p < m_n + m_e$), pero la energía de ligadura del núcleo $(A,Z)$ permite que la reacción sea cinemáticamente viable.
+
+    \item \textbf{Captura Electrónica (EC):}
+    Un electrón de la capa atómica k/L es capturado por un protón nuclear:
+    \begin{equation}
+    \left[ e^- + (A, Z) \right] \longrightarrow (A, Z-1) + \nu_e \quad \Big( \left[ e^- + p \right] \longrightarrow n + \nu_e \Big)
+    \end{equation}
+    Este proceso se obtiene mediante la simetría de cruzamiento, pasando el positrón $e^+$ del producto final en la desintegración $\beta^+$ al lado inicial como su antipartícula $e^-$.
+\end{enumerate}
+
+\newpage
+%--------------------------------
+\subsubsection{Análisis de la Cinemática Hipotética de Dos Cuerpos}
+
+Supongamos hipotéticamente que la desintegración $\beta^-$ fuese un proceso de desintegración a solo dos cuerpos en el estado final:
+\begin{equation}
+M_1 \longrightarrow M_2 + m \quad \text{con } m \ll M_2
+\end{equation}
+donde $M_1$ es el núcleo padre, $M_2$ el núcleo hijo y $m$ la masa del electrón $m_e$.
+
+Para que el proceso sea posible, debe existir un exceso de masa positivo:
+\begin{equation}
+\Delta M = M_1 - M_2 - m > 0
+\end{equation}
+Toda la energía equivalente a esta masa disponible $\Delta M c^2$ se empleará en la energía cinética de las dos partículas finales.
+
+\paragraph{1. Tratamiento No Relativista:}
+Por conservación del momento lineal en el sistema en reposo del padre ($\vec{p}_1 = \vec{0}$):
+\begin{equation}
+|\vec{p}_{M_2}| = |\vec{p}_m| \equiv p
+\end{equation}
+
+La conservación de la energía cinética total viene dada por:
+\begin{equation}
+\Delta M c^2 = \frac{p^2}{2 M_2} + \frac{p^2}{2 m} = \frac{p^2}{2m} \left( 1 + \frac{m}{M_2} \right) = T_m \left( 1 + \frac{m}{M_2} \right)
+\end{equation}
+donde $T_m$ es la energía cinética de la partícula ligera (el electrón).
+
+Despejando $T_m$ y considerando el límite $m \ll M_2$:
+\begin{equation}
+T_m = \frac{\Delta M c^2}{1 + \frac{m}{M_2}} \approx \Delta M c^2 \left( 1 - \frac{m}{M_2} \right) \approx \Delta M c^2
+\end{equation}
+
+\paragraph{2. Tratamiento Relativista:}
+Dado que $\Delta M c^2$ puede ser de varios $\text{MeV}$, el electrón resulta ultra-relativista. Por conservación de la energía total:
+\begin{equation}
+M_1 c^2 = \sqrt{p^2 c^2 + M_2^2 c^4} + \sqrt{p^2 c^2 + m^2 c^4}
+\end{equation}
+
+Desarrollando en potencias del cociente de masas $m/M_2$:
+\begin{equation}
+T_m = \sqrt{p^2 c^2 + m^2 c^4} - m c^2 = \Delta M c^2 \left( 1 - \frac{m}{M_2} + \dots \right) \approx \Delta M c^2
+\end{equation}
+
+\newpage
+%--------------------------------
+\subsubsection{Conclusión Física y la Necesidad del Neutrino}
+
+Del cálculo cinemático se deducen dos conclusiones fundamentales para cualquier desintegración a dos cuerpos:
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Reparto de energía:} La partícula más ligera ($m \ll M_2$) se lleva prácticamente toda la energía disponible de la reacción ($\approx \Delta M c^2$).
+    \item \textbf{Carácter monoenergético:} La energía cinética del electrón producido debería tener un valor discreto y fijo único $T_m = \Delta M c^2$.
+\end{enumerate}
+
+\begin{observacion}[Contradicción Experimental y Postulado de Pauli]
+Las mediciones experimentales del espectro de electrones en la desintegración $\beta^-$ (como en el $^{210}\text{Bi}$) mostraron de forma incontestable una distribución continua de energía $T_e \in [0, \, E_{\text{máx}}]$, con $E_{\text{máx}} = \Delta M c^2$.
+
+Esta incoherencia con la hipótesis de dos cuerpos llevó a Wolfgang Pauli (1930) a postular que la desintegración $\beta$ involucra necesariamente un tercer cuerpo neutro de masa casi nula y espín $1/2$ (el neutrino $\bar{\nu}_e$), el cual comparte de forma continua la energía cinética liberada en el estado final a tres cuerpos:
+\begin{equation}
+(A,Z) \longrightarrow (A, Z+1) + e^- + \bar{\nu}_e
+\end{equation}
+\end{observacion}
+
+\newpage
+% ==============================================================================
+% SUBSECCIÓN: ESTABILIDAD NUCLEAR (Z vs N) Y PROPIEDADES DEL NEUTRINO
+% ==============================================================================
+\subsection{Estabilidad Nuclear: El Mapa de Núclidos (\texorpdfstring{$Z$ vs. $N$}{Z vs. N})}
+
+La distribución de los núcleos estables e inestables se representa habitualmente en el diagrama $Z$ frente a $N$ (diagrama de Segrè). El comportamiento de la estabilidad nuclear sigue reglas cinemáticas y estructurales bien definidas:
+
+\begin{concepto}[Regiones de Estabilidad y Modos de Desintegración]
+\begin{itemize}
+    \item \textbf{Núcleos Ligeros ($Z = N \le 20$):} Para $Z \le 20$ (hasta el Calcio-40, $^{40}\text{Ca}$), la simetría de la interacción fuerte favorece configuraciones con igual número de protones y neutrones ($Z \approx N$).
+    \item \textbf{Núcleos Pesados ($Z > 20$):} A medida que $Z$ aumenta, la repulsión culombiana entre protones crece cuadráticamente ($\propto Z^2$). Para mantener la cohesión nuclear, el número de neutrones debe superar al de protones ($N > Z$), por lo que el mapa de estabilidad se desvía por debajo de la recta $Z = N$.
+    \item \textbf{Cinturón de Estabilidad (Línea Negra):} Agrupa a los aproximadamente $256$ núcleos estables conocidos.
+    \item \textbf{Región Azul (Exceso de Neutrones):} Núcleos situados a la derecha del cinturón de estabilidad. Tienden a estabilizarse convirtiendo un neutrón en un protón mediante la \textbf{desintegración $\beta^-$}:
+    \begin{equation}
+    n \longrightarrow p + e^- + \bar{\nu}_e
+    \end{equation}
+    \item \textbf{Región Roja (Exceso de Protones):} Núcleos situados a la izquierda del cinturón de estabilidad. Se estabilizan convirtiendo un protón en un neutrón mediante la \textbf{desintegración $\beta^+$} o la \textbf{captura electrónica (EC)}:
+    \begin{equation}
+    p \longrightarrow n + e^+ + \nu_e
+    \end{equation}
+    \item \textbf{Región Superior / Amarilla ($A$ elevado y exceso de protones):} Núcleos muy pesados ($A > 150$, $Z \ge 82$) que se desintegran mediante la emisión de una partícula $\alpha$ ($^4\text{He}$):
+    \begin{equation}
+    ^A_Z X \longrightarrow ^{A-4}_{Z-2} Y + \alpha
+    \end{equation}
+\end{itemize}
+\end{concepto}
+
+\begin{observacion}[Ausencia de Desintegración $\alpha$ en Núcleos Ligeros]
+Es de vital importancia destacar que \textbf{los núcleos ligeros NO sufren desintegración $\alpha$}. La desintegración $\alpha$ requiere que el balance energético global y la masa del núcleo padre permitan la emisión espontánea de un núcleo de $^4\text{He}$, proceso cuya barrera de penetración por efecto túnel solo es cinemáticamente favorable en núcleos muy pesados.
+\end{observacion}
+
+\newpage
+%--------------------------------
+\subsection{Demostración Cinemática Relativista para la Desintegración a Dos Cuerpos}
+
+Si la desintegración $\beta^-$ consistiese únicamente en la emisión de dos cuerpos ($M_1 \to M_2 + m$, con $m \equiv m_e \ll M_2$), el tratamiento relativista conduce al mismo resultado que el análisis no relativista.
+
+\paragraph{1. Planteamiento de la conservación de energía y momento:}
+En el sistema de referencia en reposo del núcleo padre ($M_1$):
+\begin{align}
+\text{Conservación del momento:} \quad & |\vec{p}_{M_2}| = |\vec{p}_m| \equiv p_m \\
+\text{Conservación de la energía:} \quad & M_1 c^2 = \sqrt{p_m^2 c^2 + M_2^2 c^4} + \sqrt{p_m^2 c^2 + m^2 c^4}
+\end{align}
+
+\paragraph{2. Aislamiento del radical y elevación al cuadrado:}
+Despejamos el término correspondiente al núcleo hijo $M_2$:
+\begin{equation}
+M_1 c^2 - \sqrt{p_m^2 c^2 + m^2 c^4} = \sqrt{p_m^2 c^2 + M_2^2 c^4}
+\end{equation}
+
+Elevando ambos miembros al cuadrado:
+\begin{equation}
+M_1^2 c^4 + (p_m^2 c^2 + m^2 c^4) - 2 M_1 c^2 \sqrt{p_m^2 c^2 + m^2 c^4} = p_m^2 c^2 + M_2^2 c^4
+\end{equation}
+
+Cancelando el término $p_m^2 c^2$ a ambos lados:
+\begin{equation}
+M_1^2 c^4 + m^2 c^4 - M_2^2 c^4 = 2 M_1 c^2 \sqrt{p_m^2 c^2 + m^2 c^4}
+\end{equation}
+
+Recordando que la energía total del electrón es $E_m = \sqrt{p_m^2 c^2 + m^2 c^4} = T_m + m c^2$, expresamos la ecuación como:
+\begin{equation}
+M_1^2 c^4 + m^2 c^4 - M_2^2 c^4 = 2 M_1 c^2 (T_m + m c^2)
+\end{equation}
+
+\paragraph{3. Obtención de la energía cinética $T_m$:}
+Despejando $T_m$:
+\begin{equation}
+T_m = \frac{M_1^2 c^4 + m^2 c^4 - M_2^2 c^4 - 2 M_1 m c^4}{2 M_1 c^2} = \frac{(M_1 - m)^2 - M_2^2}{2 M_1} c^2
+\end{equation}
+
+Introduciendo la definición del exceso de masa disponible $\Delta M \equiv M_1 - M_2 - m \implies M_1 - m = \Delta M + M_2$:
+\begin{equation}
+T_m = \frac{(\Delta M + M_2)^2 - M_2^2}{2 M_1} c^2 = \frac{\Delta M^2 + 2 \Delta M M_2}{2 M_1} c^2
+\end{equation}
+
+\paragraph{4. Límite para la desintegración nuclear ($\Delta M \ll M_2$):}
+Dado que el exceso de masa $\Delta M$ en la desintegración $\beta$ es de apenas unos pocos $\text{MeV}$, se cumple holgadamente que $\Delta M \ll M_2$:
+\begin{equation}
+T_m = \frac{M_2^2 \left( 1 + \frac{\Delta M}{M_2} \right)^2 - M_2^2}{2 M_1} c^2 \approx \frac{M_2^2 \left( 1 + 2\frac{\Delta M}{M_2} \right) - M_2^2}{2 M_1} c^2 = \Delta M \frac{M_2}{M_1} c^2
+\end{equation}
+
+Desarrollando el cociente de masas $M_2 / M_1$:
+\begin{equation}
+\frac{M_2}{M_1} = \frac{M_2}{\Delta M + M_2 + m} = \frac{M_2}{M_2 + m} \left( 1 + \frac{\Delta M}{M_2 + m} \right)^{-1} \approx \frac{M_2}{M_2 + m}
+\end{equation}
+
+Y expresando $\frac{M_2}{M_2 + m} = \frac{1}{1 + m / M_2} \approx 1 - \frac{m}{M_2}$, sustituimos finalmente para obtener:
+\begin{equation}
+T_m = \Delta M \left( 1 - \frac{m}{M_2} \right) c^2 \approx \Delta M c^2
+\end{equation}
+
+\begin{concepto}[Conclusión Cinemática]
+Tanto el análisis no relativista como el relativista demuestran unívocamente que, en una desintegración a dos cuerpos, la partícula ligera ($e^-$) debe ser estrictamente monoenergética, llevándose prácticamente toda la energía liberada $T_m \approx \Delta M c^2$.
+\end{concepto}
+
+\newpage
+%--------------------------------
+\subsection{El Postulado del Neutrino (Pauli, 1930)}
+
+La predicción teórica de una energía fija $T_m = \Delta M c^2$ contradecía de forma directa la medición experimental del espectro de electrones en la desintegración $\beta^-$, el cual mostraba una distribución continua de energía finalizando en $E_{\text{máx}} = \Delta M c^2$.
+
+Asimismo, la hipótesis de dos cuerpos violaba el principio de conservación del momento angular:
+\begin{itemize}
+    \item \textbf{Desintegración del neutrón libre ($n \to p + e^-$):}
+    \begin{equation}
+    s_n = \frac{1}{2} \longrightarrow s_p \otimes s_e \otimes L = \frac{1}{2} \otimes \frac{1}{2} \otimes L \,(\text{entero}) \implies \text{Resultado entero} \ne \frac{1}{2}
+    \end{equation}
+    \item \textbf{Desintegración de un núcleo par-par ($^{14}_6\text{C} \to ^{14}_7\text{N} + e^-$):}
+    \begin{equation}
+    J_i = 0 \longrightarrow J_f \otimes s_e \otimes L = 1 \otimes \frac{1}{2} \otimes L \,(\text{entero}) \implies \text{Resultado semientero} \ne 0
+    \end{equation}
+\end{itemize}
+
+Para resolver estas inconsistencias, Wolfgang Pauli postuló en 1930 la existencia de una nueva partícula elemental (el neutrino).
+
+\begin{definicion}[Propiedades del Neutrino Postulado por Pauli]
+Para hacer compatibles los datos experimentales con todas las leyes de conservación fundamental, la nueva partícula propuesta debía cumplir las siguientes propiedades:
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Carácter de tres cuerpos:} Al tratarse de un proceso a tres cuerpos ($M_1 \to M_2 + e^- + \bar{\nu}_e$), las dos partículas ligeras se reparten de forma continua la energía disponible $\Delta M c^2$, explicando el espectro continuo de emisión.
+    \item \textbf{Carga eléctrica neutra ($q = 0$):} Necesaria para garantizar la conservación estricta de la carga eléctrica total del proceso.
+    \item \textbf{Masa casi nula ($m_\nu \approx 0$):} Para garantizar que el límite superior del espectro continuo $E_{\text{máx}}$ coincida exactamente con la energía total disponible $\Delta M c^2$.
+    \item \textbf{Fermión de espín $1/2$ ($s = 1/2$):} Necesario para conservar el momento angular total ($1/2 \to 1/2 \otimes 1/2 \otimes 1/2$).
+    \item \textbf{Probabilidad de interacción casi nula (interacción débil):} Para justificar por qué no se observaba ningún efecto o traza directa de dicha partícula en los detectores de la época.
+\end{enumerate}
+\end{definicion}
+
+\newpage
+% ==============================================================================
+% SUBSECCIÓN: EL DESCUBRIMIENTO EXPERIMENTAL DEL NEUTRINO (REINES Y COWAN, 1956)
+% ==============================================================================
+
+\subsection{El Descubrimiento Experimental del Neutrino (Reines y Cowan, 1956)}
+
+A pesar del postulado teórico de Wolfgang Pauli (1930) y la formulación de la teoría de la desintegración $\beta$ de Enrico Fermi (1934), Hans Bethe y Rudolf Peierls estimaron que la sección eficaz de interacción del neutrino con la materia a energías nucleares era extraordinariamente pequeña ($\sigma \sim 10^{-44} \text{ cm}^2$). Esto implicaba que un neutrino tendría que atravesar en promedio un espesor de materia de $10^{16} \text{ km}$ (años luz de plomo) antes de interaccionar, por lo que su detección directa se consideró durante décadas técnicamente irrealizable.
+
+El desarrollo de los reactores nucleares de fisión tras la Segunda Guerra Mundial cambió este escenario al proporcionar una fuente masiva e intensa de antineutrinos electrónicos ($\bar{\nu}_e$).
+
+\subsubsection{El Proceso $\beta$ Inverso como Mecanismo de Detección}
+
+En el núcleo de un reactor nuclear de alta potencia, los fragmentos de fisión ricos en neutrones sufren desintegraciones $\beta^-$ sucesivas:
+\begin{equation}
+n \longrightarrow p + e^- + \bar{\nu}_e
+\end{equation}
+
+En 1956, Frederick Reines y Clyde L. Cowan aplicaron la sugerencia propuesta por Bethe y Bacher (1936) de inducir una reacción $\beta$ inversa exponiendo un gran blanco de protones al flujo de antineutrinos procedentes del reactor:
+\begin{equation}
+\label{eq:beta_inversa}
+\bar{\nu}_e + p \longrightarrow n + e^+
+\end{equation}
+
+Esta reacción es cinemáticamente posible si la energía del antineutrino incidente supera la energía umbral de la reacción ($E_{\bar{\nu}_e} \ge 1.806 \text{ MeV}$).
+
+\subsubsection{Estrategia Experimental: Técnica de Coincidencia Retardada}
+
+Para diferenciar los eventos genuinos de $\bar{\nu}_e$ frente al elevado fondo de radiación cósmica y neutrones del reactor, Reines y Cowan diseñaron un detector instalado cerca del reactor de Savannah River. El dispositivo constaba de un tanque de agua dulce (rico en protones) dopado con cloruro de cadmio ($\text{CdCl}_2$) e inmerso en detectores de centelleo líquido.
+
+El proceso de detección se basa en una firma señalizada por dos pulsos fotónicos correlacionados en el tiempo:
+
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Señal Prompt (Inmediata) --- Aniquilación del Positrón ($e^+$):} \\
+    El positrón generado en la reacción \eqref{eq:beta_inversa} se frena rápidamente e interacciona con un electrón del medio ($e^-$), sufriendo una aniquilación instantánea[cite: 6]:
+    \begin{equation}
+    e^+ + e^- \longrightarrow \gamma + \gamma
+    \end{equation}
+    Esta aniquilación emite dos fotones $\gamma$ simultáneos de $0.511 \text{ MeV}$ cada uno, caracterizados por una estricta coincidencia espacial en direcciones opuestas ($180^\circ$).
+
+    \item \textbf{Señal Retardada --- Captura de Neutrones por Cadmio ($n$):} \\
+    El neutrón resultante en la reacción \eqref{eq:beta_inversa} se termaliza por colisiones elásticas con los protones del agua durante un intervalo de tiempo de unos pocos microsegundos ($\sim 5\text{--}10 \, \mu\text{s}$). Una vez ralentizado, es capturado eficientemente por un núcleo de cadmio ($^{108}\text{Cd}$ o $^{113}\text{Cd}$), el cual pasa a un estado sumamente excitado:
+    \begin{equation}
+    n + {}^{A}_{Z}\text{X} \longrightarrow {}^{A+1}_{Z}\text{X}^* \longrightarrow {}^{A+1}_{Z}\text{X} + \sum \gamma'
+    \end{equation}
+    La posterior de-excitación del núcleo atómico emite una cascada de fotones $\gamma$ con una energía total conjunta de aproximadamente $8\text{--}9 \text{ MeV}$.
+\end{enumerate}
+
+\begin{concepto}[Firma Experimental y Demostración]
+La observación de un primer pulso de luz (dos fotones de $0.511 \text{ MeV}$ en coincidencia prompt) seguido, tras una ventana temporal fija de varios microsegundos, por un segundo pulso de fotones de alta energía proveniente de la captura neutrónica en el cadmio, proporcionó la firma experimental inconfundible e irrefutable de la existencia real del neutrino.
+\end{concepto}
+
+\begin{observacion}[Importancia Histórica]
+Este experimento demostró inequívocamente que los neutrinos son partículas libres reales capaces de interactuar con la materia y no un mero artificio matemático para salvar la conservación de la energía en la desintegración $\beta$. Por este hito experimental, Frederick Reines fue galardonado con el Premio Nobel de Física en 1995.
+\end{observacion}
+
+\newpage
+%-----------------------------------------------------
+% ==============================================================================
+% SUBSECCIÓN: DETECCIÓN DEL NEUTRINO Y PROPIEDADES FUNDAMENTALES
+% ==============================================================================
+
+\subsection{Detección Experimental del Neutrino (Reines y Cowan, 1956)}
+
+La detección directa del antineutrino electrónico ($\bar{\nu}_e$) se logró mediante el proceso de desintegración $\beta$ inversa:
+\begin{equation}
+\bar{\nu}_e + p \longrightarrow n + e^+
+\end{equation}
+
+Cuando los antineutrinos procedentes del reactor nuclear interaccionan con los protones del tanque de agua, los productos de la reacción generan una señal doble característica:
+
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Aniquilación del positrón ($e^+$):} El positrón creado se aniquila casi instantáneamente con un electrón del medio:
+    \begin{equation}
+    e^+ + e^- \longrightarrow \gamma + \gamma
+    \end{equation}
+    Esta aniquilación emite dos fotones $\gamma$ simultáneos de $0.511 \text{ MeV}$ cada uno, emitidos exactamente en direcciones opuestas ($180^\circ$).
+    
+    \item \textbf{Moderación y captura del neutrón ($n$):} El neutrón liberado pierde energía cinética mediante colisiones elásticas con los núcleos del medio (termalización). Tras perder la suficiente energía, es capturado por un núcleo de cadmio previamente introducido en el tanque:
+    \begin{equation}
+    n + {}^{A}_{Z}\text{X}_N \longrightarrow {}^{A+1}_{Z}\text{X}^*_{N+1} \longrightarrow {}^{A+1}_{Z}\text{X}_{N+1} + \sum \gamma'
+    \end{equation}
+    El núcleo excitado se de-excita emitiendo una cascada de fotones característicos de alta energía.
+\end{enumerate}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{imagenes/tema1/1_detector_neutrino.png}
+  \caption{Esquema del dispositivo detector de neutrinos empleado por Reines y Cowan.}
+  \label{fig:1_detector_neutrino}
+\end{figure}
+
+Físicamente, los dos detectores de fotones situados en coincidencia miden en primer lugar dos señales simultáneas de igual energía (señal prompt de la aniquilación del positrón), seguidas, tras un intervalo temporal característico de varios microsegundos, por un pulso de luz más intenso correspondiente a la captura neutrónica en el cadmio.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{imagenes/tema1/1_deteccion_neutrino.png}
+  \caption{Firma temporal de la coincidencia retardada entre la aniquilación del positrón y la captura del neutrón.}
+  \label{fig:1_deteccion_neutrino}
+\end{figure}
+
+\subsubsection{El Problema de los Neutrinos Solares}
+Experimentos posteriores diseñados para medir el flujo de neutrinos producidos en las reacciones de fusión nuclear del Sol detectaron un número significativamente menor de neutrinos que el predicho por el Modelo Solar Estándar (problema de los neutrinos solares). La solución teórica fue propuesta por John Norris Bahcall junto con Bruno Pontecorvo, postulando que los neutrinos poseen masa finita no nula y sufren el fenómeno de \textbf{oscilación de neutrinos}, transformándose entre distintos sabores durante su trayectoria desde el núcleo solar hasta la Tierra.
+
+\subsection{Cuestiones Fundamentales sobre la Naturaleza del Neutrino}
+
+Una vez establecida la existencia real del neutrino, fue necesario dar respuesta a dos preguntas fundamentales sobre sus propiedades cuánticas internas.
+
+\subsubsection{Cuestión 1: ¿Son idénticos el neutrino y el antineutrino? ($\nu \stackrel{?}{=} \bar{\nu}$)}
+
+Para comprobar si el neutrino y el antineutrino son la misma partícula ($\nu_e = \bar{\nu}_e \equiv x_{\nu_e}$), Raymond Davis Jr. expuso un tanque de tetracloruro de carbono que contenía Cloro-37 (${}^{37}_{17}\text{Cl}$) al flujo intenso de antineutrinos producido por un reactor nuclear.
+
+\begin{itemize}
+    \item \textbf{Si $\nu_e = \bar{\nu}_e$ (Partícula de Majorana):} Deberían estar permitidas simultáneamente las dos reacciones:
+    \begin{align}
+    x_{\nu_e} + p &\longrightarrow n + e^+ \\
+    x_{\nu_e} + n &\longrightarrow p + e^-
+    \end{align}
+    Por consiguiente, en el tanque de ${}^{37}_{17}\text{Cl}$ se debería observar la reacción:
+    \begin{equation}
+    \bar{\nu}_e + {}^{37}_{17}\text{Cl} \longrightarrow {}^{37}_{18}\text{Ar} + e^-
+    \end{equation}
+    
+    \item \textbf{Si $\nu_e \neq \bar{\nu}_e$ (Partícula de Dirac):} La reacción $\bar{\nu}_e + n \to p + e^-$ está prohibida. En consecuencia, la transformación de ${}^{37}_{17}\text{Cl}$ en ${}^{37}_{18}\text{Ar}$ no debe producirse.
+\end{itemize}
+
+El Argón-37 (${}^{37}_{18}\text{Ar}$) es una sustancia radioactiva muy fácil de identificar al ser un emisor $\beta^+$ (captura electrónica) con un periodo de semidesintegración de $35 \text{ días}$. 
+
+El resultado experimental de Davis fue totalmente negativo: no se midió formación de ${}^{37}_{18}\text{Ar}$. Por lo tanto, se concluye que **el neutrino y el antineutrino son partículas distintas** ($\nu_e \neq \bar{\nu}_e$). Para formalizar esta distinción se introduce la conservación del **número leptónico electrónico** ($L_e$), asignando $L_e = +1$ a $e^-$ y $\nu_e$, y $L_e = -1$ a $e^+$ y $\bar{\nu}_e$.
+
+---
+
+\subsubsection{Cuestión 2: ¿Existe un único tipo de neutrino para todos los leptones? ($\nu_e \stackrel{?}{=} \nu_\mu$)}
+
+A principios de la década de 1960 se conocía la existencia del pión ($\pi^\pm$), el cual se desintegra produciendo un muón y una partícula neutra:
+\begin{equation}
+\pi^\pm \longrightarrow \mu^\pm + [\nu / \bar{\nu}]
+\end{equation}
+
+En 1962, L. Lederman, M. Schwartz y J. Steinberger diseñaron un experimento en Brookhaven para determinar si el neutrino asociado al muón ($\nu_\mu$) era idéntico al neutrino electrónico ($\nu_e$) emitido en la desintegración del neutrón.
+
+\paragraph{Montaje Experimental:}
+Protones de $15 \text{ GeV}$ colisionan contra un blanco de Berilio ($\text{Be}$), produciendo un haz intenso de piones $\pi^\pm$. Tras recorrer una distancia en la que los piones se desintegran ($\pi^\pm \to \mu^\pm + \nu$), el haz atraviesa un blindaje de acero de $13.5 \text{ m}$ de grosor que absorbe todos los muones y hadrones, dejando pasar únicamente a los neutrinos hacia el detector.
+
+\paragraph{Predicción e Interpretación:}
+Si $\nu_e = \nu_\mu$, los neutrinos al interaccionar con los nucleones del detector deberían producir electrones y muones en igual proporción:
+\begin{align}
+\bar{\nu} + p &\longrightarrow n + e^+ \qquad \text{y} \qquad \bar{\nu} + p \longrightarrow n + \mu^+ \\
+\nu + n &\longrightarrow p + e^- \qquad \text{y} \qquad \nu + n \longrightarrow p + \mu^-
+\end{align}
+
+Sin embargo, en el experimento se observaron **exclusivamente eventos con muones** ($\mu^\pm$), resultando nula la producción de electrones (los escasos eventos de electrón medidos correspondían al fondo de radiación cósmica).
+
+\paragraph{Conclusión y Ley de Conservación de Sabor Leptónico:}
+Este resultado demostró que **el neutrino del muón es distinto del neutrino del electrón** ($\nu_e \neq \nu_\mu$). Cada generación de leptones posee su propio número leptónico independiente ($L_e, L_\mu, L_\tau$), cuya conservación individual prohíbe procesos de cambio de sabor sin neutrinos como:
+\begin{equation}
+\mu^\pm \nrightarrow e^\pm + \gamma \quad (\text{Proceso prohibido por conservación de } L_e \text{ y } L_\mu)
+\end{equation}
+
+Permitiendo únicamente la desintegración débil de los muones a través de:
+\begin{align}
+\mu^+ &\longrightarrow e^+ + \nu_e + \bar{\nu}_\mu \\
+\mu^- &\longrightarrow e^- + \bar{\nu}_e + \nu_\mu
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+%--------------------------------------------------------
+
+\phantom{a}
+
+\newpage
+\section{Problemas resueltos}
+
+% ==============================================================================
+% PROBLEMA 3: UMBRAL DE PRODUCCIÓN DE ANTIPROTONES
+% ==============================================================================
+
+\begin{problema}{Problema 3}
+Calcular la energía cinética mínima de un protón para que al colisionar con otro protón en reposo pueda producir antiprotones según la reacción:
+\begin{equation}
+p + p \longrightarrow p + p + p + \bar{p}
+\end{equation}
+
+\textit{Nota histórica:} Se trata de la reacción con la que se descubrió el antiprotón, realizada en 1955 por O. Chamberlain, E. Segrè, C. Wiegand y T. Ypsilantis.
+
+\tcblower
+
+\textbf{Solución:}
+
+Para determinar la energía cinética mínima (energía umbral) necesaria en el sistema del laboratorio, emplearemos la invariancia relativista del módulo del cuadrimomento total del sistema:
+\begin{equation}
+s = P^\mu P_\mu = \frac{E^2}{c^2} - |\vec{p}|^2 = \text{invariante de Lorentz}
+\end{equation}
+
+---
+
+\subsubsection*{1. Resolución en el Sistema de Referencia del Laboratorio (LAB)}
+
+Consideramos un protón proyectil $A$ en movimiento con cuadrimomento $P_A^\mu = \left( \frac{E_A}{c}, \vec{p}_A \right)$ y un protón blanco $B$ en reposo con cuadrimomento $P_B^\mu = \left( m_p c, \vec{0} \right)$.
+
+El cuadrimomento total del estado inicial es:
+\begin{equation}
+P_i^\mu = P_A^\mu + P_B^\mu = \left( \frac{E_A}{c} + m_p c, \, \vec{p}_A \right)
+\end{equation}
+
+Calculamos el invariante escalando $s$:
+\begin{align}
+s &= (P_i^\mu P_{i,\mu})_{\text{LAB}} = \left( \frac{E_A}{c} + m_p c \right)^2 - |\vec{p}_A|^2 \nonumber \\
+  &= \frac{E_A^2}{c^2} - |\vec{p}_A|^2 + m_p^2 c^2 + 2 E_A m_p \nonumber \\
+  &= m_p^2 c^2 + m_p^2 c^2 + 2 E_A m_p = 2 m_p^2 c^2 + 2 E_A m_p
+\end{align}
+donde se ha hecho uso de la relación relativista de dispersión $E_A^2 / c^2 - |\vec{p}_A|^2 = m_p^2 c^2$.
+
+En la condición de umbral ($\text{th}$), las cuatro partículas del estado final ($3p + 1\bar{p}$) se producen en reposo relativo en el sistema del centro de masas ($\vec{p}_{f,\text{CM}} = \vec{0}$). Por lo tanto, la energía total mínima del estado final es la suma de sus masas en reposo:
+\begin{equation}
+E_{f,\text{CM}}^{\text{min}} = \sum_{i=1}^{4} m_i c^2 = 4 m_p c^2
+\end{equation}
+
+El invariante $s$ evaluado en el estado final a la energía umbral en el CM resulta:
+\begin{equation}
+s = (P_f^\mu P_{f,\mu})_{\text{CM}} = \left( \frac{4 m_p c^2}{c} \right)^2 = 16 m_p^2 c^2
+\end{equation}
+
+Igualando los invariantes relativistas entre el laboratorio y el centro de masas ($s_{\text{LAB}} = s_{\text{CM}}$):
+\begin{equation}
+2 m_p^2 c^2 + 2 E_p^{\text{LAB}} m_p = 16 m_p^2 c^2
+\end{equation}
+\begin{equation}
+2 E_p^{\text{LAB}} m_p = 14 m_p^2 c^2 \implies E_p^{\text{LAB}} = 7 m_p c^2
+\end{equation}
+
+Por lo tanto, la energía cinética mínima (umbral) necesaria para el protón incidente en el laboratorio es:
+\begin{equation}
+T_p^{\text{th}} = E_p^{\text{LAB}} - m_p c^2 = 7 m_p c^2 - m_p c^2 = 6 m_p c^2
+\end{equation}
+
+Sustituyendo la masa del protón $m_p c^2 \approx 0.938 \text{ GeV}$:
+\begin{equation}
+T_p^{\text{th}} = 6 \times 0.938 \text{ GeV} \approx 5.63 \text{ GeV} \approx 5.6 \text{ BeV (o GeV)}
+\end{equation}
+
+---
+
+\subsubsection*{2. Resolución en el Sistema del Centro de Masas (CM)}
+
+En el sistema de referencia del centro de masas, ambos protones inciden con momentos iguales y opuestos:
+\begin{equation}
+P_A^\mu = \left( \frac{E_p^{\text{CM}}}{c}, \vec{p} \right), \qquad P_B^\mu = \left( \frac{E_p^{\text{CM}}}{c}, -\vec{p} \right)
+\end{equation}
+
+El cuadrimomento total inicial en el CM es $P_i^\mu = \left( \frac{2 E_p^{\text{CM}}}{c}, \vec{0} \right)$, cuyo invariante es:
+\begin{equation}
+s = (P_i^\mu P_{i,\mu})_{\text{CM}} = 4 \left( \frac{E_p^{\text{CM}}}{c} \right)^2 c^2 = 4 (E_p^{\text{CM}})^2
+\end{equation}
+
+Dado que en el umbral se crean 4 partículas idénticas de masa $m_p$ en reposo relativo, la energía total en el CM es:
+\begin{equation}
+E_{T}^{\text{CM}} = 2 E_p^{\text{CM}} = 4 m_p c^2 \implies E_p^{\text{CM}} = 2 m_p c^2
+\end{equation}
+
+Sustituyendo $E_p^{\text{CM}}$ en el invariante $s$:
+\begin{equation}
+s = 4 (2 m_p c^2)^2 = 16 m_p^2 c^2
+\end{equation}
+
+Igualando este resultado con la expresión del invariante obtenida en el laboratorio:
+\begin{equation}
+s_{\text{CM}} = s_{\text{LAB}} \implies 16 m_p^2 c^2 = 2 m_p^2 c^2 + 2 E_p^{\text{LAB}} m_p
+\end{equation}
+\begin{equation}
+14 m_p^2 c^2 = 2 E_p^{\text{LAB}} m_p \implies E_p^{\text{LAB}} = 7 m_p c^2
+\end{equation}
+
+Reobteniendo así la misma energía cinética umbral $T_p^{\text{LAB}} = E_p^{\text{LAB}} - m_p c^2 = 6 m_p c^2$.
+
+---
+
+\subsubsection*{3. Comparación Física: Experimentos de Blanco Fijo frente a Colisionadores}
+
+\begin{itemize}
+    \item \textbf{Inconveniencia de los experimentos de blanco fijo:} Para crear una masa neta de $2 m_p c^2$ (un par protón-antiprotón $p\bar{p}$), es necesario aportar una energía cinética de $6 m_p c^2$. Las dos terceras partes de la energía introducida ($4 m_p c^2$) se pierden como energía cinética de translación del centro de masas para garantizar la conservación del momento lineal.
+    \item \textbf{Ventaja de los colisionadores (ej. LHC):} En colisionadores con haces de momentos opuestos ($\vec{p}_{\text{total}} = \vec{0}$), el sistema del laboratorio coincide con el centro de masas. Toda la energía cinética de las partículas incidentes se aprovecha de forma efectiva para la producción de nuevas partículas.
+    \item \textbf{Ventaja técnica del blanco fijo:} A pesar de su menor eficiencia energética, los aceleradores de blanco fijo permiten interacciones con blancos de alta densidad de materia, lo que incrementa sustancialmente la sección eficaz efectiva y la probabilidad de colisión frente a los haces cruzados.
+\end{itemize}
+\end{problema}
+
+\newpage
+
+% ==============================================================================
+% PROBLEMA 4: ESTADO LIGADO DEL DEUTERÓN EN UN POZO ESFÉRICO ATRACTIVO
+% ==============================================================================
+
+\begin{problema}{Problema 4}
+Suponiendo que el deuterón, sistema formado por un neutrón y un protón, se pudiera describir como un estado ligado en onda $S$ ($L=0$), dar una estimación de la profundidad del pozo para un potencial de la forma:
+\begin{equation}
+V(r) = \begin{cases} -V_0, & r \le a \\ 0, & r > a \end{cases}
+\end{equation}
+siendo $a = 1.59 \text{ fm}$. Considerar que la energía de ligadura, $B = -E$, es mucho menor que la profundidad del pozo, $V_0$. 
+
+Representar gráficamente el comportamiento de la función de onda reducida, $u_L(r)$, que satisface la ecuación:
+\begin{equation}
+\left( -\frac{\hbar^2}{2\mu} \frac{d^2}{dr^2} + V(r) + \frac{\hbar^2 L(L+1)}{2\mu r^2} \right) u_L(r) = E u_L(r)
+\end{equation}
+
+\tcblower
+
+\textbf{Solución:}
+
+\subsubsection*{1. Separación de Variables y Ecuación Radial Reducida}
+
+Para un estado de momento angular orbital nulo ($L = 0$, onda $S$), el armónico esférico correspondiente es constante:
+\begin{equation}
+Y_{00}(\Omega) = \frac{1}{\sqrt{4\pi}} \implies \psi(\vec{r}) = R(r) Y_{00}(\Omega) = \frac{u(r)}{r} Y_{00}(\Omega)
+\end{equation}
+
+donde $R(r) = \frac{u(r)}{r}$ representa la función de onda radial y $u(r)$ es la función radial reducida. La ecuación de Schrödinger radial completa se reduce a:
+\begin{equation}
+\left( -\frac{\hbar^2}{2\mu} \frac{d^2}{dr^2} + V(r) + \frac{\hbar^2 L(L+1)}{2\mu r^2} \right) u(r) = E u(r)
+\end{equation}
+
+Al ser $L = 0$, el término de la barrera centrífuga se anula, resultando la ecuación diferencial unidimensional:
+\begin{equation}
+\frac{d^2 u(r)}{dr^2} + \frac{2\mu}{\hbar^2} \left( E - V(r) \right) u(r) = 0
+\end{equation}
+
+---
+
+\subsubsection*{2. Solución en las Regiones del Potencial}
+
+Analizamos la solución general en las dos regiones de continuidad del potencial de pozo cuadrado esférico para un estado ligado ($E = -B < 0$, con $B > 0$):
+
+\paragraph{Zona I ($r \le a$, $V(r) = -V_0$):}
+En el interior del pozo, el potencial es constante y atractivo:
+\begin{equation}
+\frac{d^2 u_I(r)}{dr^2} + \frac{2\mu}{\hbar^2} (V_0 - B) u_I(r) = 0 \implies \frac{d^2 u_I(r)}{dr^2} + \alpha^2 u_I(r) = 0
+\end{equation}
+donde definimos la constante de onda interna $\alpha$:
+\begin{equation}
+\alpha = \frac{\sqrt{2\mu (V_0 - B)}}{\hbar} = \frac{\sqrt{2\mu (V_0 + E)}}{\hbar}
+\end{equation}
+
+La solución general de esta ecuación armónica es:
+\begin{equation}
+u_I(r) = A \sin(\alpha r) + B' \cos(\alpha r)
+\end{equation}
+
+Para garantizar la regularidad de la función de onda en el origen ($r = 0$), se exige la condición de contorno $R(0) < \infty \implies u(0) = 0$. Dado que $\cos(0) = 1$, la constante $B'$ debe ser nula ($B' = 0$), quedando:
+\begin{equation}
+u_I(r) = A \sin(\alpha r)
+\end{equation}
+
+\paragraph{Zona II ($r > a$, $V(r) = 0$):}
+Fuera del pozo, la partícula se encuentra en la región clásicamente prohibida:
+\begin{equation}
+\frac{d^2 u_{II}(r)}{dr^2} - \frac{2\mu B}{\hbar^2} u_{II}(r) = 0 \implies \frac{d^2 u_{II}(r)}{dr^2} - k^2 u_{II}(r) = 0
+\end{equation}
+donde definimos la constante de atenuación externa $k$:
+\begin{equation}
+k = \frac{\sqrt{2\mu B}}{\hbar} = \frac{\sqrt{-2\mu E}}{\hbar}
+\end{equation}
+
+La solución general es una combinación de exponenciales real e invertida:
+\begin{equation}
+u_{II}(r) = C e^{-k r} + C' e^{+k r}
+\end{equation}
+
+Para que la función de onda sea normalizable y tienda a cero en el infinito ($u_{II}(r) \to 0$ cuando $r \to \infty$), se requiere $C' = 0$, obteniendo:
+\begin{equation}
+u_{II}(r) = C e^{-k r}
+\end{equation}
+
+---
+
+\subsubsection*{3. Condiciones de Contorno e Igualdad de la Derivada Logarítmica}
+
+Para garantizar la continuidad de la función de onda $u(r)$ y de su primera derivada $u'(r)$ en la frontera $r = a$, igualamos la derivada logarítmica a ambos lados:
+\begin{equation}
+\left. \frac{u_I'(r)}{u_I(r)} \right|_{r=a} = \left. \frac{u_{II}'(r)}{u_{II}(r)} \right|_{r=a}
+\end{equation}
+
+Sustituyendo $u_I(r) = A \sin(\alpha r)$ y $u_{II}(r) = C e^{-k r}$:
+\begin{equation}
+\frac{A \alpha \cos(\alpha a)}{A \sin(\alpha a)} = \frac{-C k e^{-k a}}{C e^{-k a}} \implies \alpha \cot(\alpha a) = -k
+\end{equation}
+
+Reagrupando la condición trascendente de cuantización:
+\begin{equation}
+\tan(\alpha a) = -\frac{\alpha}{k}
+\end{equation}
+
+---
+
+\subsubsection*{4. Condición de Pozo Poco Ligado ($V_0 \gg B$)}
+
+Utilizando el enunciado, sabemos que el deuterón es un sistema débilmente ligado donde la energía de ligadura $B = -E$ es mucho menor que la profundidad del pozo $V_0$ ($V_0 \gg B$):
+\begin{equation}
+\frac{\alpha}{k} = \frac{\sqrt{2\mu(V_0 - B)}/\hbar}{\sqrt{2\mu B}/\hbar} = \sqrt{\frac{V_0 - B}{B}} \approx \sqrt{\frac{V_0}{B}} \gg 1
+\end{equation}
+
+Puesto que el cociente $\frac{\alpha}{k}$ es un valor numérico muy grande, el término $-\frac{\alpha}{k}$ tiende a $-\infty$. Para que la función tangente tienda a $-\infty$, su argumento debe aproximarse por la izquierda al primer polo ($\pi / 2$) correspondiente al primer estado ligado (estado fundamental):
+\begin{equation}
+\alpha a \approx \frac{\pi}{2}
+\end{equation}
+
+---
+
+\subsubsection*{5. Representación Gráfica de la Función de Onda Reducida $u(r)$}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % Ejes coordenados
+  \draw[->, thick] (0,0) -- (6.0,0) node[right] {$r$};
+  \draw[->, thick] (0,-1.8) -- (0,2.8) node[above] {$u(r), V(r)$};
+  
+  % Pozo de potencial esquematico
+  \draw[dashed, red!80!black, thick] (0,-1.2) -- (2.2,-1.2) -- (2.2,0) -- (5.5,0);
+  \node[red!80!black, left] at (0,-1.2) {$-V_0$};
+  \node[red!80!black, above] at (1.1,-1.2) {$V(r) = -V_0$};
+  
+  % Línea del radio del pozo
+  \draw[dotted, gray, thick] (2.2,-1.5) -- (2.2,2.3);
+  \node[below, black] at (2.2,0) {$r = a$};
+  
+  % Region I: Curva senoidal u_I(r)
+  \draw[domain=0:2.2, samples=100, smooth, ultra thick, maincolor] 
+    plot (\x, {2.2*sin(deg(\x * 3.14159 / (2*2.2)))});
+    
+  % Region II: Curva exponencial decreciente u_II(r)
+  \draw[domain=2.2:5.5, samples=100, smooth, ultra thick, maincolor] 
+    plot (\x, {2.2*exp(-0.85*(\x - 2.2))});
+    
+  % Etiquetas de las soluciones
+  \node[maincolor, above] at (1.1,1.5) {$u_I(r) = A \sin(\alpha r)$};
+  \node[maincolor, above right] at (3.0,1.0) {$u_{II}(r) = C e^{-kr}$};
+  
+  % Punto de empalme suave
+  \fill[maincolor] (2.2,2.2) circle (2pt);
+  \node[above] at (2.2,2.3) {\small Empalme C$^1$ en $r=a$};
+\end{tikzpicture}
+\end{center}
+\end{problema}
+
+\newpage
+
+% ==============================================================================
+% EJERCICIO 12: ACOPLAMIENTO DE MOMENTOS ANGULARES Y SIMETRÍA DE ESPÍN
+% Solución completa: Apartado a) operadores de escalera y Clebsch-Gordan;
+% Apartado b) desarrollo explícito de la simetría de espín para s_a = 0, 1/2, 1
+% ==============================================================================
+
+\begin{problema}{Ejercicio 12}
+\begin{enumerate}[label=\alph*)]
+    \item El momento angular orbital $\ell$ y el espín de un electrón en un átomo de hidrógeno pueden acoplarse para dar dos valores del momento angular total $j = \ell \pm \frac{1}{2}$. Así, los estados P ($\ell = 1$) pueden tener $j = \frac{3}{2}$ (tetraplete) ó $j = \frac{1}{2}$ (doblete). 
+    
+    El estado $|j, m\rangle = \left|\frac{3}{2}, \frac{3}{2}\right\rangle$ viene definido unívocamente por el estado $|\ell, m_\ell\rangle \otimes |s, m_s\rangle = |1, 1\rangle \otimes \left|\frac{1}{2}, \frac{1}{2}\right\rangle$. Utilizar los operadores $J_- = L_- + S_-$ para obtener los otros tres estados del tetraplete. Comprobar la solución con la obtenida utilizando tablas de coeficientes de Clebsch-Gordan.
+
+    \textit{Nota:} La actuación de los operadores de escalera $J_\pm$ sobre un estado genérico $|j, m\rangle$ viene dada por:
+    \begin{equation}
+    J_\pm |j, m\rangle = \sqrt{j(j+1) - m(m \pm 1)} \, |j, m \pm 1\rangle
+    \end{equation}
+
+    \item Considerar dos partículas idénticas de espín $s_a$. Determinar la simetría de la función de onda de espín total en los casos: $s_a = 0$, $s_a = 1/2$ y $s_a = 1$.
+\end{enumerate}
+
+\tcblower
+
+\textbf{Solución:}
+
+\subsubsection*{Apartado a) Obtención de los estados del tetraplete mediante operadores de descenso}
+
+Trabajamos con el acoplamiento de un momento angular orbital $\ell = 1$ y un espín $s = 1/2$. El tetraplete corresponde al valor de momento angular total $j = 3/2$, con proyecciones $m_j \in \{+3/2, +1/2, -1/2, -3/2\}$.
+
+Para simplificar la notación, denotaremos la base desacoplada $|\ell, m_\ell\rangle |s, m_s\rangle$ simplemente como $|m_\ell\rangle |m_s\rangle$.
+
+\paragraph{1. Estado de máxima proyección ($m_j = +3/2$):}
+El estado superior del tetraplete es único y coincide exactamente con el producto directo de los estados de máxima proyección orbital y de espín:
+\begin{equation}
+\left| \frac{3}{2}, \frac{3}{2} \right\rangle = |1, 1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle
+\end{equation}
+
+\paragraph{2. Obtención del estado $\left| \frac{3}{2}, \frac{1}{2} \right\rangle$:}
+Aplicamos el operador de descenso $J_- = L_- + S_-$ a ambos lados de la igualdad anterior.
+
+\textit{Lado izquierdo (base acoplada):}
+\begin{align}
+J_- \left| \frac{3}{2}, \frac{3}{2} \right\rangle &= \sqrt{\frac{3}{2}\left(\frac{3}{2}+1\right) - \frac{3}{2}\left(\frac{3}{2}-1\right)} \left| \frac{3}{2}, \frac{1}{2} \right\rangle \nonumber \\
+&= \sqrt{\frac{15}{4} - \frac{3}{4}} \left| \frac{3}{2}, \frac{1}{2} \right\rangle = \sqrt{3} \left| \frac{3}{2}, \frac{1}{2} \right\rangle
+\end{align}
+
+\textit{Lado derecho (base desacoplada):}
+\begin{align}
+(L_- + S_-) \left[ |1, 1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle \right] &= (L_- |1, 1\rangle) \left| \frac{1}{2}, \frac{1}{2} \right\rangle + |1, 1\rangle \left( S_- \left| \frac{1}{2}, \frac{1}{2} \right\rangle \right) \nonumber \\
+&= \sqrt{1(1+1) - 1(0)} \, |1, 0\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + |1, 1\rangle \sqrt{\frac{1}{2}\left(\frac{3}{2}\right) - \frac{1}{2}\left(-\frac{1}{2}\right)} \left| \frac{1}{2}, -\frac{1}{2} \right\rangle \nonumber \\
+&= \sqrt{2} \, |1, 0\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + |1, 1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle
+\end{align}
+
+Igualando ambas expresiones y despejando $\left| \frac{3}{2}, \frac{1}{2} \right\rangle$:
+\begin{equation}
+\left| \frac{3}{2}, \frac{1}{2} \right\rangle = \sqrt{\frac{2}{3}} \, |1, 0\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + \sqrt{\frac{1}{3}} \, |1, 1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle
+\end{equation}
+
+\paragraph{3. Obtención del estado $\left| \frac{3}{2}, -\frac{1}{2} \right\rangle$:}
+Aplicamos nuevamente $J_-$ sobre el estado obtenido en el paso anterior.
+
+\textit{Lado izquierdo:}
+\begin{equation}
+J_- \left| \frac{3}{2}, \frac{1}{2} \right\rangle = \sqrt{\frac{3}{2}\left(\frac{5}{2}\right) - \frac{1}{2}\left(-\frac{1}{2}\right)} \left| \frac{3}{2}, -\frac{1}{2} \right\rangle = \sqrt{\frac{15}{4} + \frac{1}{4}} \left| \frac{3}{2}, -\frac{1}{2} \right\rangle = 2 \left| \frac{3}{2}, -\frac{1}{2} \right\rangle
+\end{equation}
+
+\textit{Lado derecho:}
+\begin{align}
+(L_- + S_-) &\left[ \sqrt{\frac{2}{3}} |1, 0\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + \sqrt{\frac{1}{3}} |1, 1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle \right] \nonumber \\
+&= \sqrt{\frac{2}{3}} \left[ \sqrt{2} |1, -1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + |1, 0\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle \right] + \sqrt{\frac{1}{3}} \left[ \sqrt{2} |1, 0\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle + 0 \right] \nonumber \\
+&= \frac{2}{\sqrt{3}} |1, -1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + \left( \sqrt{\frac{2}{3}} + \frac{\sqrt{2}}{\sqrt{3}} \right) |1, 0\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle \nonumber \\
+&= \frac{2}{\sqrt{3}} |1, -1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + 2 \sqrt{\frac{2}{3}} |1, 0\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle
+\end{align}
+
+Dividiendo entre $2$ a ambos lados:
+\begin{equation}
+\left| \frac{3}{2}, -\frac{1}{2} \right\rangle = \sqrt{\frac{1}{3}} \, |1, -1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + \sqrt{\frac{2}{3}} \, |1, 0\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle
+\end{equation}
+
+\paragraph{4. Obtención del estado $\left| \frac{3}{2}, -\frac{3}{2} \right\rangle$:}
+Aplicamos $J_-$ por tercera vez.
+
+\textit{Lado izquierdo:}
+\begin{equation}
+J_- \left| \frac{3}{2}, -\frac{1}{2} \right\rangle = \sqrt{\frac{15}{4} - \left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)} \left| \frac{3}{2}, -\frac{3}{2} \right\rangle = \sqrt{3} \left| \frac{3}{2}, -\frac{3}{2} \right\rangle
+\end{equation}
+
+\textit{Lado derecho:}
+\begin{align}
+(L_- + S_-) &\left[ \sqrt{\frac{1}{3}} |1, -1\rangle \left| \frac{1}{2}, \frac{1}{2} \right\rangle + \sqrt{\frac{2}{3}} |1, 0\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle \right] \nonumber \\
+&= \sqrt{\frac{1}{3}} \left[ 0 + |1, -1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle \right] + \sqrt{\frac{2}{3}} \left[ \sqrt{2} |1, -1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle + 0 \right] \nonumber \\
+&= \left( \frac{1}{\sqrt{3}} + \frac{2}{\sqrt{3}} \right) |1, -1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle = \frac{3}{\sqrt{3}} |1, -1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle = \sqrt{3} \, |1, -1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle
+\end{align}
+
+Dividiendo entre $\sqrt{3}$:
+\begin{equation}
+\left| \frac{3}{2}, -\frac{3}{2} \right\rangle = |1, -1\rangle \left| \frac{1}{2}, -\frac{1}{2} \right\rangle
+\end{equation}
+
+\paragraph{Comprobación con Coeficientes de Clebsch-Gordan:}
+La relación general de cambio de base viene dada por los coeficientes de Clebsch-Gordan:
+\begin{equation}
+|j, m_j\rangle = \sum_{m_{\ell}, m_s} \langle \ell, s; m_\ell, m_s | j, m_j \rangle \, |\ell, m_\ell\rangle |s, m_s\rangle
+\end{equation}
+Consultando la tabla de acoplamiento $1 \otimes 1/2$:
+\begin{itemize}
+    \item Para $j = 3/2, m_j = 3/2$: $\langle 1, 1/2; 1, 1/2 | 3/2, 3/2 \rangle = 1$.
+    \item Para $j = 3/2, m_j = 1/2$: $\langle 1, 1/2; 0, 1/2 | 3/2, 1/2 \rangle = \sqrt{2/3}$, \quad $\langle 1, 1/2; 1, -1/2 | 3/2, 1/2 \rangle = \sqrt{1/3}$.
+    \item Para $j = 3/2, m_j = -1/2$: $\langle 1, 1/2; -1, 1/2 | 3/2, -1/2 \rangle = \sqrt{1/3}$, \quad $\langle 1, 1/2; 0, -1/2 | 3/2, -1/2 \rangle = \sqrt{2/3}$.
+    \item Para $j = 3/2, m_j = -3/2$: $\langle 1, 1/2; -1, -1/2 | 3/2, -3/2 \rangle = 1$.
+\end{itemize}
+Los coeficientes obtenidos mediante los operadores de escalera coinciden exactamente con los de la tabla.
+
+\subsubsection*{Apartado b) Desarrollo completo y clasificación de simetría para $s_a = 0$, $s_a = 1/2$ y $s_a = 1$}
+
+El operador de permutación $P_{12}$ intercambia las etiquetas de dos partículas idénticas. Para dos partículas de espín $s_a$ acopladas a un espín total $S \in \{2s_a, 2s_a - 1, \dots, 0\}$, la acción de $P_{12}$ sobre un estado de la base acoplada $|S, M_S\rangle$ satisface la propiedad general:
+\begin{equation}
+P_{12} |S, M_S\rangle = (-1)^{2s_a - S} |S, M_S\rangle
+\end{equation}
+A continuación se realiza la construcción explícita de las combinaciones lineales en la base desacoplada y la verificación de su simetría bajo el intercambio de las dos partículas ($1 \leftrightarrow 2$) para los tres casos propuestos.
+
+\paragraph{1. Caso $s_a = 0$ (Bosones escalar / sin espín):}
+El acoplamiento de dos partículas con $s_1 = 0$ y $s_2 = 0$ conduce a un único valor posible de espín total:
+\begin{equation}
+0 \otimes 0 \implies S = 0 \quad (\text{dim: } 1 \times 1 = 1 \text{ estado})
+\end{equation}
+
+El estado resultante es el singlete $|0, 0\rangle = |0, 0\rangle_1 |0, 0\rangle_2$. Bajo el operador de permutación:
+\begin{equation}
+P_{12} |0, 0\rangle = (-1)^{2(0) - 0} |0, 0\rangle = +1 |0, 0\rangle \quad (\mathbf{\text{Simétrico}})
+\end{equation}
+
+\paragraph{2. Caso $s_a = 1/2$ (Fermiones de espín $1/2$):}
+El acoplamiento de dos fermiones de espín $s_1 = 1/2$ y $s_2 = 1/2$ genera:
+\begin{equation}
+\frac{1}{2} \otimes \frac{1}{2} \implies S = 1 \oplus 0 \quad (\text{dim: } 2 \times 2 = 4 \text{ estados})
+\end{equation}
+
+\subparagraph{A. Triplete de Espín ($S = 1$, 3 estados):}
+Partiendo de los estados de máxima y mínima proyección $M_S = \pm 1$:
+\begin{align}
+|1, 1\rangle &= \left|\frac{1}{2}, \frac{1}{2}\right\rangle_1 \left|\frac{1}{2}, \frac{1}{2}\right\rangle_2 \quad \xrightarrow{P_{12}} \quad +|1, 1\rangle \quad (\mathbf{\text{Simétrico}}) \\
+|1, -1\rangle &= \left|\frac{1}{2}, -\frac{1}{2}\right\rangle_1 \left|\frac{1}{2}, -\frac{1}{2}\right\rangle_2 \quad \xrightarrow{P_{12}} \quad +|1, -1\rangle \quad (\mathbf{\text{Simétrico}})
+\end{align}
+
+Para la proyección $M_S = 0$, utilizando la tabla de coeficientes de Clebsch-Gordan o aplicando el operador de descenso $S_- = S_{1,-} + S_{2,-}$:
+\begin{equation}
+|1, 0\rangle = \frac{1}{\sqrt{2}} \left|\frac{1}{2}, \frac{1}{2}\right\rangle_1 \left|\frac{1}{2}, -\frac{1}{2}\right\rangle_2 + \frac{1}{\sqrt{2}} \left|\frac{1}{2}, -\frac{1}{2}\right\rangle_1 \left|\frac{1}{2}, \frac{1}{2}\right\rangle_2
+\end{equation}
+Al intercambiar los índices $1 \leftrightarrow 2$, el estado permanece inalterado: $P_{12} |1, 0\rangle = +|1, 0\rangle$ ($\mathbf{\text{Simétrico}}$).
+
+\subparagraph{B. Singlete de Espín ($S = 0$, 1 estado):}
+El estado ortogonal con proyección $M_S = 0$ es:
+\begin{equation}
+|0, 0\rangle = \frac{1}{\sqrt{2}} \left|\frac{1}{2}, \frac{1}{2}\right\rangle_1 \left|\frac{1}{2}, -\frac{1}{2}\right\rangle_2 - \frac{1}{\sqrt{2}} \left|\frac{1}{2}, -\frac{1}{2}\right\rangle_1 \left|\frac{1}{2}, \frac{1}{2}\right\rangle_2
+\end{equation}
+Al intercambiar los índices $1 \leftrightarrow 2$, la función cambia de signo global: $P_{12} |0, 0\rangle = -|0, 0\rangle$ ($\mathbf{\text{Antisimétrico}}$).
+
+\textbf{Resumen para $s_a = 1/2$:}
+\begin{itemize}
+    \item $S = 1$ (3 estados): Factor $(-1)^{2(1/2) - 1} = (-1)^0 = +1 \implies \mathbf{3 \text{ estados simétricos}}$.
+    \item $S = 0$ (1 estado): Factor $(-1)^{2(1/2) - 0} = (-1)^1 = -1 \implies \mathbf{1 \text{ estado antisimétrico}}$.
+\end{itemize}
+
+\paragraph{3. Caso $s_a = 1$ (Bosones de espín $1$):}
+El acoplamiento de dos bosones vectoriales $s_1 = 1$ y $s_2 = 1$ genera:
+\begin{equation}
+1 \otimes 1 \implies S = 2 \oplus 1 \oplus 0 \quad (\text{dim: } 3 \times 3 = 9 \text{ estados})
+\end{equation}
+
+\subparagraph{A. Quintuplete de Espín ($S = 2$, 5 estados):}
+Los estados de proyección extrema son directamente simétricos:
+\begin{align}
+|2, 2\rangle &= |1, 1\rangle_1 |1, 1\rangle_2 \quad (\mathbf{\text{Simétrico}}) \\
+|2, -2\rangle &= |1, -1\rangle_1 |1, -1\rangle_2 \quad (\mathbf{\text{Simétrico}})
+\end{align}
+
+Obteniendo los estados restantes mediante el operador de descenso o los coeficientes de Clebsch-Gordan $1 \otimes 1$:
+\begin{align}
+|2, 1\rangle &= \frac{1}{\sqrt{2}} |1, 1\rangle_1 |1, 0\rangle_2 + \frac{1}{\sqrt{2}} |1, 0\rangle_1 |1, 1\rangle_2 \quad (\mathbf{\text{Simétrico}}) \\
+|2, 0\rangle &= \frac{1}{\sqrt{6}} |1, 1\rangle_1 |1, -1\rangle_2 + \sqrt{\frac{2}{3}} |1, 0\rangle_1 |1, 0\rangle_2 + \frac{1}{\sqrt{6}} |1, -1\rangle_1 |1, 1\rangle_2 \quad (\mathbf{\text{Simétrico}}) \\
+|2, -1\rangle &= \frac{1}{\sqrt{2}} |1, 0\rangle_1 |1, -1\rangle_2 + \frac{1}{\sqrt{2}} |1, -1\rangle_1 |1, 0\rangle_2 \quad (\mathbf{\text{Simétrico}})
+\end{align}
+Los 5 estados del multiplete $S = 2$ son estrictamente \textbf{simétricos} bajo el operador $P_{12}$.
+
+\subparagraph{B. Triplete de Espín ($S = 1$, 3 estados):}
+Los estados ortogonales con $S = 1$ se construyen como diferencias antisimétricas:
+\begin{align}
+|1, 1\rangle &= \frac{1}{\sqrt{2}} |1, 1\rangle_1 |1, 0\rangle_2 - \frac{1}{\sqrt{2}} |1, 0\rangle_1 |1, 1\rangle_2 \quad (\mathbf{\text{Antisimétrico}}) \\
+|1, 0\rangle &= \frac{1}{\sqrt{2}} |1, 1\rangle_1 |1, -1\rangle_2 - \frac{1}{\sqrt{2}} |1, -1\rangle_1 |1, 1\rangle_2 \quad (\mathbf{\text{Antisimétrico}}) \\
+|1, -1\rangle &= \frac{1}{\sqrt{2}} |1, 0\rangle_1 |1, -1\rangle_2 - \frac{1}{\sqrt{2}} |1, -1\rangle_1 |1, 0\rangle_2 \quad (\mathbf{\text{Antisimétrico}})
+\end{align}
+Los 3 estados del multiplete $S = 1$ son estrictamente \textbf{antisimétricos} bajo el operador $P_{12}$.
+
+\subparagraph{C. Singlete de Espín ($S = 0$, 1 estado):}
+El estado totalmente ortogonal para $S = 0$ adopta la forma:
+\begin{equation}
+|0, 0\rangle = \frac{1}{\sqrt{3}} |1, 1\rangle_1 |1, -1\rangle_2 - \frac{1}{\sqrt{3}} |1, 0\rangle_1 |1, 0\rangle_2 + \frac{1}{\sqrt{3}} |1, -1\rangle_1 |1, 1\rangle_2
+\end{equation}
+Al permutar las partículas $1 \leftrightarrow 2$, el primer y tercer término se transforman mutuamente mientras el término central permanece idéntico, resultando $P_{12} |0, 0\rangle = +|0, 0\rangle$ ($\mathbf{\text{Simétrico}}$).
+
+\textbf{Resumen para $s_a = 1$:}
+\begin{itemize}
+    \item $S = 2$ (5 estados): Factor $(-1)^{2(1) - 2} = (-1)^0 = +1 \implies \mathbf{5 \text{ estados simétricos}}$.
+    \item $S = 1$ (3 estados): Factor $(-1)^{2(1) - 1} = (-1)^1 = -1 \implies \mathbf{3 \text{ estados antisimétricos}}$.
+    \item $S = 0$ (1 estado): Factor $(-1)^{2(1) - 0} = (-1)^2 = +1 \implies \mathbf{1 \text{ estado simétrico}}$.
+\end{itemize}
+
+Para dos bosones de dimensión individual $N = 2s_a + 1 = 3$, el número total de estados simétricos es $\frac{N(N+1)}{2} = \frac{3 \times 4}{2} = 6$ ($5 + 1$), y el de estados antisimétricos es $\frac{N(N-1)}{2} = \frac{3 \times 2}{2} = 3$.
+
+\paragraph{Conclusión general de simetría:}
+Los resultados anteriores para $s_a = 0, 1/2, 1$ ponen de manifiesto una regla general que depende únicamente de la naturaleza cuántica (fermiónica o bosónica) de las dos partículas idénticas acopladas:
+\begin{itemize}
+    \item \textbf{Fermiones} (espín semientero $s_a$): si se acoplan a un momento angular total $S$ \textbf{impar}, el estado de espín resultante es \textbf{simétrico}; si $S$ es \textbf{par}, el estado es \textbf{antisimétrico}.
+    \item \textbf{Bosones} (espín entero $s_a$): la regla es exactamente la inversa. Si $S$ es \textbf{par}, el estado es \textbf{simétrico}; si $S$ es \textbf{impar}, el estado es \textbf{antisimétrico}.
+\end{itemize}
+Esta regla se deduce directamente del factor de fase $(-1)^{2s_a - S}$: para fermiones $2s_a$ es impar, por lo que el signo global resulta $+1$ cuando $S$ es impar y $-1$ cuando $S$ es par; para bosones $2s_a$ es par, y el signo sigue entonces la paridad de $S$ de forma directa, invirtiendo así el criterio respecto al caso fermiónico.
+\end{problema}

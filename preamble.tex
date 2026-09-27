@@ -1,0 +1,171 @@
+% ==============================================================================
+% PREAMBLE.TEX - Configuración, Paquetes y Entornos Estilizados
+% ==============================================================================
+
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm, headheight=14pt]{geometry}
+\raggedbottom % Evita errores 'Underfull \vbox' equilibrando márgenes inferiores
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}   % Tablas de calidad editorial
+\usepackage{tabularx}   % Tablas ajustables
+\usepackage{microtype}  % Mejora tipográfica de justificación
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems, skins, breakable}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\usepackage{tikz}
+\usetikzlibrary{babel}
+
+% Registro completo de niveles en la tabla de contenidos
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+% ------------------------------------------------------------------------------
+% Paleta de Colores Académicos
+% ------------------------------------------------------------------------------
+\definecolor{maincolor}{RGB}{27, 54, 93}      % Azul Marino Profundo (Títulos/Encabezados)
+\definecolor{accentcolor}{RGB}{0, 128, 128}    % Azul Teal / Turquesa Oscuro
+\definecolor{defcolor}{RGB}{41, 128, 185}     % Azul Definición
+\definecolor{conceptcolor}{RGB}{31, 78, 121}   % Azul Concepto Clave
+\definecolor{excolor}{RGB}{39, 174, 96}       % Verde Ejemplo Resuelto
+\definecolor{notecolor}{RGB}{142, 68, 173}    % Morado Nota / Observación
+\definecolor{bglight}{RGB}{248, 249, 250}     % Fondo neutro claro
+
+% ------------------------------------------------------------------------------
+% Configuración de Hyperref
+% ------------------------------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=maincolor,
+    citecolor=accentcolor,
+    urlcolor=accentcolor,
+    pdfstartview=FitH
+}
+
+% ------------------------------------------------------------------------------
+% Configuración de Encabezados y Pies a Doble Cara (fancyhdr)
+% ------------------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+
+% Páginas Pares (Izquierda / Left): Capítulo a la izq, Número de página a la der.
+\fancyhead[LE]{\small\bfseries\color{maincolor}\leftmark}
+\fancyhead[RE]{\small\bfseries\color{maincolor}\thepage}
+
+% Páginas Impares (Derecha / Right): Número de página a la izq, Sección a la der.
+\fancyhead[LO]{\small\bfseries\color{maincolor}\thepage}
+\fancyhead[RO]{\small\bfseries\color{maincolor}\rightmark}
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Estilo plano para portadas e inicios de capítulo
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% ------------------------------------------------------------------------------
+% Entornos Estilizados (tcolorbox)
+% ------------------------------------------------------------------------------
+
+% 1. Entorno Definición
+\newtcolorbox[auto counter, number within=chapter]{definicion}[1][]{%
+  enhanced,
+  breakable,
+  colback=bglight,
+  colframe=defcolor,
+  fonttitle=\bfseries\color{white},
+  title={Definición \thetcbcounter\if\relax\detokenize{#1}\relax\else\ (#1)\fi},
+  attach boxed title to top left,
+  boxed title style={colback=defcolor, sharp corners},
+  arc=2pt,
+  boxrule=0.8pt,
+  top=8pt, bottom=8pt, left=10pt, right=10pt
+}
+
+% 2. Entorno Concepto / Principio Clave
+\newtcolorbox[auto counter, number within=chapter]{concepto}[1][]{%
+  enhanced,
+  breakable,
+  colback=maincolor!4!white,
+  colframe=conceptcolor,
+  fonttitle=\bfseries\color{white},
+  title={Principio Fundamental \thetcbcounter\if\relax\detokenize{#1}\relax\else\ (#1)\fi},
+  attach boxed title to top left,
+  boxed title style={colback=conceptcolor, sharp corners},
+  arc=2pt,
+  boxrule=0.8pt,
+  top=8pt, bottom=8pt, left=10pt, right=10pt
+}
+
+% 3. Entorno Ejemplo Resuelto
+\newtcolorbox[auto counter, number within=chapter]{ejemplo}[1][]{%
+  enhanced,
+  breakable,
+  colback=excolor!4!white,
+  colframe=excolor,
+  fonttitle=\bfseries\color{white},
+  title={Ejemplo Resuelto \thetcbcounter\if\relax\detokenize{#1}\relax\else\ (#1)\fi},
+  attach boxed title to top left,
+  boxed title style={colback=excolor, sharp corners},
+  arc=2pt,
+  boxrule=0.8pt,
+  top=8pt, bottom=8pt, left=10pt, right=10pt
+}
+
+% 4. Entorno Observación / Nota Técnica
+\newtcolorbox{observacion}[1][Observación]{%
+  enhanced,
+  breakable,
+  colback=notecolor!4!white,
+  colframe=notecolor,
+  fonttitle=\bfseries\color{white},
+  title={#1},
+  attach boxed title to top left,
+  boxed title style={colback=notecolor, sharp corners},
+  arc=2pt,
+  boxrule=0.8pt,
+  top=8pt, bottom=8pt, left=10pt, right=10pt
+}
+
+% ------------------------------------------------------------------------------
+% Entorno para Problemas de la Lista del Profesor
+% ------------------------------------------------------------------------------
+\newtcolorbox{problema}[1]{%
+  enhanced,
+  breakable,
+  colback=bglight,
+  colframe=maincolor,
+  fonttitle=\bfseries\color{white},
+  title={#1},
+  attach boxed title to top left,
+  boxed title style={colback=maincolor, sharp corners},
+  arc=2pt,
+  boxrule=0.8pt,
+  top=8pt, bottom=8pt, left=10pt, right=10pt
+}
+
+% ------------------------------------------------------------------------------
+% Macros y Comandos de Física de Partículas
+% ------------------------------------------------------------------------------
+\newcommand{\eV}{\text{ eV}}
+\newcommand{\keV}{\text{ keV}}
+\newcommand{\MeV}{\text{ MeV}}
+\newcommand{\GeV}{\text{ GeV}}
+\newcommand{\TeV}{\text{ TeV}}
+\newcommand{\fm}{\text{ fm}}
+\newcommand{\SU}[1]{\text{SU}(#1)}
+\newcommand{\U}[1]{\text{U}(#1)}
+\newcommand{\SO}[1]{\text{SO}(#1)}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\bracket}[2]{\langle #1 | #2 \rangle}
