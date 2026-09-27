@@ -100,7 +100,7 @@ En principio, las tres interacciones pueden intervenir en las reacciones o desin
 \end{table}
 
 \newpage
-\subsection{Análisis Detallado de un Proceso: La Desintegración $\Lambda^0 \to p + \pi^-$}
+\subsection{Análisis Detallado de un Proceso: La Desintegración \texorpdfstring{$\Lambda^0 \to p + \pi^-$}{Lambda0 -> p + pi-}}
 
 Consideremos el proceso de desintegración del hiperón neutral $\Lambda^0$:
 \begin{equation}
@@ -673,13 +673,13 @@ Permitiendo únicamente la desintegración débil de los muones a través de:
 \phantom{a}
 
 \newpage
-\section{Problemas resueltos}
+\seccionproblemas
 
 % ==============================================================================
 % PROBLEMA 3: UMBRAL DE PRODUCCIÓN DE ANTIPROTONES
 % ==============================================================================
 
-\begin{problema}{Problema 3}
+\begin{problema}[Umbral de producción de antiprotones]
 Calcular la energía cinética mínima de un protón para que al colisionar con otro protón en reposo pueda producir antiprotones según la reacción:
 \begin{equation}
 p + p \longrightarrow p + p + p + \bar{p}
@@ -689,16 +689,12 @@ p + p \longrightarrow p + p + p + \bar{p}
 
 \tcblower
 
-\textbf{Solución:}
-
 Para determinar la energía cinética mínima (energía umbral) necesaria en el sistema del laboratorio, emplearemos la invariancia relativista del módulo del cuadrimomento total del sistema:
 \begin{equation}
 s = P^\mu P_\mu = \frac{E^2}{c^2} - |\vec{p}|^2 = \text{invariante de Lorentz}
 \end{equation}
 
----
-
-\subsubsection*{1. Resolución en el Sistema de Referencia del Laboratorio (LAB)}
+\paragraph{1. Resolución en el Sistema de Referencia del Laboratorio (LAB)}
 
 Consideramos un protón proyectil $A$ en movimiento con cuadrimomento $P_A^\mu = \left( \frac{E_A}{c}, \vec{p}_A \right)$ y un protón blanco $B$ en reposo con cuadrimomento $P_B^\mu = \left( m_p c, \vec{0} \right)$.
 
@@ -743,9 +739,7 @@ Sustituyendo la masa del protón $m_p c^2 \approx 0.938 \text{ GeV}$:
 T_p^{\text{th}} = 6 \times 0.938 \text{ GeV} \approx 5.63 \text{ GeV} \approx 5.6 \text{ BeV (o GeV)}
 \end{equation}
 
----
-
-\subsubsection*{2. Resolución en el Sistema del Centro de Masas (CM)}
+\paragraph{2. Resolución en el Sistema del Centro de Masas (CM)}
 
 En el sistema de referencia del centro de masas, ambos protones inciden con momentos iguales y opuestos:
 \begin{equation}
@@ -777,9 +771,7 @@ s_{\text{CM}} = s_{\text{LAB}} \implies 16 m_p^2 c^2 = 2 m_p^2 c^2 + 2 E_p^{\tex
 
 Reobteniendo así la misma energía cinética umbral $T_p^{\text{LAB}} = E_p^{\text{LAB}} - m_p c^2 = 6 m_p c^2$.
 
----
-
-\subsubsection*{3. Comparación Física: Experimentos de Blanco Fijo frente a Colisionadores}
+\paragraph{3. Comparación Física: Experimentos de Blanco Fijo frente a Colisionadores}
 
 \begin{itemize}
     \item \textbf{Inconveniencia de los experimentos de blanco fijo:} Para crear una masa neta de $2 m_p c^2$ (un par protón-antiprotón $p\bar{p}$), es necesario aportar una energía cinética de $6 m_p c^2$. Las dos terceras partes de la energía introducida ($4 m_p c^2$) se pierden como energía cinética de translación del centro de masas para garantizar la conservación del momento lineal.
@@ -794,7 +786,7 @@ Reobteniendo así la misma energía cinética umbral $T_p^{\text{LAB}} = E_p^{\t
 % PROBLEMA 4: ESTADO LIGADO DEL DEUTERÓN EN UN POZO ESFÉRICO ATRACTIVO
 % ==============================================================================
 
-\begin{problema}{Problema 4}
+\begin{problema}[Estado ligado del deuterón en un pozo esférico atractivo]
 Suponiendo que el deuterón, sistema formado por un neutrón y un protón, se pudiera describir como un estado ligado en onda $S$ ($L=0$), dar una estimación de la profundidad del pozo para un potencial de la forma:
 \begin{equation}
 V(r) = \begin{cases} -V_0, & r \le a \\ 0, & r > a \end{cases}
@@ -808,9 +800,7 @@ Representar gráficamente el comportamiento de la función de onda reducida, $u_
 
 \tcblower
 
-\textbf{Solución:}
-
-\subsubsection*{1. Separación de Variables y Ecuación Radial Reducida}
+\paragraph{1. Separación de Variables y Ecuación Radial Reducida}
 
 Para un estado de momento angular orbital nulo ($L = 0$, onda $S$), el armónico esférico correspondiente es constante:
 \begin{equation}
@@ -827,9 +817,7 @@ Al ser $L = 0$, el término de la barrera centrífuga se anula, resultando la ec
 \frac{d^2 u(r)}{dr^2} + \frac{2\mu}{\hbar^2} \left( E - V(r) \right) u(r) = 0
 \end{equation}
 
----
-
-\subsubsection*{2. Solución en las Regiones del Potencial}
+\paragraph{2. Solución en las Regiones del Potencial}
 
 Analizamos la solución general en las dos regiones de continuidad del potencial de pozo cuadrado esférico para un estado ligado ($E = -B < 0$, con $B > 0$):
 
@@ -873,9 +861,7 @@ Para que la función de onda sea normalizable y tienda a cero en el infinito ($u
 u_{II}(r) = C e^{-k r}
 \end{equation}
 
----
-
-\subsubsection*{3. Condiciones de Contorno e Igualdad de la Derivada Logarítmica}
+\paragraph{3. Condiciones de Contorno e Igualdad de la Derivada Logarítmica}
 
 Para garantizar la continuidad de la función de onda $u(r)$ y de su primera derivada $u'(r)$ en la frontera $r = a$, igualamos la derivada logarítmica a ambos lados:
 \begin{equation}
@@ -892,9 +878,7 @@ Reagrupando la condición trascendente de cuantización:
 \tan(\alpha a) = -\frac{\alpha}{k}
 \end{equation}
 
----
-
-\subsubsection*{4. Condición de Pozo Poco Ligado ($V_0 \gg B$)}
+\paragraph{4. Condición de Pozo Poco Ligado ($V_0 \gg B$)}
 
 Utilizando el enunciado, sabemos que el deuterón es un sistema débilmente ligado donde la energía de ligadura $B = -E$ es mucho menor que la profundidad del pozo $V_0$ ($V_0 \gg B$):
 \begin{equation}
@@ -906,9 +890,7 @@ Puesto que el cociente $\frac{\alpha}{k}$ es un valor numérico muy grande, el t
 \alpha a \approx \frac{\pi}{2}
 \end{equation}
 
----
-
-\subsubsection*{5. Representación Gráfica de la Función de Onda Reducida $u(r)$}
+\paragraph{5. Representación Gráfica de la Función de Onda Reducida $u(r)$}
 
 \begin{center}
 \begin{tikzpicture}[scale=1.1]
@@ -952,7 +934,7 @@ Puesto que el cociente $\frac{\alpha}{k}$ es un valor numérico muy grande, el t
 % Apartado b) desarrollo explícito de la simetría de espín para s_a = 0, 1/2, 1
 % ==============================================================================
 
-\begin{problema}{Ejercicio 12}
+\begin{problema}[Acoplamiento de momentos angulares y simetría de espín]
 \begin{enumerate}[label=\alph*)]
     \item El momento angular orbital $\ell$ y el espín de un electrón en un átomo de hidrógeno pueden acoplarse para dar dos valores del momento angular total $j = \ell \pm \frac{1}{2}$. Así, los estados P ($\ell = 1$) pueden tener $j = \frac{3}{2}$ (tetraplete) ó $j = \frac{1}{2}$ (doblete). 
     
@@ -968,9 +950,7 @@ Puesto que el cociente $\frac{\alpha}{k}$ es un valor numérico muy grande, el t
 
 \tcblower
 
-\textbf{Solución:}
-
-\subsubsection*{Apartado a) Obtención de los estados del tetraplete mediante operadores de descenso}
+\paragraph{a) Obtención de los estados del tetraplete mediante operadores de descenso}
 
 Trabajamos con el acoplamiento de un momento angular orbital $\ell = 1$ y un espín $s = 1/2$. El tetraplete corresponde al valor de momento angular total $j = 3/2$, con proyecciones $m_j \in \{+3/2, +1/2, -1/2, -3/2\}$.
 
@@ -1058,7 +1038,7 @@ Consultando la tabla de acoplamiento $1 \otimes 1/2$:
 \end{itemize}
 Los coeficientes obtenidos mediante los operadores de escalera coinciden exactamente con los de la tabla.
 
-\subsubsection*{Apartado b) Desarrollo completo y clasificación de simetría para $s_a = 0$, $s_a = 1/2$ y $s_a = 1$}
+\paragraph{b) Desarrollo completo y clasificación de simetría para $s_a = 0$, $s_a = 1/2$ y $s_a = 1$}
 
 El operador de permutación $P_{12}$ intercambia las etiquetas de dos partículas idénticas. Para dos partículas de espín $s_a$ acopladas a un espín total $S \in \{2s_a, 2s_a - 1, \dots, 0\}$, la acción de $P_{12}$ sobre un estado de la base acoplada $|S, M_S\rangle$ satisface la propiedad general:
 \begin{equation}

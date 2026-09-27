@@ -25,6 +25,14 @@
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
 
+\newcounter{problemacontador}[chapter]
+
+\newcommand{\seccionproblemas}[1][Problemas resueltos]{%
+  \section{#1}%
+  \setcounter{problemacontador}{0}%
+}
+
+
 % ------------------------------------------------------------------------------
 % Paleta de Colores Académicos
 % ------------------------------------------------------------------------------
@@ -35,6 +43,7 @@
 \definecolor{excolor}{RGB}{39, 174, 96}       % Verde Ejemplo Resuelto
 \definecolor{notecolor}{RGB}{142, 68, 173}    % Morado Nota / Observación
 \definecolor{bglight}{RGB}{248, 249, 250}     % Fondo neutro claro
+\definecolor{boxbg}{RGB}{245, 247, 250}       % Fondo claro para cajas
 
 % ------------------------------------------------------------------------------
 % Configuración de Hyperref
@@ -140,18 +149,19 @@
 % ------------------------------------------------------------------------------
 % Entorno para Problemas de la Lista del Profesor
 % ------------------------------------------------------------------------------
-\newtcolorbox{problema}[1]{%
+% 8. PROBLEMA RESUELTO (Púrpura)
+\newtcolorbox{problema}[1][]{
   enhanced,
   breakable,
-  colback=bglight,
+  colback=boxbg,
   colframe=maincolor,
-  fonttitle=\bfseries\color{white},
-  title={#1},
-  attach boxed title to top left,
-  boxed title style={colback=maincolor, sharp corners},
-  arc=2pt,
-  boxrule=0.8pt,
-  top=8pt, bottom=8pt, left=10pt, right=10pt
+  fonttitle=\bfseries,
+  coltitle=white,
+  arc=2mm,
+  boxrule=1pt,
+  code={\refstepcounter{problemacontador}},
+  title={Problema~\theproblemacontador\ifstrempty{#1}{}{: #1}},
+  lower separated=true
 }
 
 % ------------------------------------------------------------------------------
