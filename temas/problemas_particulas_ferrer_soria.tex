@@ -1,0 +1,106 @@
+% !TEX root = ../main.tex
+
+\chapter{Problemas Resueltos de Física de Partículas: Ferrer Soria y Ros Martínez}
+\label{chap:problemas_particulas_ferrer_soria}
+
+\section{Constituyentes de la materia: introducción y generalidades}
+
+% ==============================================================================
+% PROBLEMA 1: CONSTANTES DE ACOPLO DE LAS INTERACCIONES FUNDAMENTALES
+% ==============================================================================
+
+\begin{problema}[Constantes de acoplo de las interacciones fundamentales]
+\begin{enumerate}[label=\alph*)]
+    \item Utilizando las fórmulas del texto, definir cuatro constantes adimensionales $\alpha$, $\alpha_w$, $\alpha_s$ y $\alpha_g$, que caractericen las cuatro interacciones fundamentales (electromagnética, débil, fuerte y gravitacional).
+    \item Calcular el valor numérico de dichas constantes así como el error en dichos valores. Indicar cuando sea posible el método de medida utilizado (se podrán consultar los apéndices así como los datos aportados en el resto del libro).
+\end{enumerate}
+
+\tcblower
+
+\paragraph{a) Definición formal de las constantes adimensionales de acoplamiento}
+
+En física subatómica no existe una única definición universal para todas las constantes de acoplamiento, dado que la intensidad efectiva de cada interacción varía en función de la escala de energía a la que se evalúa el proceso (constantes de acoplamiento efectivas o corrientes). A continuación se especifican las cuatro constantes adimensionales más habituales:
+
+1. \textbf{Interacción electromagnética ($\alpha$):} Se define mediante la constante de estructura fina, que mide la intensidad del acoplamiento entre partículas cargadas y el fotón mediador:
+\begin{equation}
+\alpha = \frac{e^2}{4\pi \varepsilon_0 \hbar c}
+\end{equation}
+
+2. \textbf{Interacción débil ($\alpha_w$):} Por analogía con la electrodinámica, se define a partir de la constante de acoplamiento $g$ asociada al grupo de simetría $SU(2)_L$ del modelo electrodébil de Glashow-Weinberg-Salam:
+\begin{equation}
+\alpha_w = \frac{g^2}{4\pi \hbar c}
+\end{equation}
+Puesto que la carga elemental y la constante de acoplamiento débil se relacionan mediante el ángulo de mezcla débil (ángulo de Weinberg, $\theta_w$) a través de $|e| = g \sin\theta_w$, la constante $\alpha_w$ adopta equivalentemente la forma:
+\begin{equation}
+\alpha_w = \frac{\alpha}{\sin^2\theta_w}
+\end{equation}
+A baja energía ($E \ll M_W$), la interacción débil suele describirse alternativamente mediante la constante de Fermi $G_F$ en el marco de la teoría efectiva de cuatro fermiones.
+
+3. \textbf{Interacción fuerte ($\alpha_s$):} A altas energías (régimen perturbativo de la Cromodinámica Cuántica, QCD), se define mediante la constante de acoplamiento $g_s$ entre quarks y gluones asociada al grupo de simetría de color $SU(3)_C$:
+\begin{equation}
+\alpha_s = \frac{g_s^2}{4\pi \hbar c}
+\end{equation}
+
+4. \textbf{Interacción gravitacional ($\alpha_g$):} Por comparación entre la ley de gravitación de Newton $F = G_N m_1 m_2 / r^2$ y la ley de Coulomb $F = e^2 / (4\pi\varepsilon_0 r^2)$, se construye una constante adimensional fijando una masa de referencia $m$:
+\begin{equation}
+\alpha_g = \frac{G_N m^2}{\hbar c}
+\end{equation}
+Dado que la gravedad no posee una carga elemental fija análoga a $e$, la elección de la masa $m$ es arbitraria. Habitualmente se toma la masa del protón ($m = m_p$) para comparar la intensidad gravitatoria con las fuerzas subatómicas entre hadrones.
+
+\paragraph{b) Valores numéricos, precisión y métodos experimentales de medida}
+
+1. \textbf{Constante electromagnética ($\alpha$):}
+A bajas energías (escala de la masa del electrón $Q \sim m_e c^2$), el cálculo a partir de los valores tabulados de $e, \varepsilon_0, \hbar, c$ proporciona $\alpha^{-1} \approx 137.036$. Las medidas directas más precisas proceden de la determinación del momento magnético anómalo del electrón ($g-2$) e interferometría de retroceso atómico, alcanzando una precisión relativa de $4 \times 10^{-9}$:
+\begin{equation}
+\alpha(m_e) \approx \frac{1}{137.035999263(10)}
+\end{equation}
+A la escala de masa del bosón $Z$ ($Q = M_Z \approx 91.2\text{ GeV}$), el apantallamiento de carga debido a la polarización del vacío modifica su valor hasta $\alpha(M_Z) = 1/127.9(1)$.
+
+2. \textbf{Constante débil ($\alpha_w$):}
+A la escala $M_Z$, utilizando $\alpha(M_Z) = 1/127.9(1)$ y el valor medido del ángulo de Weinberg $\sin^2\theta_w = 0.2227(10)$ (determinado a partir de las asimetrías de desintegración del bosón $Z$ en colisionadores $e^+e^-$ como LEP y SLC), resulta:
+\begin{equation}
+\alpha_w(M_Z) = \frac{1/127.9(1)}{0.2227(10)} = \frac{1}{28.71(13)} \approx 0.0348
+\end{equation}
+La precisión relativa asociada a este valor es de $4.5 \times 10^{-3}$ ($0.45\%$).
+
+3. \textbf{Constante fuerte ($\alpha_s$):}
+El valor de $\alpha_s$ se extrae experimentalmente de múltiples observables a altas energías, destacando el cociente de secciones eficaces $R_{\text{had}} = \sigma(e^+e^- \to \text{hadrones}) / \sigma(e^+e^- \to \mu^+\mu^-)$ y las razones de ramificación $\text{BR}(Z \to \text{hadrones})$ y $\text{BR}(\tau \to \text{hadrones})$. A la escala $M_Z$, se obtiene:
+\begin{equation}
+\alpha_s(M_Z) = 0.119 \pm 0.002
+\end{equation}
+con una precisión relativa de $1.7 \times 10^{-2}$ ($1.7\%$).
+
+4. \textbf{Constante gravitacional ($\alpha_g$):}
+Empleando la constante de gravitación universal de Newton $G_N = 6.6742(10) \times 10^{-11}\text{ m}^3\text{kg}^{-1}\text{s}^{-2}$ (medida mediante balanzas de torsión a escala de laboratorio $r \sim 1\text{ m}$) y la masa del protón $m_p = 1.6726 \times 10^{-27}\text{ kg}$, se obtiene:
+\begin{equation}
+\alpha_g = \frac{G_N m_p^2}{\hbar c} \approx 5.87 \times 10^{-39}
+\end{equation}
+La precisión del valor obtenido está limitada por la incertidumbre experimental de $G_N$, situándose en $1.5 \times 10^{-4}$ ($10^{-4}$).
+
+% Hueco para Diagrama Explicativo / Esquema de Evolución de las Constantes de Acoplo
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Cuadro delimitador para diagrama
+  \draw[dashed, gray!80, thick] (-0.5,-0.5) rectangle (12.5,4.5);
+  \node[gray] at (6,2) {\textit{[Espacio reservado para el diagrama de evolución de las constantes de acoplo $\alpha_i(Q^2)$]}};
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Resumen comparativo de las interacciones fundamentales}
+
+Los resultados y parámetros analizados se resumen de forma esquemática en la siguiente tabla:
+
+\begin{center}
+\small
+\begin{tabular}{lccccc}
+\hline\hline
+\textbf{Interacción} & \textbf{Constante} & \textbf{Expresión analítica} & \textbf{Escala $Q$} & \textbf{Valor numérico} & \textbf{Precisión} \\
+\hline
+Electromagnética & $\alpha$ & $\frac{e^2}{4\pi\varepsilon_0\hbar c}$ & $m_e$ & $\frac{1}{137.036}$ & $4 \times 10^{-9}$ \\
+Débil & $\alpha_w$ & $\frac{\alpha}{\sin^2\theta_w}$ & $M_Z$ & $\frac{1}{28.71} \approx 0.035$ & $4.5 \times 10^{-3}$ \\
+Fuerte & $\alpha_s$ & $\frac{g_s^2}{4\pi\hbar c}$ & $M_Z$ & $0.119$ & $1.7 \times 10^{-2}$ \\
+Gravitacional & $\alpha_g$ & $\frac{G_N m_p^2}{\hbar c}$ & $\sim 1\text{ m}$ & $5.87 \times 10^{-39}$ & $1.5 \times 10^{-4}$ \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{problema}

@@ -1143,3 +1143,390 @@ Los resultados anteriores para $s_a = 0, 1/2, 1$ ponen de manifiesto una regla g
 \end{itemize}
 Esta regla se deduce directamente del factor de fase $(-1)^{2s_a - S}$: para fermiones $2s_a$ es impar, por lo que el signo global resulta $+1$ cuando $S$ es impar y $-1$ cuando $S$ es par; para bosones $2s_a$ es par, y el signo sigue entonces la paridad de $S$ de forma directa, invirtiendo así el criterio respecto al caso fermiónico.
 \end{problema}
+
+\newpage
+
+\begin{problema}[Expansión del universo]
+Una hipótesis que se postuló para resolver la expansión observada en el universo fue que existiera una pequeña diferencia en el valor de la carga para electrones y protones, $\Delta e$, de forma que la repulsión electrostática entre átomos de hidrógeno fuera responsable de la expansión. Dar una estimación para el valor $|\Delta e/e|$ mínimo para que hubiera expansión. (Idea propuesta por H. Bondi y R. Lyttleton, Nature 184, 974 (1959), y refutada experimentalmente por A.M. Hillas y T.E. Cranshaw, Nature 184, 982 (1959)).
+
+\tcblower
+
+\subsubsection*{1. Condición de equilibrio de fuerzas entre átomos de hidrógeno}
+
+Consideramos dos átomos de hidrógeno neutros separados por una distancia $r$, con masa individual $m_H \approx 0.9388 \text{ GeV}/c^2$. Si existiera un desequilibrio de carga $|\Delta e| = |q_p| - |q_e|$, cada átomo poseería una carga neta $\Delta e$.
+
+Las dos fuerzas que actúan entre ambos átomos son:
+\begin{itemize}
+    \item Repulsión electrostática de Coulomb:
+    \begin{equation}
+    F_e = \frac{1}{4\pi\varepsilon_0} \frac{(\Delta e)^2}{r^2}
+    \end{equation}
+    
+    \item Atracción gravitatoria de Newton:
+    \begin{equation}
+    F_g = G_N \frac{m_H^2}{r^2}
+    \end{equation}
+\end{itemize}
+
+Para que la repulsión electrostática venza a la atracción gravitatoria y sea capaz de impulsar la expansión del universo, la fuerza electrostática debe ser al menos igual a la atracción gravitatoria ($F_e \ge F_g$):
+\begin{equation}
+\frac{1}{4\pi\varepsilon_0} \frac{(\Delta e)^2}{r^2} = G_N \frac{m_H^2}{r^2} \implies \frac{(\Delta e)^2}{4\pi\varepsilon_0} = G_N m_H^2
+\end{equation}
+
+\subsubsection*{2. Relación en términos de constantes fundamentales}
+
+Expresamos la constante electrostática mediante la constante de estructura fina $\alpha$:
+\begin{equation}
+\alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c} \implies \frac{1}{4\pi\varepsilon_0} = \frac{\alpha \hbar c}{e^2}
+\end{equation}
+
+Sustituyendo en la igualdad de fuerzas:
+\begin{equation}
+\alpha \hbar c \left( \frac{\Delta e}{e} \right)^2 = G_N m_H^2 \implies \left( \frac{\Delta e}{e} \right)^2 = \frac{G_N m_H^2}{\alpha \hbar c}
+\end{equation}
+
+Reagrupando en términos de la masa de Planck $M_P = \sqrt{\frac{\hbar c}{G_N}} \approx 1.22 \times 10^{19} \text{ GeV}/c^2$:
+\begin{equation}
+\left| \frac{\Delta e}{e} \right| = \frac{1}{\sqrt{\alpha}} \frac{m_H}{\sqrt{\frac{\hbar c}{G_N}}} = \frac{1}{\sqrt{\alpha}} \frac{m_H}{M_P}
+\end{equation}
+
+\subsubsection*{3. Cálculo numérico e interpretación física}
+
+Sustituyendo los valores experimentales conocidos:
+\begin{itemize}
+    \item Masa del átomo de hidrógeno: $m_H c^2 \approx 0.9388 \text{ GeV}$
+    \item Masa de Planck: $M_P c^2 = \sqrt{\frac{\hbar c^5}{G_N}} \approx 1.22 \times 10^{19} \text{ GeV}$
+    \item Constante de estructura fina: $\alpha \approx \frac{1}{137} \implies \sqrt{\alpha} \approx 0.0854$
+\end{itemize}
+
+Sustituyendo estos valores en la expresión de la fracción de carga mínima:
+\begin{equation}
+\left| \frac{\Delta e}{e} \right| = \frac{0.9388 \text{ GeV}}{0.0854 \times 1.22 \times 10^{19} \text{ GeV}} \approx 9.0 \times 10^{-19}
+\end{equation}
+
+\subsubsection*{4. Conclusión experimental}
+
+El valor umbral teórico obtenido, $|\Delta e / e| \approx 9 \times 10^{-19}$, es significativamente superior a las cotas experimentales fijadas por Hillas y Cranshaw ($|\Delta e / e| < 10^{-20}$ en 1959, y cotas actuales de $|\Delta e / e| < 10^{-21}$). Por lo tanto, la hipótesis de que la expansión cósmica esté impulsada por una diferencia de carga neta en los átomos de hidrógeno queda descartada.
+
+\subsubsection*{Esquema del Balance de Fuerzas}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Átomo 1
+  \draw[thick, fill=blue!10] (-3,0) circle (0.8) node[black] {$\text{H}_1 \, (m_H, \Delta e)$};
+  
+  % Átomo 2
+  \draw[thick, fill=blue!10] (3,0) circle (0.8) node[black] {$\text{H}_2 \, (m_H, \Delta e)$};
+
+  % Línea de separación
+  \draw[dashed, gray] (-2.2,0) -- (2.2,0) node[midway, below] {$r$};
+
+  % Flecha Fuerza Electrostática (Repulsiva)
+  \draw[->, line width=1.3pt, red!80!black] (-3.8,0) -- (-5.2,0) node[above] {$F_e = \frac{(\Delta e)^2}{4\pi\varepsilon_0 r^2}$};
+  \draw[->, line width=1.3pt, red!80!black] (3.8,0) -- (5.2,0) node[above] {$F_e$};
+
+  % Flecha Fuerza Gravitatoria (Atractiva)
+  \draw[->, line width=1.3pt, blue!80!black] (-2.2,0.3) -- (-1.2,0.3) node[above] {$F_g = \frac{G_N m_H^2}{r^2}$};
+  \draw[->, line width=1.3pt, blue!80!black] (2.2,0.3) -- (1.2,0.3) node[above] {$F_g$};
+\end{tikzpicture}
+\end{center}
+
+\end{problema}
+
+\newpage
+
+\begin{problema}[Átomo Muónico y Efecto de Tamaño Finito Nuclear en el ${}^{12}\text{C}$ y ${}^{208}\text{Pb}$]
+Considerar los núcleos ${}_6^{12}\text{C}$ y ${}_{82}^{208}\text{Pb}$. Calcular la energía y el radio de la primera órbita de Bohr para un átomo muónico suponiendo los núcleos como una distribución puntual de carga. Comparar dichos radios con el tamaño de los núcleos suponiendo que se pueden describir mediante una distribución uniforme de carga de radio $R$. En este caso, estimar en teoría de perturbaciones a primer orden la corrección a la energía de la primera órbita de Bohr.
+
+\textbf{Datos:} Masa en reposo del muón $m_\mu c^2 = 105.66\text{ MeV}$, $1\text{ u} \cdot c^2 = 931.5\text{ MeV}$, $\hbar c = 197.33\text{ MeV}\cdot\text{fm}$, $\alpha \approx 1/137.036$, $R_0 = 1.2\text{ fm}$.
+
+\tcblower
+
+\subsubsection*{1. Aproximación de núcleo puntual (Modelo de Bohr muónico)}
+
+En un átomo muónico, un muón ($\mu^-$) sustituye a uno de los electrones. Al ser $m_\mu \approx 207 \, m_e$, la masa reducida del sistema aumenta significativamente.
+
+La masa reducida para un núcleo de masa $m_N \approx A \times 931.5\text{ MeV}/c^2$ viene dada por:
+\begin{equation}
+\mu c^2 = \frac{m_\mu m_N}{m_\mu + m_N} c^2
+\end{equation}
+
+\paragraph{Masa reducida para cada núcleo:}
+\begin{itemize}
+    \item \textbf{Carbono-12 (${}^{12}\text{C}$, $Z = 6, A = 12$):}
+    \begin{equation}
+    m_N c^2 \approx 12 \times 931.5\text{ MeV} = 11178\text{ MeV} \implies \mu c^2 \approx 104.62\text{ MeV}
+    \end{equation}
+    
+    \item \textbf{Plomo-208 (${}^{208}\text{Pb}$, $Z = 82, A = 208$):}
+    \begin{equation}
+    m_N c^2 \approx 208 \times 931.5\text{ MeV} = 193752\text{ MeV} \implies \mu c^2 \approx 105.54\text{ MeV}
+    \end{equation}
+\end{itemize}
+
+\paragraph{Energía del estado fundamental ($n = 1$):}
+\begin{equation}
+E_1 = -\frac{1}{2} \mu c^2 (Z \alpha)^2
+\end{equation}
+\begin{itemize}
+    \item \textbf{Carbono-12:}
+    \begin{equation}
+    E_1({}^{12}\text{C}) = -\frac{1}{2} \times 104.62\text{ MeV} \times \left( \frac{6}{137.036} \right)^2 \approx -0.100\text{ MeV} = -100\text{ keV}
+    \end{equation}
+    \item \textbf{Plomo-208:}
+    \begin{equation}
+    E_1({}^{208}\text{Pb}) = -\frac{1}{2} \times 105.54\text{ MeV} \times \left( \frac{82}{137.036} \right)^2 \approx -18.9\text{ MeV}
+    \end{equation}
+\end{itemize}
+
+\paragraph{Radio de la primera órbita de Bohr ($r_1$):}
+\begin{equation}
+r_1 = \frac{a_\mu}{Z} = \frac{\hbar c}{\mu c^2 Z \alpha}
+\end{equation}
+\begin{itemize}
+    \item \textbf{Carbono-12:}
+    \begin{equation}
+    r_1({}^{12}\text{C}) = \frac{197.33\text{ MeV}\cdot\text{fm}}{104.62\text{ MeV} \times 6 \times (1/137.036)} \approx 43.1\text{ fm}
+    \end{equation}
+    \item \textbf{Plomo-208:}
+    \begin{equation}
+    r_1({}^{208}\text{Pb}) = \frac{197.33\text{ MeV}\cdot\text{fm}}{105.54\text{ MeV} \times 82 \times (1/137.036)} \approx 3.12\text{ fm}
+    \end{equation}
+\end{itemize}
+
+\subsubsection*{2. Comparación con el radio nuclear real ($R = R_0 A^{1/3}$)}
+
+Suponiendo una densidad de carga homogénea de radio nuclear $R = R_0 A^{1/3}$ con $R_0 = 1.2\text{ fm}$:
+\begin{itemize}
+    \item \textbf{Carbono-12:} $R({}^{12}\text{C}) = 1.2 \times 12^{1/3}\text{ fm} \approx 2.75\text{ fm}$. \\
+    Puesto que $r_1({}^{12}\text{C}) = 43.1\text{ fm} \gg R({}^{12}\text{C}) = 2.75\text{ fm}$, la órbita muónica se encuentra casi por completo fuera del núcleo, por lo que la aproximación de núcleo puntual es físicamente válida.
+    
+    \item \textbf{Plomo-208:} $R({}^{208}\text{Pb}) = 1.2 \times 208^{1/3}\text{ fm} \approx 7.11\text{ fm}$. \\
+    En este caso, $r_1({}^{208}\text{Pb}) = 3.12\text{ fm} < R({}^{208}\text{Pb}) = 7.11\text{ fm}$. La órbita del muón queda totalmente contenida dentro del volumen nuclear, lo que inhabilita por completo el modelo de carga puntual.
+\end{itemize}
+
+\subsubsection*{3. Corrección por Teoría de Perturbaciones a Primer Orden}
+
+Modelamos el núcleo como una esfera uniforme de radio $R$ y carga total $Z e$. El potencial electrostático real $V(r)$ es:
+\begin{equation}
+V(r) = 
+\begin{cases} 
+-\frac{Z \alpha \hbar c}{r}, & r > R \\ 
+-\frac{Z \alpha \hbar c}{2 R} \left[ 3 - \left( \frac{r}{R} \right)^2 \right], & r \le R 
+\end{cases}
+\end{equation}
+
+El hamiltoniano se escribe como $H = H_0 + H'$, donde $H_0 = \frac{p^2}{2\mu} - \frac{Z\alpha\hbar c}{r}$ es el hamiltoniano no perturbado de carga puntual y $H'$ representa el potencial perturbativo ($H' = 0$ para $r > R$):
+\begin{equation}
+H'(r) = V(r) - \left(-\frac{Z\alpha\hbar c}{r}\right) = \frac{Z\alpha\hbar c}{2R} \left[ \left(\frac{r}{R}\right)^2 + \frac{2R}{r} - 3 \right] \quad (r \le R)
+\end{equation}
+
+La corrección a primer orden en la energía del estado fundamental $\psi_{100}(\vec{r}) = R_{10}(r) Y_{00}$ viene dada por:
+\begin{equation}
+\Delta E_{100} = \langle 100 | H' | 100 \rangle = \int_0^R dr \, r^2 \left| R_{10}(r) \right|^2 H'(r)
+\end{equation}
+
+donde la función radial no perturbada es $R_{10}(r) = 2 \left(\frac{Z}{a_\mu}\right)^{3/2} e^{-Z r / a_\mu}$ con $a_\mu = \frac{\hbar c}{\mu c^2 \alpha}$.
+
+Dado que $R \ll a_\mu / Z$ en la aproximación de bajo momento, la exponencial dentro del núcleo se aproxima por $e^{-Z r / a_\mu} \approx 1$:
+\begin{align}
+\Delta E_{100} &\approx 4 \left( \frac{Z}{a_\mu} \right)^3 \frac{Z \alpha \hbar c}{2 R} \int_0^R dr \, r^2 \left[ \frac{r^2}{R^2} + \frac{2 R}{r} - 3 \right] \nonumber \\
+&= 2 \left( \frac{Z}{a_\mu} \right)^3 \frac{Z \alpha \hbar c}{R} \left[ \frac{R^5}{5 R^2} + \frac{2 R \cdot R^2}{2} - \frac{3 R^3}{3} \right] \nonumber \\
+&= 2 \left( \frac{Z}{a_\mu} \right)^3 \frac{Z \alpha \hbar c}{R} \left( \frac{R^3}{5} \right) = \frac{2}{5} Z \alpha \hbar c \left( \frac{Z}{a_\mu} \right)^3 R^2
+\end{align}
+
+Expresando la corrección en términos de las constantes del sistema:
+\begin{equation}
+\Delta E_{100} = \frac{2}{5} (Z \alpha)^4 (\mu c^2)^3 \left( \frac{R}{\hbar c} \right)^2
+\end{equation}
+
+\subsubsection*{4. Evaluación numérica de las correcciones}
+
+\paragraph{Carbono-12 (${}^{12}\text{C}$):}
+\begin{equation}
+\Delta E_{100}({}^{12}\text{C}) \approx 0.000327\text{ MeV} = 0.327\text{ keV}
+\end{equation}
+\begin{equation}
+\frac{\Delta E_{100}}{|E_1|} = \frac{0.000327\text{ MeV}}{0.100\text{ MeV}} \approx 3.27 \times 10^{-3} \quad (0.327\%)
+\end{equation}
+La corrección es sumamente pequeña, lo que confirma que la teoría de perturbaciones funciona perfectamente y el modelo puntual es una excelente aproximación para el Carbono-12.
+
+\paragraph{Plomo-208 (${}^{208}\text{Pb}$):}
+\begin{equation}
+\Delta E_{100}({}^{208}\text{Pb}) \approx 78.3\text{ MeV}
+\end{equation}
+\begin{equation}
+\frac{\Delta E_{100}}{|E_1|} = \frac{78.3\text{ MeV}}{18.9\text{ MeV}} \approx 4.14 \quad (414\%)
+\end{equation}
+
+La corrección calculada ($78.3\text{ MeV}$) es cuatro veces mayor que la propia energía del estado fundamental no perturbado ($18.9\text{ MeV}$). Esto demuestra formalmente el colapso de la teoría de perturbaciones de primer orden para núcleos pesados y confirma que el potencial real dentro del núcleo de Plomo-208 altera drásticamente la estructura de niveles energéticos del muón.
+
+\subsubsection*{Esquema Comparativo del Radio Orbital y Tamaño Nuclear}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+  % Carbono-12
+  \begin{scope}[shift={(-3.5,0)}]
+    \draw[thick, fill=blue!15] (0,0) circle (0.4) node[black, scale=0.7] {${}^{12}\text{C}$};
+    \draw[dashed, thick, red!80!black] (0,0) circle (1.8);
+    \node[blue!80!black] at (0,-0.6) {\small $R = 2.75\text{ fm}$};
+    \node[red!80!black] at (0,2.1) {\small $r_1 = 43.1\text{ fm}$};
+    \node[below] at (0,-2.3) {\textbf{(a) Carbono-12} ($r_1 \gg R$)};
+  \end{scope}
+
+  % Plomo-208
+  \begin{scope}[shift={(3.5,0)}]
+    \draw[thick, fill=blue!15] (0,0) circle (1.5) node[black] {${}^{208}\text{Pb}$};
+    \draw[dashed, thick, red!80!black] (0,0) circle (0.7);
+    \node[blue!80!black] at (0,1.8) {\small $R = 7.11\text{ fm}$};
+    \node[red!80!black] at (0,0.2) {\small $r_1 = 3.12\text{ fm}$};
+    \node[below] at (0,-2.3) {\textbf{(b) Plomo-208} ($r_1 < R$)};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+\end{problema}
+
+\newpage
+
+\begin{problema}[Átomo Muónico de Hierro y Corrimiento Isotópico de Rayos X]
+Evaluar las energías de los rayos X (transición de tipo K, $n=2 \to n=1$) para un átomo muónico de hierro (${}_{26}\text{Fe}$) suponiendo el núcleo puntual y comparar las predicciones con los datos experimentales.
+
+Evaluar dichas energías teniendo en cuenta la corrección debida al tamaño finito del núcleo utilizando el método de teoría de perturbaciones de primer orden. Estimar el corrimiento isotópico entre los rayos X de los tres isótopos estables (${}^{54}\text{Fe}$, ${}^{56}\text{Fe}$ y ${}^{58}\text{Fe}$) y comprobar que siguen una ley proporcional a $A^{2/3}$.
+
+\textbf{Datos:} Masa en reposo del muón $m_\mu c^2 = 105.66\text{ MeV}$, $1\text{ u} \cdot c^2 = 931.5\text{ MeV}$, $\hbar c = 197.33\text{ MeV}\cdot\text{fm}$, $\alpha \approx 1/137.036$, $R_0 = 1.2\text{ fm}$, $Z = 26$.
+
+\tcblower
+
+\subsubsection*{1. Aproximación de núcleo puntual (Niveles de Bohr muónicos)}
+
+En un átomo muónico de hierro ($Z = 26$), la masa reducida $\mu$ para cada isótopo de masa nuclear $m_N(A) \approx A \times 931.5\text{ MeV}/c^2$ viene dada por:
+\begin{equation}
+\mu c^2 = \frac{m_\mu m_N(A)}{m_\mu + m_N(A)} c^2
+\end{equation}
+
+Evaluando para los tres isótopos estables del hierro:
+\begin{itemize}
+    \item ${}^{54}\text{Fe}$: $\mu c^2 = \frac{105.66 \times (54 \times 931.5)}{105.66 + (54 \times 931.5)}\text{ MeV} \approx 105.38\text{ MeV}$
+    \item ${}^{56}\text{Fe}$: $\mu c^2 = \frac{105.66 \times (56 \times 931.5)}{105.66 + (56 \times 931.5)}\text{ MeV} \approx 105.39\text{ MeV}$
+    \item ${}^{58}\text{Fe}$: $\mu c^2 = \frac{105.66 \times (58 \times 931.5)}{105.66 + (58 \times 931.5)}\text{ MeV} \approx 105.40\text{ MeV}$
+\end{itemize}
+
+Puesto que las diferencias en masa reducida entre los isótopos son menores al $0.02\%$, adoptamos la masa reducida promedio $\mu c^2 \approx 105.39\text{ MeV}$.
+
+Las energías no perturbadas para los niveles ligados de la aproximación puntual ($n = 1, 2$) son:
+\begin{equation}
+E_n = -\frac{1}{2} \mu c^2 \frac{(Z \alpha)^2}{n^2}
+\end{equation}
+
+Con $Z \alpha = 26 / 137.036 \approx 0.18973$:
+\begin{align}
+E_1 &= -\frac{1}{2} \times 105.39\text{ MeV} \times (0.18973)^2 \approx -1.897\text{ MeV} \\
+E_2 &= \frac{E_1}{2^2} = \frac{-1.897\text{ MeV}}{4} \approx -0.474\text{ MeV}
+\end{align}
+
+La energía del fotón de rayos X de la serie K (transición $2p \to 1s$) en la aproximación de punto puntual es:
+\begin{equation}
+\Delta E_{X,0} = E_2 - E_1 = -0.474\text{ MeV} - (-1.897\text{ MeV}) = 1.423\text{ MeV}
+\end{equation}
+
+\subsubsection*{2. Corrección por tamaño finito nuclear}
+
+Considerando que el núcleo es una esfera de densidad de carga constante y radio $R = R_0 A^{1/3}$ con $R_0 = 1.2\text{ fm}$, aplicamos la corrección perturbativa de primer orden obtenida para la función de onda fundamental $1s$:
+\begin{equation}
+\Delta E_{100}(A) = \frac{2}{5} (Z \alpha)^4 (\mu c^2)^3 \left( \frac{R}{\hbar c} \right)^2 = \frac{2}{5} (Z \alpha)^4 (\mu c^2)^3 \left( \frac{R_0}{\hbar c} \right)^2 A^{2/3}
+\end{equation}
+
+Dado que los orbitales superiores ($n \ge 2$) poseen un radio medio $r_n \propto n^2 / Z$ mucho mayor que el radio nuclear ($r_2 = 4 r_1 \gg R$), la densidad de probabilidad del muón dentro del núcleo para $n=2$ es despreciable y la corrección a la energía del nivel $n=2$ es casi nula ($\Delta E_2 \approx 0$).
+
+Por consiguiente, la energía efectiva corregida de la transición de rayos X K es:
+\begin{equation}
+E_X(A) = E_2 - (E_1 + \Delta E_{100}(A)) = \Delta E_{X,0} - \Delta E_{100}(A)
+\end{equation}
+
+Evaluamos las correcciones y las energías de emisión para cada isótopo:
+
+\paragraph{Isótopo ${}^{54}\text{Fe}$ ($A = 54$):}
+\begin{equation}
+R({}^{54}\text{Fe}) = 1.2 \times 54^{1/3}\text{ fm} \approx 4.536\text{ fm}
+\end{equation}
+\begin{equation}
+\Delta E_{100}({}^{54}\text{Fe}) = \frac{2}{5} \times (0.18973)^4 \times (105.38\text{ MeV})^3 \times \left( \frac{4.536\text{ fm}}{197.33\text{ MeV}\cdot\text{fm}} \right)^2 \approx 0.321\text{ MeV}
+\end{equation}
+\begin{equation}
+E_X({}^{54}\text{Fe}) = 1.423\text{ MeV} - 0.321\text{ MeV} = 1.102\text{ MeV}
+\end{equation}
+
+\paragraph{Isótopo ${}^{56}\text{Fe}$ ($A = 56$):}
+\begin{equation}
+R({}^{56}\text{Fe}) = 1.2 \times 56^{1/3}\text{ fm} \approx 4.591\text{ fm}
+\end{equation}
+\begin{equation}
+\Delta E_{100}({}^{56}\text{Fe}) = 0.321\text{ MeV} \times \left( \frac{56}{54} \right)^{2/3} \approx 0.328\text{ MeV}
+\end{equation}
+\begin{equation}
+E_X({}^{56}\text{Fe}) = 1.423\text{ MeV} - 0.328\text{ MeV} = 1.095\text{ MeV}
+\end{equation}
+
+\paragraph{Isótopo ${}^{58}\text{Fe}$ ($A = 58$):}
+\begin{equation}
+R({}^{58}\text{Fe}) = 1.2 \times 58^{1/3}\text{ fm} \approx 4.645\text{ fm}
+\end{equation}
+\begin{equation}
+\Delta E_{100}({}^{58}\text{Fe}) = 0.321\text{ MeV} \times \left( \frac{58}{54} \right)^{2/3} \approx 0.336\text{ MeV}
+\end{equation}
+\begin{equation}
+E_X({}^{58}\text{Fe}) = 1.423\text{ MeV} - 0.336\text{ MeV} = 1.087\text{ MeV}
+\end{equation}
+
+\subsubsection*{3. Corrimiento isotópico de los rayos X}
+
+El corrimiento isotópico $\delta E_X(A, A')$ es la diferencia en la energía de transición de los rayos X producida entre dos isótopos del mismo elemento con números de masa $A$ y $A'$:
+\begin{equation}
+\delta E_X(A, A') = E_X(A) - E_X(A') = \Delta E_{100}(A') - \Delta E_{100}(A)
+\end{equation}
+
+Como la corrección perturbativa por volumen nuclear es proporcional al cuadrado del radio ($\Delta E_{100} \propto R^2 \propto A^{2/3}$):
+\begin{equation}
+\delta E_X(A, A') = C \cdot \left( A'^{2/3} - A^{2/3} \right)
+\end{equation}
+donde la constante de proporcionalidad para el hierro es $C = \frac{2}{5} (Z \alpha)^4 (\mu c^2)^3 (R_0 / \hbar c)^2 \approx 0.0224\text{ MeV}$.
+
+Calculamos los desplazamientos relativos tomando como referencia el isótopo ${}^{54}\text{Fe}$:
+\begin{align}
+\delta E_X(54, 56) &= E_X({}^{54}\text{Fe}) - E_X({}^{56}\text{Fe}) = 1.102\text{ MeV} - 1.095\text{ MeV} = 0.007\text{ MeV} = 7\text{ keV} \\
+\delta E_X(54, 58) &= E_X({}^{54}\text{Fe}) - E_X({}^{58}\text{Fe}) = 1.102\text{ MeV} - 1.087\text{ MeV} = 0.015\text{ MeV} = 15\text{ keV}
+\end{align}
+
+Comprobamos la ley $A^{2/3}$ evaluando el cociente entre las diferencias teóricas:
+\begin{equation}
+\frac{\delta E_X(54, 58)}{\delta E_X(54, 56)} = \frac{58^{2/3} - 54^{2/3}}{56^{2/3} - 54^{2/3}} = \frac{14.976 - 14.282}{14.629 - 14.282} = \frac{0.694}{0.347} \approx 2.00
+\end{equation}
+
+El cociente entre las diferencias de energía calculadas ($15\text{ keV} / 7\text{ keV} \approx 2.14 \approx 2.00$) confirma la dependencia funcional del corrimiento isotópico con la ley $A^{2/3}$.
+
+\subsubsection*{Esquema del Diagrama de Niveles y Corrimiento Isotópico}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95]
+  % Nivel n=2 (no perturbado)
+  \draw[line width=1.2pt, black] (-4,3) -- (4,3) node[right] {$n=2 \quad (E_2 = -0.474\text{ MeV})$};
+
+  % Nivel n=1 puntual (no perturbado)
+  \draw[line width=1.2pt, gray, dashed] (-4,-1) -- (4,-1) node[right, gray] {$n=1 \text{ (puntual)} \quad (E_1 = -1.897\text{ MeV})$};
+
+  % Niveles n=1 corregidos por tamaño nuclear
+  \draw[line width=1.2pt, blue!80!black] (-3.8,0.2) -- (-1.8,0.2) node[above, midway] {\small ${}^{54}\text{Fe}$};
+  \draw[line width=1.2pt, green!60!black] (-1.0,0.3) -- (1.0,0.3) node[above, midway] {\small ${}^{56}\text{Fe}$};
+  \draw[line width=1.2pt, red!80!black] (1.8,0.4) -- (3.8,0.4) node[above, midway] {\small ${}^{58}\text{Fe}$};
+
+  % Flechas de transiciones X (K-alpha)
+  \draw[->, line width=1pt, blue!80!black] (-2.8,3) -- (-2.8,0.2) node[midway, left] {\small $1.102\text{ MeV}$};
+  \draw[->, line width=1pt, green!60!black] (0.0,3) -- (0.0,0.3) node[midway, right] {\small $1.095\text{ MeV}$};
+  \draw[->, line width=1pt, red!80!black] (2.8,3) -- (2.8,0.4) node[midway, right] {\small $1.087\text{ MeV}$};
+
+  % Desplazamiento por tamaño finito
+  \draw[<->, line width=0.8pt, purple] (-3.5,-1) -- (-3.5,0.2) node[midway, left] {\small $\Delta E_{100}$};
+\end{tikzpicture}
+\end{center}
+
+\end{problema}
