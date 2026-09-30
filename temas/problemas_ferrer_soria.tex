@@ -860,3 +860,880 @@ Por lo tanto, el ${}^{138}\text{Xe}$ es un \textbf{emisor $\beta^-$}.
 \end{center}
 
 \end{problema}
+
+\newpage
+%======================================================
+%=============== TEMA 2. EL DEUTERÓN ==================
+%======================================================
+\section{La fuerza nuclear: El deuterón. Interacción N-N}
+
+\setcounter{problemacontador}{0}
+\begin{problema}[Radio del Deuterón y Potencial de Pozo Cuadrado con Core Repulsivo]
+El deuterón está formado por la unión de un protón y un neutrón que interaccionan con una fuerza atractiva que deriva de un potencial $V(r)$. La experiencia muestra que cuando el deuterón se encuentra en su estado fundamental, la energía de ligadura tiene un valor absoluto de $B = 2.225\text{ MeV}$. Por otra parte, se puede admitir en primera aproximación que la energía de interacción $V(r)$ está representada por un pozo cuadrado más un \textit{core} (potencial infinito repulsivo) tal que:
+\begin{equation}
+V(r) = 
+\begin{cases}
+\infty, & 0 < r < c \\
+-V_0, & c \le r \le c + R_0 \\
+0, & r > c + R_0
+\end{cases}
+\end{equation}
+Si se supone que las masas del protón y del neutrón son iguales ($m_p = m_n = m = 938.3\text{ MeV}/c^2$), se pide:
+
+\begin{enumerate}[label=\alph*)]
+    \item Admitiendo que el estado fundamental tiene simetría esférica, determinar la función de onda correspondiente.
+    \item Establecer las condiciones de existencia de estados ligados así como el espectro de valores propios de energía. Calcular también el valor mínimo del potencial para que haya un solo estado ligado. A partir de estos resultados, calcular el potencial del deuterón si su radio es $R_0 = 1.9\text{ fm}$. ¿Es posible la existencia de un estado excitado para el deuterón en onda $S$?
+    \item Calcular la fracción de tiempo durante el cual los dos nucleones que constituyen el deuterón se encuentran dentro o fuera del alcance de la interacción.
+    \item Calcular el radio cuadrático medio del deuterón si el radio del \textit{core} es de $c = 0.4\text{ fm}$.
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Función de onda del estado fundamental (onda $S$, $l=0$)}
+
+Para un estado de momento angular orbital nulo ($l=0$), el armónico esférico es constante ($Y_{00} = 1/\sqrt{4\pi}$), por lo que la función de onda tridimensional depende únicamente de la coordenada radial $r$:
+\begin{equation}
+\psi(\vec{r}) = \frac{1}{\sqrt{4\pi}} \frac{u(r)}{r}
+\end{equation}
+
+La función radial reducida $u(r) = r R(r)$ satisface la ecuación de Schrödinger unidimensional para la masa reducida del sistema nucleón-nucleón $\mu = m/2$:
+\begin{equation}
+-\frac{\hbar^2}{2\mu} \frac{d^2 u(r)}{dr^2} + V(r) u(r) = E u(r) \implies -\frac{\hbar^2}{m} \frac{d^2 u(r)}{dr^2} + V(r) u(r) = -B u(r)
+\end{equation}
+donde $B = -E > 0$ es la energía de ligadura. Resolvemos en las tres regiones de definición del potencial:
+
+\paragraph{Región I ($0 < r < c$, $V(r) = \infty$):}
+Debido a la barrera infinita de repulsión en el origen, la probabilidad de presencia es nula:
+\begin{equation}
+u_I(r) = 0
+\end{equation}
+
+\paragraph{Región II ($c \le r \le c + R_0$, $V(r) = -V_0$):}
+La ecuación diferencial adopta la forma armónica:
+\begin{equation}
+\frac{d^2 u_{II}(r)}{dr^2} + k^2 u_{II}(r) = 0, \quad \text{con } k \equiv \frac{\sqrt{m(V_0 - B)}}{\hbar} > 0
+\end{equation}
+
+Imponiendo la condición de contorno de anulación en el borde del \textit{core} ($u_{II}(c) = 0$):
+\begin{equation}
+u_{II}(r) = A \sin \left[ k (r - c) \right]
+\end{equation}
+
+\paragraph{Región III ($r > c + R_0$, $V(r) = 0$):}
+En la región exterior, la ecuación es de tipo exponencial:
+\begin{equation}
+\frac{d^2 u_{III}(r)}{dr^2} - \gamma^2 u_{III}(r) = 0, \quad \text{con } \gamma \equiv \frac{\sqrt{m B}}{\hbar} > 0
+\end{equation}
+
+Exigiendo normalizabilidad en el infinito ($u_{III}(r) \to 0$ cuando $r \to \infty$):
+\begin{equation}
+u_{III}(r) = C e^{-\gamma \left[ r - (c + R_0) \right]}
+\end{equation}
+
+\paragraph{Condiciones de continuidad y constante de normalización:}
+Igualando la función de onda y su derivada en la frontera $r = c + R_0$:
+\begin{align}
+u_{II}(c + R_0) = u_{III}(c + R_0) &\implies A \sin(k R_0) = C \\
+u'_{II}(c + R_0) = u'_{III}(c + R_0) &\implies k A \cos(k R_0) = -\gamma C
+\end{align}
+
+Dividiendo ambas ecuaciones se obtiene la condición trascendente para las energías ligadas:
+\begin{equation}
+k \cot(k R_0) = -\gamma \implies \cot(k R_0) = -\frac{\gamma}{k}
+\end{equation}
+
+La constante de normalización $A$ se determina imponiendo $\int_0^\infty |u(r)|^2 dr = 1$:
+\begin{equation}
+\int_c^{c+R_0} A^2 \sin^2 \left[ k (r - c) \right] dr + \int_{c+R_0}^\infty A^2 \sin^2(k R_0) e^{-2\gamma \left[ r - (c + R_0) \right]} dr = 1
+\end{equation}
+
+Realizando las integraciones de forma analítica y empleando la relación $\cot(k R_0) = -\gamma / k$:
+\begin{equation}
+A = \sqrt{\frac{2}{R_0 + \frac{1}{\gamma}}} = \sqrt{\frac{2 \gamma}{\gamma R_0 + 1}}
+\end{equation}
+
+La función de onda completa del estado fundamental es:
+\begin{equation}
+\psi(r,\theta,\phi) = \frac{1}{\sqrt{4\pi} r} \cdot 
+\begin{cases} 
+0, & 0 < r < c \\ 
+A \sin\left[k(r-c)\right], & c \le r \le c + R_0 \\ 
+A \sin(k R_0) e^{-\gamma \left[r - (c + R_0)\right]}, & r > c + R_0 
+\end{cases}
+\end{equation}
+
+\subsubsection*{b) Condición de existencia de estados ligados y profundidad del pozo $V_0$}
+
+Definiendo las variables adimensionales $\varepsilon \equiv k R_0$, $\eta \equiv \gamma R_0$ y $\beta^2 \equiv \varepsilon^2 + \eta^2 = \frac{m V_0 R_0^2}{\hbar^2}$, la ecuación de valores propios se reescribe como:
+\begin{equation}
+\varepsilon \cot \varepsilon = -\sqrt{\beta^2 - \varepsilon^2}
+\end{equation}
+
+Para que exista al menos un estado ligado ($\cot \varepsilon < 0$), el argumento debe encontrarse en el segundo cuadrante $\frac{\pi}{2} \le \varepsilon \le \pi$.
+
+\paragraph{1. Potencial mínimo para un estado ligado ($V_{0,\text{mín}}$):}
+La condición límite para la formación de un estado ligado infinitesimalmente profundo ($B \to 0 \implies \eta \to 0$) exige $\varepsilon \to \pi / 2$:
+\begin{equation}
+\beta_{\text{mín}} = \frac{\pi}{2} \implies \frac{m V_{0,\text{mín}} R_0^2}{\hbar^2} = \frac{\pi^2}{4} \implies V_{0,\text{mín}} = \frac{\pi^2 \hbar^2}{4 m R_0^2}
+\end{equation}
+
+\paragraph{2. Profundidad del pozo para $R_0 = 1.9\text{ fm}$:}
+Calculamos en primer lugar las constantes del problema con $\hbar c = 197.33\text{ MeV}\cdot\text{fm}$:
+\begin{equation}
+\frac{\hbar^2}{m} = \frac{(\hbar c)^2}{m c^2} = \frac{(197.33\text{ MeV}\cdot\text{fm})^2}{938.3\text{ MeV}} \approx 41.47\text{ MeV}\cdot\text{fm}^2
+\end{equation}
+\begin{equation}
+\gamma = \frac{\sqrt{m B}}{\hbar} = \sqrt{\frac{2.225\text{ MeV}}{41.47\text{ MeV}\cdot\text{fm}^2}} \approx 0.2316\text{ fm}^{-1} \implies \eta = \gamma R_0 = 0.2316 \times 1.9 \approx 0.440
+\end{equation}
+
+Resolviendo numéricamente la ecuación trascendente $\varepsilon \cot \varepsilon = -0.440$ en el intervalo $(\pi/2, \pi)$:
+\begin{equation}
+\varepsilon = k R_0 \approx 1.926\text{ rad} \approx 110.34^\circ
+\end{equation}
+
+Calculamos el parámetro global $\beta^2$:
+\begin{equation}
+\beta^2 = \varepsilon^2 + \eta^2 = (1.926)^2 + (0.440)^2 \approx 3.709 + 0.194 = 3.903
+\end{equation}
+
+Despejando la profundidad del pozo $V_0$:
+\begin{equation}
+V_0 = \beta^2 \frac{\hbar^2}{m R_0^2} = 3.903 \times \frac{41.47\text{ MeV}\cdot\text{fm}^2}{(1.9\text{ fm})^2} \approx 44.83\text{ MeV}
+\end{equation}
+
+\paragraph{3. Imposibilidad de estados excitados en onda $S$:}
+Para la existencia de un segundo estado ligado ($n=2$, primer estado excitado en onda $S$), la profundidad del pozo debe satisfacer $\beta \ge 3\pi / 2$:
+\begin{equation}
+V_{0,\text{exc}} \ge \frac{9 \pi^2 \hbar^2}{4 m R_0^2} = 9 \times V_{0,\text{mín}} \approx 9 \times 28.34\text{ MeV} \approx 255\text{ MeV}
+\end{equation}
+Como $V_0 = 44.83\text{ MeV} \ll 255\text{ MeV}$, \textbf{no existe ningún estado excitado ligado en onda $S$}. El deuterón solo posee un único estado ligado fundamental.
+
+\subsubsection*{c) Fracción de tiempo dentro y fuera del alcance de la fuerza}
+
+La probabilidad $P_{\text{fuera}}$ de encontrar a los nucleones fuera del pozo de interacción ($r > c + R_0$) se calcula integrando la función de onda exterior:
+\begin{equation}
+P_{\text{fuera}} = \int_{c+R_0}^\infty |u_{III}(r)|^2 dr = \int_{c+R_0}^\infty A^2 \sin^2(k R_0) e^{-2\gamma \left[ r - (c + R_0) \right]} dr = \frac{A^2 \sin^2(k R_0)}{2\gamma}
+\end{equation}
+
+Sustituyendo la constante de normalización $A^2 = \frac{2\gamma}{\gamma R_0 + 1}$:
+\begin{equation}
+P_{\text{fuera}} = \frac{\sin^2(k R_0)}{\gamma R_0 + 1}
+\end{equation}
+
+Para $\varepsilon = 1.926\text{ rad}$, $\sin(1.926) \approx 0.938 \implies \sin^2(k R_0) \approx 0.880$:
+\begin{equation}
+P_{\text{fuera}} = \frac{0.880}{0.440 + 1} = \frac{0.880}{1.440} \approx 0.611 \quad (61.1\%)
+\end{equation}
+
+La probabilidad de encontrarse dentro del pozo de interacción ($c \le r \le c + R_0$) es:
+\begin{equation}
+P_{\text{dentro}} = 1 - P_{\text{fuera}} = 1 - 0.611 = 0.389 \quad (38.9\%)
+\end{equation}
+
+\textbf{Conclusión:} Los nucleones permanecen más del $61\%$ del tiempo fuera del alcance directo de la fuerza nuclear atractiva, lo que confirma que el deuterón es un sistema cuántico débilmente ligado de gran extensión espacial.
+
+\subsubsection*{d) Radio cuadrático medio para $c = 0.4\text{ fm}$}
+
+El radio cuadrático medio de la coordenada relativa $r$ se define como:
+\begin{equation}
+\langle r^2 \rangle = \int_c^\infty r^2 |u(r)|^2 dr = \int_c^{c+R_0} r^2 |u_{II}(r)|^2 dr + \int_{c+R_0}^\infty r^2 |u_{III}(r)|^2 dr
+\end{equation}
+
+La contribución dominante proviene de la región exterior ($r > c + R_0 = 0.4 + 1.9 = 2.3\text{ fm}$):
+\begin{equation}
+I_{\text{fuera}} = \int_{2.3}^\infty r^2 A^2 \sin^2(k R_0) e^{-2\gamma (r - 2.3)} dr = P_{\text{fuera}} \left[ r_0^2 + \frac{r_0}{\gamma} + \frac{1}{2\gamma^2} \right]
+\end{equation}
+donde $r_0 = c + R_0 = 2.3\text{ fm}$ y $1/\gamma = 1/0.2316 \approx 4.318\text{ fm}$:
+\begin{equation}
+I_{\text{fuera}} = 0.611 \times \left[ (2.3)^2 + (2.3 \times 4.318) + \frac{(4.318)^2}{2} \right] = 0.611 \times [5.29 + 9.93 + 9.32] \approx 15.00\text{ fm}^2
+\end{equation}
+
+Sumando la contribución interior $I_{\text{dentro}} \approx 0.95\text{ fm}^2$:
+\begin{equation}
+\langle r^2 \rangle \approx 15.00\text{ fm}^2 + 0.95\text{ fm}^2 \approx 15.95\text{ fm}^2 \implies r_{\text{rms}} \equiv \sqrt{\langle r^2 \rangle} \approx 3.99\text{ fm}
+\end{equation}
+
+El radio físico del deuterón respecto a su centro de masas ($R_d = r / 2$) resulta:
+\begin{equation}
+R_d = \frac{1}{2} \sqrt{\langle r^2 \rangle} \approx \frac{3.99\text{ fm}}{2} \approx 2.00\text{ fm}
+\end{equation}
+en excelente concordancia con el valor medido experimentalmente ($R_{d,\text{exp}} \approx 2.1\text{ fm}$).
+
+\subsubsection*{Esquema del Potencial de Pozo Cuadrado con Core y Función de Onda}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % Ejes
+  \draw[->, thick] (-0.5,0) -- (6.2,0) node[right] {$r$};
+  \draw[->, thick] (0,-2.2) -- (0,2.5) node[above] {$V(r), u(r)$};
+  
+  % Pozo de potencial con core
+  \draw[line width=1.5pt, red!80!black] (0.8,2.2) -- (0.8,-1.5) -- (3.2,-1.5) -- (3.2,0) -- (5.8,0);
+  \node[red!80!black, left] at (0,-1.5) {$-V_0$};
+  \node[below, red!80!black] at (2.0,-1.5) {Pozo Atractivo};
+  
+  % Core repulsivo
+  \fill[pattern=north east lines, pattern color=red!30] (0,-2.0) rectangle (0.8,2.2);
+  \node[red!80!black, rotate=90] at (0.4,0.5) {\small Core ($\infty$)};
+  
+  % Línea de Energía de ligadura
+  \draw[dashed, blue, thick] (0.8,-0.4) -- (5.8,-0.4) node[right] {$E = -B$};
+  \node[blue, left] at (0,-0.4) {$-B$};
+  
+  % Marcas de posición
+  \draw[dotted, gray] (0.8,0) -- (0.8,-2.0);
+  \node[below] at (0.8,0) {$c$};
+  \draw[dotted, gray] (3.2,0) -- (3.2,-2.0);
+  \node[below] at (3.2,0) {$c+R_0$};
+  
+  % Función de onda u(r)
+  \draw[domain=0.8:3.2, samples=100, smooth, ultra thick, green!50!black] 
+    plot (\x, {1.8*sin(deg((\x-0.8)*3.14159/(2.4)))});
+  \draw[domain=3.2:5.8, samples=100, smooth, ultra thick, green!50!black] 
+    plot (\x, {1.8*sin(deg(2.4*3.14159/(2.4))) * exp(-0.8*(\x-3.2))});
+    
+  \node[green!50!black, above] at (2.0,1.4) {$u_{II}(r) \propto \sin[k(r-c)]$};
+  \node[green!50!black, above right] at (3.6,0.8) {$u_{III}(r) \propto e^{-\gamma r}$};
+\end{tikzpicture}
+\end{center}
+
+\end{problema}
+
+\newpage
+%======================================================
+%================= PROBLEMA 2 =========================
+%======================================================
+\begin{problema}[Números cuánticos del deuterón]
+El estado fundamental del deuterón representa el único estado ligado entre dos nucleones que existe en la naturaleza con $J = 1$, paridad bien definida y energía de ligadura de $-2.22\text{ MeV}$. A partir sólo de estas consideraciones se pide:
+
+\begin{enumerate}[label=\alph*)]
+    \item Establecer los posibles estados y combinaciones lineales de estados que pueden contribuir al estado fundamental del deuterón. Emplear la notación espectroscópica usual, ${}^{2S+1}L_J$, donde las letras $S, P$ y $D$ corresponden al momento angular $L = 0, 1, 2$, respectivamente, el índice superior indica la multiplicidad de espín del estado $2S+1$ (es decir, $1$ para el estado singlete y $3$ para el triplete) y el índice inferior (en este caso, siempre igual a la unidad) representa el momento angular total $J$.
+    \item Deducir un argumento para demostrar la dependencia con el espín de la interacción del deuterón y mostrar por qué el operador $\vec{\sigma}_1 \cdot \vec{\sigma}_2$, con $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ las matrices de Pauli, introduce el resultado esperado. ¿Por qué no se emplean para ello otros operadores también escalares como $\sigma_{1z} + \sigma_{2z}$ o $\sigma_{1z} \sigma_{2z}$? ¿Cuál de estos operadores podría usarse para conseguir una distinción total entre protón y neutrón?
+    \item Mostrar cómo interpretar los resultados anteriores en términos del isospín.
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a)}
+
+\textbf{1. Condición de momento angular total $J = 1$}\\
+El deuterón es un sistema ligado de dos nucleones (protón y neutrón), cada uno con espín individual $s_1 = 1/2$ y $s_2 = 1/2$. El espín total $\vec{S} = \vec{s}_1 + \vec{s}_2$ se obtiene mediante la suma vectorial $1/2 \otimes 1/2$, dando dos posibles multiplicidades:
+\begin{itemize}
+    \item $S = 0$ (estado singlete de espín, $2S+1 = 1$)
+    \item $S = 1$ (estado triplete de espín, $2S+1 = 3$)
+\end{itemize}
+
+El momento angular total del movimiento relativo viene dado por $\vec{J} = \vec{L} + \vec{S}$. Aplicando la regla de acoplamiento de momentos angulares $|L - S| \le J \le L + S$ con la condición experimental $J = 1$:
+
+\begin{itemize}
+    \item \textbf{Si $S = 0$ (singlete):}
+    \begin{equation}
+    |L - 0| \le 1 \le L + 0 \implies L = 1 \quad (\text{Onda } P) \implies \text{Estado: } {}^{1}P_1
+    \end{equation}
+
+    \item \textbf{Si $S = 1$ (triplete):}
+    \begin{equation}
+    |L - 1| \le 1 \le L + 1 \implies L \in \{0, 1, 2\} \implies \text{Estados: } {}^3S_1, \, {}^3P_1, \, {}^3D_1
+    \end{equation}
+\end{itemize}
+
+Los cuatro estados cinemáticamente compatibles con $J = 1$ son: ${}^1P_1$, ${}^3S_1$, ${}^3P_1$ y ${}^3D_1$.
+
+\textbf{2. Restricción por conservación de la paridad}\\
+La paridad espacial del movimiento relativo de los dos nucleones está determinada por el momento angular orbital $L$ mediante $\pi = (-1)^L$. Puesto que la interacción nuclear conserva la paridad ($[H, \Pi] = 0$), el estado fundamental debe ser un autoestado del operador paridad con un valor único ($\pi = +1$ ó $\pi = -1$):
+
+\begin{itemize}
+    \item \textbf{Paridad par ($\pi = +1$, $L$ par):}
+    \begin{align}
+    {}^3S_1 \quad (L = 0) &\implies \pi = (-1)^0 = +1 \\
+    {}^3D_1 \quad (L = 2) &\implies \pi = (-1)^2 = +1
+    \end{align}
+
+    \item \textbf{Paridad impar ($\pi = -1$, $L$ impar):}
+    \begin{align}
+    {}^1P_1 \quad (L = 1) &\implies \pi = (-1)^1 = -1 \\
+    {}^3P_1 \quad (L = 1) &\implies \pi = (-1)^1 = -1
+    \end{align}
+\end{itemize}
+
+Dado que el estado fundamental del deuterón tiene paridad positiva ($\pi = +1$) —lo cual se confirma experimentalmente por el predominio de la onda $S$ ($L = 0$)—, los estados de paridad impar (${}^1P_1$ y ${}^3P_1$) quedan estrictamente prohibidos.
+
+\paragraph{3. Mezcla de estados en la función de onda del deuterón}
+
+En presencia de la interacción tensorial no central (que depende de la orientación espacial de los espines respecto al eje internucleónico), $L$ y $S$ dejan de ser números cuánticos conservados de forma independiente, aunque $J$ y la paridad $\pi$ sí se conservan. Por tanto, el estado fundamental del deuterón $|\Psi_d\rangle$ se describe como una superposición cuántica coherente de los dos únicos estados con $J = 1$ y $\pi = +1$:
+
+\begin{equation}
+|\Psi_d\rangle = a_S |{}^3S_1\rangle + a_D |{}^3D_1\rangle
+\end{equation}
+
+donde las amplitudes satisfacen $|a_S|^2 + |a_D|^2 = 1$. Experimentalmente se determina que $|a_S|^2 \approx 0.96$ ($96\%$ de onda $S$) y $|a_D|^2 \approx 0.04$ ($4\%$ de onda $D$), siendo esta pequeña mezcla de onda $D$ la responsable del momento cuadrupolar eléctrico no nulo del deuterón ($Q \neq 0$).
+
+\textbf{Esquema del Acoplamiento de Estados del Deuterón}\\
+
+\begin{center}
+  \includegraphics[width=0.75\textwidth]{imagenes/prob_ferrer_soria/2-2_a.png}
+\end{center}
+
+\newpage
+\subsubsection*{b)}
+
+\textbf{1. Evidencia experimental de la dependencia con el espín}\\
+La interacción entre nucleones no puede describirse mediante un potencial puramente central e independiente del espín. La prueba experimental decisiva en el deuterón radica en el hecho de que el sistema protón-neutrón forma un único estado ligado en la naturaleza, correspondiente exclusivamente a la configuración de espín total triplete ($S = 1$), con una energía de ligadura de $B = 2.22\text{ MeV}$.
+
+Por el contrario, la configuración con espín total singlete ($S = 0$) no da lugar a un estado ligado ($E > 0$, estado virtual no acoplado). Esto demuestra que el potencial efectivo $V(r)$ satisface la desigualdad $V_{S=1}(r) \neq V_{S=0}(r)$, siendo sustancialmente más atractivo en el canal triplete que en el singlete.
+
+\textbf{2. El operador $\vec{\sigma}_1 \cdot \vec{\sigma}_2$ y el resultado esperado}\\
+Las matrices de Pauli $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ se relacionan con los operadores de espín individual de los nucleones mediante $\vec{S}_i = \frac{\hbar}{2} \vec{\sigma}_i$. Para construir una interacción escalar e invariante frente a rotaciones continuas en el espacio de espín, el operador vectorial invariante más sencillo es el producto escalar $\vec{\sigma}_1 \cdot \vec{\sigma}_2$.
+
+Expresando el operador de espín total $\vec{S} = \vec{S}_1 + \vec{S}_2$ al cuadrado:
+\begin{equation}
+\vec{S}^2 = \vec{S}_1^2 + \vec{S}_2^2 + 2\vec{S}_1 \cdot \vec{S}_2 = \frac{3}{4}\hbar^2 + \frac{3}{4}\hbar^2 + \frac{\hbar^2}{2} (\vec{\sigma}_1 \cdot \vec{\sigma}_2) = \frac{\hbar^2}{2} \left( 3 + \vec{\sigma}_1 \cdot \vec{\sigma}_2 \right)
+\end{equation}
+
+Despejando el operador de Pauli:
+\begin{equation}
+\vec{\sigma}_1 \cdot \vec{\sigma}_2 = 2 \frac{\vec{S}^2}{\hbar^2} - 3
+\end{equation}
+
+Evaluando sus autovalores para los dos canales de espín posibles $S(S+1)$:
+\begin{itemize}
+    \item \textbf{Canal Triplete ($S = 1$):}
+    \begin{equation}
+    (\vec{\sigma}_1 \cdot \vec{\sigma}_2) \, |S=1\rangle = \left( 2 \times 1(1+1) - 3 \right) |S=1\rangle = +1 \, |S=1\rangle
+    \end{equation}
+    \item \textbf{Canal Singlete ($S = 0$):}
+    \begin{equation}
+    (\vec{\sigma}_1 \cdot \vec{\sigma}_2) \, |S=0\rangle = \left( 2 \times 0(0+1) - 3 \right) |S=0\rangle = -3 \, |S=0\rangle
+    \end{equation}
+\end{itemize}
+
+Propuesto un potencial nuclear que incluya un término dependiente del espín de la forma $V(r) = V_1(r) + V_2(r) (\vec{\sigma}_1 \cdot \vec{\sigma}_2)$, los potenciales efectivos resultantes en cada canal son:
+\begin{equation}
+V_{\text{triplete}}(r) = V_1(r) + V_2(r), \quad V_{\text{singlete}}(r) = V_1(r) - 3 V_2(r)
+\end{equation}
+
+Elegida una función de acoplamiento atractiva ($V_2(r) < 0$), el término $(\vec{\sigma}_1 \cdot \vec{\sigma}_2)$ añade pozo adicional en el canal triplete ($S=1$), permitiendo alcanzar la profundidad crítica para formar el estado ligado del deuterón ($B = 2.22\text{ MeV}$), mientras que reduce la profundidad del pozo en el canal singlete ($S=0$), impidiendo la existencia de estados ligados en dicho canal. Este comportamiento predicho constituye el resultado esperado.
+
+\textbf{3. Justificación frente a otros operadores escalares ($\sigma_{1z} + \sigma_{2z}$ y $\sigma_{1z} \sigma_{2z}$)}\\
+Los operadores $\sigma_{1z} + \sigma_{2z}$ y $\sigma_{1z} \sigma_{2z}$ no se utilizan en el hamiltoniano fundamental de la interacción nuclear porque violan la invariancia bajo rotaciones en el espacio tridimensional:
+\begin{itemize}
+    \item El operador $\sigma_{1z} + \sigma_{2z} = \frac{2}{\hbar} S_z$ no es un escalar esférico bajo rotaciones tridimensionales del espacio de espín, ya que selecciona arbitrariamente la dirección del eje $z$, rompiendo la conservación del espín total $\vec{S}^2$.
+    \item El operador $\sigma_{1z} \sigma_{2z}$ solo involucra las proyecciones longitudinales de los espines y no conmuta con los operadores de rotación global del sistema.
+\end{itemize}
+
+\textbf{4. Operador para la distinción entre protón y neutrón}\\
+El operador $\sigma_{1z} + \sigma_{2z}$ mide la proyección de la tercera componente del espín total ($M_S$). Para lograr una distinción estricta entre protón y neutrón en el formalismo cuántico, se debe recurrir al espacio de isospín utilizando la tercera matriz de Pauli del isospín $\tau_{3}$ (o el operador $\tau_{1z} - \tau_{2z}$), los cuales asignan autovalores de signos opuestos ($+1/2$ para el protón y $-1/2$ para el neutrón).
+
+\begin{center}
+  \includegraphics[width=0.85\textwidth]{imagenes/prob_ferrer_soria/2-2_a.png}
+\end{center}
+
+\end{problema}
+
+\newpage
+%======================================================
+%================= PROBLEMA 3 =========================
+%======================================================
+\begin{problema}[Función de ondas del deuterón]
+La función de ondas para un sistema de dos partículas en un esquema de acoplamiento $LS$ puede escribirse como:
+\begin{equation}
+|J M_J\rangle_{LS} \equiv \mathcal{Y}_{J L S}^{M_J} = \sum_{M_L} C(L S J | M_L, M_J - M_L, M_J) \phi(l_1 l_2 | L, M_L) \chi(s_1 s_2 | S, M_J - M_L)
+\end{equation}
+donde:
+\begin{align}
+\phi(l_1 l_2 | L, M_L) \equiv Y_L^{M_L}(1,2) &= \sum_{m_{l_1}} C(l_1 l_2 L | m_{l_1}, M_L - m_{l_1}, M_L) Y_{l_1}^{m_{l_1}}(1) Y_{l_2}^{M_L - m_{l_1}}(2) \\
+\chi(s_1 s_2 | S, M_S) \equiv \chi_S^{M_S}(1,2) &= \sum_{m_{s_1}} C(s_1 s_2 S | m_{s_1}, M_S - m_{s_1}, M_S) \chi_{s_1}^{m_{s_1}}(1) \chi_{s_2}^{M_S - m_{s_1}}(2)
+\end{align}
+
+\begin{enumerate}[label=\alph*)]
+    \item Escribir la función de ondas para un estado de dos partículas (neutrón y protón) situadas ambas en la subcapa $1p$ y con momento angular total $J = 0$.
+    \item Escribir las funciones de onda completas para representar los posibles estados del deuterón.
+    \item A partir del resultado obtenido en el apartado anterior, calcular el momento dipolar magnético del deuterón.
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{Descomposición de la función de ondas (Revisión)}
+\begin{enumerate}
+    \item Acoplamiento espacial: Se combinan los momentos angulares orbitales individuales $l_1$ y $l_2$ mediante los coeficientes de Clebsch-Gordan $C(l_1l_2L|m_{l_1},m_{l_2},M_L)$ para formar el momento angular orbital total:
+    \[
+    L=l_1+l_2\:\to\:\text{Función de onda espacial: }\phi(l_1l_2|L,M_L)
+    \]
+    \item Acoplamiento de espín: Se combinan los espines individuales $s_1$ y $s_2$ mediante $C(s_1s_2S|m_{s_1},m_{s_2},M_S)$ para formar el espín total
+    \[
+    S=s_1+s_2\:\to\:\text{Función de espín: }\xi(s_1s_2|S,M_S)
+    \]
+    \item Acoplamiento $LS$ Total: Finlamente, se acoplan $L$ y $S$ mediante $C(LSJ|M_L,M_S,M_J)$ para obtener el momento angular total del sistema
+    \[
+    J=L+S,\quad\text{ con proyección }M_J=M_L+M_S
+    \]
+\end{enumerate}
+
+\newpage
+
+\subsubsection*{a) Función de ondas para dos partículas en la subcapa $1p$ con $J = 0$}
+
+Para dos partículas situadas en la subcapa $1p$, los momentos angulares orbitales individuales son $l_1 = 1$ y $l_2 = 1$. Los espines individuales de los nucleones son $s_1 = 1/2$ y $s_2 = 1/2$.
+
+Aplicando las reglas de acoplamiento de momentos angulares:
+\begin{itemize}
+    \item \textbf{Momento angular orbital total ($L$):} $1 \otimes 1 \implies L \in \{0, 1, 2\}$ (ondas $S$, $P$ y $D$).
+    \item \textbf{Espín total ($S$):} $1/2 \otimes 1/2 \implies S \in \{0, 1\}$ (singlete y triplete).
+\end{itemize}
+
+El momento angular total es $\vec{J} = \vec{L} + \vec{S}$. Para fijar $J = 0$, la regla triangular $|L - S| \le J \le L + S$ exige de forma estricta que $L = S$. Por consiguiente, existen dos únicos canales acoplados compatibles con $J = 0$:
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Canal ${}^1S_0$ ($L = 0, S = 0, J = 0$):} Estado singlete de espín en onda $S$.
+    \item \textbf{Canal ${}^3P_0$ ($L = 1, S = 1, J = 0$):} Estado triplete de espín en onda $P$.
+\end{enumerate}
+
+Desarrollamos explícitamente la función de onda acoplada $\Psi = |J M_J\rangle_{LS}$ para cada canal utilizando los coeficientes de Clebsch-Gordan $C(L S J | M_L, M_S, M_J)$:
+
+\textbf{1. Estado ${}^1S_0$ ($L=0, S=0, J=0, M_J=0$):}
+\begin{itemize}
+    \item \textbf{Parte espacial ($l_1=1, l_2=1 \to L=0, M_L=0$):}
+    \begin{equation}
+    \phi(11|0,0) = \sum_{m_{l_1}} C(1\, 1\, 0 | m_{l_1}, -m_{l_1}, 0) Y_1^{m_{l_1}}(1) Y_1^{-m_{l_1}}(2)
+    \end{equation}
+    Sustituyendo $C(1, 1, 0 | m_{l_1}, -m_{l_1}, 0) = \frac{(-1)^{1-m_{l_1}}}{\sqrt{3}}$:
+    \begin{equation}
+    \phi(1,1|0,0) = \frac{1}{\sqrt{3}} \left[ Y_1^1(1) Y_1^{-1}(2) - Y_1^0(1) Y_1^0(2) + Y_1^{-1}(1) Y_1^1(2) \right]
+    \end{equation}
+
+    \item \textbf{Parte de espín ($s_1=1/2, s_2=1/2 \to S=0, M_S=0$):}
+    \begin{equation}
+    \chi(1/2,1/2|0,0) = \frac{1}{\sqrt{2}} \left[ \chi_{1/2}^{1/2}(1) \chi_{1/2}^{-1/2}(2) - \chi_{1/2}^{-1/2}(1) \chi_{1/2}^{1/2}(2) \right]
+    \end{equation}
+
+    \item \textbf{Función de onda acoplada ${}^1S_0$:}
+    \begin{equation}
+    \Psi_{{}^1S_0} = \phi(1,1|0,0) \chi(1/2,1/2|0,0)
+    \end{equation}
+\end{itemize}
+
+\textbf{2. Estado ${}^3P_0$ ($L=1, S=1, J=0, M_J=0$):}
+Sustituyendo los coeficientes de Clebsch-Gordan $C(1, 1, 0 | M_L, -M_L, 0) = \frac{(-1)^{1-M_L}}{\sqrt{3}}$:
+\begin{equation}
+\Psi_{{}^3P_0} = \frac{1}{\sqrt{3}} \left[ \phi(1,1|1,1) \chi_1^{-1}(1,2) - \phi(1,1|1,0) \chi_1^0(1,2) + \phi(1,1|1,-1) \chi_1^1(1,2) \right]
+\end{equation}
+donde las funciones espaciales y de espín de subcapa acoplada son:
+\begin{align}
+\phi(1,1|1,1) &= \frac{1}{\sqrt{2}} \left[ Y_1^1(1) Y_1^0(2) - Y_1^0(1) Y_1^1(2) \right] \\
+\phi(1,1|1,0) &= \frac{1}{\sqrt{2}} \left[ Y_1^1(1) Y_1^{-1}(2) - Y_1^{-1}(1) Y_1^1(2) \right] \\
+\phi(1,1|1,-1) &= \frac{1}{\sqrt{2}} \left[ Y_1^0(1) Y_1^{-1}(2) - Y_1^{-1}(1) Y_1^0(2) \right]
+\end{align}
+y las funciones de espín triplete $\chi_1^{M_S}(1,2)$ adoptan sus formas estándar.
+
+La función de onda cuántica general para un estado de dos partículas $1p$ con $J = 0$ es la superposición arbitraria:
+\begin{equation}
+|\Psi_{J=0}\rangle = c_1 \Psi_{{}^1S_0} + c_2 \Psi_{{}^3P_0} \quad \text{con } |c_1|^2 + |c_2|^2 = 1
+\end{equation}
+
+\begin{center}
+  %\includegraphics[width=0.70\textwidth]{imagenes/prob_ferrer_soria/2-3_a.png}
+\end{center}
+
+\newpage
+
+\subsubsection*{b) Funciones de onda completas para los posibles estados del deuterón}
+
+El deuterón es un estado ligado protón-neutrón con las siguientes propiedades fundamentales determinadas experimentalmente:
+\begin{itemize}
+    \item Momento angular total $J = 1$.
+    \item Paridad positiva $\pi = +1$.
+    \item Estado de espín triplete $S = 1$.
+\end{itemize}
+
+Puesto que la paridad espacial del movimiento relativo viene dada por $\pi = (-1)^L$, la condición $\pi = +1$ exige que el momento angular orbital relativo $L$ sea estrictamente par ($L = 0, 2, 4, \dots$).
+
+Acoplando el espín $S = 1$ con los valores pares de $L$ para obtener $J = 1$:
+\begin{itemize}
+    \item Para $L = 0$ (onda $S$): $|0 - 1| \le 1 \le 0 + 1 \implies J = 1 \implies \text{Estado } {}^3S_1$.
+    \item Para $L = 2$ (onda $D$): $|2 - 1| \le 1 \le 2 + 1 \implies J = 1 \implies \text{Estado } {}^3D_1$.
+    \item Para $L \ge 4$: No es posible obtener $J = 1$ ya que $|L - 1| \ge 3$.
+\end{itemize}
+
+Por tanto, los dos únicos estados cinemáticamente permitidos para representar al deuterón son ${}^3S_1$ y ${}^3D_1$.
+
+Debido a la presencia del potencial no central (fuerza de tensor nuclear), $L$ no es un número cuántico conservado individualmente, pero sí lo son $J$ y $\pi$. Por ello, la función de onda completa del deuterón se expresa como una superposición de la componente de onda $S$ y la componente de onda $D$:
+\begin{equation}
+\Psi_d(\vec{r}, 1, 2) = \frac{u(r)}{r} \mathcal{Y}_{1,0,1}^{M_J}(\hat{r}, 1, 2) + \frac{w(r)}{r} \mathcal{Y}_{1,2,1}^{M_J}(\hat{r}, 1, 2)
+\end{equation}
+donde:
+\begin{itemize}
+    \item $u(r)/r$ y $w(r)/r$ son las funciones de onda radiales reducidas para las ondas $S$ y $D$, respectivamente, cumpliendo la condición de normalización global $\int_0^\infty \left[ |u(r)|^2 + |w(r)|^2 \right] dr = 1$.
+    \item $\mathcal{Y}_{1,L,1}^{M_J}(\hat{r}, 1, 2)$ representa la armónica esférica de espín acoplada (con $L = 0$ o $L = 2$):
+    \begin{equation}
+    \mathcal{Y}_{1,L,1}^{M_J}(\hat{r}, 1, 2) = \sum_{M_L = -L}^L C(L, 1, 1 | M_L, M_J - M_L, M_J) \, Y_L^{M_L}(\hat{r}) \, \chi_1^{M_J - M_L}(1,2)
+    \end{equation}
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \node[draw, dashed, minimum width=9cm, minimum height=3.2cm] at (0,0) {Espacio reservado para el diagrama de superposición de componentes de onda $S$ y $D$ del deuterón};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{c) Momento dipolar magnético del deuterón}
+
+El operador de momento dipolar magnético del sistema protón-neutrón se define como la suma de las contribuciones orbitales y de espín de los dos nucleones:
+\begin{equation}
+\vec{\mu} = g_{L,p} \vec{L}_p + g_{L,n} \vec{L}_n + g_{s,p} \vec{S}_p + g_{s,n} \vec{S}_n
+\end{equation}
+
+Suponiendo masas iguales para el protón y el neutrón ($m_p \approx m_n$), la coordenada del protón respecto al centro de masas satisface $\vec{r}_p = \vec{r}/2$, por lo que su momento angular orbital es $\vec{L}_p = \frac{1}{2}\vec{L}$, mientras que el neutrón neutro no contribuye al momento orbital ($g_{L,n} = 0$). Expresando el operador en unidades del magnetón nuclear ($\mu_N = \frac{e\hbar}{2 m_p c}$):
+\begin{equation}
+\vec{\mu} = \frac{1}{2} \vec{L} + g_p \vec{S}_p + g_n \vec{S}_n
+\end{equation}
+con los factores giromagnéticos del nucleón libre $g_p \approx 5.586$ y $g_n \approx -3.826$.
+
+Puesto que el estado del deuterón es una superposición coherente $|\Psi_d\rangle = \frac{u(r)}{r} \mathcal{Y}_{1,0,1}^{M_J} + \frac{w(r)}{r} \mathcal{Y}_{1,2,1}^{M_J}$, con probabilidades ocupacionales $P_S = \int_0^\infty u^2(r) dr$ para la onda $S$ y $P_D = \int_0^\infty w^2(r) dr$ para la onda $D$ ($P_S + P_D = 1$), el valor esperado del momento magnético en el estado $M_J = 1$ no contiene términos de interferencia cruzada entre $L=0$ y $L=2$, reduciéndose a la suma ponderada:
+\begin{equation}
+\mu_d = \langle \Psi_d, M_J=1 | \mu_z | \Psi_d, M_J=1 \rangle = P_S \mu_S + P_D \mu_D
+\end{equation}
+
+\textbf{1. Contribución de la onda pura ${}^3S_1$ ($L=0, S=1, J=1$):}
+Al ser $L=0$, el término orbital se anula ($\vec{L}=0$), resultando:
+\begin{equation}
+\mu_S = \frac{1}{2} (g_p + g_n) \mu_N \approx \frac{1}{2} (5.586 - 3.826) \mu_N = 0.880 \, \mu_N
+\end{equation}
+
+\textbf{2. Contribución de la onda pura ${}^3D_1$ ($L=2, S=1, J=1$):}
+Aplicando el teorema de proyección de Landé para el acoplamiento $\vec{J} = \vec{L} + \vec{S}$ con $g_L = 1/2$ y $g_S = (g_p + g_n)/2$:
+\begin{equation}
+g_J(D) = g_L \frac{J(J+1) + L(L+1) - S(S+1)}{2J(J+1)} + g_S \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}
+\end{equation}
+
+Sustituyendo los números cuánticos $J=1, L=2, S=1$:
+\begin{equation}
+g_J(D) = \frac{3}{2} g_L - \frac{1}{2} g_S = \frac{3}{4} - \frac{1}{4}(g_p + g_n) = \frac{3}{4} - \frac{1}{2}\mu_S
+\end{equation}
+\begin{equation}
+\mu_D = g_J(D) \, \mu_N = \left( 0.750 - 0.440 \right) \mu_N = 0.310 \, \mu_N
+\end{equation}
+
+\textbf{3. Determinación del porcentaje de onda $D$ ($P_D$):}
+Sustituyendo $P_S = 1 - P_D$ en la expresión del momento magnético total:
+\begin{equation}
+\mu_d = (1 - P_D) \mu_S + P_D \mu_D = \mu_S - P_D (\mu_S - \mu_D)
+\end{equation}
+Reemplazando la diferencia $\mu_S - \mu_D = \frac{3}{2} \left( \mu_S - \frac{1}{2} \right)$:
+\begin{equation}
+\mu_d = \mu_S - \frac{3}{2} \left( \mu_S - \frac{1}{2} \right) P_D = 0.880 - 0.570 P_D
+\end{equation}
+
+Igualando este valor teórico con el dato medido experimentalmente ($\mu_d^{\text{exp}} \approx 0.8574 \, \mu_N$):
+\begin{equation}
+0.8574 = 0.880 - 0.570 P_D \implies 0.570 P_D = 0.0226 \implies P_D \approx 0.04 \quad (4\%)
+\end{equation}
+
+Esto confirma que la discrepancia entre la onda $S$ pura y la medida experimental se explica cuantitativamente por la presencia de un $4\%$ de mezcla de onda $D$.
+
+\begin{center}
+  %\includegraphics[width=0.70\textwidth]{imagenes/prob_ferrer_soria/2-2_a.png}
+\end{center}
+
+\subsubsection*{d) Momento cuadrupolar eléctrico del deuterón}
+
+El momento cuadrupolar eléctrico $Q$ de un núcleo mide la desviación de la densidad de carga respecto a la simetría esférica. Por definición, en el estado de máxima proyección del momento angular ($M_J = 1$):
+\begin{equation}
+Q \equiv \frac{1}{e} \int \rho(\vec{r}_p) \left( 3 z_p^2 - r_p^2 \right) d^3r_p
+\end{equation}
+
+Puesto que la carga $e$ reside únicamente en el protón y su posición respecto al centro de masas satisface $\vec{r}_p = \vec{r}/2$, la coordenada $z_p = z/2$ conduce al operador cuadrupolar expresado en la coordenada relativa $\vec{r}$:
+\begin{equation}
+Q_{\text{op}} = \frac{1}{4} \left( 3 z^2 - r^2 \right) = \frac{1}{4} r^2 \sqrt{\frac{16\pi}{5}} Y_2^0(\hat{r})
+\end{equation}
+
+Evaluando el valor esperado sobre la función de onda acoplada $|\Psi_d, M_J=1\rangle$:
+\begin{equation}
+Q = \left\langle \frac{u(r)}{r} \mathcal{Y}_{1,0,1}^1 + \frac{w(r)}{r} \mathcal{Y}_{1,2,1}^1 \right| Q_{\text{op}} \left| \frac{u(r)}{r} \mathcal{Y}_{1,0,1}^1 + \frac{w(r)}{r} \mathcal{Y}_{1,2,1}^1 \right\rangle
+\end{equation}
+
+Analizamos por separado los elementos de matriz angulares en virtud de la conservación del momento angular:
+\begin{itemize}
+    \item \textbf{Término $S-S$ ($L=0 \to L=0$):} El operador $Y_2^0$ es un tensor esférico de orden 2. Por las reglas de selección de Clebsch-Gordan ($0 \otimes 2 \to 2 \neq 0$), el elemento de matriz se anula estrictamente:
+    \begin{equation}
+    \langle \mathcal{Y}_{1,0,1}^1 | Q_{\text{op}} | \mathcal{Y}_{1,0,1}^1 \rangle = 0
+    \end{equation}
+    \item \textbf{Término cruzado $S-D$ ($L=0 \leftrightarrow L=2$):} Conecta la componente principal de onda $S$ con la mezcla de onda $D$:
+    \begin{equation}
+    \left\langle \mathcal{Y}_{1,0,1}^1 \right| \frac{1}{4} r^2 \sqrt{\frac{16\pi}{5}} Y_2^0 \left| \mathcal{Y}_{1,2,1}^1 \right\rangle = \frac{\sqrt{2}}{20} r^2
+    \end{equation}
+    \item \textbf{Término $D-D$ ($L=2 \to L=2$):}
+    \begin{equation}
+    \left\langle \mathcal{Y}_{1,2,1}^1 \right| \frac{1}{4} r^2 \sqrt{\frac{16\pi}{5}} Y_2^0 \left| \mathcal{Y}_{1,2,1}^1 \right\rangle = -\frac{1}{20} r^2
+    \end{equation}
+\end{itemize}
+
+Sumando ambas contribuciones e integrando sobre la coordenada radial $r$:
+\begin{equation}
+Q = \frac{1}{20} \int_0^\infty r^2 \left[ \sqrt{2} u(r) w(r) - \frac{1}{2} w^2(r) \right] dr
+\end{equation}
+
+\textbf{Consecuencias físicas y significación del resultado:}
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{Signo positivo del momento cuadrupolar ($Q > 0$):} Dado que $u(r) \gg w(r)$, el término cruzado de interferencia $\sqrt{2} u(r) w(r)$ domina sobre el término negativo $-w^2(r)/2$. Por tanto, el valor teórico predicho es netamente positivo ($Q > 0$).
+    \item \textbf{Deformación elipsoidal prolatada:} El valor experimental medido ($Q_{\text{exp}} \approx +0.286 \, \text{fm}^2 = +0.00286 \, \text{b}$) confirma que la distribución espacial de carga del deuterón no es esférica, sino que se halla elongada a lo largo del eje de espín (geometría de elipsoide prolatado).
+    \item \textbf{Prueba de la interacción tensorial $N-N$:} Si la fuerza entre nucleones fuese estrictamente central, la onda $D$ no existiría ($w(r) = 0$), lo que implicaría $Q = 0$. La medición experimental $Q \neq 0$ constituye la prueba irrebatible de la existencia de componentes tensoriales no centrales en el potencial de la fuerza nuclear.
+\end{enumerate}
+
+\begin{center}
+  %\includegraphics[width=0.70\textwidth]{imagenes/prob_ferrer_soria/2-2_a.png}
+\end{center}
+
+\end{problema}
+
+
+
+\newpage
+%======================================================
+%================= PROBLEMA 4 =========================
+%======================================================
+\begin{problema}[Interacción singlete y triplete]
+El potencial del deuterón incluye un término no central que depende del espín del tipo:
+\begin{equation}
+S_{12} = \frac{3(\vec{\sigma}_1 \cdot \vec{r}_1)(\vec{\sigma}_2 \cdot \vec{r}_2)}{r^2} - \vec{\sigma}_1 \cdot \vec{\sigma}_2
+\end{equation}
+
+\begin{enumerate}[label=\alph*)]
+    \item Demostrar que el operador $S_{12}$ puede escribirse también como:
+    \begin{equation}
+    S_{12} = \frac{6(\vec{S} \cdot \vec{r})^2}{\hbar^2 r^2} - \frac{2 S^2}{\hbar^2}
+    \end{equation}
+
+    \item Demostrar que si los dos nucleones se encuentran en un estado singlete de espín se cumple que $S_{12} \chi_0^0 = 0$.
+
+    \item Comprobar igualmente que si su estado es triplete se cumple que:
+    \begin{equation}
+    (S_{12} - 2)(S_{12} + 4)\chi_1^{M_S} = 0
+    \end{equation}
+
+    \item Demostrar que el promedio para todos los ángulos del operador $S_{12}$ es nulo, es decir, $\int S_{12} d\Omega = 0$.
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Demostración de la forma alternativa del operador $S_{12}$}
+
+Definimos el operador de espín total para un sistema de dos partículas de espín $1/2$ como:
+\begin{equation}
+\vec{S} = \vec{S}_1 + \vec{S}_2 = \frac{\hbar}{2} (\vec{\sigma}_1 + \vec{\sigma}_2) \implies \vec{\sigma}_1 + \vec{\sigma}_2 = \frac{2}{\hbar} \vec{S}
+\end{equation}
+
+Elevando al cuadrado el operador de espín total $\vec{S}$:
+\begin{equation}
+\vec{S}^2 = \frac{\hbar^2}{4} (\vec{\sigma}_1 + \vec{\sigma}_2)^2 = \frac{\hbar^2}{4} \left( \vec{\sigma}_1^2 + \vec{\sigma}_2^2 + 2 \vec{\sigma}_1 \cdot \vec{\sigma}_2 \right)
+\end{equation}
+
+Teniendo en cuenta la propiedad de las matrices de Pauli $\vec{\sigma}_1^2 = \vec{\sigma}_2^2 = 3 I$:
+\begin{equation}
+\vec{S}^2 = \frac{\hbar^2}{4} \left( 3 + 3 + 2 \vec{\sigma}_1 \cdot \vec{\sigma}_2 \right) = \frac{3}{2}\hbar^2 + \frac{\hbar^2}{2} (\vec{\sigma}_1 \cdot \vec{\sigma}_2)
+\end{equation}
+Despejando el producto escalar $\vec{\sigma}_1 \cdot \vec{\sigma}_2$:
+\begin{equation}
+\vec{\sigma}_1 \cdot \vec{\sigma}_2 = \frac{2\vec{S}^2}{\hbar^2} - 3
+\end{equation}
+
+Por otra parte, evaluamos la proyección del espín total a lo largo de la dirección espacial $(\vec{S} \cdot \vec{r})$:
+\begin{equation}
+\vec{S} \cdot \vec{r} = \frac{\hbar}{2} (\vec{\sigma}_1 \cdot \vec{r} + \vec{\sigma}_2 \cdot \vec{r})
+\end{equation}
+
+Elevando al cuadrado esta expresión:
+\begin{equation}
+(\vec{S} \cdot \vec{r})^2 = \frac{\hbar^2}{4} \left[ (\vec{\sigma}_1 \cdot \vec{r})^2 + (\vec{\sigma}_2 \cdot \vec{r})^2 + 2 (\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r}) \right]
+\end{equation}
+
+Utilizando la propiedad vectorial de las matrices de Pauli $(\vec{\sigma}_i \cdot \vec{A})(\vec{\sigma}_i \cdot \vec{B}) = (\vec{A} \cdot \vec{B}) I + i \vec{\sigma}_i \cdot (\vec{A} \times \vec{B})$, para el caso $\vec{A} = \vec{B} = \vec{r}$ se obtiene $(\vec{\sigma}_1 \cdot \vec{r})^2 = r^2 I$ y $(\vec{\sigma}_2 \cdot \vec{r})^2 = r^2 I$. Sustituyendo:
+\begin{equation}
+(\vec{S} \cdot \vec{r})^2 = \frac{\hbar^2}{4} \left[ 2r^2 + 2 (\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r}) \right] = \frac{\hbar^2 r^2}{2} + \frac{\hbar^2}{2} (\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r})
+\end{equation}
+
+Despejando el término cruzado $(\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r})$:
+\begin{equation}
+(\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r}) = \frac{2}{\hbar^2} (\vec{S} \cdot \vec{r})^2 - r^2
+\end{equation}
+
+Sustituyendo las dos relaciones obtenidas en la definición inicial del operador $S_{12}$:
+\begin{equation}
+S_{12} = \frac{3}{r^2} \left[ \frac{2}{\hbar^2} (\vec{S} \cdot \vec{r})^2 - r^2 \right] - \left( \frac{2\vec{S}^2}{\hbar^2} - 3 \right) = \frac{6(\vec{S} \cdot \vec{r})^2}{\hbar^2 r^2} - \frac{2 S^2}{\hbar^2}
+\end{equation}
+
+\subsubsection*{b) Demostración de que $S_{12} \chi_0^0 = 0$ para el estado singlete}
+
+El operador de helicidad espacial se define como la proyección adimensional del operador de espín total $\vec{S}$ sobre la dirección del vector de posición relativa $\vec{r}$:
+\begin{equation}
+\lambda = \frac{\vec{S} \cdot \vec{r}}{\hbar r} = \frac{\vec{S} \cdot \hat{r}}{\hbar}
+\end{equation}
+
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{imagenes/prob_ferrer_soria/2-4_a.png}
+\end{center}
+
+Los valores propios del operador de helicidad $\lambda$ representan la componente del espín total a lo largo de la dirección axial que une a los dos nucleones. Sus autovalores posibles dependen del espín total del sistema:
+\begin{itemize}
+    \item Para el estado singlete ($S = 0$), el autovalor de $\lambda$ es estrictamente $0$.
+    \item Para el estado triplete ($S = 1$), los autovalores posibles de $\lambda$ son $0, \pm 1$.
+\end{itemize}
+
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{imagenes/prob_ferrer_soria/2-4_b.png}
+\end{center}
+
+En el apartado a) vimos que el operador $S_{12}$ puede expresarse en función de la helicidad espacial $\lambda$ y del espín total $\vec{S}^2$ como:
+\begin{equation}
+S_{12} = \frac{6(\vec{S} \cdot \vec{r})^2}{\hbar^2 r^2} - \frac{2\vec{S}^2}{\hbar^2} = 6\lambda^2 - \frac{2\vec{S}^2}{\hbar^2}
+\end{equation}
+
+Esta relación implica directamente que si el sistema nucleón-nucleón ($NN$) se acopla con espín $S = 0$ (estado singlete), al ser nulos los valores propios tanto de $\vec{S}^2$ como de $\lambda$, el valor propio de $S_{12}$ es cero y la interacción tensorial se anula.
+
+\textbf{Desarrollo analítico explícito:}
+
+Para el estado singlete de espín de dos fermiones ($S = 0, M_S = 0$), la función de espín es antisimétrica:
+\begin{equation}
+\chi_0^0 = \frac{1}{\sqrt{2}} \left( \chi_{1/2}^{1/2}(1) \chi_{1/2}^{-1/2}(2) - \chi_{1/2}^{-1/2}(1) \chi_{1/2}^{1/2}(2) \right)
+\end{equation}
+
+Al actuar los operadores de espín sobre el estado singlete:
+\begin{equation}
+\vec{S}^2 \chi_0^0 = 0, \qquad \vec{S} \chi_0^0 = \vec{0} \implies \lambda \chi_0^0 = 0
+\end{equation}
+
+Sustituyendo estos resultados en la representación operacional de $S_{12}$:
+\begin{equation}
+S_{12} \chi_0^0 = \left( 6 \lambda^2 - \frac{2\vec{S}^2}{\hbar^2} \right) \chi_0^0 = 6 (0) \chi_0^0 - \frac{2(0)}{\hbar^2} \chi_0^0 = 0
+\end{equation}
+
+Demostración equivalente mediante las matrices de Pauli $\vec{\sigma}_1$ y $\vec{\sigma}_2$:
+Puesto que $\vec{\sigma}_1 \cdot \vec{\sigma}_2 \chi_0^0 = -3 \chi_0^0$ y $(\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r}) \chi_0^0 = -r^2 \chi_0^0$, evaluando sobre la definición inicial:
+\begin{equation}
+S_{12} \chi_0^0 = \left( \frac{3(\vec{\sigma}_1 \cdot \vec{r})(\vec{\sigma}_2 \cdot \vec{r})}{r^2} - \vec{\sigma}_1 \cdot \vec{\sigma}_2 \right) \chi_0^0 = \left( \frac{3(-r^2)}{r^2} - (-3) \right) \chi_0^0 = (-3 + 3) \chi_0^0 = 0
+\end{equation}
+
+Por consiguiente, queda demostrado que la interacción tensorial $S_{12}$ es estrictamente nula para el estado singlete de espín.
+
+\subsubsection*{c) Demostración de que $(S_{12} - 2)(S_{12} + 4)\chi_1^{M_S} = 0$ para el estado triplete}
+
+Si el sistema $NN$ está en el estado triplete ($S=1$), los autovalores del operador $S_{12}$ son $S_{12} = -4$ para $\lambda = 0$ y $S_{12} = 2$ para $\lambda = \pm 1$, lo que es lo mismo que escribir la relación operacional:
+\begin{equation}
+S_{12}^2 = 6 + 2\vec{\sigma}_1 \cdot \vec{\sigma}_2 - 2S_{12}
+\end{equation}
+
+\textbf{Desarrollo analítico y demostración:}
+
+Para un estado de espín total triplete ($S = 1$), el autovalor del operador $\vec{S}^2$ es $S(S+1)\hbar^2 = 2\hbar^2$, y el autovalor del operador $\vec{\sigma}_1 \cdot \vec{\sigma}_2 = 2\frac{\vec{S}^2}{\hbar^2} - 3$ es igual a $+1$.
+
+Sustituyendo $\vec{S}^2 \chi_1^{M_S} = 2\hbar^2 \chi_1^{M_S}$ en la forma alternativa obtenida en el apartado a), el operador $S_{12}$ actuando sobre el subespacio triplete se reduce a:
+\begin{equation}
+S_{12} \chi_1^{M_S} = \left( 6\lambda^2 - \frac{2\vec{S}^2}{\hbar^2} \right) \chi_1^{M_S} = \left( 6\lambda^2 - 4 \right) \chi_1^{M_S}
+\end{equation}
+donde $\lambda = \frac{\vec{S} \cdot \hat{r}}{\hbar}$ es el operador de helicidad espacial.
+
+Al medir la proyección del espín total $S = 1$ a lo largo de la dirección arbitraria $\hat{r}$, los autovalores de $\lambda$ solo pueden tomar los tres valores discretos $m_r \in \{+1, 0, -1\}$:
+
+\textbf{1. Para la componente con $\lambda = 0$:}
+\begin{equation}
+S_{12} \chi_1^{(\lambda=0)} = (6(0)^2 - 4) \chi_1^{(\lambda=0)} = -4 \, \chi_1^{(\lambda=0)} \implies (S_{12} + 4) \chi_1^{(\lambda=0)} = 0
+\end{equation}
+
+\textbf{2. Para las componentes con $\lambda = \pm 1$:}
+\begin{equation}
+S_{12} \chi_1^{(\lambda=\pm 1)} = (6(\pm 1)^2 - 4) \chi_1^{(\lambda=\pm 1)} = 2 \, \chi_1^{(\lambda=\pm 1)} \implies (S_{12} - 2) \chi_1^{(\lambda=\pm 1)} = 0
+\end{equation}
+
+Dado que los únicos autovalores posibles de $S_{12}$ en el subespacio triplete son $+2$ y $-4$, cualquier estado triplete $\chi_1^{M_S}$ se expresa como combinación lineal de autoestados asociados a dichos autovalores. Por lo tanto, el producto de los operadores linealmente independientes anula idénticamente al estado:
+\begin{equation}
+(S_{12} - 2)(S_{12} + 4) \chi_1^{M_S} = \left( S_{12}^2 + 2S_{12} - 8 \right) \chi_1^{M_S} = 0
+\end{equation}
+
+Haciendo uso de la relación $\vec{\sigma}_1 \cdot \vec{\sigma}_2 = 1$ en el estado triplete, observamos que:
+\begin{equation}
+S_{12}^2 = 8 - 2S_{12} = 6 + 2(1) - 2S_{12} = 6 + 2\vec{\sigma}_1 \cdot \vec{\sigma}_2 - 2S_{12}
+\end{equation}
+lo que confirma de forma exacta la identidad del operador proyectado en el canal triplete.
+
+\newpage
+
+\subsubsection*{d) Promedio angular del operador $S_{12}$ y sus implicaciones físicas}
+
+\textbf{Demostración matemática del promedio angular nulo:}
+
+Expresamos el vector unitario de posición relativa $\hat{r} = \frac{\vec{r}}{r}$ en sus componentes cartesianas $(\hat{r}_x, \hat{r}_y, \hat{r}_z) = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)$. De este modo, el operador $S_{12}$ se reescribe en notación de índices como:
+\begin{equation}
+S_{12} = 3 (\vec{\sigma}_1 \cdot \hat{r})(\vec{\sigma}_2 \cdot \hat{r}) - \vec{\sigma}_1 \cdot \vec{\sigma}_2 = 3 \sum_{i,j=1}^3 \sigma_{1,i} \sigma_{2,j} \hat{r}_i \hat{r}_j - \vec{\sigma}_1 \cdot \vec{\sigma}_2
+\end{equation}
+
+Puesto que los operadores de espín de Pauli $\vec{\sigma}_1$ y $\vec{\sigma}_2$ actúan exclusivamente en el espacio de espín y no dependen de los ángulos de posición $(\theta, \phi)$, se pueden extraer fuera de la integración angular sobre la esfera unidad ($d\Omega = \sin\theta d\theta d\phi$). 
+
+Evaluamos en primer lugar la integral angular del producto de componentes del vector unitario $\hat{r}_i \hat{r}_j$:
+\begin{equation}
+\int \hat{r}_i \hat{r}_j d\Omega = \frac{4\pi}{3} \delta_{ij}
+\end{equation}
+donde $\delta_{ij}$ es la delta de Kronecker, que resulta de la ortogonalidad angular entre ejes cartesianos distintos e igual a $4\pi/3$ cuando $i = j$.
+
+Aplicando este resultado al primer término del operador $S_{12}$:
+\begin{equation}
+\int 3 (\vec{\sigma}_1 \cdot \hat{r})(\vec{\sigma}_2 \cdot \hat{r}) d\Omega = 3 \sum_{i,j=1}^3 \sigma_{1,i} \sigma_{2,j} \left( \frac{4\pi}{3} \delta_{ij} \right) = 4\pi \sum_{i=1}^3 \sigma_{1,i} \sigma_{2,i} = 4\pi (\vec{\sigma}_1 \cdot \vec{\sigma}_2)
+\end{equation}
+
+Por otra parte, la integración del segundo término, independiente de los ángulos espaciales, proporciona:
+\begin{equation}
+\int (\vec{\sigma}_1 \cdot \vec{\sigma}_2) d\Omega = (\vec{\sigma}_1 \cdot \vec{\sigma}_2) \int d\Omega = 4\pi (\vec{\sigma}_1 \cdot \vec{\sigma}_2)
+\end{equation}
+
+Restando ambas contribuciones se obtiene el resultado buscado:
+\begin{equation}
+\int S_{12} d\Omega = 4\pi (\vec{\sigma}_1 \cdot \vec{\sigma}_2) - 4\pi (\vec{\sigma}_1 \cdot \vec{\sigma}_2) = 0
+\end{equation}
+
+\textbf{Implicaciones físicas de la anulación del promedio angular:}
+
+\textbf{1. Anulación de la contribución diagonal en estados esféricos (Onda $S$):}
+En un estado cuántico que posea una función de onda espacial con simetría esférica pura (momento angular orbital $L = 0$), la integración angular de la densidad de probabilidad equivale a integrar directamente sobre la esfera unidad. Como consecuencia de que $\int S_{12} d\Omega = 0$, el valor esperado diagonal del operador tensorial se anula idénticamente en la onda $S$:
+\begin{equation}
+\langle {}^3S_1 | S_{12} | {}^3S_1 \rangle = 0
+\end{equation}
+Esto implica que la interacción tensorial no añade una corrección de energía de primer orden a un estado esférico puro.
+
+\textbf{2. Acoplamiento no diagonal y mezcla de ondas $S-D$:}
+Para que la interacción tensorial manifieste sus efectos dinámicos en el deuterón, debe actuar a través de sus elementos de matriz no diagonales, conectando estados con diferente momento angular orbital $L$:
+\begin{equation}
+\langle {}^3D_1 | S_{12} | {}^3S_1 \rangle \neq 0
+\end{equation}
+Por tanto, el operador $S_{12}$ actúa esencialmente como un término de acoplamiento o perturbación que induce la transición y mezcla entre la componente de onda $S$ ($L = 0$) y la componente de onda $D$ ($L = 2$).
+
+\textbf{3. Deformación espacial y momento cuadrupolar eléctrico $Q \neq 0$:}
+La propiedad $\int S_{12} d\Omega = 0$ explica por qué la fuerza tensorial no deforma uniformemente todo el potencial nuclear en todas las direcciones, sino que introduce una aniso-tropía dependiente de la orientación relativa entre el espín total y la coordenada relativa $\vec{r}$. Esta anisotropía es la responsable última de romper la simetría esférica del deuterón y generar una distribución espacial de carga elongada (prolatada) a lo largo del eje de espín, dando lugar al momento cuadrupolar eléctrico experimentalmente observado.
+
+\begin{center}
+  \includegraphics[width=0.75\textwidth]{imagenes/prob_ferrer_soria/2-4_a.png}
+\end{center}
+
+
+\end{problema}
+
+
+
+
+
+
+
+
+
+\newpage
+%======================================================
+%================= PROBLEMA 2 =========================
+%======================================================
+\newpage
+%======================================================
+%================= PROBLEMA 2 =========================
+%======================================================
+\newpage
+%======================================================
+%================= PROBLEMA 2 =========================
+%======================================================
+\newpage
+%======================================================
+%================= PROBLEMA 2 =========================
+%======================================================

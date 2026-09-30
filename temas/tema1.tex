@@ -1,16 +1,16 @@
 % !TEX root = ../main.tex
 % ==============================================================================
-% TEMA 1: CONCEPTO DE PARTÍCULA FUNDAMENTAL: CLASIFICACIÓN
+% TEMA 1: Partículas elementales: clasificación y propiedades
 % ==============================================================================
 
-\chapter{Concepto de Partícula Fundamental: Clasificación}
+\chapter{Partículas elementales: clasificación y propiedades}
 \label{chap:tema1}
 
 % ==============================================================================
 % SECCIÓN 1: CLASIFICACIÓN DE PARTÍCULAS FUNDAMENTALES
 % ==============================================================================
 
-\section{Clasificación de Partículas Fundamentales}
+\section{Concepto de Partícula Fundamental: Clasificación}
 
 El estudio de la física subatómica requiere un esquema de clasificación sistemático para las partículas conocidas. Esta división se realiza fundamentalmente bajo dos criterios independientes: el comportamiento cuántico y estadístico (determinado por el espín) y el tipo de interacciones en las que participan.
 
@@ -139,6 +139,17 @@ Este tiempo es enormemente mayor que el tiempo característico de una desintegra
 \end{ejemplo}
 
 \newpage
+% ==============================================================================
+% SECCIÓN: ANTIPARTÍCULAS
+% ==============================================================================
+\section{Antipartículas}
+
+\newpage
+% ==============================================================================
+% SECCIÓN: LEPTONES
+% ==============================================================================
+\section{Leptones}
+
 % ==============================================================================
 % SUBSECCIÓN: EL DESCUBRIMIENTO DEL MUÓN Y LA FÍSICA DE RAYOS CÓSMICOS
 % ==============================================================================
@@ -616,7 +627,7 @@ Para comprobar si el neutrino y el antineutrino son la misma partícula ($\nu_e 
 
 El Argón-37 (${}^{37}_{18}\text{Ar}$) es una sustancia radioactiva muy fácil de identificar al ser un emisor $\beta^+$ (captura electrónica) con un periodo de semidesintegración de $35 \text{ días}$. 
 
-El resultado experimental de Davis fue totalmente negativo: no se midió formación de ${}^{37}_{18}\text{Ar}$. Por lo tanto, se concluye que **el neutrino y el antineutrino son partículas distintas** ($\nu_e \neq \bar{\nu}_e$). Para formalizar esta distinción se introduce la conservación del **número leptónico electrónico** ($L_e$), asignando $L_e = +1$ a $e^-$ y $\nu_e$, y $L_e = -1$ a $e^+$ y $\bar{\nu}_e$.
+El resultado experimental de Davis fue totalmente negativo: no se midió formación de ${}^{37}_{18}\text{Ar}$. Por lo tanto, se concluye que \textbf{el neutrino y el antineutrino son partículas distintas} ($\nu_e \neq \bar{\nu}_e$). Para formalizar esta distinción se introduce la conservación del \textbf{número leptónico electrónico} ($L_e$), asignando $L_e = +1$ a $e^-$ y $\nu_e$, y $L_e = -1$ a $e^+$ y $\bar{\nu}_e$.
 
 ---
 
@@ -639,10 +650,10 @@ Si $\nu_e = \nu_\mu$, los neutrinos al interaccionar con los nucleones del detec
 \nu + n &\longrightarrow p + e^- \qquad \text{y} \qquad \nu + n \longrightarrow p + \mu^-
 \end{align}
 
-Sin embargo, en el experimento se observaron **exclusivamente eventos con muones** ($\mu^\pm$), resultando nula la producción de electrones (los escasos eventos de electrón medidos correspondían al fondo de radiación cósmica).
+Sin embargo, en el experimento se observaron \textbf{exclusivamente eventos con muones} ($\mu^\pm$), resultando nula la producción de electrones (los escasos eventos de electrón medidos correspondían al fondo de radiación cósmica).
 
 \paragraph{Conclusión y Ley de Conservación de Sabor Leptónico:}
-Este resultado demostró que **el neutrino del muón es distinto del neutrino del electrón** ($\nu_e \neq \nu_\mu$). Cada generación de leptones posee su propio número leptónico independiente ($L_e, L_\mu, L_\tau$), cuya conservación individual prohíbe procesos de cambio de sabor sin neutrinos como:
+Este resultado demostró que \textbf{el neutrino del muón es distinto del neutrino del electrón} ($\nu_e \neq \nu_\mu$). Cada generación de leptones posee su propio número leptónico independiente ($L_e, L_\mu, L_\tau$), cuya conservación individual prohíbe procesos de cambio de sabor sin neutrinos como:
 \begin{equation}
 \mu^\pm \nrightarrow e^\pm + \gamma \quad (\text{Proceso prohibido por conservación de } L_e \text{ y } L_\mu)
 \end{equation}
@@ -653,8 +664,448 @@ Permitiendo únicamente la desintegración débil de los muones a través de:
 \mu^- &\longrightarrow e^- + \bar{\nu}_e + \nu_\mu
 \end{align}
 
+\newpage
+
+% ==============================================================================
+% SUBSECCIÓN 4: LA PARTÍCULA TAU
+% ==============================================================================
+
+\subsection{4. La Partícula Tau y la Teoría de Perturbaciones}
+
+El estudio de la física de partículas y de los procesos de desintegración (como los asociados al lepto-tau $\tau$) requiere formalizar la probabilidad de transición entre estados cuánticos. Dado que los Hamiltonianos de interacción suelen ser pequeños frente a los Hamiltonianos libres, la herramienta fundamental empleada es la \textbf{Teoría de Perturbaciones Dependiente del Tiempo}.
+
+\subsubsection{4.a) La Regla de Oro de Fermi}
+
+Consideremos un sistema físico cuyo Hamiltoniano total puede descomponerse como:
+\begin{equation}
+\hat{H} = \hat{H}_0 + \hat{H}_1(t)
+\end{equation}
+donde $\hat{H}_0$ es el Hamiltoniano libre no perturbado (independiente del tiempo), cuyos autoestados $\phi_n$ y autovalores de energía $E_n$ son conocidos:
+\begin{equation}
+\hat{H}_0 \phi_n = E_n \phi_n
+\end{equation}
+Los estados $\{\phi_n\}$ forman una base completa y ortonormal ($\langle \phi_f | \phi_n \rangle = \delta_{fn}$). El término $\hat{H}_1(t)$ representa la interacción que induce transiciones entre autoestados de $\hat{H}_0$.
+
+Supongamos que en el instante inicial $t_0 = 0$ el sistema se encuentra en un estado inicial puro $|\Psi(0)\rangle = \phi_i$. Para $t > 0$, la función de onda general se expande en la base de $\hat{H}_0$:
+\begin{equation}
+\Psi(t) = \sum_n c_n(t) \phi_n e^{-i E_n t / \hbar}
+\end{equation}
+con la condición inicial $c_n(0) = \delta_{ni}$.
+
+Sustituyendo $\Psi(t)$ en la ecuación de Schrödinger dependiente del tiempo $i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi$, proyectando con $\phi_f^*$ y haciendo uso de la ortonormalidad, se obtiene el sistema de ecuaciones diferenciales acopladas:
+\begin{equation}
+i\hbar \frac{d c_f(t)}{dt} = \sum_n c_n(t) M_{fn}(t) e^{-i (E_n - E_f) t / \hbar}
+\end{equation}
+donde $M_{fn}(t) \equiv \langle \phi_f | \hat{H}_1(t) | \phi_n \rangle$ es el elemento de matriz de la interacción.
+
+En el régimen de perturbaciones débiles, a primer orden se aproxima $c_n(t) \approx \delta_{ni}$, de modo que para un estado final $f \neq i$:
+\begin{equation}
+i\hbar \frac{d c_f^{(1)}(t)}{dt} = M_{fi}(t) e^{-i (E_i - E_f) t / \hbar} \implies c_f^{(1)}(t) = \frac{1}{i\hbar} \int_0^t M_{fi}(t') e^{-i (E_i - E_f) t' / \hbar} dt'
+\end{equation}
+
+La probabilidad de transición del estado $i$ al estado $f$ viene dada por
+\[
+P_{i \to f}(t) = |c_f(t)|^2 \approx |c_f^{(1)}(t)|^2
+\]
+\textbf{Perturbación Constante}\\
+Si la perturbación $\hat{H}_1$ no depende explícitamente del tiempo, se activa en $t_0 = 0$ y actúa durante un intervalo de tiempo $T$, el elemento de matriz $M_{fi}$ es constante:
+\begin{equation}
+c_f^{(1)}(T) = \frac{M_{fi}}{i\hbar} \int_0^T e^{i \omega_{fi} t'} dt' = \frac{M_{fi}}{\hbar \omega_{fi}} \left( 1 - e^{i \omega_{fi} T} \right)
+\end{equation}
+donde $\omega_{fi} \equiv \frac{E_f - E_i}{\hbar}$ es la frecuencia de transición de Bohr.
+
+Utilizando la identidad $1 - e^{ix} = -2i e^{ix/2} \sin(x/2)$:
+\begin{equation}
+c_f^{(1)}(T) = -2i \frac{M_{fi}}{\hbar \omega_{fi}} e^{i \omega_{fi} T / 2} \sin\left(\frac{\omega_{fi} T}{2}\right)
+\end{equation}
+
+La probabilidad de transición adopta la forma:
+\begin{equation}
+P_{i \to f}(T) = 4 \frac{|M_{fi}|^2}{\hbar^2 \omega_{fi}^2} \sin^2\left(\frac{\omega_{fi} T}{2}\right) = \frac{|M_{fi}|^2}{\hbar^2} y(\omega_{fi}, T)
+\end{equation}
+donde se define la función kernel de respuesta:
+\begin{equation}
+y(\omega_{fi}, T) \equiv \frac{\sin^2\left( \frac{\omega_{fi} T}{2} \right)}{\left( \frac{\omega_{fi}}{2} \right)^2}
+\end{equation}
+
+La función $y(\omega_{fi}, T)$ alcanza su máximo principal $T^2$ en $\omega_{fi} = 0$ ($E_f = E_i$).
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \draw[->, thick] (-4,0) -- (4,0) node[right] {$\omega_{fi}$};
+  \draw[->, thick] (0,0) -- (0,3.2) node[above] {$y(\omega_{fi}, T)$};
+  
+  \draw[domain=-3.6:3.6, samples=200, smooth, ultra thick, maincolor] 
+    plot (\x, {3.0 * (sin(deg(\x * 2.0)) / (\x * 2.0))^2});
+    
+  \node[left] at (0,3.0) {$T^2$};
+  \draw[dotted] (-1.57,0) -- (-1.57,0.5);
+  \draw[dotted] (1.57,0) -- (1.57,0.5);
+  \node[below] at (-1.57,0) {$-\frac{2\pi}{T}$};
+  \node[below] at (1.57,0) {$\frac{2\pi}{T}$};
+  \node[below left] at (0,0) {$0$};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Perturbación Sinusoidal}\\
+Si la perturbación presenta un comportamiento armónico $\hat{H}_1(t) = \hat{H}_1 e^{-i\omega t} + \hat{H}_1^\dagger e^{i\omega t}$, el término proporcional a $e^{-i\omega t}$ describe la absorción de un cuanto de energía $\hbar\omega$. La amplitud de transición resulta:
+\begin{equation}
+c_f^{(1)}(T) = -2i \frac{M_{fi}}{\hbar (\omega - \omega_{fi})} e^{i (\omega - \omega_{fi}) T / 2} \sin\left( \frac{(\omega - \omega_{fi}) T}{2} \right)
+\end{equation}
+
+La probabilidad de transición viene dada por:
+\begin{equation}
+P_{i \to f}(T) = \frac{|M_{fi}|^2}{\hbar^2} y(\omega - \omega_{fi}, T)
+\end{equation}
+
+El valor máximo ocurre cuando la frecuencia de la perturbación coincide exactamente con la frecuencia natural de transición ($\omega = \omega_{fi}$), produciéndose una resonancia. La anchura total a mitad de altura de la curva de resonancia se aproxima por la distancia entre los primeros ceros de la función:
+\begin{equation}
+\Delta\omega \approx \frac{2\pi}{T}
+\end{equation}
+Esto demuestra que la resonancia se hace progresivamente más estrecha a medida que aumenta el tiempo de interacción $T$, lo que refleja el principio de incertidumbre tiempo-energía $\Delta E \cdot T \sim \hbar$.\\[4pt]
+\textbf{Transición al Continuo y Deducción de la Regla de Oro}
+
+Al resolver la ecuación de Schrödinger para cualquier Hamiltoniano, el espectro completo de autoestados incluye tanto los estados ligados (discretos) como los estados del continuo. En los procesos habituales de colisión o desintegración (como el decaimiento de una partícula libre), las partículas producidas en el estado final son partículas libres y, por tanto, sus estados pertenecen al \textbf{continuo de energía}.
+
+En el continuo, la energía disponible para las partículas finales viene determinada por la diferencia entre las energías en reposo de reactivos y productos. Dado que existe un continuo de estados finales accesibles, no podemos realizar una suma discreta $\sum_f$, sino que debemos integrar sobre el intervalo de energía mediante la \textbf{densidad de estados} $\rho(E_f)$:
+\begin{equation}
+\rho(E_f) \equiv \frac{dN}{dE_f}
+\end{equation}
+que representa el número de estados cuánticos accesibles por unidad de energía.
+
+La probabilidad de transición por unidad de tiempo $W$ se obtiene integrando sobre todos los estados finales accesibles:
+\begin{equation}
+W = \frac{1}{t} \int \rho(E_f) |c_f(t)|^2 dE_f
+\end{equation}
+
+Sustituyendo el coeficiente de primer orden $|c_f(t)|^2 = \frac{|M_{fi}|^2}{\hbar^2} y(\omega_{fi}, t)$:
+\begin{equation}
+W = \int \rho(E_f) \frac{|M_{fi}|^2}{\hbar^2} \frac{y(\omega_{fi}, t)}{t} dE_f
+\end{equation}
+
+A medida que el tiempo de interacción $t$ aumenta ($t \to \infty$), la función $y(\omega_{fi}, t)$ se concentra cada vez más alrededor del punto de resonancia $\omega_{fi} = 0$ ($E_f = E_i$). Integrando la función respecto a la frecuencia:
+\begin{equation}
+\int_{-\infty}^{\infty} y(\omega, t) d\omega = 2\pi t \implies \lim_{t \to \infty} \frac{y(\omega, t)}{2\pi t} = \delta(\omega)
+\end{equation}
+
+Dado que la función actúa en el límite asintótico como una delta de Dirac centrada en $E_f = E_i$, podemos extraer tanto la densidad de estados $\rho(E_f)$ como el elemento de matriz $M_{fi}$ fuera de la integral, evaluándolos en el punto de conservación de la energía $E_f = E_i$:
+\begin{equation}
+W = \rho(E_f) \frac{|M_{fi}|^2}{\hbar^2} \int \frac{y(\omega_{fi}, t)}{t} dE_f
+\end{equation}
+
+Teniendo en cuenta que la relación entre la frecuencia de Bohr y la energía es $\omega_{fi} = \frac{E_f - E_i}{\hbar}$, el diferencial de energía satisface $dE_f = \hbar d\omega_{fi}$. Sustituyendo en la integral:
+\begin{equation}
+W = \rho(E_f) \frac{|M_{fi}|^2}{\hbar^2} \hbar \int_{-\infty}^{\infty} \frac{y(\omega_{fi}, t)}{t} d\omega_{fi} = \rho(E_f) \frac{|M_{fi}|^2}{\hbar^2} \hbar (2\pi) = \rho(E_f) \frac{|M_{fi}|^2}{\hbar^2} 2\pi\hbar
+\end{equation}
+
+Simplificando los factores $\hbar$, se obtiene finalmente la \textbf{Regla de Oro de Fermi}:
+\begin{equation}
+W_{i \to f} = \frac{2\pi}{\hbar} |M_{fi}|^2 \rho(E_f)
+\end{equation}
+
+\begin{concepto}[Interpretación Física de la Regla de Oro de Fermi]
+La tasa de transición por unidad de tiempo $W_{i \to f}$ de un proceso cuántico viene determinada por dos factores independientes:
+\begin{enumerate}[label=\arabic*)]
+    \item \textbf{La Dinámica de la Interacción ($|M_{fi}|^2$):} Mide la intensidad del acoplamiento entre el estado inicial $i$ y el estado final $f$ a través del operador de interacción.
+    \item \textbf{La Cinemática del Espacio de Fases ($\rho(E_f)$):} Mide el número de estados cuánticos finales disponibles a la energía del proceso.
+\end{enumerate}
+\end{concepto}
+
+\newpage
+
+\subsubsection*{4.b) Sección eficaz y anchura de desintegración}
+
+La información sobre las interacciones y propiedades fundamentales de las partículas subatómicas se obtiene experimentalmente a través de dos observables principales: las **secciones eficaces de colisión** ($\sigma$) y las **anchuras de desintegración** ($\Gamma$).
+
+\textbf{1. Sección eficaz de dispersión ($\sigma$)}
+
+Consideremos un proceso de dispersión de dos cuerpos de la forma:
+\begin{equation}
+a + b \longrightarrow c + d
+\end{equation}
+donde $a$ representa la partícula proyectil del haz e $b$ la partícula del blanco en reposo.
+
+El flujo de partículas incidentes $\Phi$ se define como el número de partículas que atraviesan una unidad de área perpendicular al haz por unidad de tiempo:
+\begin{equation}
+\Phi = n_a v_i
+\end{equation}
+donde $n_a$ es la densidad volumétrica de partículas del haz y $v_i$ es la velocidad relativa entre $a$ e $b$ en el sistema centro de masas.
+
+Para un blanco formado por una única partícula ($N_b = 1$), la probabilidad de reacción por unidad de tiempo $W$ es proporcional al flujo incidente y la constante de proporcionalidad define la sección eficaz $\sigma$:
+\begin{equation}
+W = \sigma \Phi = \sigma n_a v_i
+\end{equation}
+
+Considerando un volumen de normalización finito $V$ que contiene una única partícula incidente ($N_a = 1 \implies n_a = 1/V$):
+\begin{equation}
+W = \sigma \frac{v_i}{V} \implies \sigma = \frac{V}{v_i} W
+\end{equation}
+
+Sustituyendo la probabilidad de transición por unidad de tiempo dada por la Regla de Oro de Fermi ($W = \frac{2\pi}{\hbar} |M_{fi}|^2 \rho(E_f)$), la sección eficaz adopta la forma:
+\begin{equation}
+\sigma = \frac{2\pi}{\hbar} \frac{V}{v_i} |M_{fi}|^2 \rho(E_f)
+\end{equation}
+donde la densidad de estados finales $\rho(E_f)$ se evalúa en la energía total conservada $E_f = E_i$.
+
+\textbf{2. Anchura y constante de desintegración ($\Gamma, \lambda$)}
+
+Para un proceso de desintegración espontánea de una partícula inestable $X$ en un estado final $f$:
+\begin{equation}
+X \longrightarrow c + d
+\end{equation}
+no existe haz incidente. La probabilidad de desintegración por unidad de tiempo se define como la constante de desintegración $\lambda \equiv W$.
+
+Aplicando directamente la Regla de Oro de Fermi:
+\begin{equation}
+\lambda = \frac{2\pi}{\hbar} |M_{fi}|^2 \rho(E_f)
+\end{equation}
+
+Se define la \textbf{anchura natural de desintegración} $\Gamma$ como:
+\begin{equation}
+\Gamma \equiv \hbar \lambda = \frac{\hbar}{\tau}
+\end{equation}
+donde $\tau = 1/\lambda$ es la vida media del estado inestable. Expresando $\Gamma$ en función del elemento de matriz:
+\begin{equation}
+\Gamma = 2\pi |M_{fi}|^2 \rho(E_f)
+\end{equation}
+
+\textbf{3. Análisis dimensional}
+
+Analizando las dimensiones de las magnitudes obtenidas en el sistema internacional de unidades:
+\begin{itemize}
+    \item \textbf{Sección eficaz ($\sigma$):}
+    \begin{equation}
+    [\sigma] \equiv \frac{L^3}{L T^{-1}} \cdot \frac{1}{E T} \cdot E^2 \cdot \frac{1}{E} = L^2 \quad \implies \quad \text{superficie (m}^2 \text{ o barn, } 1\text{ b} = 10^{-28}\text{ m}^2)
+    \end{equation}
+
+    \item \textbf{Anchura de desintegración ($\Gamma$):}
+    \begin{equation}
+    [\Gamma] \equiv E^2 \cdot \frac{1}{E} = E \quad \implies \quad \text{energía (eV, MeV, GeV)}
+    \end{equation}
+
+    \item \textbf{Constante de desintegración ($\lambda$):}
+    \begin{equation}
+    [\lambda] \equiv T^{-1} \quad \implies \quad \text{inverso de tiempo (s}^{-1})
+    \end{equation}
+\end{itemize}
+
+\textbf{4. Determinación empírica del elemento de matriz $M_{fi}$}
+
+Las expresiones deducidas para $\sigma$ y $\Gamma$ asumen la hipótesis de perturbación débil ($\hat{H}_1 \ll \hat{H}_0$). Cuando la interacción es fuerte o no perturbativa y el elemento de matriz $M_{fi}$ no se puede calcular analíticamente a partir de la teoría de perturbaciones, las expresiones de la Regla de Oro de Fermi se reinterpretan como una definición operacional efectiva de $M_{fi}$. De este modo, las medidas experimentales de $\sigma$ y $\Gamma$ permiten extraer de forma empírica el valor de $|M_{fi}|$.
+\newpage
+% ==============================================================================
+% SUBSUBSECCIÓN c) DENSIDAD DE ESTADOS FINALES
+% ==============================================================================
+\subsubsection*{4.c) Densidad de estados finales: espacio de fases}
+
+Muchos procesos físicos de colisión y desintegración no están gobernados únicamente por la dinámica de la interacción (reflejada en el elemento de matriz $M_{fi}$), sino de manera determinante por el \textbf{espacio de fases disponible} en el estado final. Este factor cinemático representa el número total de estados cuánticos accesibles para el sistema dentro del rango de energía permitido por las leyes de conservación.
+
+\paragraph{1. Deducción general para un estado final de dos partículas ($a + b \to c + d$ o $A \to B + C$)}
+
+Consideremos un proceso de dos cuerpos produciendo las partículas $c$ y $d$ en el estado final. En el sistema de referencia del centro de masas (CM), los módulos de los momentos lineales de ambas partículas son iguales:
+\begin{equation}
+|\vec{p}_c| = |\vec{p}_d| \equiv p_f
+\end{equation}
+La energía total disponible en el estado final en el sistema CM viene dada por la suma de las energías relativistas individuales:
+\begin{equation}
+E_f = E_c + E_d = \sqrt{p_f^2 c^2 + m_c^2 c^4} + \sqrt{p_f^2 c^2 + m_d^2 c^4}
+\end{equation}
+
+Supongamos un detector situado a una distancia $R$ del punto de interacción que cubre un elemento de superficie $d\Sigma$. El ángulo sólido subtendido por el detector es:
+\begin{equation}
+d\Omega = \frac{d\Sigma}{R^2}
+\end{equation}
+En el espacio de momentos de una partícula, el volumen elemental correspondiente a un intervalo de momento lineal entre $p_f$ y $p_f + dp_f$ emitiendo dentro del ángulo sólido $d\Omega$ es:
+\begin{equation}
+d^3p = p_f^2 \, dp_f \, d\Omega
+\end{equation}
+
+Para cuantizar el número de estados accesibles, confinamos formalmente el sistema en un volumen cúbico $V = L^3$ e imponemos condiciones periódicas de contorno para las soluciones libres de la ecuación de Schrödinger (ondas planas). Las componentes del momento lineal quedan cuantizadas según:
+\begin{equation}
+p_i = n_i \frac{2\pi\hbar}{L} = n_i \frac{h}{L}, \quad (i = x, y, z; \quad n_i = 0, \pm 1, \pm 2, \dots)
+\end{equation}
+
+En consecuencia, cada estado cuántico ocupa un volumen elemental mínimo en el espacio de momentos de valor:
+\begin{equation}
+\Delta p^3 = \Delta p_x \Delta p_y \Delta p_z = \frac{h^3}{L^3} = \frac{h^3}{V}
+\end{equation}
+Este volumen $V$ es un artificio matemático de normalización que se cancelará posteriormente al evaluar observables físicos.
+
+El número de estados cuánticos finales accesibles $dN$ en el elemento de ángulo sólido $d\Omega$ por unidad de energía viene determinado por la razón entre el volumen diferencial en el espacio de momentos y el volumen de celda elemental, multiplicado por la degeneración de espín $g_f$:
+\begin{equation}
+\rho(E_f, \Omega) = \frac{dN}{dE_f} = p_f^2 \frac{dp_f}{dE_f} d\Omega \frac{1}{h^3 / V} g_f
+\end{equation}
+donde $g_f = (2s_c + 1)(2s_d + 1)$ cuenta las posibles configuraciones de espín de las partículas finales.
+
+Integrando sobre todas las direcciones espaciales posibles ($\int d\Omega = 4\pi$), se obtiene la densidad de estados finales total $\rho(E_f)$:
+\begin{equation}
+\rho(E_f) = 4\pi g_f p_f^2 \frac{V}{h^3} \frac{dp_f}{dE_f} = 4\pi V \frac{p_f^2}{(2\pi\hbar)^3} \frac{dp_f}{dE_f} g_f
+\end{equation}
+
+\paragraph{2. Formulación covariante en Teoría Cuántica de Campos}
+
+En la formulación moderna relativista de la Teoría Cuántica de Campos, cada partícula libre en el estado final aporta un elemento de espacio de fases Lorentz-invariante de la forma:
+\begin{equation}
+d\rho_j = \frac{d^3p_j}{(2\pi\hbar)^3 2E_j}
+\end{equation}
+Para un proceso general con $N$ partículas en el estado final, la conservación estricta del cuadrimomento total $P^\mu = (E/c, \vec{p})$ se implementa mediante una función delta de Dirac cuatridimensional $\delta^{(4)}(P_i - \sum_j P_j)$:
+\begin{equation}
+d\rho_f = (2\pi)^4 \delta^{(4)}\left(P_i - \sum_{j=1}^N P_j\right) \prod_{j=1}^N \frac{d^3p_j}{(2\pi\hbar)^3 2E_j}
+\end{equation}
+Esta expresión constituye la versión manifiesta y covariante de Lorentz para la medida del espacio de fases, reduciéndose a las fórmulas obtenidas mediante cuantización en caja para casos específicos de dos y tres cuerpos.
+
+\paragraph{3. Deducción de la sección eficaz y análisis dimensional}
+
+Sustituyendo la densidad de estados $\rho(E_f)$ en la Regla de Oro de Fermi para la sección eficaz ($\sigma = \frac{V}{v_i} W = \frac{V}{v_i} \frac{2\pi}{\hbar} |M_{fi}|^2 \rho(E_f)$), se llega a:
+\begin{equation}
+\sigma = \frac{V}{v_i} \frac{2\pi}{\hbar} |M_{fi}|^2 \left[ 4\pi g_f \frac{V}{h^3} p_f^2 \frac{dp_f}{dE_f} \right] = \frac{1}{\pi\hbar^4} V^2 |M_{fi}|^2 \frac{p_f^2}{v_i} \frac{dp_f}{dE_f} g_f
+\end{equation}
+
+\textbf{Análisis dimensional de la sección eficaz:}
+\begin{align}
+\left[\frac{dp_f}{dE_f}\right] &= \frac{\text{M} \cdot \text{L} \cdot \text{T}^{-1}}{\text{M} \cdot \text{L}^2 \cdot \text{T}^{-2}} = \frac{\text{T}}{\text{L}} \quad (\text{inverso de una velocidad}) \\
+[|M_{fi}|^2] &= \text{E}^2 \\
+[V^2] &= \text{L}^6 \\
+[v_i] &= \frac{\text{L}}{\text{T}} \\
+[\hbar^4] &= (\text{E} \cdot \text{T})^4 = \text{E}^4 \text{T}^4
+\end{align}
+Sustituyendo estas dimensiones en la expresión de $\sigma$:
+\begin{equation}
+[\sigma] \equiv \frac{1}{\text{E}^4 \text{T}^4} \cdot \text{L}^6 \cdot \text{E}^2 \cdot \frac{\text{T}}{\text{L}} \cdot \frac{\text{T}}{\text{L}} \cdot \frac{\text{T}}{\text{L}} = \frac{\text{L}^6 \text{E}^2 \text{T}^3}{\text{E}^4 \text{T}^4 \text{L}^3} = \frac{\text{L}^3}{\text{E}^2 \text{T}} = \text{L}^2 \quad \implies \quad \text{Superficie}
+\end{equation}
+
+\textbf{Cancelación del volumen de normalización $V$:}
+Cada onda plana normalizada en una caja de volumen $V$ incluye un factor de escala $1/\sqrt{V}$. Para una reacción de dos partículas a dos partículas ($a + b \to c + d$), el elemento de matriz $M_{fi} = \langle \phi_c \phi_d | \hat{H}_1 | \phi_a \phi_b \rangle$ contiene cuatro funciones de onda, lo que aporta un factor $(1/\sqrt{V})^4 = 1/V^2$.
+Por tanto, $|M_{fi}|^2 \propto 1/V^2$, cancelando exactamente la potencia $V^2$ explícita presente en la densidad de estados finales. El volumen $V$ es solo un artificio matemático y no afecta a los observables físicos medidos.
+
+\paragraph{4. Evaluación de la densidad de estados en casos particulares de interés ($g_f = 1$)}
+
+\textbf{Caso A: $A \to B + C$ ($B$ y $C$ relativistas)}
+
+En este caso, la conservación de energía en el centro de masas satisface:
+\begin{equation}
+E_f = E_B + E_C = \sqrt{p_f^2 c^2 + m_B^2 c^4} + \sqrt{p_f^2 c^2 + m_C^2 c^4} = E_A = m_A c^2
+\end{equation}
+Calculamos la derivada $dE_f / dp_f$:
+\begin{equation}
+\frac{dE_f}{dp_f} = \frac{2 p_f c^2}{2\sqrt{p_f^2 c^2 + m_B^2 c^4}} + \frac{2 p_f c^2}{2\sqrt{p_f^2 c^2 + m_C^2 c^4}} = \frac{p_f c^2}{E_B} + \frac{p_f c^2}{E_C} = p_f c^2 \left( \frac{E_B + E_C}{E_B E_C} \right) = \frac{p_f c^2 E_A}{E_B E_C}
+\end{equation}
+De donde se obtiene:
+\begin{equation}
+\frac{dp_f}{dE_f} = \frac{E_B E_C}{p_f c^2 E_A}
+\end{equation}
+Sustituyendo en la densidad de estados $\rho(E_f) = 4\pi V \frac{p_f^2}{(2\pi\hbar)^3} \frac{dp_f}{dE_f}$:
+\begin{equation}
+\rho(E_f) = 4\pi V \frac{p_f^2}{(2\pi\hbar)^3} \frac{E_B E_C}{p_f c^2 E_A} = \frac{V}{2\pi^2 (\hbar c)^3} (p_f c) \frac{E_B E_C}{E_A}
+\end{equation}
+Comprobación dimensional: $[\rho(E_f)] = \frac{\text{L}^3}{\text{E}^3 \text{L}^3 \text{T}^3 \cdot \text{T}^{-3}} \cdot \text{E} \cdot \frac{\text{E}^2}{\text{E}} = \text{E}^{-1}$, correcto.
+
+\textbf{Caso B: $A \to B + C$ ($B$ y $C$ no relativistas)}
+
+Definimos el valor $Q$ de la reacción como la energía liberada en reposo: $Q = (m_A - m_B - m_C)c^2 \ll m_B c^2, m_C c^2$.
+La energía cinética total en el sistema CM se aproxima no relativistamente por:
+\begin{equation}
+E_f = m_B c^2 + \frac{p_f^2}{2m_B} + m_C c^2 + \frac{p_f^2}{2m_C} = m_A c^2 \implies Q = \frac{p_f^2}{2} \left( \frac{1}{m_B} + \frac{1}{m_C} \right) = \frac{p_f^2}{2\mu}
+\end{equation}
+donde $\mu = \frac{m_B m_C}{m_B + m_C}$ es la masa reducida del sistema final.
+El momento lineal resulta $p_f = \sqrt{2\mu Q} = (2\mu Q)^{1/2}$. Derivando la energía respecto a $p_f$:
+\begin{equation}
+\frac{dE_f}{dp_f} = p_f \left( \frac{1}{m_B} + \frac{1}{m_C} \right) = \frac{p_f}{\mu} \implies \frac{dp_f}{dE_f} = \frac{\mu}{p_f}
+\end{equation}
+Sustituyendo en la expresión de $\rho(E_f)$:
+\begin{equation}
+\rho(E_f) = 4\pi V \frac{p_f^2}{(2\pi\hbar)^3} \frac{\mu}{p_f} = \frac{4\pi V}{(2\pi\hbar)^3} \mu (2\mu Q)^{1/2} = \frac{2\pi V}{(2\pi\hbar c)^3} Q^{1/2} (2\mu c^2)^{3/2}
+\end{equation}
+
+\textbf{Comparación entre dos reacciones de desintegración ($A \to B + C$ frente a $D \to E + F$):}
+Al calcular el cociente de las anchuras de desintegración de dos procesos de dos cuerpos:
+\begin{equation}
+\frac{\Gamma_A}{\Gamma_D} \approx \frac{|M_{A \to BC}|^2}{|M_{D \to EF}|^2} \cdot \frac{\rho_A}{\rho_D}
+\end{equation}
+Para poder ignorar la contribución del espacio de fases ($\rho_A / \rho_D \approx 1$) y comparar directamente la intensidad dinámica de las interacciones $|M|^2$, debe cumplirse que:
+\begin{enumerate}
+    \item Los valores $Q$ de ambas reacciones sean similares: $Q_A \approx Q_D \implies m_A - m_B - m_C \approx m_D - m_E - m_F$.
+    \item Las masas reducidas sean similares: $\mu_A \approx \mu_D$.
+\end{enumerate}
+En el caso simétrico de masas iguales en productos ($m_B \approx m_C$), $2\mu \approx m_B$. Por lo tanto, la aproximación es válida únicamente entre procesos que involucren partículas de masas del mismo orden.
+
+\textbf{Caso C: $A \to B + C$ ($B$ no relativista y $C$ relativista)}
+
+Este caso describe procesos como la desintegración $\alpha$ o transiciones electromagnéticas donde se emite una partícula ligera o sin masa ($m_C c^2 \ll m_B c^2$, p. ej. fotón $\gamma$ con $m_C \to 0$).
+La conservación de energía se escribe:
+\begin{equation}
+E_f = m_B c^2 + \frac{p_f^2}{2m_B} + \sqrt{p_f^2 c^2 + m_C^2 c^4} = m_A c^2
+\end{equation}
+Dado que el fragmento pesado $B$ absorbe el momento de recesión con una energía cinética $p_f^2 / (2m_B)$ despreciable frente a la energía del cuanto emitido $C$, el momento $p_f$ verifica aproximadamente:
+\begin{equation}
+p_f \approx \sqrt{(m_A - m_B)^2 - m_C^2} \, c
+\end{equation}
+La derivada de la energía es:
+\begin{equation}
+\frac{dE_f}{dp_f} = \frac{p_f}{m_B} + \frac{p_f c^2}{\sqrt{p_f^2 c^2 + m_C^2 c^4}} \approx \frac{p_f c^2}{(m_A - m_B)c^2} = \frac{p_f}{m_A - m_B} \implies \frac{dp_f}{dE_f} = \frac{m_A - m_B}{p_f}
+\end{equation}
+Sustituyendo en la densidad de estados:
+\begin{equation}
+\rho(E_f) = 4\pi V \frac{p_f^2}{(2\pi\hbar)^3} \frac{m_A - m_B}{p_f} = \frac{4\pi V}{(2\pi\hbar c)^3} \sqrt{(m_A - m_B)^2 - m_C^2} \, (m_A - m_B) c^4
+\end{equation}
+En el límite $m_C \to 0$ (emisión electromagnética de fotones):
+\begin{equation}
+\rho(E_f) = \frac{4\pi V}{(2\pi\hbar c)^3} (m_A - m_B)^2 c^4
+\end{equation}
+
+\textbf{Caso D: Desintegración de tres cuerpos $A \to B + C + D$ ($m_C, m_D \ll m_B \sim m_A$)}
+
+Este caso es fundamental en la física de interacciones débiles (desintegración $\beta$ nuclear o desintegración de leptones). El núcleo recojiente $B$ es muy pesado ($m_B \sim m_A$), por lo que absorbe el momento necesario para conservar el impulso global pero se lleva una fracción insignificante de la energía cinética ($p_B^2 / (2m_B) \approx 0$).
+
+La energía disponible $E_0 \equiv (m_A - m_B)c^2 = E_C + E_D$ se distribuye continuamente entre los dos productos ligeros $C$ y $D$.
+En el límite ultrarrelativista ($E_C \gg m_C c^2, E_D \gg m_D c^2$), las densidades de estados individuales de cada partícula son:
+\begin{equation}
+\rho_C(E_C) = \frac{4\pi V}{(2\pi\hbar c)^3} E_C^2, \qquad \rho_D(E_D) = \frac{4\pi V}{(2\pi\hbar c)^3} E_D^2 = \frac{4\pi V}{(2\pi\hbar c)^3} (E_0 - E_C)^2
+\end{equation}
+
+Para obtener la densidad de estados finales total del sistema, integramos sobre todas las particiones posibles de la energía $E_C$ desde $0$ hasta $E_0$:
+\begin{equation}
+\rho_f(E_f) = \int_0^{E_0} \rho_C(E_C) \rho_D(E_0 - E_C) dE_C = \int_0^{E_0} \frac{4\pi V}{(2\pi\hbar c)^3} E_C^2 \cdot \frac{4\pi V}{(2\pi\hbar c)^3} (E_0 - E_C)^2 dE_C
+\end{equation}
+\begin{equation}
+\rho_f(E_f) = \frac{(4\pi)^2 V^2}{(2\pi\hbar c)^6} \int_0^{E_0} \left( E_0^2 E_C^2 - 2 E_0 E_C^3 + E_C^4 \right) dE_C
+\end{equation}
+Calculando la integral polinómica:
+\begin{equation}
+\int_0^{E_0} \left( E_0^2 E_C^2 - 2 E_0 E_C^3 + E_C^4 \right) dE_C = E_0^5 \left( \frac{1}{3} - \frac{2}{4} + \frac{1}{5} \right) = E_0^5 \left( \frac{1}{3} - \frac{1}{2} + \frac{1}{5} \right) = \frac{E_0^5}{30}
+\end{equation}
+Se obtiene finalmente:
+\begin{equation}
+\rho_f(E_f) = \frac{(4\pi)^2 V^2}{(2\pi\hbar c)^6} \frac{E_0^5}{30}
+\end{equation}
+
+\textbf{Interpretación física de las desintegraciones de tres cuerpos:}
+A diferencia de las desintegraciones de dos cuerpos, donde la energía de cada partícula queda unívocamente fijada por la conservación de energía y momento, en un proceso de tres cuerpos la energía se reparte de forma continua entre los productos emitidos. Esta libertad cinemática genera un volumen de espacio de fases inmensamente mayor que escala con la \textbf{quinta potencia de la energía disponible} ($E_0^5$). Si las masas de los productos son despreciables frente a la masa inicial ($E_0 \approx m_A c^2$), el espacio de fases resulta proporcional a $m_A^5$.
+
+\paragraph{5. Aplicación física: Desintegración del muón y descubrimiento del leptón tau}
+
+Un ejemplo paradigmático de la dependencia $m^5$ se encuentra en la desintegración débil del muón:
+\begin{equation}
+\mu^- \longrightarrow e^- + \bar{\nu}_e + \nu_\mu
+\end{equation}
+Dado que $m_e, m_\nu \ll m_\mu$, el espacio de fases accesible viene determinado por $m_\mu^5$. Combinando esto con el elemento de matriz de la interacción débil mediado por la constante de Fermi $G_F$:
+\begin{equation}
+\Gamma_\mu \propto G_F^2 m_\mu^5 \implies \tau_\mu = \frac{\hbar}{\Gamma_\mu} \propto \frac{1}{m_\mu^5}
+\end{equation}
+
+De forma análoga, para el leptón tau ($\tau^- \to e^- + \bar{\nu}_e + \nu_\tau$), su masa sustancialmente mayor ($m_\tau \approx 1777\text{ MeV/c}^2 \approx 17 m_\mu$) implica que su anchura de desintegración es extraordinariamente superior:
+\begin{equation}
+\Gamma_\tau \propto G_F^2 m_\tau^5 \implies \tau_\tau \approx \tau_\mu \left( \frac{m_\mu}{m_\tau} \right)^5 \times \text{BR}(\tau \to e \nu \nu)
+\end{equation}
+Esta rapidísima desintegración (vida media del orden de $10^{-13}\text{ s}$) explicaba su difuso comportamiento experimental y guió su búsqueda y descubrimiento por Martin Perl en 1975.
 
 
+
+\subsubsection*{4. d) Propiedades generales de procesos de desintegración}
+\subsubsection*{4. e) Distribuciones de desintegración: Fórmula de Breit-Wigner}
+\subsubsection*{4. f) Sección eficaz resonante}
+
+\section{Quarks y hadrones}
 
 
 
