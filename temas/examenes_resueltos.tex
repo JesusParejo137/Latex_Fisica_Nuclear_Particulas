@@ -1,0 +1,2110 @@
+\chapter*{Exámenes resueltos}
+\setcounter{chapter}{1}
+\addcontentsline{toc}{chapter}{Exámenes resueltos}
+\setcounter{problemacontador}{0}
+
+\section{Examen Parcial 25-26}
+% ==============================================================================
+% TEORÍA
+% ==============================================================================
+\subsection{Ejercicios de Teoría}
+% ==============================================================================
+% EJERCICIO 1.
+% ==============================================================================
+\begin{problema}[Detección del antineutrino electrónico]
+Señales de la existencia del antineutrino electrónico. Partícula que generó la señal, su energía y su orientación temporal.
+
+\tcblower
+
+\subsubsection*{1. Proceso fundamental de interacción}
+
+La primera evidencia experimental directa de la existencia del antineutrino electrónico ($\bar{\nu}_e$) fue obtenida por F. Reines y C. Cowan en 1956 utilizando el flujo de antineutrinos producido en los reactores nucleares de Savannah River. El proceso de detección se basa en la reacción de \textbf{desintegración beta inversa (IBD)}:
+\begin{equation*}
+\bar{\nu}_e + p \longrightarrow e^+ + n
+\end{equation*}
+donde un antineutrino electrónico incidente interactúa con un protón del blanco (agua con cloruro de cadmio, $\text{CdCl}_2$), produciendo un positrón ($e^+$) y un neutrón ($n$).
+
+\subsubsection*{2. Análisis de las señales, partículas asociadas, energía y orientación temporal}
+
+La prueba inequívoca de la detección del antineutrino requiere la observación de una \textbf{firma de coincidencia temporal diferida} entre dos señales consecutivas:
+
+\paragraph{a) Primera señal: Señal Pronta (Prompt Signal)}
+\begin{itemize}
+    \item \textbf{Partícula que la genera:} El \textbf{positrón} ($e^+$).
+    \item \textbf{Mecanismo y energía:} El positrón ralentiza rápidamente por ionización en el medio centellador y se aniquila casi instantáneamente con un electrón libre ($e^+ + e^- \to 2\gamma$). Se emiten dos fotones de aniquilación en direcciones opuestas ($180^\circ$), cada uno con una energía de $m_e c^2 = 0.511\text{ MeV}$. La energía depositada en esta señal pronta es:
+    \begin{equation*}
+    E_{\text{pronta}} = T_{e^+} + 2 m_e c^2 \approx E_{\bar{\nu}_e} - (m_n - m_p - m_e)c^2 \approx E_{\bar{\nu}_e} - 0.782\text{ MeV}
+    \end{equation*}
+    produciendo una señal luminosa inmediata de energía visible $E_{\text{pronta}} \ge 1.022\text{ MeV}$.
+    \item \textbf{Orientación temporal:} Ocurre en el tiempo \textbf{$t = 0$} ($\sim \text{pocos nanosegundos}$ tras la interacción inicial del antineutrino).
+\end{itemize}
+
+\paragraph{b) Segunda señal: Señal Diferida (Delayed Signal)}
+\begin{itemize}
+    \item \textbf{Partícula que la genera:} El \textbf{neutrón} ($n$).
+    \item \textbf{Mecanismo y energía:} El neutrón producido es expulsado con poca energía cinética. Tras sufrir múltiples colisiones elásticas con los protones del medio acuoso hasta reducir su energía al régimen térmico ($\sim 0.025\text{ eV}$), es capturado por un núcleo de cadmio ($^{113}\text{Cd}$), el cual posee una enorme sección eficaz de captura neutrónica térmicas ($\sigma \sim 2 \times 10^4\text{ b}$). Tras la captura, el núcleo excitado de $^{114}\text{Cd}^*$ se desexcita emitiendo una cascada de fotones $\gamma$ con una energía total igual a la energía de ligadura del neutrón:
+    \begin{equation*}
+    E_{\text{diferida}} = \sum E_\gamma \approx 8\text{ MeV}
+    \end{equation*}
+    \item \textbf{Orientación temporal:} Ocurre con un retraso característico de unos \textbf{$t \approx 5\text{ a } 10\ \mu\text{s}$} posterior a la señal pronta del positrón (el tiempo necesario para que el neutrón se termalice y sea capturado).
+\end{itemize}
+
+\subsubsection*{3. Conclusión}
+La presencia del antineutrino electrónico queda demostrada por la aparición correlacionada de un par de pulsos: un primer pulso de $\approx (T_{e^+} + 1.022)\text{ MeV}$ producido por la aniquilación del positrón ($t=0$), seguido escasos microsegundos después por un segundo pulso característico de $\approx 8\text{ MeV}$ producido por la captura del neutrón en el cadmio.
+\end{problema}
+\newpage
+% ==============================================================================
+% EJERCICIO 2.
+% ==============================================================================
+\begin{problema}[Estabilidad del estado ligado $p-\Lambda$]
+Sabemos que la interacción fuerte entre un protón y un neutrón da lugar a un estado ligado estable (el deuterón) con una energía de ligadura $E_{d}\approx2.23$ MeV. Suponiendo que la interacción fuerte entre un protón y un hiperón $\Lambda$ ($p-\Lambda$) fuera comparable en intensidad:
+\begin{enumerate}[label=\alph*.-]
+    \item ¿Sería estable el estado ligado $p-\Lambda$? Discute bajo qué condiciones exactas lo sería.
+    \item Si es así, calcula su masa límite o la condición de estabilidad frente a sus canales de desintegración:
+    \begin{equation*}
+    \Lambda \rightarrow \begin{cases} p + \pi^- \\ n + \pi^0 \end{cases}
+    \end{equation*}
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Análisis de la estabilidad del estado ligado $p-\Lambda$}
+
+Un estado ligado $p-\Lambda$ (conocido como dibarión con extrañeza $S=-1$ o hiperdeuterón) estará formado por la atracción fuerte entre un protón ($m_p c^2 \approx 938.27\text{ MeV}$) y un hiperón $\Lambda$ ($m_\Lambda c^2 \approx 1115.68\text{ MeV}$).
+
+Debemos distinguir dos conceptos de estabilidad:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Estabilidad frente a la interacción fuerte (estabilidad de ligadura):}
+    Para que exista como un estado ligado y no se desintegre instantáneamente por interacción fuerte en un protón libre y un hiperón $\Lambda$ libre ($p-\Lambda \to p + \Lambda$), su energía de ligadura $B_{p\Lambda}$ debe ser estrictamente positiva:
+    \begin{equation*}
+    B_{p\Lambda} = (m_p + m_\Lambda)c^2 - M(p\Lambda)c^2 > 0 \implies M(p\Lambda) < m_p + m_\Lambda \approx 2053.95\text{ MeV/c}^2
+    \end{equation*}
+    Si la fuerza $p-\Lambda$ es comparable a la $p-n$ ($B \sim 2.23\text{ MeV}$), el estado ligado existirá como tal y será \textbf{estable frente a la separación fuerte}.
+
+    \item \textbf{Estabilidad frente a la interacción débil (vida media larga vs. estabilidad absoluta):}
+    El hiperón $\Lambda$ libre es inestable por interacción débil ($\tau_\Lambda \approx 2.63 \times 10^{-10}\text{ s}$), desintegrándose mediante modos no leptónicos de cambio de sabor ($\Delta S = 1$). Por lo tanto, el estado ligado $(p\Lambda)$ sufrirá desintegración débil mesónica o no mesónica, a menos que la energía de ligadura sea tan grande que los canales de desintegración débil queden cerrados cinemáticamente.
+\end{enumerate}
+
+\subsubsection*{b) Masa límite y condiciones de estabilidad frente a desintegración mesónica}
+
+Para que el estado ligado $(p\Lambda)$ sea \textbf{estrictamente estable} (prohibido cinemáticamente) frente a los canales de desintegración débil mesónica del $\Lambda$, la masa de reposo del estado ligado $M(p\Lambda)$ debe ser menor que la masa total de los productos de desintegración final:
+
+\paragraph{1. Canal 1: $(p\Lambda) \longrightarrow p + p + \pi^-$}
+La condición de estabilidad exige:
+\begin{equation*}
+M(p\Lambda)c^2 < 2 m_p c^2 + m_{\pi^-} c^2
+\end{equation*}
+Sustituyendo los valores de las masas ($m_p c^2 = 938.27\text{ MeV}$, $m_{\pi^-} c^2 = 139.57\text{ MeV}$):
+\begin{equation*}
+M_{\text{límite}}^{(1)} c^2 = 2(938.27\text{ MeV}) + 139.57\text{ MeV} = \mathbf{2016.11\text{ MeV}}
+\end{equation*}
+
+Expresado en términos de la energía de ligadura requerida $B_{p\Lambda} = (m_p + m_\Lambda) c^2 - M(p\Lambda) c^2$:
+\begin{equation*}
+B_{p\Lambda} > (m_p + m_\Lambda)c^2 - (2 m_p + m_{\pi^-})c^2 = m_\Lambda c^2 - m_p c^2 - m_{\pi^-} c^2 = Q_{\Lambda \to p\pi^-}
+\end{equation*}
+\begin{equation*}
+B_{p\Lambda} > 1115.68 - 938.27 - 139.57 = \mathbf{37.84\text{ MeV}}
+\end{equation*}
+
+\paragraph{2. Canal 2: $(p\Lambda) \longrightarrow p + n + \pi^0$}
+La condición de estabilidad exige:
+\begin{equation*}
+M(p\Lambda)c^2 < m_p c^2 + m_n c^2 + m_{\pi^0} c^2
+\end{equation*}
+Sustituyendo las masas ($m_n c^2 = 939.57\text{ MeV}$, $m_{\pi^0} c^2 = 134.98\text{ MeV}$):
+\begin{equation*}
+M_{\text{límite}}^{(2)} c^2 = 938.27\text{ MeV} + 939.57\text{ MeV} + 134.98\text{ MeV} = \mathbf{2012.82\text{ MeV}}
+\end{equation*}
+La energía de ligadura mínima necesaria para bloquear este canal es:
+\begin{equation*}
+B_{p\Lambda} > m_\Lambda c^2 - m_n c^2 - m_{\pi^0} c^2 = 1115.68 - 939.57 - 134.98 = \mathbf{41.13\text{ MeV}}
+\end{equation*}
+
+\subsubsection*{Resumen de la condición de estabilidad}
+\begin{itemize}
+    \item \textbf{Masa límite para estabilidad absoluta frente a desintegración mesónica:} $M(p\Lambda)c^2 < \mathbf{2012.82\text{ MeV}}$ (el canal más restrictivo es $p+n+\pi^0$).
+    \item \textbf{Conclusión:} Si la interacción $p-\Lambda$ es de intensidad similar a la del deuterón ($B \approx 2.23\text{ MeV} \ll 37.84\text{ MeV}$), el estado $p-\Lambda$ estará ligado frente a la fuerza fuerte, pero \textbf{no será estable frente a la desintegración débil}, desintegrándose en escalas de $\sim 10^{-10}\text{ s}$.
+\end{itemize}
+\end{problema}
+\newpage
+% ==============================================================================
+% EJERCICIO 3.
+% ==============================================================================
+\begin{problema}[Filtro hadrónico y haz de neutrinos]
+Un haz de protones incide sobre un blanco de berilio (Be), generando partículas que atraviesan un bloque de acero hasta llegar a un detector. ¿Qué se detecta?
+
+\tcblower
+
+\subsubsection*{1. Procesos de producción en el blanco de Berilio ($p + \text{Be}$)}
+
+Al impactar los protones de alta energía sobre los núcleos ligeros de berilio, las interacciones fuertes producen una gran abundancia de hadrones secundarios:
+\begin{itemize}
+    \item Mesones ligeros: piones cargados y neutros ($\pi^+, \pi^-, \pi^0$) y kaones ($K^+, K^-, K^0$).
+    \item Bariones de reculada y pares nucleón-antinucleón ($p, n, \bar{p}, \bar{n}$).
+\end{itemize}
+
+\subsubsection*{2. Efecto del bloque de acero (Absorbedor hadrónico / Dump)}
+
+El bloque de acero (compuesto principalmente por hierro, $\text{Fe}$) actúa como un escudo o absorbedor denso. El comportamiento de las distintas partículas al atravesar el bloque es:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Hadrones ($\pi^\pm, K^\pm, p, n$, etc.):} Tienen una longitud de interacción nuclear muy corta ($\lambda_{\text{int}} \approx 16.8\text{ cm}$ en acero). Experimentan colisiones inelásticas fuertes sucesivas con los núcleos de hierro, perdiendo su energía y formando una cascada hadrónica que queda totalmente detenida y \textbf{absorbida en el interior del bloque}.
+
+    \item \textbf{Piones neutros ($\pi^0$):} Tienen una vida media extremadamente corta ($\tau \sim 8.4 \times 10^{-17}\text{ s}$) y se desintegran casi instantáneamente en el punto de producción mediante $\pi^0 \to \gamma + \gamma$. Los fotones resultantes generan cascadas electromagnéticas ($e^+e^-$) que son completamente frenadas en el acero (longitud de radiación $X_0 \approx 1.76\text{ cm}$).
+
+    \item \textbf{Muones ($\mu^\pm$):} Los piones y kaones cargados que se desintegran antes de colisionar produce muones ($\pi^\pm \to \mu^\pm + \nu_\mu$). Los muones no sienten la interacción fuerte; pierden energía únicamente por ionización electrodébil a una tasa de $\sim 1.5\text{ GeV/m}$ de acero. Si el bloque de acero es muy grueso, los muones de baja energía quedan detenidos, pero los muones de ultra-alta energía pueden atravesarlo.
+
+    \item \textbf{Neutrinos ($\nu_\mu, \bar{\nu}_\mu, \nu_e, \bar{\nu}_e$):} Procedentes de la desintegración de mesones ($\pi^+ \to \mu^+ \nu_\mu$, $K^+ \to \mu^+ \nu_\mu$, etc.). Al interactuar exclusivamente mediante la fuerza débil, su sección eficaz es insignificante ($\sigma \sim 10^{-38}\text{ cm}^2$). Los neutrinos \textbf{atraviesan el bloque de acero sin sufrir atenuación}.
+\end{enumerate}
+
+\subsubsection*{3. Respuesta y componentes detectadas en el detector}
+
+Tras el bloque de acero, el haz emergente está compuesto por:
+\begin{itemize}
+    \item \textbf{Neutrinos (Componente dominante):} Constituyen el flujo principal que llega al detector (este montaje es el esquema clásico de un \textbf{haz de neutrinos de acelerador}). En el detector se observan productos de interacciones débiles por corriente cargada:
+    \begin{equation*}
+    \nu_\mu + N \longrightarrow \mu^- + X \qquad \text{o} \qquad \bar{\nu}_\mu + N \longrightarrow \mu^+ + X
+    \end{equation*}
+    \item \textbf{Muones penetrantes ($\mu^\pm$):} Si el grosor del bloque de acero no es suficiente para absorberlos por pérdida de energía dE/dx, se detectarán trazas de muones con alta capacidad de penetración.
+\end{itemize}
+
+\textbf{Resultado final:} Se detectan \textbf{neutrinos} (a través de sus interacciones débiles en el detector) y \textbf{muones relícticos} ultra-penetrantes. Todos los hadrones y fotones son completamente filtrados por el acero.
+\newpage
+% ==============================================================================
+% EJERCICIO 4.
+% ==============================================================================
+\end{problema}
+
+\begin{problema}[Ejercicio 4: Determinación de la C-paridad en desintegraciones electromagnéticas]
+Considera procesos de desintegración electromagnética de hadrones en los que se emite un fotón, del tipo:
+\begin{align*}
+M_1 &\rightarrow M_2 + \gamma \qquad \text{(para mesones)} \\
+B_1 &\rightarrow B_2 + \gamma \qquad \text{(para bariones)}
+\end{align*}
+¿Es posible determinar la C-paridad intrínseca de los mesones o bariones implicados a partir de estas reacciones? Razona la respuesta.
+
+\tcblower
+
+\subsubsection*{1. Análisis para el caso de los bariones ($B_1 \rightarrow B_2 + \gamma$)}
+
+\textbf{Respuesta: NO es posible,} debido a que la paridad de conjugación de carga ($C$) \textbf{no está definida para los bariones}.
+
+\paragraph{Razonamiento:}
+El operador de conjugación de carga $\hat{C}$ invierte todos los números cuánticos internos conservados (carga eléctrica $Q$, número bariónico $B$, números de sabor, etc.):
+\begin{equation*}
+\hat{C} |B\rangle = |\bar{B}\rangle
+\end{equation*}
+Para que una partícula sea un autoestado del operador $\hat{C}$ (y por tanto posea un autovalor de $C$-paridad bien definido $C = \pm 1$), debe ser estrictamente neutra en todos los números cuánticos aditivos ($Q = 0, B = 0, S = 0, C = 0$).
+
+Dado que los bariones tienen número bariónico $B = +1$ y los antibariones $B = -1$, un estado bariónico $|B\rangle$ no puede ser jamás autoestado del operador $\hat{C}$ ($\hat{C} |B\rangle \neq c |B\rangle$). En consecuencia, \textbf{los bariones no tienen paridad de conjugación de carga}.
+
+\subsubsection*{2. Análisis para el caso de los mesones ($M_1 \rightarrow M_2 + \gamma$)}
+
+\textbf{Respuesta: SÍ es posible,} pero \textbf{únicamente para mesones estrictamente neutros de sabor} (neutrales respecto a $Q, S, C, B$), determinando sus $C$-paridades relativas.
+
+\paragraph{Razonamiento:}
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Mesones cargados o con sabor neto (p. ej. $\pi^\pm, K^\pm, K^0, D^\pm$):} No son su propia antipartícula ($\hat{C}|\pi^+\rangle = |\pi^-\rangle$), por lo que no poseen autovalor de $C$-paridad. Para estos mesones no es posible determinar su $C$-paridad.
+
+    \item \textbf{Mesones verdaderamente neutros (p. ej. $\pi^0, \eta, \rho^0, \omega, \phi, J/\psi$):} Son sus propias antipartículas y son autoestados de $\hat{C}$ con autovalores $C_1 = \pm 1$ y $C_2 = \pm 1$.
+
+    \item \textbf{Conservación de $C$ en la interacción electromagnética:} La interacción electromagnética conserva estrictamente la paridad de conjugación de carga. Para un fotón real se cumple universalmente:
+    \begin{equation*}
+    C(\gamma) = -1
+    \end{equation*}
+
+    \item \textbf{Relación de C-paridad:} Aplicando la conservación de $C$ al proceso $M_1 \rightarrow M_2 + \gamma$:
+    \begin{equation*}
+    C(M_1) = C(M_2) \cdot C(\gamma) = C(M_2) \cdot (-1) = -C(M_2)
+    \end{equation*}
+\end{enumerate}
+
+\subsubsection*{Conclusión general}
+\begin{itemize}
+    \item \textbf{Bariones:} Imposible, ya que la $C$-paridad no está definida para estados con $B \neq 0$.
+    \item \textbf{Mesones:} Solo es posible para mesones \textbf{neutros de sabor}, en cuyo caso el proceso fija de forma unívoca la relación entre sus $C$-paridades intrínsecas: $\mathbf{C(M_1) = -C(M_2)}$.
+\end{itemize}
+\end{problema}
+\newpage
+% ==============================================================================
+% EJERCICIO 5.
+% ==============================================================================
+\begin{problema}[Ejercicio 5: Resonancia en la dispersión elástica $e^- + p \rightarrow e^- + p$]
+En el estudio de la dispersión elástica de electrones por protones ($e^- + p \rightarrow e^- + p$), la sección eficaz a determinadas energías viene dada por la expresión:
+\begin{equation*}
+\sigma = \frac{4\pi^{2}\alpha}{3s} \left[ \frac{\sqrt{s}}{E_{0}} - 1 + i \frac{1}{48} \right]^{-2}
+\end{equation*}
+donde $s = p^{\mu}p_{\mu}$ es la variable de Mandelstam correspondiente a la energía en el centro de masas al cuadrado y $E_{0}$ es una energía característica del proceso. Discute qué sucede en la sección eficaz en torno a esa energía característica $E_{0}$.
+
+\tcblower
+
+\subsubsection*{1. Forma funcional de Breit-Wigner}
+
+El término dependiente de la energía entre corchetes representa el módulo al cuadrado de la amplitud de dispersión resonante:
+\begin{equation*}
+\left| \frac{\sqrt{s}}{E_0} - 1 + i \frac{1}{48} \right|^{-2} = \frac{1}{\left( \frac{\sqrt{s}}{E_0} - 1 \right)^2 + \left( \frac{1}{48} \right)^2}
+\end{equation*}
+
+Esta estructura responde a la forma estándar de una \textbf{resonancia de Breit-Wigner} en el canal $s$, originada por la formación intermedia de un estado ligado o resonancia vectorial de masa $M = E_0$.
+
+\subsubsection*{2. Análisis del comportamiento en torno a $\sqrt{s} = E_0$}
+
+\paragraph{a) Máximo resonante (Pico de la sección eficaz):}
+Cuando la energía en el centro de masas alcanza exactamente la energía característica ($\sqrt{s} = E_0$), la parte real del denominador se anula $\left(\frac{\sqrt{s}}{E_0} - 1 = 0\right)$, alcanzándose un \textbf{máximo absoluto} en la sección eficaz:
+\begin{equation*}
+\sigma_{\text{máx}} = \sigma(E_0) = \frac{4\pi^2 \alpha}{3 E_0^2} \frac{1}{\left(\frac{1}{48}\right)^2} = \frac{4\pi^2 \alpha \cdot 2304}{3 E_0^2} = \frac{3072 \pi^2 \alpha}{E_0^2}
+\end{equation*}
+
+\paragraph{b) Determinación de la anchura de la resonancia ($\Gamma$):}
+Comparando el término imaginario con la forma universal de Breit-Wigner $\left( \frac{\sqrt{s}-E_0}{E_0} + i \frac{\Gamma}{2E_0} \right)$, identificamos:
+\begin{equation*}
+\frac{\Gamma}{2 E_0} = \frac{1}{48} \implies \Gamma = \frac{E_0}{24} \approx 0.0417 \, E_0
+\end{equation*}
+La anchura total de la resonancia a media altura (FWHM) es exactamente un 24-avo de la energía característica $E_0$.
+
+\paragraph{c) Comportamiento del desfase ($\delta$):}
+La amplitud de dispersión pasa por un cambio de fase de $\delta = 90^\circ$ ($\pi/2$) justo en el punto de resonancia $\sqrt{s} = E_0$, variando desde $\delta \approx 0^\circ$ para $\sqrt{s} \ll E_0$ hasta $\delta \approx 180^\circ$ ($\pi$) para $\sqrt{s} \gg E_0$.
+
+\subsubsection*{Conclusión}
+En torno a $E_0$, la sección eficaz presenta un \textbf{pico resonante agudo} característico de la creación de una partícula o resonancia intermedia con masa $M = E_0$ y anchura reducida $\Gamma = E_0 / 24$.
+\end{problema}
+
+\begin{problema}[Ejercicio 6: Desintegración de mesón vectorial en dos mesones pseudoescalares]
+¿Qué han de verificar dos mesones pseudoescalares isovectoriales ($I=1$) para que un mesón vectorial isoescalar ($I=0$) no pueda desintegrarse en ellos por interacción fuerte?
+Se cumple $M_{I_0} > M_{I_1}$ y $C_{I_0} = +$.
+
+\tcblower
+
+\subsubsection*{1. Identificación de los números cuánticos de los estados}
+
+\begin{itemize}
+    \item \textbf{Mesón progenitor ($V$):} Mesón vectorial ($J^P = 1^-$), isoescalar ($I = 0$), con paridad de conjugación de carga $C_V = +1$ (dada como $C_{I_0} = +$).
+    \item \textbf{Productos finales ($P_1, P_2$):} Dos mesones pseudoescalares ($J^P = 0^-$), isovectoriales ($I_1 = 1, I_2 = 1$).
+\end{itemize}
+
+\subsubsection*{2. Evaluación de las leyes de conservación en la interacción fuerte}
+
+\paragraph{a) Momento angular total ($J$) y paridad ($P$):}
+\begin{itemize}
+    \item Momento angular inicial: $J_i = 1$.
+    \item Como los productos son sin espín ($J_1=0, J_2=0$), el momento angular final viene dado por el momento orbital relativo $L$: $J_f = L \implies \mathbf{L = 1}$ (onda $P$).
+    \item Paridad final: $P_f = P(P_1) P(P_2) (-1)^L = (-1)(-1)(-1)^1 = -1 = P_i$. La paridad se conserva.
+\end{itemize}
+
+\paragraph{b) Conjugación de Carga ($C$) e Isospín ($I$):}
+\begin{itemize}
+    \item \textbf{C-paridad del estado final de dos mesones $I=1$ en onda $P$ ($L=1$):}
+    Para un sistema neutro de dos mesones pseudoescalares isovectoriales acoplados a isospín total $I$, la paridad de conjugación de carga viene dada por:
+    \begin{equation*}
+    C_{\text{final}} = (-1)^{L + I}
+    \end{equation*}
+    Dado que el estado inicial tiene $I = 0$, la conservación del isospín impone $I = 0$ para el estado final. Por tanto:
+    \begin{equation*}
+    C_{\text{final}} = (-1)^{1 + 0} = -1
+    \end{equation*}
+    \item \textbf{Comparación con el estado inicial:}
+    El estado inicial posee $C_{\text{inicial}} = +1$. Puesto que $C_{\text{inicial}} = +1 \neq C_{\text{final}} = -1$, \textbf{se viola la conservación de la C-paridad}.
+\end{itemize}
+
+\paragraph{c) Estadística de Bose-Einstein (si las partículas fueran idénticas):}
+Si los dos mesones pseudoescalares fuera idénticos (p. ej., $\pi^0 \pi^0$), la función de onda espacial debe ser simétrica ($(-1)^L = +1 \implies L$ par), lo que contradice $L=1$ y prohíbe la reacción.
+
+\subsubsection*{Conclusión}
+Para que la desintegración esté prohibida por la interacción fuerte basta con que los dos mesones estén cargados de modo que el par formado posea $C = -1$ (o que sean partículas idénticas), provocando la \textbf{violación de la paridad de conjugación de carga $C$} ($C_i = + \neq C_f = -$).
+\end{problema}
+\newpage
+% ==============================================================================
+% EJERCICIO 7.
+% ==============================================================================
+\begin{problema}[Relación de secciones eficaces e Isospín de la partícula $x$]
+Dados dos canales de desintegración para el $x^+$, sabiendo que la razón de anchuras de desintegración es:
+\begin{equation*}
+R_{\Gamma} = \frac{\Gamma(x^+ \rightarrow \pi^0 + p)}{\Gamma(x^+ \rightarrow \pi^+ + n)} = 2
+\end{equation*}
+Calcula la razón de secciones eficaces:
+\begin{equation*}
+R_{\sigma} = \frac{\sigma(n + {}^{3}\text{He} \rightarrow d + p + x^0)}{\sigma(p + {}^{3}\text{H} \rightarrow d + n + x^+)}
+\end{equation*}
+
+\tcblower
+
+\subsubsection*{1. Determinación del Isospín del multiplete $x$}
+
+Los productos de desintegración tienen isospín $I_\pi = 1$ y $I_N = 1/2$. Los estados de isospín total $I = 3/2$ y $I = 1/2$ con $I_3 = +1/2$ se expresan en la base de Clebsch-Gordan como:
+\begin{align*}
+|\pi^0 p\rangle = |1,0\rangle |1/2, +1/2\rangle &= \sqrt{\frac{2}{3}} |3/2, +1/2\rangle - \sqrt{\frac{1}{3}} |1/2, +1/2\rangle \\
+|\pi^+ n\rangle = |1,+1\rangle |1/2, -1/2\rangle &= \sqrt{\frac{1}{3}} |3/2, +1/2\rangle + \sqrt{\frac{2}{3}} |1/2, +1/2\rangle
+\end{align*}
+
+La razón de anchuras observada es $R_\Gamma = \frac{|\langle \pi^0 p | x^+\rangle|^2}{|\langle \pi^+ n | x^+\rangle|^2} = 2$. 
+\begin{itemize}
+    \item Si $x^+$ tuviera $I_x = 3/2 \implies R_\Gamma = \frac{(\sqrt{2/3})^2}{(\sqrt{1/3})^2} = 2$.
+    \item Si $x^+$ tuviera $I_x = 1/2 \implies R_\Gamma = \frac{(-\sqrt{1/3})^2}{(\sqrt{2/3})^2} = 1/2$.
+\end{itemize}
+Por tanto, deducimos que \textbf{la partícula $x$ pertenece a un multiplete de isospín $I_x = 3/2$}.
+
+\subsubsection*{2. Cálculo de la razón de secciones eficaces $R_\sigma$}
+
+Analizamos la composición de isospín de los estados iniciales y finales:
+\begin{itemize}
+    \item Nucleones: $p = |1/2, +1/2\rangle$, $n = |1/2, -1/2\rangle$.
+    \item Núcleos: ${}^3\text{He} = |1/2, +1/2\rangle$, ${}^3\text{H} = |1/2, -1/2\rangle$, $d = |0, 0\rangle$.
+    \item Partícula $x$: $x^+ = |3/2, +1/2\rangle$, $x^0 = |3/2, -1/2\rangle$.
+\end{itemize}
+
+\paragraph{Estados Iniciales:}
+\begin{align*}
+|n + {}^3\text{He}\rangle &= |1/2, -1/2\rangle |1/2, +1/2\rangle = \frac{1}{\sqrt{2}} |1, 0\rangle - \frac{1}{\sqrt{2}} |0, 0\rangle \\
+|p + {}^3\text{H}\rangle &= |1/2, +1/2\rangle |1/2, -1/2\rangle = \frac{1}{\sqrt{2}} |1, 0\rangle + \frac{1}{\sqrt{2}} |0, 0\rangle
+\end{align*}
+
+\paragraph{Estados Finales (acoplando el nucleón y la partícula $x$ a isospín total $I$):}
+\begin{align*}
+|p + x^0\rangle &= |1/2, +1/2\rangle |3/2, -1/2\rangle = \sqrt{\frac{1}{2}} |2, 0\rangle + \sqrt{\frac{1}{2}} |1, 0\rangle \\
+|n + x^+\rangle &= |1/2, -1/2\rangle |3/2, +1/2\rangle = \sqrt{\frac{1}{2}} |2, 0\rangle - \sqrt{\frac{1}{2}} |1, 0\rangle
+\end{align*}
+
+\paragraph{Amplitudes de Transición por Interacción Fuerte ($\Delta I = 0$):}
+Al conservar el isospín, únicamente contribuye el canal de isospín $I = 1$:
+\begin{align*}
+\mathcal{M}_1 &= \langle d + p + x^0 | \mathcal{M} | n + {}^3\text{He} \rangle = \left( \sqrt{\frac{1}{2}} \right) \left( \frac{1}{\sqrt{2}} \right) \mathcal{M}_{I=1} = \frac{1}{2} \mathcal{M}_{I=1} \\
+\mathcal{M}_2 &= \langle d + n + x^+ | \mathcal{M} | p + {}^3\text{H} \rangle = \left( -\sqrt{\frac{1}{2}} \right) \left( \frac{1}{\sqrt{2}} \right) \mathcal{M}_{I=1} = -\frac{1}{2} \mathcal{M}_{I=1}
+\end{align*}
+
+\subsubsection*{Resultado}
+\begin{equation*}
+R_\sigma = \frac{\sigma_1}{\sigma_2} = \frac{|\mathcal{M}_1|^2}{|\mathcal{M}_2|^2} = \frac{|1/2|^2}{|-1/2|^2} = \mathbf{1}
+\end{equation*}
+\end{problema}
+\newpage
+% ==============================================================================
+% EJERCICIO 8.
+% ==============================================================================
+\begin{problema}[Razón de anchuras de desintegración y espacio de fases]
+Dos partículas inestables $A$ y $B$ se desintegran a través de canales de dos cuerpos hacia los mismos productos finales: $A\rightarrow C+D$ y $B\rightarrow C+D$ (con $m_{C}=m_{D}$). Sabiendo que sus masas cumplen la relación $M_{A}=\sqrt{2}M_{B}=4M_{C}=4M_{D}$, que los estados iniciales tienen el mismo espín y paridad ($J^{P}$) y que la amplitud de transición $|\mathcal{M}_{if}|^{2}$ es idéntica para ambos canales, calcula la razón entre sus anchuras de desintegración:
+\begin{equation*}
+\frac{\Gamma(A\rightarrow C+D)}{\Gamma(B\rightarrow C+D)}
+\end{equation*}
+
+\tcblower
+
+\subsubsection*{1. Expresión de la anchura de desintegración a dos cuerpos}
+
+La anchura de desintegración a dos cuerpos para una partícula de masa $M$ que se desintegra en dos partículas de masa idéntica $m \equiv m_C = m_D$ viene dada por:
+\begin{equation*}
+\Gamma = \frac{p^*}{8 \pi M^2 \hbar} |\mathcal{M}_{if}|^2
+\end{equation*}
+donde $p^*$ es el momento cinemático de los productos finales en el sistema del centro de masas:
+\begin{equation*}
+p^* = \frac{1}{2M} \sqrt{M^2 (M^2 - 4m^2)} = \frac{1}{2} \sqrt{M^2 - 4m^2}
+\end{equation*}
+
+\subsubsection*{2. Evaluación para las partículas $A$ y $B$}
+
+Sea $m$ la masa de las partículas finales ($m_C = m_D = m$). De las relaciones dadas:
+\begin{itemize}
+    \item Para la partícula $A$: $M_A = 4m$.
+    \item Para la partícula $B$: $M_B = \frac{M_A}{\sqrt{2}} = \frac{4m}{\sqrt{2}} = 2\sqrt{2}\, m$.
+\end{itemize}
+
+\paragraph{Cálculo del momento en el CM ($p^*$):}
+\begin{align*}
+p_A^* &= \frac{1}{2} \sqrt{(4m)^2 - 4m^2} = \frac{1}{2} \sqrt{16m^2 - 4m^2} = \frac{\sqrt{12} m}{2} = \sqrt{3}\, m \\
+p_B^* &= \frac{1}{2} \sqrt{(2\sqrt{2}m)^2 - 4m^2} = \frac{1}{2} \sqrt{8m^2 - 4m^2} = \frac{\sqrt{4} m}{2} = m
+\end{align*}
+
+\paragraph{Cálculo de las anchuras de desintegración ($\Gamma_A$ y $\Gamma_B$):}
+\begin{align*}
+\Gamma_A &= \frac{\sqrt{3}\, m}{8 \pi (4m)^2 \hbar} |\mathcal{M}|^2 = \frac{\sqrt{3}}{128 \pi m \hbar} |\mathcal{M}|^2 \\
+\Gamma_B &= \frac{m}{8 \pi (2\sqrt{2}m)^2 \hbar} |\mathcal{M}|^2 = \frac{1}{64 \pi m \hbar} |\mathcal{M}|^2
+\end{align*}
+
+\subsubsection*{3. Razón entre las anchuras de desintegración}
+\begin{equation*}
+\frac{\Gamma(A\rightarrow C+D)}{\Gamma(B\rightarrow C+D)} = \frac{\Gamma_A}{\Gamma_B} = \frac{\frac{\sqrt{3}}{128 \pi m \hbar}}{\frac{1}{64 \pi m \hbar}} = \frac{\sqrt{3} \cdot 64}{128} = \frac{\sqrt{3}}{2} \approx \mathbf{0.866}
+\end{equation*}
+\end{problema}
+
+
+\newpage
+%===============================================================
+% PROBLEMAS
+%===============================================================
+\subsection{Problemas Prácticos}
+\begin{problema}[Viabilidad cinemática de producción de la resonancia $\Delta^0$]
+Se considera la desintegración en reposo del barión pesado $\Lambda_b^0$ (con una masa aproximada de $5619\text{ MeV/c}^2$) en un barión charm $\Lambda_c^+$ ($2286\text{ MeV/c}^2$) y un pión cargado $\pi^-$ ($140\text{ MeV/c}^2$):
+\begin{equation*}
+\Lambda_b^0 \longrightarrow \Lambda_c^+ + \pi^-
+\end{equation*}
+Utilizando los piones procedentes de esta reacción, se hace incidir el pión sobre un protón en reposo ($938\text{ MeV/c}^2$) para intentar producir una resonancia $\Delta^0$ ($2420\text{ MeV/c}^2$) mediante el proceso:
+\begin{equation*}
+\pi^- + p \longrightarrow \Delta^0
+\end{equation*}
+Determina si es cinemásticamente posible producir la partícula $\Delta^0$ en dicha colisión.
+
+\tcblower
+
+\subsubsection*{1. Cinemática de la desintegración $\Lambda_b^0 \rightarrow \Lambda_c^+ + \pi^-$ en reposo}
+
+Consideramos la desintegración a dos cuerpos del barión $\Lambda_b^0$ en su sistema de reposo. Sean las masas de las partículas:
+\begin{itemize}
+    \item $M_{\Lambda_b^0} = 5619\text{ MeV/c}^2$
+    \item $m_{\Lambda_c^+} = 2286\text{ MeV/c}^2$
+    \item $m_{\pi^-} = 140\text{ MeV/c}^2$
+\end{itemize}
+
+Por conservación del cuadrimomento ($P_{\Lambda_b} = p_{\Lambda_c} + p_\pi$):
+\begin{equation*}
+(P_{\Lambda_b} - p_\pi)^2 = p_{\Lambda_c}^2 \implies M_{\Lambda_b^0}^2 c^2 + m_{\pi^-}^2 c^2 - 2 M_{\Lambda_b^0} E_\pi = m_{\Lambda_c^+}^2 c^2
+\end{equation*}
+
+Despejamos la energía total del pión emitido ($E_\pi$):
+\begin{equation*}
+E_\pi = \frac{M_{\Lambda_b^0}^2 + m_{\pi^-}^2 - m_{\Lambda_c^+}^2}{2 M_{\Lambda_b^0}} c^2
+\end{equation*}
+
+Sustituyendo los valores numéricos de las masas:
+\begin{equation*}
+E_\pi = \frac{(5619)^2 + (140)^2 - (2286)^2}{2 \times 5619}\text{ MeV} \approx \mathbf{2346.23\text{ MeV}}
+\end{equation*}
+
+\subsubsection*{2. Energía disponible en el centro de masas para la colisión $\pi^- + p$}
+
+Hacemos incidir este pión con energía $E_\pi \approx 2346.23\text{ MeV}$ sobre un protón en reposo ($P_p = (m_p c, \vec{0})$ con $m_p = 938\text{ MeV/c}^2$). 
+
+El cuadrimomento total del sistema inicial es $P_{\text{tot}} = p_\pi + P_p$. Calculamos la energía invariante al cuadrado en el sistema del centro de masas ($s$):
+\begin{equation*}
+s = P_{\text{tot}}^2 = (p_\pi + P_p)^2 = m_{\pi^-}^2 c^2 + m_p^2 c^2 + 2 E_\pi m_p
+\end{equation*}
+
+Sustituyendo los términos cinemáticos, la energía disponible en el centro de masas ($\sqrt{s}$) resulta:
+\begin{equation*}
+\sqrt{s} = \sqrt{5298979}\text{ MeV} \approx \mathbf{2301.95\text{ MeV}}
+\end{equation*}
+
+\subsubsection*{3. Evaluación de la viabilidad cinemática}
+
+Para poder producir una resonancia $\Delta^0$ en reposo en el centro de masas, la energía disponible $\sqrt{s}$ debe ser al menos igual a la masa en reposo de la partícula a crear ($m_{\Delta^0} c^2 = 2420\text{ MeV}$):
+\begin{equation*}
+\sqrt{s}_{\text{disponible}} = 2301.95\text{ MeV} < m_{\Delta^0} c^2 = 2420\text{ MeV}
+\end{equation*}
+
+\textbf{Conclusión:} Puesto que la energía en el centro de masas ($\approx 2302\text{ MeV}$) es inferior a la masa del estado resonante ($2420\text{ MeV}$), \textbf{NO es cinemásticamente posible} producir la partícula $\Delta^0$ en dicha colisión (faltan aproximadamente $118\text{ MeV}$ de energía).
+\end{problema}
+
+\begin{problema}[Determinación de la interacción fundamental en $A^0 \rightarrow B^+ + B^-$]
+Dada la siguiente desintegración de una partícula neutra en un par de partículas cargadas:
+\begin{equation*}
+A^0 \longrightarrow B^+ + B^-
+\end{equation*}
+y sabiendo que los números cuánticos de isospín y espín-paridad-conjugación de carga ($(I)J^{PC}$) de las partículas implicadas son:
+\begin{itemize}
+    \item $A^0: (I)J^{PC} = (1)2^{++}$
+    \item $B^+, B^-: (I)J^{PC} = (1)1^{--}$
+\end{itemize}
+¿Qué interacción fundamental (fuerte, electromagnética o débil) es responsable de este proceso? Razona la respuesta evaluando las leyes de conservación y simetrías correspondientes.
+
+\tcblower
+
+\subsubsection*{1. Análisis de simetrías continuas y discretas}
+
+\paragraph{a) Paridad espacial ($P$):}
+\begin{itemize}
+    \item Estado inicial: $P(A^0) = +1$.
+    \item Estado final: $B^+$ y $B^-$ son bosones vectoriales ($J^P = 1^-$). Dado que los bosones y sus antibosones tienen la misma paridad intrínseca, $P(B^+) P(B^-) = (-1)(-1) = +1$.
+    \item La paridad total del estado final es $P_f = P(B^+) P(B^-) (-1)^L = (-1)^L$.
+    \item Conservación de $P$ ($P_i = P_f$): exige que el momento angular orbital relativo $L$ sea \textbf{par} ($L \in \{0, 2, 4, \dots\}$).
+\end{itemize}
+
+\paragraph{b) Paridad de conjugación de carga ($C$):}
+\begin{itemize}
+    \item Estado inicial: $C(A^0) = +1$.
+    \item Estado final: el par $B^+ B^-$ está formado por un bosón vectorial y su antibosón. Para un sistema bosón-antibosón de espín $S$ y momento orbital $L$, la $C$-paridad viene dada por:
+    \begin{equation*}
+    C_f = (-1)^{L+S}
+    \end{equation*}
+    \item Conservación de $C$ ($C_i = C_f = +1$): exige que la suma $L+S$ sea \textbf{par}. Dado que $L$ es par, el espín total del par $S$ debe ser necesariamente \textbf{par} ($S \in \{0, 2\}$).
+\end{itemize}
+
+\paragraph{c) Estadística de Bose-Einstein y Simetría de Isospín ($I$):}
+\begin{itemize}
+    \item Las partículas $B^+$ y $B^-$ forman un par de bosones pertenecientes al mismo multiplete de isospín ($I = 1$).
+    \item El principio de simetrización de Bose-Einstein exige que la función de onda total (Espacio $\times$ Espín $\times$ Isospín) sea \textbf{simétrica} bajo el intercambio de las dos partículas:
+    \begin{equation*}
+    \text{Simetría Total} = (-1)^L \cdot (-1)^S \cdot (-1)^{I_f} = +1
+    \end{equation*}
+    \item Puesto que $L$ es par ($(-1)^L = +1$) y $S$ es par ($(-1)^S = +1$), se deduce obligatoriamente que la simetría de isospín del estado final debe ser simétrica:
+    \begin{equation*}
+    (-1)^{I_f} = +1 \implies I_f \text{ debe ser \textbf{par}} \quad (I_f = 0 \text{ o } I_f = 2)
+    \end{equation*}
+\end{itemize}
+
+\subsubsection*{2. Identificación de la interacción fundamental}
+
+\begin{itemize}
+    \item \textbf{Descarte de la Interacción Fuerte:} La interacción fuerte conserva estrictamente el isospín total ($\Delta I = 0$). Como el estado inicial tiene $I(A^0) = 1$, la interacción fuerte exigiría $I_f = 1$. Sin embargo, un estado final con $I_f = 1$ tendría simetría de isospín antisimétrica ($(-1)^{I_f} = -1$), violando la estadística de Bose-Einstein. Por tanto, la desintegración \textbf{no puede ocurrir por interacción fuerte}.
+    \item \textbf{Descarte de la Interacción Débil:} La interacción débil no conserva la paridad ($P$) ni la conjugación de carga ($C$). Sin embargo, las escalas de tiempo y la conservación comprobada de $P$ y $C$ con $L$ par y $S$ par descartan una violación de paridad.
+    \item \textbf{Interacción Electromagnética:} La interacción electromagnética conserva la paridad ($P$), la conjugación de carga ($C$), la carga eléctrica ($Q$) y la tercera componente de isospín ($\Delta I_3 = 0$), pero permite variaciones en el isospín total ($\Delta I = 1$). Como el proceso requiere pasar de $I_i = 1$ a $I_f = 0$ ó $2$ ($\Delta I = 1$) respetando $P$, $C$ y la estadística de Bose-Einstein, la fuerza responsable es electromagnética.
+\end{itemize}
+
+\textbf{Conclusión:} La interacción responsable del proceso es la \textbf{interacción electromagnética}.
+\end{problema}
+
+\begin{problema}[Problema 3: Análisis de viabilidad y clasificación de reacciones subatómicas]
+Indicar cuáles de las siguientes reacciones están permitidas y cuáles prohibidas, sabiendo que en ningún caso hay problemas de conservación de energía. Si estuvieran prohibidas indicar la razón, si estuvieran permitidas indicar a través de qué interacción ocurren:
+\begin{enumerate}[label=\alph*.]
+    \item $D_s^+ \rightarrow K^+ + \pi^0$
+    \item $K^{*+} \rightarrow K^+ + e^+ + e^-$
+    \item $\pi^0 \rightarrow \gamma + \gamma + \gamma$
+    \item $\Lambda^0 \rightarrow \pi^+ + e^- + \bar{\nu}_e$
+    \item $\Xi^{*-} \rightarrow \Xi^- + \pi^0$
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{Análisis detallado de cada proceso}
+
+\paragraph{a) $D_s^+ \rightarrow K^+ + \pi^0$}
+\begin{itemize}
+    \item \textbf{Números cuánticos e identificaciones:} 
+    $D_s^+$ es un mesón con encanto y extrañeza ($c\bar{s}$, $C = +1, S = +1, Q = +1$). 
+    $K^+$ ($u\bar{s}$, $C = 0, S = +1, Q = +1$) y $\pi^0$ ($C = 0, S = 0, Q = 0$).
+    \item \textbf{Leyes de conservación:} Se conservan la carga $Q$ ($+1 \to +1 + 0$) y el número bariónico $B$ ($0 \to 0$).
+    \item \textbf{Cambio de sabor:} Existe una variación del número cuántico de encanto $\Delta C = C_f - C_i = 0 - 1 = -1$.
+    \item \textbf{Conclusión:} \textbf{PERMITIDA} mediante la \textbf{interacción débil} (desintegración débil no leptónica con cambio de encanto $\Delta C = -1$).
+\end{itemize}
+
+\paragraph{b) $K^{*+} \rightarrow K^+ + e^+ + e^-$}
+\begin{itemize}
+    \item \textbf{Números cuánticos e identificaciones:} 
+    $K^{*+}$ es un mesón vectorial ($u\bar{s}$, $S = +1, Q = +1$). 
+    $K^+$ es un mesón pseudoescalar ($u\bar{s}$, $S = +1, Q = +1$).
+    \item \textbf{Leyes de conservación:} Se conserva la extrañeza ($\Delta S = 0$), la carga ($+1 \to +1 + 1 - 1 = +1$) y el número leptónico electrónico ($L_e = 0 \to -1 + 1 = 0$).
+    \item \textbf{Mecanismo:} Se trata de una desintegración radiativa Dalitz donde un fotón virtual se convierte internamente en un par electrón-positrón ($\gamma^* \to e^+ + e^-$).
+    \item \textbf{Conclusión:} \textbf{PERMITIDA} mediante la \textbf{interacción electromagnética}.
+\end{itemize}
+
+\paragraph{c) $\pi^0 \rightarrow \gamma + \gamma + \gamma$}
+\begin{itemize}
+    \item \textbf{Números cuánticos e identificaciones:} 
+    El pión neutro $\pi^0$ posee autovalor de conjugación de carga $C(\pi^0) = +1$.
+    Cada fotón real posee autovalor $C(\gamma) = -1$.
+    \item \textbf{C-paridad del estado final:} $C(3\gamma) = (-1)^3 = -1$.
+    \item \textbf{Violación de simetría:} $C_i = +1 \neq C_f = -1$. Puesto que la interacción electromagnética conserva estrictamente la paridad de conjugación de carga, el proceso está prohibido.
+    \item \textbf{Conclusión:} \textbf{PROHIBIDA} por la \textbf{violación de la conservación de la paridad de conjugación de carga ($C$)}.
+\end{itemize}
+
+\paragraph{d) $\Lambda^0 \rightarrow \pi^+ + e^- + \bar{\nu}_e$}
+\begin{itemize}
+    \item \textbf{Números cuánticos e identificaciones:} 
+    $\Lambda^0$ es un barión ($uds$, $B = +1, Q = 0$). 
+    El estado final consta de tres mesones/leptones ($\pi^+, e^-, \bar{\nu}_e$), todos con número bariónico nulo ($B = 0$).
+    \item \textbf{Violación de simetría:} $B_i = +1 \neq B_f = 0 + 0 + 0 = 0$. El número bariónico no se conserva ($\Delta B = -1$).
+    \item \textbf{Conclusión:} \textbf{PROHIBIDA} por la \textbf{violación de la conservación del número bariónico ($B$)}.
+\end{itemize}
+
+\paragraph{e) $\Xi^{*-} \rightarrow \Xi^- + \pi^0$}
+\begin{itemize}
+    \item \textbf{Números cuánticos e identificaciones:} 
+    $\Xi^{*-}$ es una resonancia de hiperón ($dss$, $B = +1, S = -2, Q = -1$). 
+    $\Xi^-$ es un hiperón ($dss$, $B = +1, S = -2, Q = -1$) y $\pi^0$ es un pión ($S = 0, Q = 0$).
+    \item \textbf{Leyes de conservación:} Se conservan estrictamente la carga $Q$, el número bariónico $B = +1$ y el sabor ($\Delta S = 0$).
+    \item \textbf{Mecanismo:} Desintegración hadrónica fuerte entre estados con el mismo contenido de quarks.
+    \item \textbf{Conclusión:} \textbf{PERMITIDA} mediante la \textbf{interacción fuerte}.
+\end{itemize}
+\end{problema}
+
+\newpage
+%====================================================
+% EXAMEN ADICIONAL
+%====================================================
+\section{Examen adicional 2025}
+\setcounter{problemacontador}{0}
+\subsection{Ejercicios de Teoría}
+%====================================================
+% EJERCICIO 1
+%====================================================
+\begin{problema}[Detección del antineutrino electrónico y la hipótesis de Dirac/Majorana con ${}^{37}\text{Cl}$]
+Se quiere averiguar si el neutrino y el antineutrino electrónicos son la misma partícula. Para ello se expone un tanque con cloro-37 (${}^{37}_{17}\text{Cl}$) a los productos de desintegración de un reactor nuclear.
+
+\begin{enumerate}[label=\alph*)]
+    \item ¿Qué partícula emite mayoritariamente el reactor y mediante qué proceso? Escribe la reacción que ocurriría en el tanque si $\nu_e = \bar{\nu}_e$ y justifica, con los números leptónicos, por qué estaría prohibida si $\nu_e \neq \bar{\nu}_e$.
+    \item ¿Qué núcleo constituye la señal buscada? ¿Cómo se detecta (tipo de desintegración y periodo de semidesintegración)?
+    \item ¿Cuál fue el resultado y qué se concluye? ¿Qué diferencia hay entre esta señal y la que utilizaron Reines y Cowan?
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Emisión del reactor y análisis por conservación del número leptónico}
+
+\paragraph{1. Partícula emitida por el reactor:}
+Los reactores nucleares producen energía mediante la fisión de núcleos pesados (como ${}^{235}\text{U}$). Los fragmentos de fisión resultantes poseen un exceso de neutrones respecto a la línea de estabilidad, por lo que sufren cadenas de desintegraciones $\beta^-$ ($n \rightarrow p + e^- + \bar{\nu}_e$). Por consiguiente, el reactor emite un intenso flujo de \textbf{antineutrinos electrónicos} ($\bar{\nu}_e$).
+
+\paragraph{2. Reacción hipotética si $\nu_e = \bar{\nu}_e$:}
+Si el neutrino fuera idéntico a su antipartícula (partícula de Majorana), los antineutrinos $\bar{\nu}_e$ emitidos por el reactor podrían actuar inductivamente como neutrinos $\nu_e$ e interactuar con el Cloro-37 mediante la reacción:
+\begin{equation*}
+{}^{37}_{17}\text{Cl} + \bar{\nu}_e \longrightarrow {}^{37}_{18}\text{Ar} + e^-
+\end{equation*}
+
+\paragraph{3. Justificación por conservación del número leptónico ($L_e$):}
+Evaluamos el número leptónico electrónico a ambos lados de la reacción:
+\begin{itemize}
+    \item \textbf{Estado inicial:} $L_e({}^{37}_{17}\text{Cl}) + L_e(\bar{\nu}_e) = 0 + (-1) = -1$.
+    \item \textbf{Estado final:} $L_e({}^{37}_{18}\text{Ar}) + L_e(e^-) = 0 + (+1) = +1$.
+\end{itemize}
+La variación del número leptónico resulta $\Delta L_e = L_e^f - L_e^i = (+1) - (-1) = +2 \neq 0$. Si el neutrino y el antineutrino son partículas distintas (partículas de Dirac, $\nu_e \neq \bar{\nu}_e$), esta reacción viola la conservación estricta del número leptónico por dos unidades ($\Delta L_e = 2$) y, por lo tanto, está \textbf{estrictamente prohibida}.
+
+\subsubsection*{b) Núcleo de señal, método de detección y decaimiento}
+
+\paragraph{1. Núcleo buscado:}
+El núcleo que constituye la señal experimental buscada es el isótopo radiactivo de \textbf{Argón-37} (${}^{37}_{18}\text{Ar}$).
+
+\paragraph{2. Método de extracción y detección:}
+Al ser el Argón un gas noble, no reacciona químicamente con el líquido del tanque (tetracloroetileno, $\text{C}_2\text{Cl}_4$). Se extrae purgando el volumen con un flujo de gas helio, atrapando los átomos de ${}^{37}\text{Ar}$ acumulados en trampas criogénicas de carbón activo para llevarlos a contadores proporcionales de bajo fondo.
+
+\paragraph{3. Tipo de desintegración y periodo de semidesintegración:}
+El ${}^{37}_{18}\text{Ar}$ se desintegra mediante \textbf{captura electrónica (EC)} de la capa K, volviendo a transformar un protón en neutrón:
+\begin{equation*}
+{}^{37}_{18}\text{Ar} + e^-_{\text{K}} \longrightarrow {}^{37}_{17}\text{Cl} + \nu_e + X\text{-rays / electrones Auger}
+\end{equation*}
+\begin{itemize}
+    \item \textbf{Periodo de semidesintegración:} $T_{1/2} \approx 35.0\text{ días}$.
+    \item \textbf{Señal medida:} La desintegración se detecta registrando los electrones Auger característicos ($\sim 2.82\text{ keV}$) emitidos tras la reordenación electrónica del átomo de Cloro resultante.
+\end{itemize}
+
+\subsubsection*{c) Resultado del experimento y comparación con Reines y Cowan}
+
+\paragraph{1. Resultado y conclusión (Experimento de Davis y Harmer, 1955):}
+R. Davis Jr. y C. Harmer no observaron la producción de ${}^{37}\text{Ar}$ por encima del fondo radiogénico. Se concluyó que los antineutrinos del reactor no inducen la transformación del ${}^{37}\text{Cl}$, lo que demostró que \textbf{$\nu_e \neq \bar{\nu}_e$} (el neutrino y el antineutrino son partículas distintas) y confirmó experimentalmente la ley de conservación del número leptónico electrónico.
+
+\paragraph{2. Diferencias con la señal del experimento de Reines y Cowan (1956):}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Proceso físico subyacente:} Reines y Cowan emplearon la reacción de desintegración beta inversa (IBD):
+    \begin{equation*}
+    \bar{\nu}_e + p \longrightarrow e^+ + n
+    \end{equation*}
+    Esta reacción conserva el número leptónico ($L_e = -1 \to -1$) y por ello sí ocurre espontáneamente con el flujo de antineutrinos del reactor.
+    
+    \item \textbf{Técnica de detección:}
+    \begin{itemize}
+        \item \textbf{Reines y Cowan:} Utilizaron una \textbf{firma de coincidencia temporal diferida} en tiempo real: un primer pulso de aniquilación del positrón ($e^+ e^- \to 2\gamma$, $t=0$), seguido escasos microsegundos después ($t \approx 5\text{--}10\ \mu\text{s}$) por un segundo pulso característico ($\approx 8\text{ MeV}$) de captura del neutrón en Cadmio (${}^{113}\text{Cd}$).
+        \item \textbf{Davis y Harmer (Cloro-37):} Emplearon una \textbf{técnica radioquímica acumulativa e indirecta} (offline), que no mide coincidencia en tiempo real sino que acumula la producción del isótopo ${}^{37}\text{Ar}$ durante semanas de exposición y mide posteriormente su decaimiento por captura electrónica diferida.
+    \end{itemize}
+\end{enumerate}
+\end{problema}
+\newpage
+%====================================================
+% EJERCICIO 2
+%====================================================
+\begin{problema}[Estado ligado $p$--$\Lambda_c^+$, análisis de estabilidad y canales de desintegración]
+La interacción fuerte entre un protón y un neutrón da lugar a un estado ligado estable (el deuterón) con energía de ligadura $E_d \approx 2.23\text{ MeV}$. Supón que la interacción fuerte entre un protón y un barión encantado $\Lambda_c^+$ ($p$--$\Lambda_c^+$) fuera de intensidad comparable, de modo que existiese un estado ligado con $B \approx 2\text{ MeV}$.
+
+\begin{enumerate}[label=\alph*)]
+    \item Escribe la masa de un estado ligado y la de una resonancia, indicando su anchura y su vida media. ¿Sería estable el estado $p$--$\Lambda_c^+$ frente a la interacción fuerte? ¿Y frente a todas las interacciones? Discute bajo qué condiciones exactas lo sería.
+    \item Calcula la masa del sistema y compárala con la masa de los productos de los canales de desintegración débil de la $\Lambda_c^+$:
+    \begin{equation*}
+    \Lambda_c^+ \longrightarrow p + K^- + \pi^+, \qquad \Lambda_c^+ \longrightarrow \Lambda + \pi^+
+    \end{equation*}
+    ¿Qué canales del sistema completo están abiertos?
+\end{enumerate}
+
+\textbf{Datos:} $m_p = 938.3\text{ MeV}/c^2$, $m_{\Lambda_c} = 2286.5\text{ MeV}/c^2$, $m_\Lambda = 1115.7\text{ MeV}/c^2$, $m_K = 493.7\text{ MeV}/c^2$, $m_\pi = 139.6\text{ MeV}/c^2$.
+
+\tcblower
+
+\subsubsection*{a) Masa de estados ligados y resonancias, y análisis de estabilidad}
+
+\paragraph{1. Expresiones generales de masa, anchura y vida media:}
+\begin{itemize}
+    \item \textbf{Estado ligado ($B > 0$):} Un estado ligado de dos partículas de masas $m_1$ y $m_2$ tiene una energía total estrictamente inferior al umbral de separación de sus constituyentes en reposo. Su masa es real y vale:
+    \begin{equation*}
+    M_{\text{ligado}} c^2 = (m_1 + m_2) c^2 - B
+    \end{equation*}
+    Al estar por debajo del umbral ($M_{\text{ligado}} < m_1 + m_2$), el estado no puede desintegrarse fuertemente en $m_1 + m_2$, por lo que su anchura de desintegración fuerte es nula ($\Gamma_{\text{fuerte}} = 0$) y su vida media frente a esta interacción es infinita ($\tau_{\text{fuerte}} = \infty$).
+
+    \item \textbf{Resonancia (estado inestable / no ligado):} Una resonancia se sitúa por encima del umbral de reacción ($E_R > 0$) y se describe mediante un polo en el plano complejo de energía (distribución de Breit-Wigner):
+    \begin{equation*}
+    M_{\text{res}} c^2 = E_R - i \frac{\Gamma}{2}
+    \end{equation*}
+    donde $\Gamma$ representa la anchura total de desintegración (relacionada con la incertidumbre en masa/energía). Su vida media $\tau$ se relaciona con $\Gamma$ mediante la ley de desintegración exponencial y el principio de incertidumbre de Heisenberg:
+    \begin{equation*}
+    \tau = \frac{\hbar}{\Gamma}
+    \end{equation*}
+\end{itemize}
+
+\paragraph{2. Estabilidad del sistema $p$--$\Lambda_c^+$ frente a la interacción fuerte:}
+El estado $p$--$\Lambda_c^+$ posee una masa $M(p\Lambda_c^+) c^2 = m_p c^2 + m_{\Lambda_c} c^2 - B < m_p c^2 + m_{\Lambda_c} c^2$. Como la energía del estado ligado es inferior a la masa sumada de sus constituyentes libres, la desintegración fuerte $p\Lambda_c^+ \to p + \Lambda_c^+$ es cinemáticamente imposible. Además, al ser el $\Lambda_c^+$ el barión encantado más ligero ($C=+1$), no existe ningún otro estado bariónico de menor masa con número bariónico $B_{\text{bar}} = 2$ y encanto $C=+1$ al que pueda transicionar conservando el sabor. Por tanto, el estado $p$--$\Lambda_c^+$ es \textbf{estricta y totalmente estable frente a la interacción fuerte}.
+
+\paragraph{3. Estabilidad frente a todas las interacciones (interacción débil):}
+El estado \textbf{no es estable frente a la interacción débil}. La partícula $\Lambda_c^+$ es inestable y se desintegra por interacción débil cargada (transición del quark $c \to s$ o $c \to d$) con una vida media $\tau \approx 2 \times 10^{-13}\text{ s}$. En el estado ligado $p$--$\Lambda_c^+$, la $\Lambda_c^+$ sufrirá desintegración débil (tanto por decaimiento individual como por interacción débil no mesónica entre los dos bariones, $p + \Lambda_c^+ \to p + \Sigma^+$, etc.), por lo que el sistema ligado tendrá una vida media finita del orden de $10^{-13}\text{ s}$.
+
+\paragraph{4. Condiciones exactas para ser absolutamente estable:}
+Para que el estado fuera absolutamente estable frente a todas las fuerzas de la naturaleza, su energía de ligadura $B$ tendría que superar la diferencia entre la masa inicial y la del estado final más ligero con la misma carga ($Q=+2$) y número bariónico ($B_{\text{bar}}=2$), que son dos protones ($2p$, $2m_p \approx 1876.6\text{ MeV}/c^2$). Esto requeriría una energía de ligadura descomunal de:
+\begin{equation*}
+B > (m_p + m_{\Lambda_c} - 2m_p) c^2 = (m_{\Lambda_c} - m_p) c^2 \approx 2286.5 - 938.3 = 1348.2\text{ MeV}
+\end{equation*}
+Como $B \approx 2\text{ MeV} \ll 1348.2\text{ MeV}$, el sistema decaerá inevitablemente mediante la interacción débil.
+
+\subsubsection*{b) Masa del sistema ligado y canales de desintegración abiertos}
+
+\paragraph{1. Masa del sistema ligado $p$--$\Lambda_c^+$:}
+\begin{equation*}
+M(p\Lambda_c^+) c^2 = m_p c^2 + m_{\Lambda_c} c^2 - B = 938.3\text{ MeV} + 2286.5\text{ MeV} - 2.0\text{ MeV} = \mathbf{3222.8\text{ MeV}}
+\end{equation*}
+
+\paragraph{2. Canales de desintegración débil con el protón espectador y comparación de masas:}
+
+En el sistema compuesto $p$--$\Lambda_c^+$, la desintegración débil de la $\Lambda_c^+$ en presencia del protón da lugar a los canales globales del sistema:
+
+\begin{itemize}
+    \item \textbf{Canal A (proveniente de $\Lambda_c^+ \to p + K^- + \pi^+$):}
+    \begin{equation*}
+    (p \Lambda_c^+) \longrightarrow p + p + K^- + \pi^+
+    \end{equation*}
+    Suma de las masas de los productos del estado final:
+    \begin{align*}
+    m_{f,A} c^2 &= 2 m_p c^2 + m_K c^2 + m_\pi c^2 \\
+    &= 2(938.3\text{ MeV}) + 493.7\text{ MeV} + 139.6\text{ MeV} = \mathbf{2509.9\text{ MeV}}
+    \end{align*}
+
+    \item \textbf{Canal B (proveniente de $\Lambda_c^+ \to \Lambda + \pi^+$):}
+    \begin{equation*}
+    (p \Lambda_c^+) \longrightarrow p + \Lambda + \pi^+
+    \end{equation*}
+    Suma de las masas de los productos del estado final:
+    \begin{align*}
+    m_{f,B} c^2 &= m_p c^2 + m_\Lambda c^2 + m_\pi c^2 \\
+    &= 938.3\text{ MeV} + 1115.7\text{ MeV} + 139.6\text{ MeV} = \mathbf{2193.6\text{ MeV}}
+    \end{align*}
+\end{itemize}
+
+\paragraph{3. Identificación de canales abiertos:}
+Comparando la masa del sistema inicial $M(p\Lambda_c^+) c^2 = 3222.8\text{ MeV}$ con las masas finales:
+\begin{itemize}
+    \item Para el Canal A: $M(p\Lambda_c^+) c^2 - m_{f,A} c^2 = 3222.8 - 2509.9 = 712.9\text{ MeV} > 0$.
+    \item Para el Canal B: $M(p\Lambda_c^+) c^2 - m_{f,B} c^2 = 3222.8 - 2193.6 = 1029.2\text{ MeV} > 0$.
+\end{itemize}
+
+\textbf{Conclusión:} Tanto el canal $(p \Lambda_c^+) \to 2p + K^- + \pi^+$ como el canal $(p \Lambda_c^+) \to p + \Lambda + \pi^+$ están **ampliamente abiertos cinemáticamente** para la desintegración débil del sistema ligado, liberando energéticamente $Q_A \approx 712.9\text{ MeV}$ y $Q_B \approx 1029.2\text{ MeV}$, respectivamente.
+\end{problema}
+
+\newpage
+%====================================================
+% EJERCICIO 3
+%====================================================
+\begin{problema}[Experimento de los dos neutrinos (BNL, 1962) y conservación del número leptónico]
+Un haz de protones de 15 GeV incide sobre un blanco de berilio y genera, entre otras partículas, piones cargados que se desintegran en vuelo. Todo lo producido atravesará un bloque de acero lo bastante grueso como para frenar cualquier partícula cargada o hadrónica, y llega a un detector de partículas cargadas situado detrás.
+
+\begin{enumerate}[label=\alph*)]
+    \item Escribe la desintegración de los piones. ¿Qué llega al detector y qué es frenado por el acero? Justifica por qué atraviesan el bloque los neutrinos.
+    \item Algunos neutrinos interaccionan con protones o neutrones al final del bloque. Escribe las reacciones posibles y qué proporción de sucesos con electrón y con muón se esperaría si $\nu_e = \nu_\mu$.
+    \item ¿Qué se detecta realmente? ¿Qué conclusión se extrae y qué ley de conservación la explica? ¿Qué predice esa ley para $\mu^\pm \to e^\pm + \gamma$?
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Desintegración de los piones y filtrado por el bloque de acero}
+
+\paragraph{1. Desintegración de los piones en vuelo:}
+Los piones cargados producidos en la colisión del haz de protones ($p + \text{Be} \to \pi^\pm + \dots$) se desintegran débilmente en vuelo produciendo muones y neutrinos muónicos (vía impulsada por la supresión de helicidad):
+\begin{align*}
+\pi^+ &\longrightarrow \mu^+ + \nu_\mu \\
+\pi^- &\longrightarrow \mu^- + \bar{\nu}_\mu
+\end{align*}
+
+\paragraph{2. Partículas frenadas y transmisibilidad al detector:}
+\begin{itemize}
+    \item \textbf{Frenadas por el acero:} Los protones no interaccionados y todos los hadrones/piones no desintegrados (absorbidos por la interacción fuerte mediante cascadas hadrónicas), así como los muones cargados ($\mu^\pm$), los cuales pierden toda su energía cinética por ionización continua a lo largo del bloque de hierro/acero.
+    \item \textbf{Llegan al detector:} Únicamente los \textbf{neutrinos} ($\nu_\mu, \bar{\nu}_\mu$).
+\end{itemize}
+
+\paragraph{3. Justificación de la penetración de los neutrinos:}
+Los neutrinos son leptones neutros ($Q = 0$), por lo que no sufren pérdidas de energía electromagnéticas (ionización o radiación de frenado). Al no ser hadrones, tampoco experimentan la interacción fuerte con los núcleos del acero. Interaccionan únicamente a través de la \textbf{interacción débil}, cuya sección eficaz a energías de pocos GeV es extremadamente pequeña ($\sigma \sim 10^{-38}\text{ cm}^2$), haciendo que el libre camino medio sea de millones de kilómetros de materia. Por tanto, atraviesan el bloque de acero sin sufrir atenuación significativa.
+
+\subsubsection*{b) Reacciones en el detector y proporción esperada si $\nu_e = \nu_\mu$}
+
+\paragraph{1. Reacciones de corriente cargada con los nucleones del detector:}
+Al interaccionar el flujo de neutrinos con los protones y neutrones mediante el intercambio de bosones débiles cargados $W^\pm$:
+\begin{itemize}
+    \item \textbf{Para neutrinos:}
+    \begin{align*}
+    \nu + n &\longrightarrow p + e^- \quad (\text{si actuase como neutrino electrónico}) \\
+    \nu + n &\longrightarrow p + \mu^- \quad (\text{si actuase como neutrino muónico})
+    \end{align*}
+    \item \textbf{Para antineutrinos:}
+    \begin{align*}
+    \bar{\nu} + p &\longrightarrow n + e^+ \quad (\text{si actuase como antineutrino electrónico}) \\
+    \bar{\nu} + p &\longrightarrow n + \mu^+ \quad (\text{si actuase como antineutrino muónico})
+    \end{align*}
+\end{itemize}
+
+\paragraph{2. Proporción esperada bajo la hipótesis $\nu_e = \nu_\mu$:}
+Si el neutrino producido junto al muón en la desintegración del pión fuera idéntico al neutrino asociado al electrón ($\nu_e = \nu_\mu = \nu$), por la universalidad leptónica de la interacción débil ambas reaciones ($\nu + n \to p + e^-$ y $\nu + n \to p + \mu^-$) ocurrirían con idéntica probabilidad (a la energía de 15 GeV del haz, las diferencias de masa entre electrón y muón son cinemáticamente despreciables). Se esperaría una \textbf{proporción 1:1} de sucesos (50\% de trazas de tipo electrón y 50\% de tipo muón).
+
+\subsubsection*{c) Resultado experimental, conclusión y ley de conservación}
+
+\paragraph{1. Observación experimental (Experimento de Lederman, Schwartz y Steinberger, 1962):}
+En los detectores (cámaras de chispas) se observaron de forma abrumadora trazas rectilíneas de \textbf{muones} ($\mu^-$ y $\mu^+$), con una ausencia práctica de cascadas electromagnéticas producidas por electrones ($e^\pm$).
+
+\paragraph{2. Conclusión extraída:}
+Se demuestra experimentalmente que el neutrino producido en la desintegración del pión junto con un muón ($\nu_\mu$) es una partícula físicamente distinta del neutrino asociado a la desintegración beta del electrón ($\nu_e$):
+\begin{equation*}
+\nu_e \neq \nu_\mu
+\end{equation*}
+Confirmando la existencia de al menos dos generaciones/sabores independientes de neutrinos en la naturaleza.
+
+\paragraph{3. Ley de conservación explicativa:}
+Este fenómeno queda explicado por la \textbf{conservación del número leptónico individual por familia} ($L_e$ y $L_\mu$):
+\begin{itemize}
+    \item Familia electrónica: $L_e(e^-) = L_e(\nu_e) = +1$, $L_e(e^+) = L_e(\bar{\nu}_e) = -1$.
+    \item Familia muónica: $L_\mu(\mu^-) = L_\mu(\nu_\mu) = +1$, $L_\mu(\mu^+) = L_\mu(\bar{\nu}_\mu) = -1$.
+\end{itemize}
+En cualquier proceso del Modelo Estándar, el número leptónico de cada familia se conserva por separado ($\Delta L_e = 0$ y $\Delta L_\mu = 0$).
+
+\paragraph{4. Predicción para el proceso $\mu^\pm \to e^\pm + \gamma$:}
+Analizamos el balance del número leptónico en la desintegración radiativa del muón:
+\begin{itemize}
+    \item \textbf{Estado inicial ($\mu^-$):} $L_\mu = +1, \quad L_e = 0$.
+    \item \textbf{Estado final ($e^- + \gamma$):} $L_\mu = 0, \quad L_e = +1$.
+\end{itemize}
+Puesto que $\Delta L_\mu = -1 \neq 0$ y $\Delta L_e = +1 \neq 0$, la ley de conservación de los números leptónicos individuales predice que la desintegración \textbf{$\mu^\pm \to e^\pm + \gamma$ está estrictamente prohibida} (su relación de ramificación en el Modelo Estándar sin masa de neutrinos es exactamente cero, BR $= 0$).
+\end{problema}
+\newpage
+%====================================================
+% EJERCICIO 4
+%====================================================
+\begin{problema}[Desintegraciones radiativas hadrónicas, conservación de sabores y clasificación de interacciones]
+Considera desintegraciones hadrónicas en las que se emite un fotón, de la forma $M_1 \rightarrow M_2 + \gamma$ (mesones) y $B_1 \rightarrow B_2 + \gamma$ (bariones).
+
+\begin{enumerate}[label=\alph*)]
+    \item Si el proceso es electromagnético, ¿qué números cuánticos aditivos ($Q, B, S, C, \text{bottom}, \text{top}$) deben coincidir entre el hadrón inicial y el final? ¿Qué se puede afirmar entonces sobre su contenido de quarks?
+    \item Clasifica cada proceso como posible por interacción electromagnética, posible solo por interacción débil, o prohibido para cualquier interacción. Razona la respuesta.
+    \begin{enumerate}[label=\roman*)]
+        \item $\Sigma^0 \longrightarrow \Lambda + \gamma$
+        \item $\Sigma^+ \longrightarrow p + \gamma$
+        \item $D^{*0} (c\bar{u}) \longrightarrow D^0 (c\bar{u}) + \gamma$
+        \item $\Omega^- \longrightarrow \Xi^- + \gamma$
+        \item $p \longrightarrow \pi^+ + \gamma$
+    \end{enumerate}
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Números cuánticos aditivos y contenido de quarks en desintegraciones electromagnéticas}
+
+\paragraph{1. Conservación de números cuánticos aditivos:}
+La interacción electromagnética conserva estrictamente todos los números cuánticos aditivos globales y de sabor. Al ser el fotón emitido ($\gamma$) un cuanto sin carga eléctrica, sin número bariónico y libre de sabor ($Q_\gamma = 0, B_\gamma = 0, S_\gamma = 0, C_\gamma = 0, b_\gamma = 0, t_\gamma = 0$), las leyes de conservación exigen la igualdad exacta entre los valores del hadrón inicial ($H_1$) y final ($H_2$):
+\begin{equation*}
+Q_1 = Q_2, \qquad B_1 = B_2, \qquad S_1 = S_2, \qquad C_1 = C_2, \qquad b_1 = b_2, \qquad t_1 = t_2
+\end{equation*}
+
+\paragraph{2. Conclusión sobre el contenido de quarks:}
+Dado que el número bariónico ($B$) y todos los sabores de quark ($S, C, b, t$) coinciden punto por punto entre el hadrón inicial y el final, se concluye que \textbf{ambos hadrones deben poseer exactamente el mismo contenido neto de quarks de valencia} (misma combinación de sabores, como por ejemplo ambos $uds$ o ambos $c\bar{u}$).
+
+La emisión de un fotón electromagnético no altera el sabor de ningún quark individual; por lo tanto, la transición refleja únicamente un cambio en el estado cuántico del sistema ligado (excitación de espín, momento angular orbital o estructura de isospín de los mismos quarks constituyentes).
+
+\subsubsection*{b) Clasificación y razonamiento de los procesos}
+
+\paragraph{i) $\Sigma^0 \longrightarrow \Lambda + \gamma$}
+\begin{itemize}
+    \item \textbf{Análisis de números cuánticos y quarks:}
+    \begin{itemize}
+        \item $\Sigma^0$: contenido $uds$, $Q=0$, $B=+1$, $S=-1$, $C=0$, $J^P = \frac{1}{2}^+$, $I=1$.
+        \item $\Lambda$: contenido $uds$, $Q=0$, $B=+1$, $S=-1$, $C=0$, $J^P = \frac{1}{2}^+$, $I=0$.
+    \end{itemize}
+    \item \textbf{Evaluación:} Conserva la carga ($\Delta Q = 0$), el número bariónico ($\Delta B = 0$) y la extrañeza ($\Delta S = 0$). Ambos bariones comparten la misma composición de quarks ($uds$). Es un proceso cinemáticamente permitido ($m_{\Sigma^0} \approx 1192.6\text{ MeV}/c^2 > m_\Lambda \approx 1115.7\text{ MeV}/c^2$).
+    \item \textbf{Conclusión:} \textbf{Posible por interacción electromagnética} (constituye el modo de desintegración prácticamente exclusivo del $\Sigma^0$, con $\text{BR} \approx 100\%$).
+\end{itemize}
+
+\paragraph{ii) $\Sigma^+ \longrightarrow p + \gamma$}
+\begin{itemize}
+    \item \textbf{Análisis de números cuánticos y quarks:}
+    \begin{itemize}
+        \item $\Sigma^+$: contenido $uus$, $Q=+1$, $B=+1$, $S=-1$.
+        \item $p$: contenido $uud$, $Q=+1$, $B=+1$, $S=0$.
+    \end{itemize}
+    \item \textbf{Evaluación:} La variación del número cuántico de extrañeza es $\Delta S = S(p) - S(\Sigma^+) = 0 - (-1) = +1 \neq 0$.
+    \begin{itemize}
+        \item \textbf{Interacción electromagnética:} Prohibida, pues la interacción electromagnética conserva de forma estricta el sabor de quark ($\Delta S = 0$).
+        \item \textbf{Interacción débil:} Permitida, ya que la interacción débil admite cambios de sabor con $|\Delta S| = 1$ mediante un diagrama de bucle radiativo débil (transición $s \to u + \gamma$).
+    \end{itemize}
+    \item \textbf{Conclusión:} \textbf{Posible solo por interacción débil} (desintegración radiativa débil de hiperón, $\text{BR} \approx 1.23 \times 10^{-3}$).
+\end{itemize}
+
+\paragraph{iii) $D^{*0} (c\bar{u}) \longrightarrow D^0 (c\bar{u}) + \gamma$}
+\begin{itemize}
+    \item \textbf{Análisis de números cuánticos y quarks:}
+    \begin{itemize}
+        \item $D^{*0}$: mesón vectorial ($1^-$), contenido $c\bar{u}$, $Q=0$, $B=0$, $C=+1$, $S=0$.
+        \item $D^0$: mesón pseudoescalar ($0^-$), contenido $c\bar{u}$, $Q=0$, $B=0$, $C=+1$, $S=0$.
+    \end{itemize}
+    \item \textbf{Evaluación:} Conserva la carga ($\Delta Q = 0$), el número bariónico ($\Delta B = 0$) y el encanto ($\Delta C = 0$). Ambos mesones presentan idéntico contenido de quarks ($c\bar{u}$). Es una transición dipolar magnética ($M1$) cinemáticamente abierta ($m_{D^{*0}} \approx 2006.85\text{ MeV}/c^2 > m_{D^0} \approx 1864.84\text{ MeV}/c^2$).
+    \item \textbf{Conclusión:} \textbf{Posible por interacción electromagnética} ($\text{BR} \approx 35.3\%$).
+\end{itemize}
+
+\paragraph{iv) $\Omega^- \longrightarrow \Xi^- + \gamma$}
+\begin{itemize}
+    \item \textbf{Análisis de números cuánticos y quarks:}
+    \begin{itemize}
+        \item $\Omega^-$: contenido $sss$, $Q=-1$, $B=+1$, $S=-3$.
+        \item $\Xi^-$: contenido $dss$, $Q=-1$, $B=+1$, $S=-2$.
+    \end{itemize}
+    \item \textbf{Evaluación:} Muestra una variación de extrañeza $\Delta S = S(\Xi^-) - S(\Omega^-) = (-2) - (-3) = +1 \neq 0$.
+    \begin{itemize}
+        \item \textbf{Interacción electromagnética:} Prohibida por violar la conservación de sabor ($\Delta S \neq 0$).
+        \item \textbf{Interacción débil:} Permitida por interacción débil como proceso radiativo de primer orden con $|\Delta S| = 1$ (transición $s \to d + \gamma$).
+    \end{itemize}
+    \item \textbf{Conclusión:} \textbf{Posible solo por interacción débil} (desintegración radiativa débil del hiperón $\Omega^-$, $\text{BR} \approx 1.23 \times 10^{-3}$).
+\end{itemize}
+
+\paragraph{v) $p \longrightarrow \pi^+ + \gamma$}
+\begin{itemize}
+    \item \textbf{Análisis de números cuánticos:}
+    \begin{itemize}
+        \item Protón ($p$): $Q=+1$, $B=+1$.
+        \item Estado final ($\pi^+ + \gamma$): $Q = +1 + 0 = +1$, $B = B(\pi^+) + B(\gamma) = 0 + 0 = 0$.
+    \end{itemize}
+    \item \textbf{Evaluación:} La desintegración implica una variación del número bariónico de $\Delta B = B_f - B_i = 0 - (+1) = -1 \neq 0$.
+    \item \textbf{Conclusión:} \textbf{Prohibido para cualquier interacción}. La conservación del número bariónico es una ley absoluta en el Modelo Estándar, lo que impide de forma total la desintegración de un protón por cualquier fuerza fundamental.
+\end{itemize}
+\end{problema}
+\newpage
+%====================================================
+% EJERCICIO 5
+%====================================================
+\begin{problema}[Sección eficaz de una resonancia, anchura $\Gamma$ y principio de incertidumbre]
+En una colisión $a + b \longrightarrow R \longrightarrow f$, la sección eficaz a energías próximas a una energía característica $E_0$ viene dada por
+\begin{equation*}
+\sigma(s) = \frac{2\pi\alpha^2}{3s} \left| \frac{\sqrt{s}}{E_0} - 1 + \frac{i}{40} \right|^{-2}
+\end{equation*}
+donde $s = p^\mu p_\mu$ es la variable de Mandelstam. Discute qué sucede en la sección eficaz en torno a $E_0$:
+
+\begin{enumerate}[label=\alph*)]
+    \item Valor y posición del máximo.
+    \item Anchura a media altura $\Gamma$ en función de $E_0$ (despreciando la variación del factor $1/s$ cerca del pico) y vida media de la resonancia. Evalúa ambas para $E_0 = 1\text{ GeV}$ y compara con la escala temporal de la interacción fuerte ($\sim 10^{-23}\text{ s}$).
+    \item Comportamiento muy por debajo y muy por encima de $E_0$.
+    \item ¿Qué ocurriría si $\Gamma \to 0$? Relaciónalo con un estado ligado y con la relación de incertidumbre energía--tiempo.
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{Análisis previo de la sección eficaz}
+
+Definiendo la energía en el centro de masas $E = \sqrt{s}$, la sección eficaz puede reescribirse desarrollando el módulo del denominador complejo:
+\begin{equation*}
+\left| \frac{\sqrt{s}}{E_0} - 1 + \frac{i}{40} \right|^2 = \left( \frac{\sqrt{s}}{E_0} - 1 \right)^2 + \left(\frac{1}{40}\right)^2 = \frac{(\sqrt{s} - E_0)^2}{E_0^2} + \frac{1}{1600}
+\end{equation*}
+
+Sustituyendo en la expresión dada:
+\begin{equation*}
+\sigma(s) = \frac{2\pi\alpha^2}{3s} \frac{1}{\left( \frac{\sqrt{s}}{E_0} - 1 \right)^2 + \frac{1}{1600}} = \frac{2\pi\alpha^2 E_0^2}{3s} \frac{1}{(\sqrt{s} - E_0)^2 + \left(\frac{E_0}{40}\right)^2}
+\end{equation*}
+
+\subsubsection*{a) Posición y valor del máximo de la sección eficaz}
+
+\paragraph{1. Posición del máximo:}
+Despreciando la variación lenta del factor $1/s$ frente a la rápida variación del denominador resonante cerca de $E_0$, el mínimo del denominador se alcanza cuando el término cuadrático se anula:
+\begin{equation*}
+\frac{\sqrt{s}}{E_0} - 1 = 0 \implies \sqrt{s}_{\text{máx}} = E_0 \quad (s_{\text{máx}} = E_0^2)
+\end{equation*}
+\textit{(Nota: Si se incluye la variación de $1/s = 1/E^2$, la posición exacta del pico sufre un desplazamiento insignificante de $\sqrt{s}_{\text{máx}} \approx E_0 (1 - 1/1600) \approx 0.9994 E_0$).}
+
+\paragraph{2. Valor máximo de la sección eficaz:}
+Evaluando $\sigma(s)$ en $\sqrt{s} = E_0$:
+\begin{equation*}
+\sigma_{\text{máx}} = \sigma(E_0^2) = \frac{2\pi\alpha^2}{3 E_0^2} \frac{1}{\frac{1}{1600}} = \mathbf{\frac{3200 \pi \alpha^2}{3 E_0^2}}
+\end{equation*}
+
+\subsubsection*{b) Anchura a media altura $\Gamma$, vida media $\tau$ y escala temporal}
+
+\paragraph{1. Determinación de la anchura a media altura $\Gamma$:}
+La condición a media altura exige que la sección eficaz caiga a la mitad de su valor máximo, $\sigma(\sqrt{s}_{\pm}) = \frac{1}{2} \sigma_{\text{máx}}$. Esto equivale a exigir que el denominador se duplique:
+\begin{equation*}
+\left( \frac{\sqrt{s}_{\pm}}{E_0} - 1 \right)^2 + \frac{1}{1600} = 2 \times \frac{1}{1600} \implies \left( \frac{\sqrt{s}_{\pm}}{E_0} - 1 \right)^2 = \frac{1}{1600}
+\end{equation*}
+Extrayendo la raíz cuadrada:
+\begin{equation*}
+\frac{\sqrt{s}_{\pm}}{E_0} - 1 = \pm \frac{1}{40} \implies \sqrt{s}_{\pm} = E_0 \left( 1 \pm \frac{1}{40} \right) = E_0 \pm \frac{E_0}{40}
+\end{equation*}
+
+La anchura total a media altura (FWHM) en energía es $\Gamma = \sqrt{s}_+ - \sqrt{s}_-$:
+\begin{equation*}
+\Gamma = \left( E_0 + \frac{E_0}{40} \right) - \left( E_0 - \frac{E_0}{40} \right) = \frac{2 E_0}{40} = \mathbf{\frac{E_0}{20} = 0.05 E_0}
+\end{equation*}
+
+\paragraph{2. Evaluación numérica para $E_0 = 1\text{ GeV}$:}
+\begin{itemize}
+    \item \textbf{Anchura de desintegración:} $\Gamma = 0.05 \times 1\text{ GeV} = \mathbf{0.05\text{ GeV} = 50\text{ MeV}}$.
+    \item \textbf{Vida media de la resonancia ($\tau = \hbar / \Gamma$):}
+    \begin{equation*}
+    \tau = \frac{\hbar}{\Gamma} = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{50\text{ MeV}} \approx \mathbf{1.32 \times 10^{-23}\text{ s}}
+    \end{equation*}
+\end{itemize}
+
+\paragraph{3. Comparación con la escala de la interacción fuerte:}
+El tiempo característico de la interacción fuerte es $\tau_{\text{fuerte}} \sim 10^{-23}\text{ s}$ (el tiempo que tarda la luz o una señal fuertemente interactuante en cruzar un radio de escala hadrónica $\sim 1\text{ fm}$). Dado que $\tau \approx 1.32 \times 10^{-23}\text{ s} \sim \tau_{\text{fuerte}}$, se confirma que el estado $R$ es una \textbf{resonancia hadrónica} que se desintegra directamente a través de la \textbf{interacción fuerte}.
+
+\subsubsection*{c) Comportamiento asíntotico muy por debajo y muy por encima de $E_0$}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Régimen de muy baja energía ($\sqrt{s} \ll E_0$ / $s \ll E_0^2$):}
+    En este límite $\sqrt{s}/E_0 \ll 1$, por lo que $\left( \frac{\sqrt{s}}{E_0} - 1 \right)^2 \approx 1 \gg \frac{1}{1600}$.
+    \begin{equation*}
+    \sigma(s) \approx \mathbf{\frac{2\pi\alpha^2}{3s}} \propto \frac{1}{s} \quad \left( \text{o } \frac{1}{E^2} \right)
+    \end{equation*}
+    Muestra el comportamiento standard $1/s$ característico de procesos no resonantes de carga puntual (QED).
+
+    \item \textbf{Régimen de muy alta energía ($\sqrt{s} \gg E_0$ / $s \gg E_0^2$):}
+    En este límite $\sqrt{s}/E_0 \gg 1$, de modo que $\left( \frac{\sqrt{s}}{E_0} - 1 \right)^2 \approx \frac{s}{E_0^2}$.
+    \begin{equation*}
+    \sigma(s) \approx \frac{2\pi\alpha^2}{3s} \frac{1}{\frac{s}{E_0^2}} = \mathbf{\frac{2\pi\alpha^2 E_0^2}{3 s^2}} \propto \frac{1}{s^2} \quad \left( \text{o } \frac{1}{E^4} \right)
+    \end{equation*}
+    La sección eficaz decrece rápidamente como $1/s^2$ por encima de la resonancia.
+\end{enumerate}
+
+\subsubsection*{d) Límite $\Gamma \to 0$, estado ligado y relación de incertidumbre}
+
+\paragraph{1. Comportamiento matemático si $\Gamma \to 0$:}
+Si la parte imaginaria del denominador tiende a cero, la función Breit-Wigner se colapsa a una representación de la delta de Dirac:
+\begin{equation*}
+\lim_{\Gamma \to 0} \frac{\frac{\Gamma}{2}}{(\sqrt{s} - E_0)^2 + \left(\frac{\Gamma}{2}\right)^2} = \pi \, \delta(\sqrt{s} - E_0)
+\end{equation*}
+Por tanto, la sección eficaz se vuelve infinitamente estrecha e infinitamente alta en $\sqrt{s} = E_0$, transformándose en un pico daltónico proporcional a $\delta(\sqrt{s} - E_0)$.
+
+\paragraph{2. Relación con un estado ligado y la incertidumbre energía--tiempo:}
+\begin{itemize}
+    \item \textbf{Principio de incertidumbre energía--tiempo ($\Delta E \cdot \Delta t \ge \frac{\hbar}{2}$ / $\tau = \frac{\hbar}{\Gamma}$):} La anchura de energía $\Gamma = \Delta E$ mide la incertidumbre en la energía del estado debido a su carácter inestable.
+    \item \textbf{Límite $\Gamma \to 0$:} Si $\Gamma \to 0$ ($\Delta E \to 0$), la vida media tiende a infinito:
+    \begin{equation*}
+    \tau = \lim_{\Gamma \to 0} \frac{\hbar}{\Gamma} = \infty
+    \end{equation*}
+    \item \textbf{Conclusión física:} Un estado con $\Gamma = 0$ y $\tau = \infty$ no sufre desintegración alguna; se trata de un \textbf{estado ligado verdaderamente estable} con una energía $E_0$ perfectamente definida ($\Delta E = 0$). Una resonancia ($\Gamma > 0$), en cambio, es un estado cuasiligado inestable que decae en un tiempo finito $\tau = \hbar/\Gamma$.
+\end{itemize}
+\end{problema}
+\newpage
+%====================================================
+% EJERCICIO 6
+%====================================================
+\begin{problema}[Desintegración de mesones pesados, regla de OZI y ausencia de estados ligados de toponio]
+Un mesón vectorial neutro $Q\bar{Q}$ (quark pesado y su antiquark) puede desintegrarse por interacción fuerte en un par de mesones de sabor abierto, $Q\bar{q} + q\bar{Q}$ ($q = u, d$).
+
+\begin{enumerate}[label=\alph*)]
+    \item ¿Qué han de verificar los sabores y las masas de esos dos mesones para que la desintegración sea posible?
+    \item Aplícalo a las siguientes desintegraciones:
+    \begin{itemize}
+        \item $J/\psi \, (c\bar{c}, 3097) \longrightarrow D^0 \bar{D}^0$
+        \item $\psi(3770) \, (c\bar{c}, 3770) \longrightarrow D^0 \bar{D}^0$
+        \item $\Upsilon(1S) \, (b\bar{b}, 9460) \longrightarrow B^0 \bar{B}^0$
+        \item $\Upsilon(4S) \, (b\bar{b}, 10579) \longrightarrow B^0 \bar{B}^0$
+    \end{itemize}
+    \item Con $\Gamma = \hbar / \tau$, explica por qué $J/\psi$ y $\Upsilon(1S)$ son resonancias muy estrechas ($\Gamma \approx 93\text{ keV}$ y $54\text{ keV}$) frente a $\psi(3770)$ ($\Gamma \approx 27\text{ MeV}$). Explica también por qué existen estados $c\bar{c}$ y $b\bar{b}$, pero no $t\bar{t}$ ($\Gamma_t = 1.42\text{ GeV}$, $\Lambda_{\text{QCD}}^{-1} \approx 10^{-23}\text{ s}$).
+\end{enumerate}
+
+\textbf{Datos:} $m(D^0) = 1865\text{ MeV}/c^2$, $m(B^0) = 5280\text{ MeV}/c^2$.
+
+\tcblower
+
+\subsubsection*{a) Condiciones de sabor y masa para la desintegración en sabor abierto}
+
+\paragraph{1. Condición de sabores:}
+La interacción fuerte conserva de forma estricta todos los sabores de quark de valencia (encanto $C$, belleza $B_{\text{beauty}}$, etc.). El estado inicial $Q\bar{Q}$ tiene sabor neto nulo (sabor oculto). Para desintegrarse en dos mesones con sabor abierto ($Q\bar{q}$ y $q\bar{Q}$), el par de quarks ligeros $q\bar{q}$ ($u\bar{u}$ o $d\bar{d}$) debe crearse espontáneamente a partir del campo de gluones del vacío de la QCD:
+\begin{equation*}
+Q\bar{Q} \longrightarrow (Q\bar{q}) + (q\bar{Q})
+\end{equation*}
+La presencia del antiquark $\bar{q}$ en uno de los mesones compensa exactamente el sabor del quark $q$ en el otro mesón, garantizando la conservación global del sabor.
+
+\paragraph{2. Condición de masas (umbral cinemático):}
+Para que la desintegración fuerte sea cinemáticamente posible con el mesón progenitor en reposo, la masa en reposo del vector $Q\bar{Q}$ debe superar o igualar la suma de las masas de los dos mesones de sabor abierto producidos (umbral de sabor abierto):
+\begin{equation*}
+M(Q\bar{Q}) \ge m(Q\bar{q}) + m(q\bar{Q}) = 2 m_{\text{abierto}}
+\end{equation*}
+Si $M(Q\bar{Q}) < 2 m_{\text{abierto}}$, el canal de desintegración en pares con sabor abierto está \textbf{cinemáticamente prohibido}.
+
+\subsubsection*{b) Aplicación a los estados $c\bar{c}$ y $b\bar{b}$}
+
+\paragraph{1. Casos del Charmonio ($c\bar{c}$):}
+El umbral cinemático para la producción de un par $D^0 \bar{D}^0$ es:
+\begin{equation*}
+2 m(D^0) = 2 \times 1865\text{ MeV}/c^2 = \mathbf{3730\text{ MeV}/c^2}
+\end{equation*}
+
+\begin{itemize}
+    \item \textbf{Desintegración $J/\psi(3097) \to D^0 \bar{D}^0$:}
+    \begin{equation*}
+    M(J/\psi) = 3097\text{ MeV}/c^2 < 3730\text{ MeV}/c^2
+    \end{equation*}
+    \textbf{Prohibida cinemáticamente} ($M < 2 m_{D^0}$). El $J/\psi$ se encuentra por debajo del umbral del encanto abierto.
+
+    \item \textbf{Desintegración $\psi(3770) \to D^0 \bar{D}^0$:}
+    \begin{equation*}
+    M(\psi(3770)) = 3770\text{ MeV}/c^2 > 3730\text{ MeV}/c^2
+    \end{equation*}
+    \textbf{Permitida cinemáticamente} ($M > 2 m_{D^0}$). La masa supera holgadamente el umbral de encanto abierto.
+\end{itemize}
+
+\paragraph{2. Casos del Bottomonio ($b\bar{b}$):}
+El umbral cinemático para la producción de un par $B^0 \bar{B}^0$ es:
+\begin{equation*}
+2 m(B^0) = 2 \times 5280\text{ MeV}/c^2 = \mathbf{10560\text{ MeV}/c^2}
+\end{equation*}
+
+\begin{itemize}
+    \item \textbf{Desintegración $\Upsilon(1S)(9460) \to B^0 \bar{B}^0$:}
+    \begin{equation*}
+    M(\Upsilon(1S)) = 9460\text{ MeV}/c^2 < 10560\text{ MeV}/c^2
+    \end{equation*}
+    \textbf{Prohibida cinemáticamente} ($M < 2 m_{B^0}$). Se halla por debajo del umbral de belleza abierta.
+
+    \item \textbf{Desintegración $\Upsilon(4S)(10579) \to B^0 \bar{B}^0$:}
+    \begin{equation*}
+    M(\Upsilon(4S)) = 10579\text{ MeV}/c^2 > 10560\text{ MeV}/c^2
+    \end{equation*}
+    \textbf{Permitida cinemáticamente} ($M > 2 m_{B^0}$). La masa está justo por encima del umbral de belleza abierta.
+\end{itemize}
+
+\subsubsection*{c) Explicación de las anchuras de desintegración y ausencia de toponio ($t\bar{t}$)}
+
+\paragraph{1. Razón de la estrechez de $J/\psi$ y $\Upsilon(1S)$ frente a $\psi(3770)$ (Regla de OZI):}
+\begin{itemize}
+    \item \textbf{Estados por encima del umbral ($\psi(3770)$):} Al tener masa suficiente, se desintegran directamente por la interacción fuerte mediante la ruptura del estado ligado en mesones de sabor abierto ($c\bar{c} \to D\bar{D}$). Es un proceso **OZI-permitido**, con líneas de quarks continuas que transcurre en la escala de tiempo típica de la fuerza fuerte ($\tau \sim 10^{-23}\text{ s}$), dando lugar a una anchura de desintegración grande ($\Gamma \approx 27\text{ MeV}$).
+    
+    \item \textbf{Estados por debajo del umbral ($J/\psi$ y $\Upsilon(1S)$):} Al no poder producir mesones con sabor abierto, la única vía de desintegración fuerte posible es la aniquilación completa del par $Q\bar{Q}$ en gluones virtuales. Por conservación de la paridad de conjugación de carga ($C = -1$), no pueden aniquilarse en 2 gluones ($C=+1$), requiriendo al menos 3 gluones ($Q\bar{Q} \to 3g$). Este proceso está suprimido por la **regla de OZI** y por el acoplamiento fuerte evaluado a altas energías ($\propto \alpha_s^3(M_Q^2) \ll 1$). Como consecuencia, la probabilidad de desintegración es drásticamente reducida, dando vidas medias inusualmente largas y anchuras de resonancia **extremadamente estrechas** ($\Gamma_{J/\psi} \approx 93\text{ keV}$, $\Gamma_{\Upsilon(1S)} \approx 54\text{ keV}$).
+\end{itemize}
+
+\paragraph{2. Ausencia de estados ligados de toponio ($t\bar{t}$):}
+Para que se forme un estado ligado de quarks (hadrón) caracterizado por el confinamiento de la QCD, el tiempo de vida media de las partículas constituyentes ($\tau_t$) debe ser superior a la escala temporal característica de la hadronización e interacción fuerte:
+\begin{equation*}
+\tau_{\text{QCD}} \sim \frac{1}{\Lambda_{\text{QCD}}} \sim 10^{-23}\text{ s}
+\end{equation*}
+
+Evaluamos la vida media del quark top a partir de su anchura de desintegración débil ($\Gamma_t = 1.42\text{ GeV}$):
+\begin{equation*}
+\tau_t = \frac{\hbar}{\Gamma_t} = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{1420\text{ MeV}} \approx \mathbf{4.6 \times 10^{-25}\text{ s}}
+\end{equation*}
+
+Dado que $\tau_t \approx 4.6 \times 10^{-25}\text{ s} \ll \tau_{\text{QCD}} \approx 10^{-23}\text{ s}$, el quark top sufre una desintegración débil ultra-rápida ($t \to W^+ b$) **mucho antes de tener tiempo de unirse a un antiquark o formar estados ligados de toponio ($t\bar{t}$)**. En cambio, las vidas medias débiles de los quarks $c$ y $b$ ($\tau \sim 10^{-12}\text{ s}$) son órdenes de magnitud mayores que $\tau_{\text{QCD}}$, lo que permite la existencia de resonancias estables $c\bar{c}$ y $b\bar{b}$.
+\end{problema}
+\newpage
+%====================================================
+% EJERCICIO 7
+%====================================================
+\begin{problema}[Resonancia mesónica, anchuras parciales y sección eficaz de Breit-Wigner]
+Una resonancia $R$ de espín $J = 1$ se forma en la colisión de dos mesones de espín 0, $a + b \longrightarrow R$, y solo puede desintegrarse en tres canales: $a + b$, $c + d$ y $e + f$. Se sabe que $\Gamma = 120\text{ MeV}$, que $\Gamma(R \rightarrow a+b) = 24\text{ MeV}$ y que
+\begin{equation*}
+R_\Gamma = \frac{\Gamma(R \rightarrow c+d)}{\Gamma(R \rightarrow e+f)} = 3
+\end{equation*}
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcula las anchuras parciales, las fracciones de ramificación de cada canal y la vida media de $R$.
+    \item Calcula la razón $R_\sigma = \frac{\sigma(a+b \rightarrow R \rightarrow c+d)}{\sigma(a+b \rightarrow R \rightarrow e+f)}$ (i) en el máximo de la resonancia y (ii) a la energía $E_1 = M c^2 + \Gamma$. ¿Depende $R_\sigma$ de la energía?
+    \item Calcula $\sigma(a+b \rightarrow R \rightarrow c+d)$ en el máximo, en unidades de $\frac{\pi\hbar^2}{q_i^2}$ ($q_i$ es el momento en el centro de masas del canal de entrada).
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{a) Anchuras parciales, fracciones de ramificación y vida media de $R$}
+
+\paragraph{1. Anchuras parciales ($\Gamma_i$):}
+La anchura total $\Gamma$ es la suma de las anchuras parciales de todos los canales de desintegración abiertos:
+\begin{equation*}
+\Gamma = \Gamma_{ab} + \Gamma_{cd} + \Gamma_{ef}
+\end{equation*}
+donde $\Gamma_{ab} = \Gamma(R \to a+b) = 24\text{ MeV}$. Por tanto:
+\begin{equation*}
+\Gamma_{cd} + \Gamma_{ef} = \Gamma - \Gamma_{ab} = 120\text{ MeV} - 24\text{ MeV} = 96\text{ MeV}
+\end{equation*}
+
+Utilizando la razón conocida $R_\Gamma = \frac{\Gamma_{cd}}{\Gamma_{ef}} = 3 \implies \Gamma_{cd} = 3 \Gamma_{ef}$:
+\begin{equation*}
+3 \Gamma_{ef} + \Gamma_{ef} = 4 \Gamma_{ef} = 96\text{ MeV} \implies \Gamma_{ef} = \mathbf{24\text{ MeV}}
+\end{equation*}
+\begin{equation*}
+\Gamma_{cd} = 3 \times 24\text{ MeV} = \mathbf{72\text{ MeV}}
+\end{equation*}
+
+\paragraph{2. Fracciones de ramificación ($\text{BR}_i = \frac{\Gamma_i}{\Gamma}$):}
+\begin{itemize}
+    \item \textbf{Canal $a+b$:} $\text{BR}(R \to a+b) = \frac{24\text{ MeV}}{120\text{ MeV}} = \mathbf{0.20 \quad (20\%)}$
+    \item \textbf{Canal $c+d$:} $\text{BR}(R \to c+d) = \frac{72\text{ MeV}}{120\text{ MeV}} = \mathbf{0.60 \quad (60\%)}$
+    \item \textbf{Canal $e+f$:} $\text{BR}(R \to e+f) = \frac{24\text{ MeV}}{120\text{ MeV}} = \mathbf{0.20 \quad (20\%)}$
+\end{itemize}
+
+\paragraph{3. Vida media ($\tau$):}
+Aplicando la relación del principio de incertidumbre de Heisenberg $\tau = \frac{\hbar}{\Gamma}$ con $\hbar \approx 6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}$:
+\begin{equation*}
+\tau = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{120\text{ MeV}} \approx \mathbf{5.485 \times 10^{-24}\text{ s}}
+\end{equation*}
+
+\subsubsection*{b) Razón de secciones eficaces $R_\sigma$ y su independencia con la energía}
+
+La sección eficaz de formación y posterior desintegración de una resonancia en un canal final $f$ a la energía $E = \sqrt{s}$ en el centro de masas viene descrita por la fórmula de Breit-Wigner no relativista:
+\begin{equation*}
+\sigma(a+b \to R \to f) = \frac{\pi}{q_i^2} \, g \, \frac{\Gamma_{ab} \, \Gamma_f}{(E - M c^2)^2 + \frac{\Gamma^2}{4}}
+\end{equation*}
+donde $g = \frac{2J + 1}{(2s_a + 1)(2s_b + 1)}$ es el factor estadístico de espín. Para $J = 1$ y dos mesones escalares ($s_a = s_b = 0$):
+\begin{equation*}
+g = \frac{2(1) + 1}{(2\cdot 0 + 1)(2\cdot 0 + 1)} = 3
+\end{equation*}
+
+Calculamos la razón de las secciones eficaces $R_\sigma(E)$:
+\begin{equation*}
+R_\sigma(E) = \frac{\sigma(a+b \to R \to c+d)}{\sigma(a+b \to R \to e+f)} = \frac{\frac{\pi}{q_i^2} \, g \, \frac{\Gamma_{ab} \, \Gamma_{cd}}{(E - M c^2)^2 + \frac{\Gamma^2}{4}}}{\frac{\pi}{q_i^2} \, g \, \frac{\Gamma_{ab} \, \Gamma_{ef}}{(E - M c^2)^2 + \frac{\Gamma^2}{4}}} = \frac{\Gamma_{cd}}{\Gamma_{ef}}
+\end{equation*}
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{En el máximo de la resonancia ($E = M c^2$):}
+    \begin{equation*}
+    R_\sigma(M c^2) = \frac{\Gamma_{cd}}{\Gamma_{ef}} = \mathbf{3}
+    \end{equation*}
+    \item \textbf{A la energía $E_1 = M c^2 + \Gamma$:}
+    \begin{equation*}
+    R_\sigma(E_1) = \frac{\Gamma_{cd}}{\Gamma_{ef}} = \mathbf{3}
+    \end{equation*}
+\end{enumerate}
+
+\paragraph{¿Depende $R_\sigma$ de la energía?}
+\textbf{No, $R_\sigma$ no depende de la energía.} Puesto que el factor cinemático en el canal de entrada ($\frac{\pi}{q_i^2} g \Gamma_{ab}$) y la forma resonante de Breit-Wigner ($\frac{1}{(E - M c^2)^2 + \frac{\Gamma^2}{4}}$) son exactamente idénticos para ambos procesos, se cancelan en el cociente. Por tanto, la razón de secciones eficaces es constante e igual al cociente de las anchuras parciales de desintegración $R_\sigma = R_\Gamma = 3$ a cualquier energía.
+
+\subsubsection*{c) Sección eficaz $\sigma(a+b \to R \to c+d)$ en el máximo de la resonancia}
+
+En el máximo de la resonancia ($E = M c^2$), el término cuadrático del denominador se anula ($(E - M c^2)^2 = 0$), simplificando la expresión a:
+\begin{equation*}
+\sigma_{\text{máx}}(a+b \to R \to c+d) = \frac{\pi \hbar^2}{q_i^2} \, g \, \frac{\Gamma_{ab} \, \Gamma_{cd}}{\frac{\Gamma^2}{4}} = 4 \pi \frac{\hbar^2}{q_i^2} \, g \, \left(\frac{\Gamma_{ab}}{\Gamma}\right) \left(\frac{\Gamma_{cd}}{\Gamma}\right)
+\end{equation*}
+
+Sustituyendo los valores del factor de espín ($g = 3$) y de las fracciones de ramificación ($\text{BR}_{ab} = 0.20$, $\text{BR}_{cd} = 0.60$):
+\begin{align*}
+\sigma_{\text{máx}}(a+b \to R \to c+d) &= 4 \times 3 \times (0.20) \times (0.60) \, \left( \frac{\pi \hbar^2}{q_i^2} \right) \\
+&= 12 \times 0.12 \, \left( \frac{\pi \hbar^2}{q_i^2} \right) \\
+&= \mathbf{1.44 \left( \frac{\pi \hbar^2}{q_i^2} \right)}
+\end{align*}
+\end{problema}
+\newpage
+%====================================================
+% EJERCICIO 8
+%====================================================
+\begin{problema}[Razón de anchuras de desintegración a dos cuerpos y espacio de fases]
+Dos partículas inestables $A$ y $B$ se desintegran a través de canales de dos cuerpos hacia los mismos productos finales, $A \longrightarrow C + D$ y $B \longrightarrow C + D$, con $m_C = m_D \equiv m$. Sabiendo que sus masas cumplen $M_A = 2 M_B = 2\sqrt{5} m$, que los estados iniciales tienen el mismo espín y paridad ($J^P$) y que el elemento de matriz cuadrado $|\mathcal{M}_{fi}|^2$ es idéntico en ambos canales, calcula la razón entre sus anchuras de desintegración:
+\begin{equation*}
+\frac{\Gamma(A \rightarrow C + D)}{\Gamma(B \rightarrow C + D)}
+\end{equation*}
+
+\tcblower
+
+\subsubsection*{1. Expresión general de la anchura de desintegración a dos cuerpos}
+
+La anchura de desintegración $\Gamma(X \rightarrow C + D)$ para una partícula progenitora $X$ de masa $M_X$ en su sistema de reposo viene dada en unidades naturales ($\hbar = c = 1$) por la fórmula del espacio de fases de dos cuerpos:
+\begin{equation*}
+\Gamma(X \rightarrow C + D) = \frac{|\vec{p}^*|}{8 \pi M_X^2 (2J_X + 1)} \sum_{\text{espines}} |\mathcal{M}_{fi}|^2
+\end{equation*}
+donde $|\vec{p}^*|$ es el módulo del momento lineal de cualquiera de los productos de desintegración en el sistema del centro de masas.
+
+Dado que ambos estados iniciales poseen el mismo espín $J_A = J_B$ y el elemento de matriz cuadrado medio $|\mathcal{M}_{fi}|^2$ es idéntico por hipótesis, la anchura de desintegración es directamente proporcional al factor cinemático:
+\begin{equation*}
+\Gamma(X \rightarrow C + D) \propto \frac{|\vec{p}^*_X|}{M_X^2}
+\end{equation*}
+
+\subsubsection*{2. Cálculo de los momentos en el centro de masas}
+
+Para el proceso $X \rightarrow C + D$ con $m_C = m_D = m$, la energía de cada partícula final en el centro de masas es $E^* = \frac{M_X}{2}$. El momento en el centro de masas se obtiene mediante la relación de dispersión $E^{*2} = |\vec{p}^*|^2 + m^2$:
+\begin{equation*}
+|\vec{p}^*_X| = \sqrt{\left(\frac{M_X}{2}\right)^2 - m^2} = \frac{1}{2} \sqrt{M_X^2 - 4m^2}
+\end{equation*}
+
+Evaluamos este momento para cada una de las dos partículas progenitoras:
+
+\paragraph{a) Para la partícula $A$ ($M_A = 2\sqrt{5} m \implies M_A^2 = 20 m^2$):}
+\begin{equation*}
+|\vec{p}^*_A| = \frac{1}{2} \sqrt{20 m^2 - 4 m^2} = \frac{1}{2} \sqrt{16 m^2} = \frac{1}{2} (4 m) = \mathbf{2 m}
+\end{equation*}
+
+\paragraph{b) Para la partícula $B$ ($M_B = \sqrt{5} m \implies M_B^2 = 5 m^2$):}
+\begin{equation*}
+|\vec{p}^*_B| = \frac{1}{2} \sqrt{5 m^2 - 4 m^2} = \frac{1}{2} \sqrt{m^2} = \mathbf{\frac{1}{2} m}
+\end{equation*}
+
+\subsubsection*{3. Cálculo de la razón de anchuras de desintegración}
+
+Expresamos el cociente entre las anchuras de desintegración de $A$ y $B$:
+\begin{equation*}
+\frac{\Gamma(A \rightarrow C + D)}{\Gamma(B \rightarrow C + D)} = \frac{\frac{|\vec{p}^*_A|}{M_A^2}}{\frac{|\vec{p}^*_B|}{M_B^2}} = \left( \frac{|\vec{p}^*_A|}{|\vec{p}^*_B|} \right) \cdot \left( \frac{M_B}{M_A} \right)^2
+\end{equation*}
+
+Sustituyendo los valores del momento cinemático y de las masas:
+\begin{itemize}
+    \item Cociente de momentos: $\frac{|\vec{p}^*_A|}{|\vec{p}^*_B|} = \frac{2 m}{\frac{1}{2} m} = 4$
+    \item Cociente de masas al cuadrado: $\left( \frac{M_B}{M_A} \right)^2 = \left( \frac{\sqrt{5} m}{2\sqrt{5} m} \right)^2 = \left( \frac{1}{2} \right)^2 = \frac{1}{4}$
+\end{itemize}
+
+Multiplicando ambos términos:
+\begin{equation*}
+\frac{\Gamma(A \rightarrow C + D)}{\Gamma(B \rightarrow C + D)} = 4 \times \frac{1}{4} = \mathbf{1}
+\end{equation*}
+
+\subsubsection*{Conclusión física}
+
+La razón entre las anchuras de desintegración es exactamente \textbf{1}:
+\begin{equation*}
+\frac{\Gamma(A \rightarrow C + D)}{\Gamma(B \rightarrow C + D)} = 1
+\end{equation*}
+
+\textbf{Interpretación:} El incremento por un factor de $4$ en el momento disponible en el centro de masas para la partícula $A$ ($|\vec{p}^*_A| = 4 |\vec{p}^*_B|$) compensa de manera exacta la reducción por un factor de $1/4$ introducida por el denominador cinemático de densidad/flujo ($M_A^2 = 4 M_B^2$), dando como resultado anchuras de desintegración idénticas para ambos procesos.
+\end{problema}
+
+\newpage
+\subsection{Problemas Práctica}
+%====================================================
+% PROBLEMA 1
+%====================================================
+\begin{problema}[Desintegración del barión $\Xi_b^0$, cinemática de piones y producción de hadrones]
+Se considera la desintegración en reposo del barión pesado $\Xi_b^0$ ($usb$, $5792\text{ MeV}/c^2$) en un barión charm $\Xi_c^+$ ($usc$, $2468\text{ MeV}/c^2$) y un pión cargado $\pi^-$ ($140\text{ MeV}/c^2$):
+\begin{equation*}
+\Xi_b^0 \longrightarrow \Xi_c^+ + \pi^-
+\end{equation*}
+
+\begin{enumerate}[label=\alph*)]
+    \item ¿Qué interacción es responsable de esta desintegración? Justifícalo con los números cuánticos de sabor. Calcula el momento y la energía del $\pi^-$.
+    \item Los piones así producidos se hacen incidir sobre protones en reposo ($938\text{ MeV}/c^2$). Calcula $\sqrt{s}$ del sistema $\pi^- p$.
+    \item Con esos piones se intenta formar una resonancia hipotética $N^0$ ($M = 2600\text{ MeV}/c^2$, $\Gamma = 20\text{ MeV}$) mediante $\pi^- + p \to N^0$. ¿Es cinemáticamente posible? ¿Qué energía debería tener el pión?
+    \item Indica cuáles de las siguientes reacciones están permitidas por interacción fuerte con estos piones, estudiando la conservación de $Q$, $B$ y $S$ y la cinemática (umbral):
+    \begin{enumerate}[label=\roman*)]
+        \item $\pi^- + p \longrightarrow \Lambda + K^0$
+        \item $\pi^- + p \longrightarrow \Lambda + \pi^0$
+        \item $\pi^- + p \longrightarrow \Sigma^- + K^+$
+        \item $\pi^- + p \longrightarrow \Omega^- + K^+ + K^0 + K^0$
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{Datos:} $m(\Lambda) = 1116\text{ MeV}/c^2$, $m(\Sigma^-) = 1197\text{ MeV}/c^2$, $m(\Omega^-) = 1672\text{ MeV}/c^2$, $m(K^+) = 494\text{ MeV}/c^2$, $m(K^0) = 498\text{ MeV}/c^2$, $m(\pi^0) = 135\text{ MeV}/c^2$. Extrañeza: $S(\Lambda) = S(\Sigma^-) = -1$, $S(\Omega^-) = -3$, $S(K^+) = S(K^0) = +1$.
+
+\tcblower
+
+\subsubsection*{a) Interacción responsable y cinemática de la desintegración $\Xi_b^0 \to \Xi_c^+ + \pi^-$}
+
+\paragraph{1. Identificación de la interacción por números cuánticos de sabor:}
+Analizamos el contenido de quarks y los sabores del estado inicial y final:
+\begin{itemize}
+    \item \textbf{Estado inicial ($\Xi_b^0$, $usb$):} Belleza/Bottomness $b = -1$, Encanto/Charm $C = 0$, Extrañeza $S = -1$.
+    \item \textbf{Estado final ($\Xi_c^+ + \pi^-$, $usc + \bar{u}d$):} $b = 0$, $C = +1$, $S = -1$.
+\end{itemize}
+Calculamos las variaciones de sabor en el proceso:
+\begin{equation*}
+\Delta b = b_f - b_i = 0 - (-1) = +1, \qquad \Delta C = C_f - C_i = +1 - 0 = +1, \qquad \Delta S = 0
+\end{equation*}
+Las interacciones fuerte y electromagnética conservan de manera estricta todos los sabores de quark de valencia ($\Delta b = 0, \Delta C = 0$). Puesto que el proceso implica un cambio simultáneo de belleza y encanto ($\Delta b = 1, \Delta C = 1$) provocado por la transición débil de corriente cargada $b \to c + W^- \to c + (\bar{u}d)$, la desintegración está mediada de manera exclusiva por la \textbf{interacción débil}.
+
+\paragraph{2. Energía y momento del $\pi^-$ emitido:}
+Para la desintegración de dos cuerpos a partir de la partícula $\Xi_b^0$ en reposo ($M = 5792\text{ MeV}/c^2 \to M_1 + m_2$, con $M_1 = 2468\text{ MeV}/c^2$ y $m_2 = 140\text{ MeV}/c^2$):
+\begin{equation*}
+E_{\pi^-} = \frac{M^2 + m_2^2 - M_1^2}{2M} \approx \mathbf{2371.88\text{ MeV}}
+\end{equation*}
+
+El momento del $\pi^-$ en el sistema de reposo resulta:
+\begin{equation*}
+p_{\pi^-} c = \sqrt{E_{\pi^-}^2 - m_{\pi^-}^2 c^4} \approx \mathbf{2367.74\text{ MeV}}
+\end{equation*}
+
+\subsubsection*{b) Energía en el centro de masas $\sqrt{s}$ de la colisión $\pi^- p$}
+
+Al incidir el pión de energía $E_{\pi^-} = 2371.88\text{ MeV}$ sobre un protón libre en reposo ($m_p = 938\text{ MeV}/c^2$), la variable de Mandelstam $s$ del sistema $\pi^- p$ vale:
+\begin{equation*}
+s = (p_{\pi^-} + p_p)^2 = m_{\pi^-}^2 c^4 + m_p^2 c^4 + 2 E_{\pi^-} m_p c^2
+\end{equation*}
+
+Sustituyendo los valores numéricos:
+\begin{align*}
+s &= (140)^2 + (938)^2 + 2 \times 2371.88 \times 938 \\
+&= 19600 + 879844 + 4449606.88 = 5349050.88\text{ MeV}^2
+\end{align*}
+
+La energía total disponible en el centro de masas es:
+\begin{equation*}
+\sqrt{s} = \sqrt{5349050.88} \approx \mathbf{2312.80\text{ MeV}} \quad (2.313\text{ GeV})
+\end{equation*}
+
+\subsubsection*{c) Viabilidad de formación de la resonancia $N^0(2600)$}
+
+\paragraph{1. Evaluación cinemática con los piones del apartado a):}
+La energía invariante disponible en la colisión es $\sqrt{s} \approx 2312.80\text{ MeV}$. Para producir la resonancia $N^0$ en la cima de su pico de masa ($M_N = 2600\text{ MeV}/c^2$), se requeriría una energía en el centro de masas $\sqrt{s} = 2600\text{ MeV}$. Como $\sqrt{s} \approx 2312.80\text{ MeV} < 2600\text{ MeV}$ (quedando a más de $14\,\Gamma$ por debajo de la masa central), la producción de la resonancia $N^0$ \textbf{no es cinemáticamente posible} con los piones procedentes de la desintegración del $\Xi_b^0$.
+
+\paragraph{2. Energía del pión requerida para alcanzar la resonancia ($E_\pi$):}
+Exigiendo $\sqrt{s} = M_N = 2600\text{ MeV} \implies s = M_N^2 = (2600)^2 = 6760000\text{ MeV}^2$:
+\begin{equation*}
+s = m_\pi^2 + m_p^2 + 2 E_\pi m_p = M_N^2 \implies E_\pi = \frac{M_N^2 - m_\pi^2 - m_p^2}{2 m_p}
+\end{equation*}
+\begin{equation*}
+E_\pi = \frac{6760000 - 19600 - 879844}{2 \times 938} = \frac{5860556}{1876} \approx \mathbf{3123.96\text{ MeV}} \quad (3.124\text{ GeV})
+\end{equation*}
+
+\subsubsection*{d) Clasificación de las reacciones por interacción fuerte}
+
+El estado inicial $\pi^- + p$ posee $Q_i = 0$, $B_i = +1$, $S_i = 0$ y una energía en el centro de masas $\sqrt{s} \approx 2312.80\text{ MeV}$.
+
+\paragraph{i) $\pi^- + p \longrightarrow \Lambda + K^0$}
+\begin{itemize}
+    \item \textbf{Carga y Bariones:} $Q_f = 0 + 0 = 0 = Q_i$, $B_f = +1 + 0 = +1 = B_i$ (\checkmark).
+    \item \textbf{Extrañeza:} $S_f = S(\Lambda) + S(K^0) = (-1) + (+1) = 0 = S_i \implies \Delta S = 0$ (\checkmark).
+    \item \textbf{Umbral cinemático:} $m_{\text{th}} c^2 = m_\Lambda c^2 + m_{K^0} c^2 = 1116 + 498 = 1614\text{ MeV}$. Como $\sqrt{s} \approx 2312.80\text{ MeV} > 1614\text{ MeV}$ (\checkmark).
+    \item \textbf{Conclusión:} \textbf{Permitida} por interacción fuerte.
+\end{itemize}
+
+\paragraph{ii) $\pi^- + p \longrightarrow \Lambda + \pi^0$}
+\begin{itemize}
+    \item \textbf{Carga y Bariones:} $Q_f = 0 + 0 = 0$, $B_f = +1 + 0 = +1$ (\checkmark).
+    \item \textbf{Extrañeza:} $S_f = S(\Lambda) + S(\pi^0) = (-1) + 0 = -1 \neq S_i = 0 \implies \Delta S = -1 \neq 0$.
+    \item \textbf{Conclusión:} \textbf{Prohibida} por interacción fuerte, ya que esta fuerza conserva estrictamente el sabor de extrañeza ($\Delta S = 0$).
+\end{itemize}
+
+\paragraph{iii) $\pi^- + p \longrightarrow \Sigma^- + K^+$}
+\begin{itemize}
+    \item \textbf{Carga y Bariones:} $Q_f = (-1) + (+1) = 0 = Q_i$, $B_f = +1 + 0 = +1 = B_i$ (\checkmark).
+    \item \textbf{Extrañeza:} $S_f = S(\Sigma^-) + S(K^+) = (-1) + (+1) = 0 = S_i \implies \Delta S = 0$ (\checkmark).
+    \item \textbf{Umbral cinemático:} $m_{\text{th}} c^2 = m_{\Sigma^-} c^2 + m_{K^+} c^2 = 1197 + 494 = 1691\text{ MeV}$. Como $\sqrt{s} \approx 2312.80\text{ MeV} > 1691\text{ MeV}$ (\checkmark).
+    \item \textbf{Conclusión:} \textbf{Permitida} por interacción fuerte.
+\end{itemize}
+
+\paragraph{iv) $\pi^- + p \longrightarrow \Omega^- + K^+ + K^0 + K^0$}
+\begin{itemize}
+    \item \textbf{Carga y Bariones:} $Q_f = -1 + 1 + 0 + 0 = 0 = Q_i$, $B_f = +1 + 0 + 0 + 0 = +1 = B_i$ (\checkmark).
+    \item \textbf{Extrañeza:} $S_f = S(\Omega^-) + S(K^+) + 2 S(K^0) = (-3) + (+1) + 2(+1) = 0 = S_i \implies \Delta S = 0$ (\checkmark).
+    \item \textbf{Umbral cinemático:} $m_{\text{th}} c^2 = m_{\Omega^-} c^2 + m_{K^+} c^2 + 2 m_{K^0} c^2 = 1672 + 494 + 2(498) = 3162\text{ MeV}$.
+    Como $\sqrt{s} \approx 2312.80\text{ MeV} < 3162\text{ MeV}$, el sistema no posee suficiente energía para producir la masa del estado final.
+    \item \textbf{Conclusión:} \textbf{Prohibida cinemáticamente} por violación del umbral energético.
+\end{itemize}
+\end{problema}
+\newpage
+%====================================================
+% PROBLEMA 2
+%====================================================
+\begin{problema}[Clasificación de interacciones fundamentales, conservación de números cuánticos y jerarquía de vidas medias]
+Las tres desintegraciones siguientes están observadas, y cada una está gobernada por una interacción fundamental distinta:
+\begin{enumerate}[label=(\roman*)]
+    \item $\phi \, (s\bar{s}) \longrightarrow K^+ \, (u\bar{s}) + K^- \, (s\bar{u})$
+    \item $\Lambda^0 \, (uds) \longrightarrow p \, (uud) + \pi^- \, (d\bar{u})$
+    \item $J/\psi \, (c\bar{c}) \longrightarrow e^- + e^+$
+\end{enumerate}
+
+\begin{enumerate}[label=\alph*)]
+    \item Para cada una, evalúa la conservación de energía, carga, número bariónico, números leptónicos y números de sabor ($S, C$).
+    \item Identifica la interacción responsable de cada desintegración, razonando qué leyes o propiedades impiden las otras dos. En particular, ¿por qué no puede ser fuerte la (iii)? ¿Por qué la (ii) no puede ser ni fuerte ni electromagnética?
+    \item Con $\Gamma = \hbar/\tau$, estima el orden de magnitud de las vidas medias asociadas a $\Gamma(\phi) = 4.25\text{ MeV}$ y a $\Gamma(J/\psi \rightarrow e^+e^-) = 5.5\text{ keV}$, y la anchura correspondiente a $\tau(\Lambda^0) = 2.6 \times 10^{-10}\text{ s}$. Comprueba que se cumple la jerarquía fuerte $\gg$ electromagnética $\gg$ débil.
+\end{enumerate}
+
+\textbf{Datos:} $m_\phi = 1019.5\text{ MeV}/c^2$, $m_K = 493.7\text{ MeV}/c^2$, $m_\Lambda = 1115.7\text{ MeV}/c^2$, $m_p = 938.3\text{ MeV}/c^2$, $m_\pi = 139.6\text{ MeV}/c^2$, $m_{J/\psi} = 3096.9\text{ MeV}/c^2$, $m_e = 0.511\text{ MeV}/c^2$.
+
+\tcblower
+
+\subsubsection*{a) Evaluación de leyes de conservación y viabilidad cinemática}
+
+\paragraph{1. Proceso (i): $\phi(s\bar{s}) \longrightarrow K^+(u\bar{s}) + K^-(s\bar{u})$}
+\begin{itemize}
+    \item \textbf{Energía (cinemática):} $m_i = m_\phi = 1019.5\text{ MeV}/c^2$; $m_f = 2 m_K = 2(493.7) = 987.4\text{ MeV}/c^2$. Como $m_i > m_f$ ($Q = 32.1\text{ MeV} > 0$), la desintegración es exotérmica y cinemáticamente permitida en reposo.
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = 0 \to Q_f = (+1) + (-1) = 0 \implies \Delta Q = 0$ (conservada).
+    \item \textbf{Número bariónico ($B$):} $B_i = 0 \to B_f = 0 + 0 = 0 \implies \Delta B = 0$ (conservado).
+    \item \textbf{Números leptónicos ($L_e, L_\mu, L_\tau$):} $L_i = 0 \to L_f = 0 \implies \Delta L = 0$ (conservados).
+    \item \textbf{Extrañeza ($S$):} $\phi(s\bar{s})$ posee extrañeza oculta ($S_i = 0$). $S(K^+) = +1$, $S(K^-) = -1 \implies S_f = (+1) + (-1) = 0 \implies \Delta S = 0$ (conservada).
+    \item \textbf{Encanto ($C$):} $C_i = 0 \to C_f = 0 \implies \Delta C = 0$ (conservado).
+\end{itemize}
+
+\paragraph{2. Proceso (ii): $\Lambda^0(uds) \longrightarrow p(uud) + \pi^-(d\bar{u})$}
+\begin{itemize}
+    \item \textbf{Energía (cinemática):} $m_i = m_\Lambda = 1115.7\text{ MeV}/c^2$; $m_f = m_p + m_{\pi^-} = 938.3 + 139.6 = 1077.9\text{ MeV}/c^2$. Como $m_i > m_f$ ($Q = 37.8\text{ MeV} > 0$), está cinemáticamente permitida.
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = 0 \to Q_f = (+1) + (-1) = 0 \implies \Delta Q = 0$ (conservada).
+    \item \textbf{Número bariónico ($B$):} $B_i = +1 \to B_f = (+1) + 0 = +1 \implies \Delta B = 0$ (conservado).
+    \item \textbf{Números leptónicos ($L$):} $L_i = 0 \to L_f = 0 \implies \Delta L = 0$ (conservados).
+    \item \textbf{Extrañeza ($S$):} $S(\Lambda^0) = -1$; $S(p) = 0$, $S(\pi^-) = 0 \implies S_f = 0$. Muestra una variación de extrañeza $\Delta S = S_f - S_i = 0 - (-1) = +1 \neq 0$ (extrañeza violada).
+    \item \textbf{Encanto ($C$):} $C_i = 0 \to C_f = 0 \implies \Delta C = 0$ (conservado).
+\end{itemize}
+
+\paragraph{3. Proceso (iii): $J/\psi(c\bar{c}) \longrightarrow e^- + e^+$}
+\begin{itemize}
+    \item \textbf{Energía (cinemática):} $m_i = m_{J/\psi} = 3096.9\text{ MeV}/c^2$; $m_f = 2 m_e = 2(0.511) = 1.022\text{ MeV}/c^2$. Como $m_i \gg m_f$, está amplia y cinemáticamente permitida.
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = 0 \to Q_f = (-1) + (+1) = 0 \implies \Delta Q = 0$ (conservada).
+    \item \textbf{Número bariónico ($B$):} $B_i = 0 \to B_f = 0 + 0 = 0 \implies \Delta B = 0$ (conservado).
+    \item \textbf{Número leptónico electrónico ($L_e$):} $L_e(J/\psi) = 0 \to L_e(e^-) + L_e(e^+) = (+1) + (-1) = 0 \implies \Delta L_e = 0$ (conservado).
+    \item \textbf{Extrañeza y Encanto ($S, C$):} $S_i = 0 \to S_f = 0 \implies \Delta S = 0$; $C_i = 0 \to C_f = 0 \implies \Delta C = 0$ (conservados).
+\end{itemize}
+
+\subsubsection*{b) Identificación de la interacción dominante y razonamiento de exclusión}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Proceso (i) $\phi \rightarrow K^+ + K^-$ $\longrightarrow$ Interacción Fuerte:}
+    \begin{itemize}
+        \item Conserva la carga, el número bariónico y de forma estricta todos los sabores de quark ($\Delta S = 0$).
+        \item Es una transición puramente hadrónica donde un par de quarks ligeros $u\bar{u}$ se crea del vacío QCD para formar mesones de sabor abierto ($s\bar{s} \to u\bar{s} + s\bar{u}$). Transcurre libre de supresión de OZI y en la escala de tiempo propia de la fuerza fuerte.
+    \end{itemize}
+
+    \item \textbf{Proceso (ii) $\Lambda^0 \rightarrow p + \pi^-$ $\longrightarrow$ Interacción Débil:}
+    \begin{itemize}
+        \item \textbf{¿Por qué no puede ser fuerte ni electromagnética?} Las interacciones fuerte y electromagnética conservan de manera estricta el sabor de quark y, en particular, el número cuántico de extrañeza ($\Delta S = 0$). Debido a que en este proceso $\Delta S = +1$, ambas interacciones están **estrictamente prohibidas**.
+        \item La única fuerza del Modelo Estándar capaz de violar el sabor de quark ($\Delta S = \pm 1$) mediante corrientes cargadas $W^\pm$ (transición $s \to u + W^-$) es la \textbf{interacción débil}.
+    \end{itemize}
+
+    \item \textbf{Proceso (iii) $J/\psi \rightarrow e^- + e^+$ $\longrightarrow$ Interacción Electromagnética:}
+    \begin{itemize}
+        \item \textbf{¿Por qué no puede ser fuerte?} La interacción fuerte acopla de manera exclusiva a partículas que poseen carga de color (quarks y gluones). Los leptones ($e^-, e^+$) son totalmente neutros respecto a la carga de color (no son hadrones), por lo que **la interacción fuerte no puede interactuar con ellos ni producir un par leptónico**.
+        \item El mesón vectorial $J/\psi(1^{--})$ se aniquila electromagnéticamente en un fotón virtual que posteriormente crea el par electrón-positrón ($c\bar{c} \to \gamma^* \to e^- e^+$). Por ende, está mediado por la \textbf{interacción electromagnética}.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{c) Estimación de vidas medias, anchuras y comprobación de la jerarquía}
+
+Empleamos la constante reducida de Planck $\hbar \approx 6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s} = 6.5821 \times 10^{-16}\text{ eV}\cdot\text{s}$.
+
+\paragraph{1. Vida media asociada al proceso fuerte ($\phi$):}
+Dada la anchura total $\Gamma(\phi) = 4.25\text{ MeV}$:
+\begin{equation*}
+\tau(\phi) = \frac{\hbar}{\Gamma(\phi)} = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{4.25\text{ MeV}} \approx \mathbf{1.55 \times 10^{-22}\text{ s}}
+\end{equation*}
+Corresponde a la escala temporal característica de la \textbf{interacción fuerte} ($\tau \sim 10^{-24}\text{ a } 10^{-22}\text{ s}$).
+
+\paragraph{2. Vida media parcial asociada al proceso electromagnético ($J/\psi \to e^+e^-$):}
+Dada la anchura parcial $\Gamma(J/\psi \to e^+e^-) = 5.5\text{ keV} = 5.5 \times 10^{-3}\text{ MeV}$:
+\begin{equation*}
+\tau(J/\psi \to e^+e^-) = \frac{\hbar}{\Gamma_{e^+e^-}} = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{5.5 \times 10^{-3}\text{ MeV}} \approx \mathbf{1.20 \times 10^{-19}\text{ s}}
+\end{equation*}
+Corresponde a la escala temporal característica de la \textbf{interacción electromagnética} ($\tau \sim 10^{-20}\text{ a } 10^{-16}\text{ s}$).
+
+\paragraph{3. Anchura de desintegración asociada al proceso débil ($\Lambda^0$):}
+
+Dada la vida media experimental $\tau(\Lambda^0) = 2.6 \times 10^{-10}\text{ s}$:
+
+\begin{equation*}
+    \Gamma(\Lambda^0) = \frac{\hbar}{\tau(\Lambda^0)} = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{2.6 \times 10^{-10}\text{ s}} \approx \mathbf{2.53 \times 10^{-12}\text{ MeV}} \quad (2.53\ \mu\text{eV})
+\end{equation*}
+
+\paragraph{4. Comprobación de la jerarquía de las interacciones:}
+Comparando las anchuras de desintegración obtenidas para las tres interacciones:
+\begin{equation*}
+\Gamma_{\text{fuerte}}(\phi) = 4.25\text{ MeV} \gg \Gamma_{\text{em}}(J/\psi \to e^+e^-) = 5.5 \times 10^{-3}\text{ MeV} \gg \Gamma_{\text{débil}}(\Lambda^0) = 2.53 \times 10^{-12}\text{ MeV}
+\end{equation*}
+
+En términos de las vidas medias ($\tau = \hbar / \Gamma$):
+\begin{equation*}
+\tau_{\text{fuerte}} \, (\sim 10^{-22}\text{ s}) \ll \tau_{\text{electromagnética}} \, (\sim 10^{-19}\text{ s}) \ll \tau_{\text{débil}} \, (\sim 10^{-10}\text{ s})
+\end{equation*}
+
+Esto confirma de manera tajante la jerarquía fundamental de las intensidades de acoplamiento:
+\begin{equation*}
+\mathbf{\Gamma_{\text{fuerte}} \gg \Gamma_{\text{electromagnética}} \gg \Gamma_{\text{débil}}}
+\end{equation*}
+\end{problema}
+\newpage
+%====================================================
+% PROBLEMA 3
+%====================================================
+\begin{problema}[Análisis de conservación de números cuánticos y clasificación de interacciones subatómicas]
+Indicar cuáles de las siguientes reacciones están permitidas y cuáles prohibidas, sabiendo que en ningún caso hay problemas de conservación de energía. Si estuvieran prohibidas, indicar la razón. Si estuvieran permitidas, indicar a través de qué interacción ocurren.
+
+\begin{enumerate}[label=\alph*)]
+    \item $\Omega^- (sss) \longrightarrow \Xi^0 (uss) + \pi^-$
+    \item $\Lambda_c^+ (udc) \longrightarrow \Lambda (uds) + \pi^+$
+    \item $\mu^- \longrightarrow e^- + \gamma$
+    \item $\Sigma^{*+} (uus) \longrightarrow \Lambda (uds) + \pi^+$
+    \item $p \longrightarrow e^+ + \pi^0$
+    \item $\Sigma^- (dds) \longrightarrow n + e^- + \bar{\nu}_e$
+\end{enumerate}
+
+\tcblower
+
+\subsubsection*{Criterios generales de análisis}
+
+Para determinar la viabilidad cinemática y dinámica de cada proceso se evalúan las siguientes leyes de conservación fundamentales del Modelo Estándar:
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Leyes de conservación absolutas:} La carga eléctrica ($Q$), el número bariónico ($B$) y los números leptónicos individuales por familia ($L_e, L_\mu, L_\tau$) deben conservarse de manera estricta ($\Delta = 0$) en todas las interacciones fundamentales.
+    \item \textbf{Conservación de sabor de quark (Extrañeza $S$, Encanto $C$, etc.):}
+    \begin{itemize}
+        \item \textbf{Interacción fuerte y electromagnética:} Conservan estrictamente todos los sabores de quark de valencia ($\Delta S = 0$, $\Delta C = 0$).
+        \item \textbf{Interacción débil:} Permite transiciones con cambio de sabor a primer orden ($|\Delta S| = 1$, $|\Delta C| = 1$) mediadas por bosones débiles cargados $W^\pm$.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{Análisis detallado de cada reacción}
+
+\paragraph{a) $\Omega^- (sss) \longrightarrow \Xi^0 (uss) + \pi^-$}
+\begin{itemize}
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = -1 \to Q_f = 0 + (-1) = -1 \implies \Delta Q = 0$ (\checkmark).
+    \item \textbf{Número bariónico ($B$):} $B_i = +1 \to B_f = +1 + 0 = +1 \implies \Delta B = 0$ (\checkmark).
+    \item \textbf{Números leptónicos ($L$):} $L_i = 0 \to L_f = 0 \implies \Delta L = 0$ (\checkmark).
+    \item \textbf{Extrañeza ($S$):} $S_i = S(\Omega^-) = -3 \to S_f = S(\Xi^0) + S(\pi^-) = -2 + 0 = -2 \implies \Delta S = S_f - S_i = +1 \neq 0$.
+    \item \textbf{Conclusión:} Proceso \textbf{PERMITIDO} mediante la \textbf{interacción débil} (desintegración no leptónica del hiperón $\Omega^-$ impulsada por la transición de corriente cargada $s \to u + W^- \to u + \bar{u}d$ con $\Delta S = +1$).
+\end{itemize}
+
+\paragraph{b) $\Lambda_c^+ (udc) \longrightarrow \Lambda (uds) + \pi^+$}
+\begin{itemize}
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = +1 \to Q_f = 0 + (+1) = +1 \implies \Delta Q = 0$ (\checkmark).
+    \item \textbf{Número bariónico ($B$):} $B_i = +1 \to B_f = +1 + 0 = +1 \implies \Delta B = 0$ (\checkmark).
+    \item \textbf{Números leptónicos ($L$):} $L_i = 0 \to L_f = 0 \implies \Delta L = 0$ (\checkmark).
+    \item \textbf{Sabores (Encanto $C$ y Extrañeza $S$):}
+    \begin{itemize}
+        \item Encanto: $C_i = +1 \to C_f = 0 \implies \Delta C = -1$.
+        \item Extrañeza: $S_i = 0 \to S_f = -1 \implies \Delta S = -1$.
+    \end{itemize}
+    \item \textbf{Conclusión:} Proceso \textbf{PERMITIDO} mediante la \textbf{interacción débil} (desintegración no leptónica del barión encantado $\Lambda_c^+$ mediada por la transición débil de Cabibbo favorecida $c \to s + u\bar{d}$ con $\Delta C = -1$ y $\Delta S = -1$).
+\end{itemize}
+
+\paragraph{c) $\mu^- \longrightarrow e^- + \gamma$}
+\begin{itemize}
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = -1 \to Q_f = -1 + 0 = -1 \implies \Delta Q = 0$ (\checkmark).
+    \item \textbf{Número bariónico ($B$):} $B_i = 0 \to B_f = 0 \implies \Delta B = 0$ (\checkmark).
+    \item \textbf{Números leptónicos ($L_e, L_\mu$):}
+    \begin{itemize}
+        \item Familia muónica: $L_{\mu,i} = +1 \to L_{\mu,f} = 0 \implies \Delta L_\mu = -1 \neq 0$.
+        \item Familia electrónica: $L_{e,i} = 0 \to L_{e,f} = +1 \implies \Delta L_e = +1 \neq 0$.
+    \end{itemize}
+    \item \textbf{Conclusión:} Proceso \textbf{PROHIBIDO}. Viola la conservación individual de los números leptónicos por familia ($L_\mu$ y $L_e$).
+\end{itemize}
+
+\paragraph{d) $\Sigma^{*+} (uus) \longrightarrow \Lambda (uds) + \pi^+$}
+\begin{itemize}
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = +1 \to Q_f = 0 + (+1) = +1 \implies \Delta Q = 0$ (\checkmark).
+    \item \textbf{Número bariónico ($B$):} $B_i = +1 \to B_f = +1 + 0 = +1 \implies \Delta B = 0$ (\checkmark).
+    \item \textbf{Números leptónicos ($L$):} $L_i = 0 \to L_f = 0 \implies \Delta L = 0$ (\checkmark).
+    \item \textbf{Extrañeza ($S$):} $S_i = S(\Sigma^{*+}) = -1 \to S_f = S(\Lambda) + S(\pi^+) = -1 + 0 = -1 \implies \Delta S = 0$ (\checkmark).
+    \item \textbf{Conclusión:} Proceso \textbf{PERMITIDO} mediante la \textbf{interacción fuerte} (desintegración hadrónica ultra-rápida de una resonancia bariónica conservando estrictamente la extrañeza $\Delta S = 0$).
+\end{itemize}
+
+\paragraph{e) $p \longrightarrow e^+ + \pi^0$}
+\begin{itemize}
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = +1 \to Q_f = +1 + 0 = +1 \implies \Delta Q = 0$ (\checkmark).
+    \item \textbf{Número bariónico ($B$):} $B_i = +1 \to B_f = 0 + 0 = 0 \implies \Delta B = -1 \neq 0$.
+    \item \textbf{Número leptónico electrónico ($L_e$):} $L_{e,i} = 0 \to L_{e,f} = -1 \implies \Delta L_e = -1 \neq 0$.
+    \item \textbf{Conclusión:} Proceso \textbf{PROHIBIDO}. Viola la conservación del número bariónico ($\Delta B \neq 0$) y la del número leptónico ($\Delta L_e \neq 0$).
+\end{itemize}
+
+\paragraph{f) $\Sigma^- (dds) \longrightarrow n + e^- + \bar{\nu}_e$}
+\begin{itemize}
+    \item \textbf{Carga eléctrica ($Q$):} $Q_i = -1 \to Q_f = 0 - 1 + 0 = -1 \implies \Delta Q = 0$ (\checkmark).
+    \item \textbf{Número bariónico ($B$):} $B_i = +1 \to B_f = +1 + 0 + 0 = +1 \implies \Delta B = 0$ (\checkmark).
+    \item \textbf{Número leptónico electrónico ($L_e$):} $L_{e,i} = 0 \to L_{e,f} = +1 - 1 = 0 \implies \Delta L_e = 0$ (\checkmark).
+    \item \textbf{Extrañeza ($S$):} $S_i = S(\Sigma^-) = -1 \to S_f = S(n) = 0 \implies \Delta S = S_f - S_i = +1 \neq 0$.
+    \item \textbf{Conclusión:} Proceso \textbf{PERMITIDO} mediante la \textbf{interacción débil} (desintegración beta semileptónica por corriente cargada $W^-$ del barión $\Sigma^-$ con cambio de sabor $s \to u + e^- + \bar{\nu}_e$ y $\Delta S = +1$).
+\end{itemize}
+\end{problema}
+
+
+\newpage
+\begin{problema}[Ejercicio 1: Cinemática relativista de la desintegración a dos cuerpos]
+Se considera la desintegración $M_1 \rightarrow M_2 + m$, siendo $M_1$, $M_2$ y $m$ las masas de las partículas.
+Calcular la energía cinética de la partícula $m$ usando cinemática relativista y expresando el resultado en función de $M_1$, $M_2$ y $\Delta M = M_1 - M_2 - m$. Desarrollar el resultado en el límite $\Delta M \ll M_1, M_2, m$ y $m \ll M_1, M_2$, hasta orden $m/M_i$. Comparar con el resultado no relativista al mismo orden.
+
+\tcblower
+
+\subsubsection*{1. Cálculo exacto en cinemática relativista}
+
+Consideramos la desintegración en el sistema de reposo de la partícula progenitora $M_1$, donde sus cuadrimomentos son:
+\begin{equation*}
+P_1^\mu = (M_1 c, \vec{0}), \qquad P_2^\mu = \left(\frac{E_2}{c}, \vec{p}_2\right), \qquad p_m^\mu = \left(\frac{E_m}{c}, \vec{p}_m\right)
+\end{equation*}
+
+Por conservación del cuadrimomento total:
+\begin{equation*}
+P_1^\mu - p_m^\mu = P_2^\mu
+\end{equation*}
+
+Elevando al cuadrado ambos miembros mediante el producto escalar relativista ($P^2 = m^2 c^2$):
+\begin{equation*}
+(P_1 - p_m)^2 = P_2^2 \implies P_1^2 + p_m^2 - 2 (P_1 \cdot p_m) = P_2^2
+\end{equation*}
+\begin{equation*}
+M_1^2 c^2 + m^2 c^2 - 2 (M_1 c) \left(\frac{E_m}{c}\right) = M_2^2 c^2
+\end{equation*}
+
+Despejando la energía total de la partícula $m$:
+\begin{equation*}
+E_m = \frac{M_1^2 + m^2 - M_2^2}{2 M_1} c^2
+\end{equation*}
+
+La energía cinética de la partícula $m$ es $T_m = E_m - m c^2$:
+\begin{equation*}
+T_m = \left( \frac{M_1^2 + m^2 - M_2^2 - 2 M_1 m}{2 M_1} \right) c^2 = \frac{(M_1 - m)^2 - M_2^2}{2 M_1} c^2
+\end{equation*}
+
+Introduciendo el defecto de masa $\Delta M = M_1 - M_2 - m \implies M_1 - m = M_2 + \Delta M$:
+\begin{equation*}
+T_m = \frac{(M_2 + \Delta M)^2 - M_2^2}{2 M_1} c^2 = \frac{2 M_2 \Delta M + (\Delta M)^2}{2 M_1} c^2
+\end{equation*}
+
+Sustituyendo $M_1 = M_2 + m + \Delta M$ en el denominador:
+\begin{equation*}
+T_m = \Delta M c^2 \left( \frac{M_2 + \frac{\Delta M}{2}}{M_2 + m + \Delta M} \right)
+\end{equation*}
+
+\subsubsection*{2. Desarrollo en el límite $\Delta M \ll M_i$ y $m \ll M_i$}
+
+Despreciando términos de orden superior en $\Delta M$ ($\Delta M \ll M_i$), la expresión se simplifica a:
+\begin{equation*}
+T_m \approx \Delta M c^2 \left( \frac{M_2}{M_2 + m} \right) = \Delta M c^2 \left( 1 + \frac{m}{M_2} \right)^{-1}
+\end{equation*}
+
+Desarrollando en serie de Taylor hasta primer orden en $m/M_2$:
+\begin{equation*}
+T_m \approx \Delta M c^2 \left( 1 - \frac{m}{M_2} \right)
+\end{equation*}
+
+\subsubsection*{3. Comparación con el límite no relativista}
+
+En física clásica no relativista, el balance de energía y momento lineal en reposo impone:
+\begin{equation*}
+\Delta M c^2 = T_m + T_2, \qquad p_m = p_2 = p
+\end{equation*}
+\begin{equation*}
+T_m = \frac{p^2}{2m}, \qquad T_2 = \frac{p^2}{2 M_2} = T_m \left(\frac{m}{M_2}\right)
+\end{equation*}
+
+Sustituyendo $T_2$ en el balance energético:
+\begin{equation*}
+\Delta M c^2 = T_m \left( 1 + \frac{m}{M_2} \right) \implies T_m^{\text{NR}} = \Delta M c^2 \left( 1 + \frac{m}{M_2} \right)^{-1} \approx \Delta M c^2 \left( 1 - \frac{m}{M_2} \right)
+\end{equation*}
+
+\textbf{Conclusión:} El resultado relativista desarrollado a orden $m/M_i$ coincide exactamente con el resultado no relativista.
+\end{problema}
+
+\begin{problema}[Ejercicio 2: Evidencia experimental de la existencia del neutrino]
+Describir, en dos líneas, cuál fue la evidencia experimental que llevó a postular la existencia del neutrino.
+
+\tcblower
+
+La observación del espectro continuo de energía de los electrones emitidos en la desintegración $\beta$, junto con la aparente violación de la conservación del momento angular y de la energía en un proceso a dos cuerpos, llevó a W. Pauli (1930) a postular la emisión de una partícula neutra y ligera no detectada (el neutrino).
+\end{problema}
+
+\begin{problema}[Ejercicio 3: Confinamiento del electrón en el núcleo y principio de incertidumbre]
+El ${}_{83}^{210}\text{Bi}$ es un núcleo inestable que se desintegra $\beta^-$. La energía máxima de los electrones medidos en dicha desintegración es de $1.16\text{ MeV}$. El radio de los núcleos viene dado, aproximadamente, por la expresión $R = R_0 A^{1/3}$ siendo $R_0 = 1.28\text{ fm}$ y $A$ el número másico. Demostrar, haciendo uso del principio de incertidumbre, que los electrones que se producen en la desintegración $\beta^-$ del ${}_{83}^{210}\text{Bi}$ no podían existir dentro del núcleo y se han formado en el proceso de desintegración.
+
+\tcblower
+
+\subsubsection*{1. Estimación del radio nuclear y la incertidumbre en la posición}
+
+Para el núcleo de ${}_{83}^{210}\text{Bi}$ ($A = 210$):
+\begin{equation*}
+R = R_0 A^{1/3} = 1.28 \times (210)^{1/3}\text{ fm} \approx 1.28 \times 5.944\text{ fm} \approx 7.61\text{ fm}
+\end{equation*}
+
+Si el electrón estuviese confinado en el interior del núcleo de diámetro $2R$, la incertidumbre máxima en su posición espacial sería $\Delta x \approx 2R \approx 15.22\text{ fm}$.
+
+\subsubsection*{2. Incertidumbre mínima en el momento lineal y energía}
+
+Aplicando el principio de incertidumbre de Heisenberg ($\Delta x \cdot \Delta p \ge \frac{\hbar}{2}$):
+\begin{equation*}
+\Delta p \ge \frac{\hbar}{2 \Delta x} = \frac{\hbar c}{2 c \Delta x}
+\end{equation*}
+
+Utilizando $\hbar c = 197.327\text{ MeV}\cdot\text{fm}$:
+\begin{equation*}
+\Delta p c \ge \frac{197.327\text{ MeV}\cdot\text{fm}}{2 \times 15.22\text{ fm}} \approx 6.48\text{ MeV}
+\end{equation*}
+
+Puesto que el momento característico $p \sim \Delta p$ satisface $p c \approx 6.48\text{ MeV} \gg m_e c^2 = 0.511\text{ MeV}$, el electrón sería ultrarelativista en el núcleo. Su energía total mínima estimada es:
+\begin{equation*}
+E_{\text{mín}} = \sqrt{(p c)^2 + (m_e c^2)^2} \approx \sqrt{(6.48)^2 + (0.511)^2}\text{ MeV} \approx 6.50\text{ MeV}
+\end{equation*}
+
+La energía cinética mínima requerida para un electrón confinado en el núcleo resulta:
+\begin{equation*}
+T_{\text{mín}} = E_{\text{mín}} - m_e c^2 \approx 6.50 - 0.511 = 5.99\text{ MeV}
+\end{equation*}
+\textit{(Nota: Si se considera $\Delta x \approx R$, $T_{\text{mín}}$ supera los $12.4\text{ MeV}$).}
+
+\subsubsection*{3. Comparación con el dato experimental y conclusión}
+
+La energía cinética máxima observada experimentalmente para los electrones emitidos es $E_{\text{máx}} = 1.16\text{ MeV}$. Como $E_{\text{máx}} = 1.16\text{ MeV} \ll T_{\text{mín}} \approx 6.0\text{ MeV}$, es imposible que el electrón estuviese preexistiendo confinado dentro del pozo nuclear. Se concluye que el electrón no residía en el núcleo, sino que es creado instantáneamente durante el proceso de desintegración $\beta^-$ ($n \to p + e^- + \bar{\nu}_e$).
+\end{problema}
+
+\begin{problema}[Ejercicio 4: Acoplamiento de espín de un sistema de tres partículas de espín 1]
+Se dispone de un sistema de tres partículas de espín 1, que se encuentran en el estado $|1, +1\rangle$, $|1, 0\rangle$ y $|1, -1\rangle$, respectivamente. Calcular la probabilidad de encontrar el sistema de tres partículas en el estado de espín total $|J=1, M=0\rangle$.
+
+\tcblower
+
+\subsubsection*{1. Definición del estado inicial del sistema}
+
+El estado de las tres partículas independientes es:
+\begin{equation*}
+|\Psi_i\rangle = |1, +1\rangle_1 \otimes |1, 0\rangle_2 \otimes |1, -1\rangle_3
+\end{equation*}
+La tercera componente total de espín es $M = m_1 + m_2 + m_3 = 1 + 0 - 1 = 0$.
+
+\subsubsection*{2. Descomposición en autoestados de espín acoplado}
+
+Acoplamos primero las partículas 1 y 2 ($\vec{J}_{12} = \vec{s}_1 + \vec{s}_2$), produciendo momentos angulares $J_{12} \in \{0, 1, 2\}$. Expresamos el producto $|1, +1\rangle_1 |1, 0\rangle_2$ mediante los coeficientes de Clebsch-Gordan $\langle 1, m_1; 1, m_2 | J_{12}, M_{12} \rangle$:
+\begin{equation*}
+|1, +1\rangle_1 |1, 0\rangle_2 = \frac{1}{\sqrt{2}} |J_{12}=2, M_{12}=+1\rangle + \frac{1}{\sqrt{2}} |J_{12}=1, M_{12}=+1\rangle
+\end{equation*}
+
+Acoplando el estado intermedio $J_{12}$ con la tercera partícula ($j_3 = 1, m_3 = -1$) para formar el espín total $J = 1$:
+\begin{equation*}
+|J=1, M=0\rangle = \sum_{J_{12}} C(J_{12}) \, |(J_{12}, j_3) J=1, M=0\rangle
+\end{equation*}
+
+Las amplitudes de proyección $A(J_{12}) = \langle (J_{12}, j_3) J=1, M=0 | \Psi_i \rangle$ vienen dadas por el producto de los coeficientes de Clebsch-Gordan correspondientes:
+\begin{equation*}
+A(J_{12}) = \langle 1, +1; 1, 0 | J_{12}, +1 \rangle \times \langle J_{12}, +1; 1, -1 | 1, 0 \rangle
+\end{equation*}
+
+\begin{itemize}
+    \item \textbf{Canal $J_{12} = 1$:}
+    \begin{equation*}
+    \langle 1, +1; 1, 0 | 1, +1 \rangle = \frac{1}{\sqrt{2}}, \qquad \langle 1, +1; 1, -1 | 1, 0 \rangle = \frac{1}{\sqrt{2}}
+    \end{equation*}
+    \begin{equation*}
+    A(J_{12}=1) = \frac{1}{\sqrt{2}} \times \frac{1}{\sqrt{2}} = \frac{1}{2}
+    \end{equation*}
+
+    \item \textbf{Canal $J_{12} = 2$:}
+    \begin{equation*}
+    \langle 1, +1; 1, 0 | 2, +1 \rangle = \frac{1}{\sqrt{2}}, \qquad \langle 2, +1; 1, -1 | 1, 0 \rangle = -\sqrt{\frac{3}{10}}
+    \end{equation*}
+    \begin{equation*}
+    A(J_{12}=2) = \frac{1}{\sqrt{2}} \times \left(-\sqrt{\frac{3}{10}}\right) = -\sqrt{\frac{3}{20}}
+    \end{equation*}
+\end{itemize}
+
+\subsubsection*{3. Probabilidad total}
+
+Sumando los cuadrados de las amplitudes de los canales ortogonales $J_{12} = 1$ y $J_{12} = 2$:
+\begin{equation*}
+P(J=1, M=0) = |A(J_{12}=1)|^2 + |A(J_{12}=2)|^2 = \left(\frac{1}{2}\right)^2 + \left(-\sqrt{\frac{3}{20}}\right)^2 = \frac{1}{4} + \frac{3}{20} = \frac{8}{20} = \mathbf{\frac{2}{5} = 0.40 \quad (40\%)}
+\end{equation*}
+\end{problema}
+
+\begin{problema}[Ejercicio 5: Anchura de desintegración de la resonancia $\Delta^0(1232)$]
+La $\Delta^0(1232)$ se desintegra a través del proceso fuerte: $\Delta^0(1232) \rightarrow p(938) + \pi^-(140)$ donde los números entre paréntesis representan las masas de las partículas en $\text{MeV}/c^2$. Calcular la anchura de desintegración de la $\Delta^0(1232)$ conociendo el valor del elemento de matriz de la interacción fuerte junto con el término de volumen:
+\begin{equation*}
+\sqrt{V}|\langle \pi^-(140) + p(938) | H_s | \Delta^0(1232) \rangle| = \sqrt{V}|\mathcal{M}_{if}| = 253.56\text{ MeV fm}^{3/2}
+\end{equation*}
+
+\tcblower
+
+\subsubsection*{1. Cinemática de la desintegración a dos cuerpos}
+
+En el centro de masas del $\Delta^0$ ($M_\Delta = 1232\text{ MeV}/c^2$), el momento lineal de las partículas finales $p(938)$ y $\pi^-(140)$ es:
+\begin{equation*}
+p^* c = \frac{\sqrt{[M_\Delta^2 - (m_p + m_\pi)^2][M_\Delta^2 - (m_p - m_\pi)^2]}}{2 M_\Delta}
+\end{equation*}
+Sustituyendo los valores de las masas:
+\begin{equation*}
+M_\Delta^2 - (m_p + m_\pi)^2 = 1232^2 - 1078^2 = 355740\text{ MeV}^2
+\end{equation*}
+\begin{equation*}
+M_\Delta^2 - (m_p - m_\pi)^2 = 1232^2 - 798^2 = 881020\text{ MeV}^2
+\end{equation*}
+\begin{equation*}
+p^* c = \frac{\sqrt{355740 \times 881020}}{2 \times 1232} = \frac{\sqrt{3.13414 \times 10^{11}}}{2464} \approx \frac{559834}{2464} \approx 227.20\text{ MeV}
+\end{equation*}
+
+Las energías relativisticas de las partículas emitidas son:
+\begin{equation*}
+E_p = \sqrt{(p^* c)^2 + m_p^2 c^4} = \sqrt{(227.20)^2 + 938^2} \approx 965.12\text{ MeV}
+\end{equation*}
+\begin{equation*}
+E_\pi = \sqrt{(p^* c)^2 + m_\pi^2 c^4} = \sqrt{(227.20)^2 + 140^2} \approx 266.88\text{ MeV}
+\end{equation*}
+
+\subsubsection*{2. Expresión de la anchura de desintegración $\Gamma$}
+
+A partir de la Regla de Oro de Fermi con densidad de estados en el espacio de fases relativista de 2 cuerpos:
+\begin{equation*}
+\Gamma = \frac{p^* E_p E_\pi}{\pi \hbar^4 c^4 M_\Delta} \left( V |\mathcal{M}_{if}|^2 \right)
+\end{equation*}
+
+Convertimos la magnitud dada al Sistema Natural usando $\hbar c = 197.327\text{ MeV}\cdot\text{fm}$:
+\begin{equation*}
+V |\mathcal{M}_{if}|^2 = (253.56)^2\text{ MeV}^2\text{ fm}^3 = 64292.68\text{ MeV}^2\text{ fm}^3
+\end{equation*}
+\begin{equation*}
+1\text{ fm}^3 = \left(\frac{1}{197.327}\right)^3\text{ MeV}^{-3} \approx 1.3005 \times 10^{-7}\text{ MeV}^{-3}
+\end{equation*}
+\begin{equation*}
+\left( V |\mathcal{M}_{if}|^2 \right)_{\text{adimensional}} = 64292.68 \times 1.3005 \times 10^{-7} \approx 8.3615 \times 10^{-3}\text{ MeV}^{-1}
+\end{equation*}
+
+\subsubsection*{3. Cálculo numérico de la anchura $\Gamma$}
+
+Sustituyendo todos los términos en la fórmula:
+\begin{equation*}
+\Gamma = \frac{(227.20\text{ MeV}) \times (965.12\text{ MeV}) \times (266.88\text{ MeV})}{\pi \times 1232\text{ MeV}} \times (8.3615 \times 10^{-3}\text{ MeV}^{-1})
+\end{equation*}
+\begin{equation*}
+\Gamma = \left( \frac{58517228}{3870.44} \right) \times (8.3615 \times 10^{-3})\text{ MeV} = 15118.9 \times 8.3615 \times 10^{-3}\text{ MeV} \approx \mathbf{126.4\text{ MeV}}
+\end{equation*}
+\end{problema}
+
+\begin{problema}[Ejercicio 6: Conservación de números cuánticos y determinación de la interacción]
+Un mesón ligero no cargado $A$, con números cuánticos $J^{PC} = 0^{+-}$, se desintegra en tres mesones ligeros a través del proceso $A \rightarrow C^0 + B^+ + B^-$. Sabiendo que los mesones cargados $B$ tienen números cuánticos $J^P = 0^-$, y el mesón neutro $C^0$ tiene números cuánticos $J^{PC} = 0^{-+}$, estudiar qué interacción es responsable de dicho proceso.
+
+\tcblower
+
+\subsubsection*{1. Análisis de la conservación del momento angular y la paridad espacial ($P$)}
+
+\begin{itemize}
+    \item \textbf{Estado inicial ($A$):} $J_i = 0$, Paridad $P_i = +1$.
+    \item \textbf{Estado final ($C^0 + B^+ + B^-$):} Como las tres partículas resultantes tienen espín nulo ($J=0$), el momento angular total del estado final se construye a partir de los momentos angulares orbitales relativos de Jacobi:
+    \begin{equation*}
+    \vec{J}_f = \vec{L}_{B^+ B^-} + \vec{L}_{C^0 (B^+ B^-)}
+    \end{equation*}
+    Para conservar el momento angular total ($J_i = 0 = J_f$), los dos momentos orbitales relativos deben ser idénticos:
+    \begin{equation*}
+    L_{B^+ B^-} = L_{C^0 (B^+ B^-)} \equiv L
+    \end{equation*}
+
+    \item \textbf{Paridad del estado final ($P_f$):}
+    \begin{equation*}
+    P_f = P(C^0) \cdot P(B^+) \cdot P(B^-) \cdot (-1)^{L_{B^+ B^-} + L_{C^0 (B^+ B^-)}} = (-1) \cdot (-1) \cdot (-1) \cdot (-1)^{2L} = -1
+    \end{equation*}
+    puesto que $(-1)^{2L} = +1$ para todo entero $L$.
+\end{itemize}
+
+Comparando las paridades inicial y final:
+\begin{equation*}
+P_i = +1 \neq P_f = -1 \implies \Delta P \neq 0 \quad (\textbf{Paridad violada})
+\end{equation*}
+
+\subsubsection*{2. Determinación de la interacción responsable}
+
+Las interacciones fuerte y electromagnética conservan de manera estricta la paridad espacial ($\Delta P = 0$). Puesto que el proceso viola la conservación de la paridad, se concluye de forma unívoca que la reacción está gobernada por la \textbf{Interacción Débil}.
+\end{problema}
+
+\begin{problema}[Ejercicio 7: Estimación de la vida media del mesón $K^-$ por escalado débil]
+El mesón $D_s^+(c\bar{s})$ ($m_{D_s^+} = 1968.30\text{ MeV}/c^2$) tiene una vida media $\tau_{D_s^+} = 5 \times 10^{-13}\text{ s}$, y se desintegra a través de la reacción $D_s^+ \rightarrow K^0 + e^+ + \nu_e$ con una probabilidad del $3.7 \times 10^{-3}\%$. El mesón $K^-(s\bar{u})$ ($m_{K^-} = 493.68\text{ MeV}/c^2$) se desintegra a través de la reacción $K^- \rightarrow \pi^0 + e^- + \bar{\nu}_e$ con una relación de ramificación $\text{BR} = 0.05$. Considerando que las masas de las partículas de los estados finales de los dos procesos son despreciables respecto a la masa de la partícula que se desintegra, obtener una estimación de la vida media del $K^-$.
+
+\tcblower
+
+\subsubsection*{1. Regla de escalado de Fermi para desintegraciones semileptónicas}
+
+Para desintegraciones débiles semileptónicas a tres cuerpos con partículas finales ligeras, la anchura de desintegración parcial escala con la quinta potencia de la masa del progenitor (regla de Sargent):
+\begin{equation*}
+\Gamma_{\text{semi}} = \frac{\text{BR}}{\tau} \propto G_F^2 \, |V_{qq'}|^2 \, M^5
+\end{equation*}
+
+Los elementos de la matriz CKM correspondientes a las transiciones de quark subyacentes son $|V_{cd}|$ (para $c \to d$ en $D_s^+$) y $|V_{us}|$ (para $s \to u$ en $K^-$). Ambas transiciones corresponden al mismo orden de supresión de Cabibbo:
+\begin{equation*}
+|V_{cd}| \approx |V_{us}| \approx \sin\theta_C \approx 0.225
+\end{equation*}
+
+Por consiguiente, las anchuras parciales cumplen la relación de proporcionalidad directa:
+\begin{equation*}
+\frac{\text{BR}(K^-)}{\tau_{K^-}} \Big/ \frac{\text{BR}(D_s^+)}{\tau_{D_s^+}} = \left( \frac{m_{K^-}}{m_{D_s^+}} \right)^5
+\end{equation*}
+
+\subsubsection*{2. Cálculo numérico de la vida media $\tau_{K^-}$}
+
+Despejando la vida media del mesón $K^-$:
+\begin{equation*}
+\tau_{K^-} = \tau_{D_s^+} \times \left( \frac{\text{BR}(K^-)}{\text{BR}(D_s^+)} \right) \times \left( \frac{m_{D_s^+}}{m_{K^-}} \right)^5
+\end{equation*}
+
+Sustituyendo los datos del enunciado:
+\begin{itemize}
+    \item $\text{BR}(D_s^+) = 3.7 \times 10^{-3}\% = 3.7 \times 10^{-5}$
+    \item $\text{BR}(K^-) = 0.05$
+    \item Cociente de relaciones de ramificación: $\frac{0.05}{3.7 \times 10^{-5}} \approx 1351.35$
+    \item Cociente de masas al cubo y quinta potencia: $\frac{1968.30}{493.68} \approx 3.987 \implies (3.987)^5 \approx 1011.66$
+\end{itemize}
+
+Calculando el resultado final:
+\begin{equation*}
+\tau_{K^-} = (5 \times 10^{-13}\text{ s}) \times 1351.35 \times 1011.66 \approx \mathbf{6.84 \times 10^{-7}\text{ s}}
+\end{equation*}
+\end{problema}
+
+\begin{problema}[Ejercicio 8: Selección por paridad $G$ e isospín en la desintegración del mesón $\eta$]
+El mesón $\eta(547)$ tiene isoespín cero y $J^{PC} = 0^{-+}$. Se desintegra a través de interacción electromagnética, en particular a través del canal $\eta \rightarrow \pi^0 + \pi^0 + \pi^0$. ¿Por qué este proceso no tiene lugar a través de interacción fuerte?
+
+\tcblower
+
+\subsubsection*{1. Prohibición por conservación de la Paridad $G$}
+
+La paridad $G$ es un número cuántico conservado estrictamente en las interacciones fuertes ($\Delta G = 0$). Para un multiplete de isospín $I$, viene dada por $G = C (-1)^I$:
+\begin{itemize}
+    \item \textbf{Estado inicial ($\eta$):} $I = 0$, $C = +1 \implies G(\eta) = (+1) (-1)^0 = +1$.
+    \item \textbf{Estado final ($3\pi^0$):} Como $G(\pi^0) = -1$, la paridad $G$ del sistema de tres piones es $G(3\pi^0) = (-1)^3 = -1$.
+\end{itemize}
+Puesto que $G_i = +1 \neq G_f = -1$, la interacción fuerte no puede mediar este proceso.
+
+\subsubsection*{2. Prohibición por conservación del Isospín total ($I$)}
+
+La interacción fuerte conserva el isospín total ($\Delta I = 0$):
+\begin{itemize}
+    \item \textbf{Estado inicial ($\eta$):} Isospín total $I_i = 0$.
+    \item \textbf{Estado final ($3\pi^0$):} Los tres piones son bosones idénticos de espín 0 con $I=1, I_3=0$. La estadística de Bose-Einstein exige que la función de onda espacial y de isospín sea totalmente simétrica. Al acoplar tres piones idénticos en $I_3 = 0$, las únicas combinaciones de isospín total simétricas permitidas son $I_f = 1$ o $I_f = 3$. En particular, **es imposible formar un estado de isospín total $I_f = 0$ con tres piones neutros**.
+\end{itemize}
+Dado que $I_i = 0 \to I_f \in \{1, 3\}$, la desintegración viola la conservación del isospín ($\Delta I \neq 0$) y queda **estrictamente prohibida por interacción fuerte**.
+\end{problema}
+
+\begin{problema}[Ejercicio 9: Anchura de desintegración total del mesón $\rho^+$]
+Uno de los modos de desintegración del mesón $\rho^+(770)$ es $\pi^+ + \gamma$. Dicho proceso tiene una probabilidad de $4.5 \times 10^{-4}\%$. Además, la vida media de ese modo de desintegración es $\tau = 9.81 \times 10^{-19}\text{ s}$. Calcular la anchura de desintegración total del mesón $\rho^+(770)$ y discutir razonadamente el resultado obtenido.
+
+\tcblower
+
+\subsubsection*{1. Cálculo de la anchura parcial $\Gamma_i$ y anchura total $\Gamma_{\text{total}}$}
+
+La anchura de desintegración parcial del canal electromagnético radiativo ($\rho^+ \to \pi^+ \gamma$) es:
+\begin{equation*}
+\Gamma_i = \frac{\hbar}{\tau_i} = \frac{6.5821 \times 10^{-22}\text{ MeV}\cdot\text{s}}{9.81 \times 10^{-19}\text{ s}} \approx 6.71 \times 10^{-4}\text{ MeV} = 0.671\text{ keV}
+\end{equation*}
+
+La relación de ramificación de este canal es $\text{BR}_i = 4.5 \times 10^{-4}\% = 4.5 \times 10^{-6}$. Aplicando la definición de $\text{BR}_i = \frac{\Gamma_i}{\Gamma_{\text{total}}}$:
+\begin{equation*}
+\Gamma_{\text{total}} = \frac{\Gamma_i}{\text{BR}_i} = \frac{6.71 \times 10^{-4}\text{ MeV}}{4.5 \times 10^{-6}} \approx \mathbf{149.1\text{ MeV}}
+\end{equation*}
+
+\subsubsection*{2. Discusión del resultado}
+
+Una anchura total $\Gamma_{\text{total}} \approx 149\text{ MeV}$ corresponde a una vida media global ultra-corta de:
+\begin{equation*}
+\tau_{\text{total}} = \frac{\hbar}{\Gamma_{\text{total}}} \approx 4.4 \times 10^{-24}\text{ s}
+\end{equation*}
+
+Esta escala de tiempo ($\sim 10^{-24}\text{ s}$) es la típica de los procesos gobernados por la \textbf{Interacción Fuerte}. El resultado confirma que el $\rho^+(770)$ es una resonancia hadrónica cuya desintegración principal ocurre mediante el canal fuerte $\rho^+ \to \pi^+ \pi^0$ ($\text{BR} \approx 100\%$), mientras que la transición $\pi^+ \gamma$ es un canal radiativo electromagnético secundario y fuertemente suprimido.
+\end{problema}
+
+\begin{problema}[Ejercicio 10: Clasificación de reacciones e interacciones fundamentales]
+Indicar cuáles de las siguientes reacciones están permitidas y cuáles prohibidas, sabiendo que en ningún caso hay problemas de conservación de energía. Si estuvieran prohibidas indicar la razón, si estuvieran permitidas indicar a través de qué interacción ocurren:
+
+\begin{enumerate}[label=\alph*.]
+    \item $D_s^+ \longrightarrow K^+ + \pi^0$
+    \item $K^{+*} \longrightarrow K^+ + e^+ + e^-$
+    \item $\pi^0 \longrightarrow \gamma + \gamma + \gamma$
+    \item $\Lambda \longrightarrow \pi^+ + e^- + \bar{\nu}_e$
+    \item $\Xi^{-*} \longrightarrow \Xi^- + \pi^0$
+\end{enumerate}
+
+\tcblower
+
+\paragraph{a) $D_s^+ \longrightarrow K^+ + \pi^0$}
+\begin{itemize}
+    \item \textbf{Análisis de sabor:} $D_s^+(c\bar{s}) \to K^+(u\bar{s}) + \pi^0(u\bar{u}/d\bar{d})$. Presenta $\Delta C = -1$ y $\Delta S = 0$.
+    \item \textbf{Evaluación:} Muestra un cambio en el sabor de encanto ($\Delta C = -1$).
+    \item \textbf{Conclusión:} \textbf{PERMITIDA por Interacción Débil} (desintegración no leptónica con cambio de sabor $c \to u + \bar{d}s$).
+\end{itemize}
+
+\paragraph{b) $K^{+*} \longrightarrow K^+ + e^+ + e^-$}
+\begin{itemize}
+    \item \textbf{Análisis de sabor y leptones:} Conserva estrictamente todos los sabores ($\Delta S = 0, \Delta C = 0$) y los números leptónicos ($\Delta L_e = 0$).
+    \item \textbf{Mecanismo:} Mediada por la conversión de un fotón virtual en un par leptónico ($K^{+*} \to K^+ \gamma^* \to K^+ e^+ e^-$).
+    \item \textbf{Conclusión:} \textbf{PERMITIDA por Interacción Electromagnética} (desintegración Dalitz).
+\end{itemize}
+
+\paragraph{c) $\pi^0 \longrightarrow \gamma + \gamma + \gamma$}
+\begin{itemize}
+    \item \textbf{Análisis de simetría $C$:} $C(\pi^0) = +1$, mientras que para tres fotones $C(3\gamma) = (-1)^3 = -1$.
+    \item \textbf{Evaluación:} Viola la conservación de la paridad de conjugación de carga ($\Delta C \neq 0$).
+    \item \textbf{Conclusión:} \textbf{PROHIBIDA} por violación de la paridad de conjugación de carga ($C$).
+\end{itemize}
+
+\paragraph{d) $\Lambda \longrightarrow \pi^+ + e^- + \bar{\nu}_e$}
+\begin{itemize}
+    \item \textbf{Análisis de número bariónico:} $B(\Lambda) = +1 \to B_f = B(\pi^+) + B(e^-) + B(\bar{\nu}_e) = 0 + 0 + 0 = 0$.
+    \item \textbf{Evaluación:} Viola la conservación del número bariónico ($\Delta B = -1 \neq 0$).
+    \item \textbf{Conclusión:} \textbf{PROHIBIDA} por violación de la conservación del número bariónico ($B$).
+\end{itemize}
+
+\paragraph{e) $\Xi^{-*} \longrightarrow \Xi^- + \pi^0$}
+\begin{itemize}
+    \item \textbf{Análisis de sabor:} $S(\Xi^{-*}) = -2 \to S_f = S(\Xi^-) + S(\pi^0) = -2 + 0 = -2 \implies \Delta S = 0$.
+    \item \textbf{Evaluación:} Conserva la carga, el número bariónico, el isospín y la extrañeza ($\Delta S = 0$).
+    \item \textbf{Conclusión:} \textbf{PERMITIDA por Interacción Fuerte} (desintegración hadrónica directa de la resonancia $\Xi^*(1530)$).
+\end{itemize}
+\end{problema}
